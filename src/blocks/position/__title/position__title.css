@@ -1,0 +1,10 @@
+.position__title {
+  margin: 70px auto 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.175;
+  text-align: center;
+  max-width: 610px;
+  width: 100%;
+}

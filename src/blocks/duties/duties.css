@@ -1,0 +1,9 @@
+.duties {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  /* ToDo: check font YS Display, change format? */
+  font-family: 'YS Display', Arial, sans-serif;
+}

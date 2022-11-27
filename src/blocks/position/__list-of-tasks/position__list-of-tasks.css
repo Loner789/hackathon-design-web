@@ -1,0 +1,10 @@
+.position__list-of-tasks {
+  margin: 40px 30px 65px 105px;
+  padding: 0;
+  max-width: 475px;
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
