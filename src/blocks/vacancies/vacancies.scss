@@ -1,0 +1,217 @@
+.vacancies {
+  font-family: 'YS Display', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.vacanсies__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% - 200px);
+  max-width: 1240px;
+  margin: 50px 0 147px 0;
+}
+
+.vacancies__education-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 69px;
+  background-color: #000000;
+  padding: 0;
+  margin: 0;
+}
+
+.vacancies__menu-item {
+  list-style: none;
+}
+
+.vacancies__btn-menu {
+  border-style: none;
+  background-color: #000000;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 55px 0 15px;
+}
+
+.vacancies__btn-menu_active {
+  background-color: #FFFFFF;
+  padding: 10px 15px;
+  border-radius: 23px;
+  color: #000000;
+  margin: 0 40px 0 0px;
+}
+
+.vacancies__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 820px;
+  margin: 60px 10px 0 0;
+}
+
+.vacancies__prophecy-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 38px;
+  padding: 0;
+  margin: 0;
+}
+
+.vacancies__prophecy-item {
+  list-style: none;
+}
+
+.vacancies__proph-btn-menu {
+  border-style: none;
+  background-color: #FFFFFF;
+  font-family: 'YS Display';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #000000;
+  margin: 0 40px 0 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.vacancies__proph-btn-menu_active {
+  border-bottom: solid #000000 1px;
+}
+
+.vacancies__gallery {
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.vacancies__gallery-item {
+  list-style: none;
+  margin-top: 25px;
+}
+
+.vacancies__gallery-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.vacancies__name {
+  border-style: none;
+  background-color: #FFFFFF;
+  font-family: 'YS Display';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.vacancies__name_active {
+
+}
+
+.vacancies__salary {
+  font-family: 'YS Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #000000;
+  margin: 0;
+}
+
+.vacancies__line {
+  width: 100%;
+  max-width: 820px;
+  height: 0.5px;
+  background-color: #000000;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.vacancies__work-time {
+  font-family: 'YS Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #979797;
+  text-align: right;
+  margin: 0;
+}
+
+.vacancies__description {
+  display: none;
+}
+
+.vacancies__description_active {
+  display: block;
+}
+
+.vacancies__req-title {
+  margin: 10px 0 20px 0;
+  font-family: 'YS Display';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  color: #000000;
+}
+
+.vacancies__req-list {
+  list-style: square;
+  padding: 0;
+  padding-left: 25px;
+}
+
+.vacancies__req-list :last-child {
+  margin: 0 0 20px 10px;
+}
+
+.vacancies__req-item {
+  font-family: 'YS Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #000000;
+  margin: 0 0 15px 10px;
+}
+
+.vacancies__send-btn {
+  width: 295px;
+  height: 50px;
+  background-color: #000000;
+  font-family: 'YS Text';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 50px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 0;
+  margin: 25px 0 35px 0;
+  border-style: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
