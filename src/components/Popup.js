@@ -4,6 +4,7 @@ export default class Popup {
     this._handleEscClose = this._handleEscClose.bind(this);
   }
 
+  /* ToDo: check linter */
   _handleEscClose = (evt) => {
     if (evt.key === 'Escape') {
       this.close();

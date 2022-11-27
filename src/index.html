@@ -32,57 +32,57 @@
       <!-- ToDo: title -->
       <!-- <h2 class="popup__title"></h2> -->
 
-      <form class="popup__form form" novalidate>
+      <form class="popup__form form" id="form" novalidate>
         <label for="name" class="form__label">
           ФИО
           <input type="text" class="form__item" id="name" name="name" minlength="2" maxlength="100" required>
         </label>
-        <span class="form__error"></span>
+        <span class="form__name-error"></span>
 
         <label for="email" class="form__label">
           Почта
           <input type="email" class="form__item" id="email" name="email" minlength="2" maxlength="30" required>
         </label>
-        <span class="form__error"></span>
+        <span class="form__email-error"></span>
 
         <label for="contact" class="form__label">
           Telegram или телефон
           <input type="text" class="form__item" id="contact" name="contact" minlength="2" maxlength="30" required>
         </label>
-        <span class="form__error"></span>
+        <span class="form__contact-error"></span>
 
         <label for="position" class="form__label">
           Какая роль вам ближе?
           <select name="position" id="position" class="form__item" required>
             <option value="">--</option>
-            <option value="">Наставник</option>
-            <option value="">Ревьюер</option>
+            <option value="Наставник">Наставник</option>
+            <option value="Ревьюер">Ревьюер</option>
           </select>
         </label>
-        <span class="form__error"></span>
+        <span class="form__position-error"></span>
 
-        <label for="position" class="form__label">
+        <label for="faculty" class="form__label">
           Выберете направление (факультет)
-          <select name="position" id="position" class="form__item" required>
+          <select name="faculty" id="faculty" class="form__item" required>
             <option value="">--</option>
             <option value="Middle frontend developer">Мидл фронтенд-разработчик</option>
             <option value="Java developer">Java-разработчик</option>
             <option value="Go developer">Go-разработчик</option>
           </select>
         </label>
-        <span class="form__error"></span>
+        <span class="form__faculty-error"></span>
 
         <label for="stack" class="form__label">
           Перечислите набор технологий, которыми вы владеете и уровень владения каждой
           <textarea class="form__item" id="stack" name="stack" minlength="2" maxlength="500" required></textarea>
         </label>
-        <span class="form__error"></span>
+        <span class="form__stack-error"></span>
 
         <label for="cv" class="form__label">
           Ссылка на резюме (пожалуйста, проверьте, что вы открыли достут к документу)
           <input type="url" class="form__item" id="cv" name="cv" minlength="2" maxlength="100" required>
         </label>
-        <span class="form__error"></span>
+        <span class="form__cv-error"></span>
 
         <label for="confidential" class="form__label">
           <input type="checkbox" class="form__item" id="confidential" name="confidential" required>
@@ -90,7 +90,7 @@
           <a href="https://yandex.ru/legal/confidential/">указанных данных</a>
           для целей рассмотрения анкеты и обратной связи по ней.
         </label>
-        <span class="form__error"></span>
+        <span class="form__confidential-error"></span>
 
         <!-- Common button? -->
         <button type="submit" class="form__button">Отправить</button>
