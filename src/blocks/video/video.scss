@@ -1,0 +1,28 @@
+@import '../../utils/styles/constants';
+
+.video {
+  display: block;
+  position: relative;
+
+  .video__link {
+    display: block;
+  }
+
+  .video__image {
+    display: block;
+  }
+
+  .video__button-play {
+    /* ToDo: fix background-image
+    background-image: url(../../images/button-play-video.svg); */
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    padding: 0;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: calc(50% - 60px);
+    left: calc(50% - 60px);
+  }
+}

@@ -1,3 +1,12 @@
 /* VENDOR */
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts.css);
+
+/* advantages */
+@import '../blocks/advantages/advantages.scss';
+@import '../blocks/advantages-container/advantages-container.scss';
+@import '../blocks/card/card.scss';
+@import '../blocks/advantages-list/advantages-list.scss';
+
+/* video */
+@import '../blocks/video/video.scss';

@@ -16,7 +16,116 @@
     <section class="learning"></section>
     <section class="conditions"></section>
     <section class="duties"></section>
-    <section class="advantages"></section>
+    <section class="advantages">
+      <div class="advantages-container">
+        <div class="advantages-container__row advantages-container__row_place_first">
+          <!-- ToDo: srcset? -->
+          <img class="advantages-container__image" alt="Фото наставник практикума" src="<%=require('./images/block4-mentor-first-610w.png')%>">
+          <ul class="advantages-container__card-list advantages-container__card-list_place_first-top">
+            <li class="card card_place_right-top">
+              <p class="card__text">Развивать личный бренд</p>
+              <p class="card__description">
+                Публикуйте статьи в нашем блоге и выступайте на мероприятиях,
+                чтобы как можно больше людей узнали о вас как об эксперте
+              </p>
+            </li>
+            <li class="card card_place_right-bottom">
+              <p class="card__text">Менять жизнь людей</p>
+              <p class="card__description">
+                Тысячи наших студентов нуждаются в ваших знаниях и
+                опыте — не бойтесь ими делиться.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="advantages-container__row advantages-container__row_place_second">
+          <ul class="advantages-container__card-list">
+            <li class="card card_place_left-top">
+              <p class="card__text">Гибкий график</p>
+              <p class="card__description">
+                Удаленно, 2–3 часа в день, график выберете сами
+              </p>
+            </li>
+            <!-- ToDo: change content -->
+            <li class="card card_place_left-bottom">
+              <p class="card__text">Гибкий график</p>
+              <p class="card__description">
+                Удаленно, 2–3 часа в день, график выберете сами
+              </p>
+            </li>
+          </ul>
+          <!-- ToDo: add loading video script by click on the button -->
+          <div class="video">
+            <!-- ToDo: link to video -->
+            <a class="video__link" href="#">
+              <!-- ToDo: srcset? -->
+              <img class="video__image" src="<%=require('./images/block4-video-820w.png')%>" alt="Обложка видео">
+            </a>
+            <button type="button" class="video__button-play" aria-label="Кнопка воспроизвести видео">
+              <!-- ToDo: change teg img to background-image of the button -->
+              <img src="<%=require('./images/button-play-video.png')%>" alt="Кнопка воспроизвести видео">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <ul class="advantages-list">
+        <li class="advantages-list__item">
+          <p class="advantages-list__main-text">2—3</p>
+          <p class="advantages-list__text">часа в неделю</p>
+        </li>
+        <li class="advantages-list__item">
+          <img src="<%=require('./images/block4-icon-flexible-hours.svg')%>" alt="Иконка Гибкий график">
+          <p class="advantages-list__text advantages-list__text_weight_medium">Гибкий график</p>
+        </li>
+        <li class="advantages-list__item">
+          <p class="advantages-list__main-text">35—50</p>
+          <p class="advantages-list__text">тысяч в месяц</p>
+        </li>
+      </ul>
+
+      <div class="advantages-container">
+        <div class="advantages-container__row advantages-container__row_place_third">
+          <!-- ToDo: srcset? -->
+          <img class="advantages-container__image" alt="Фото наставник практикума" src="<%=require('./images/block4-mentor-second-715w.png')%>">
+          <ul class="advantages-container__card-list advantages-container__card-list_place_second-top">
+            <li class="card card_place_second-right-top">
+              <p class="card__text">Сообщество EdTech</p>
+              <p class="card__description">
+                Станете частью сообщества экспертов и посмотрите на мир онлайн-образования изнутри
+              </p>
+            </li>
+            <li class="card card_place_second-right-bottom">
+              <p class="card__text">Дополнительный доход</p>
+              <p class="card__description">
+                Иметь заработок в среднем от 35 до 50 тысяч ₽ в месяц
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="advantages-container__row advantages-container__row_place_fourth">
+          <ul class="advantages-container__card-list advantages-container__card-list_place_second-bottom">
+            <li class="card card_place_second-left-top">
+              <p class="card__text">Развивать лидерские качества</p>
+              <p class="card__description">
+                Научитесь проводить воркшопы для передачи знаний и опыта,
+                давать обратную связь, выступать на публике и мотивировать людей.
+              </p>
+            </li>
+            <li class="card card_place_second-left-bottom">
+              <p class="card__text">Осваивать новые знания</p>
+              <p class="card__description">
+                Бесплатно учиться на том курсе, где вы помогаете студентам,
+                и со скидкой на остальных направлениях Практикума
+              </p>
+            </li>
+          </ul>
+          <!-- ToDo: srcset? -->
+          <img class="advantages-container__image" alt="Фото наставник практикума" src="<%=require('./images/block4-mentor-third-610w.png')%>">
+        </div>
+      </div>
+
+    </section>
     <section class="vacancies"></section>
     <section class="success-stories"></section>
     <section class="faq"></section>
