@@ -95,9 +95,37 @@
   border-bottom: solid #000000 1px;
 }
 
+.vacancies__novac-wrapper {
+  display: none;
+  flex-direction: column;
+  width: 820px;
+  margin: 45px 0 0 0;
+}
+
+.vacancies__novac-wrapper_active {
+  display: flex;
+}
+
+.vacancies__no-vac-text {
+  font-family: 'YS Display';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  color: #000000;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 45px;
+}
+
 .vacancies__gallery {
   padding: 0;
   margin: 20px 0 0 0;
+  display: none;
+}
+
+.vacancies__gallery_active {
+  display: block;
 }
 
 .vacancies__gallery-item {
@@ -109,6 +137,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.vacancies__gallery-wrapper_share {
+  justify-content: flex-start;
+}
+
+.vacancies__gallery-wrapper_hide {
+  display: none;
 }
 
 .vacancies__name {
@@ -215,3 +251,46 @@
   cursor: pointer;
 }
 
+.vacancies__share-btn {
+  width: 50px;
+  height: 50px;
+  background-image: url(../../images/share-button.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border-radius: 15px;
+  padding: 0;
+  margin: 25px 0 35px 20px;
+  border-style: none;
+  cursor: pointer;
+}
+
+.vacancies__notfound-vac-text {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 50px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  margin: 45px 0 0 0;
+}
+
+.vacancies__notfound-vac-btn {
+  width: 293px;
+  height: 50px;
+  background-color: #1A1B22;
+  font-family: 'YS Text';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 50px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 0;
+  margin: 45px 0 0 20px;
+  border-style: none;
+  border-radius: 100px;
+  cursor: pointer;
+}

@@ -6,6 +6,7 @@ import './index.scss';
 const vacancies = document.querySelector('.vacancies');
 const vacancieNameBtn = vacancies.querySelectorAll('.vacancies__name');
 const vacancieEduItems = vacancies.querySelectorAll('.vacancies__btn-menu');
+const vacanciesDescriptionItems = vacancies.querySelectorAll('.vacancies__description');
 const vacancieEduItemDesign = vacancies.querySelector('#disign');
 const vacancieEduItemProgramming = vacancies.querySelector('#programming');
 const vacancieEduItemAnalitics = vacancies.querySelector('#analitics');
@@ -14,6 +15,13 @@ const vacancieEduItemManagement = vacancies.querySelector('#management');
 const vacancieProphItems = vacancies.querySelectorAll('.vacancies__proph-btn-menu');
 const vacancieProphSensey = vacancies.querySelector('#sensey');
 const vacancieProphReviewer = vacancies.querySelector('#reviewer');
+const vacancieSenseyGallaryProg = vacancies.querySelector('#sensey-gallary-prog');
+const vacancieReviewerGallaryProg = vacancies.querySelector('#reviewer-gallary-prog');
+const vacancieSenseyGallaryAnalitics = vacancies.querySelector('#sensey-gallary-analitics');
+const vacancieReviewerGallaryAnalitics = vacancies.querySelector('#reviewer-gallary-analitics');
+const vacanciesGallaries = vacancies.querySelectorAll('.vacancies__gallery');
+const vacanciesNoVac = vacancies.querySelector('#no-vac-available');
+const vacanciesNotFound = vacancies.querySelector('#vac-notfound');
 
 
 // ------- КОД -------
@@ -23,33 +31,106 @@ vacancieNameBtn.forEach(btn => {
   btn.addEventListener('click', function handleClick(event) {
     const vacItem = btn.closest('.vacancies__gallery-item')
     const vacDescription = vacItem.querySelector('.vacancies__description');
-    vacDescription.classList.toggle('vacancies__description_active');
+    if (vacDescription.classList.contains('vacancies__description_active')) {
+      vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+    } else {
+      vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+      vacDescription.classList.add('vacancies__description_active');
+    }
   });
 });
+
+const activateVacanciesProphItem = (menuItems, menuItemElement) => {
+  menuItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
+  vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
+  menuItemElement.classList.add('vacancies__proph-btn-menu_active');
+}
+
+const handleVacSenseyProphItemClick = (evt) => {
+  activateVacanciesProphItem(vacancieProphItems, evt.target);
+  if (vacancieEduItemProgramming.classList.contains('vacancies__btn-menu_active')) {
+    vacancieSenseyGallaryProg.classList.add('vacancies__gallery_active');
+  } else {
+    vacancieSenseyGallaryAnalitics.classList.add('vacancies__gallery_active');
+  }
+}
+
+const handleVacReviewerProphItemClick = (evt) => {
+  activateVacanciesProphItem(vacancieProphItems, evt.target);
+  if (vacancieEduItemProgramming.classList.contains('vacancies__btn-menu_active')) {
+    vacancieReviewerGallaryProg.classList.add('vacancies__gallery_active');
+  } else {
+    vacancieReviewerGallaryAnalitics.classList.add('vacancies__gallery_active');
+  }
+}
 
 const activateVacanciesEducationItem = (menuItems, menuItemElement) => {
   menuItems.forEach((item) => item.classList.remove('vacancies__btn-menu_active'));
   menuItemElement.classList.add('vacancies__btn-menu_active');
 }
 
-const handleVacanciesEducationItemClick = (evt) => {
+const handleDesignBtnClick = (evt) => {
   activateVacanciesEducationItem(vacancieEduItems, evt.target);
+  vacancieProphItems.forEach((item) => item.disabled = true);
+  vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
+  vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
+  vacancieProphSensey.classList.add('vacancies__proph-btn-menu_active');
+  vacanciesNoVac.classList.add('vacancies__novac-wrapper_active');
+  vacanciesNotFound.classList.add('vacancies__gallery-wrapper_hide');
+  vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
 }
 
-const activateVacanciesProphItem = (menuItems, menuItemElement) => {
-  menuItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
-  menuItemElement.classList.add('vacancies__proph-btn-menu_active');
+const handleProgrammingBtnClick = (evt) => {
+  activateVacanciesEducationItem(vacancieEduItems, evt.target);
+  vacancieProphItems.forEach((item) => item.disabled = false);
+  vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
+  vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
+  vacancieProphSensey.classList.add('vacancies__proph-btn-menu_active');
+  vacancieSenseyGallaryProg.classList.add('vacancies__gallery_active');
+  vacanciesNoVac.classList.remove('vacancies__novac-wrapper_active');
+  vacanciesNotFound.classList.remove('vacancies__gallery-wrapper_hide');
+  vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
 }
 
-const handleVacanciesProphItemClick = (evt) => {
-  activateVacanciesProphItem(vacancieProphItems, evt.target);
+const handleAnaliticsBtnClick = (evt) => {
+  activateVacanciesEducationItem(vacancieEduItems, evt.target);
+  vacancieProphItems.forEach((item) => item.disabled = false);
+  vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
+  vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
+  vacancieProphSensey.classList.add('vacancies__proph-btn-menu_active');
+  vacancieSenseyGallaryAnalitics.classList.add('vacancies__gallery_active');
+  vacanciesNoVac.classList.remove('vacancies__novac-wrapper_active');
+  vacanciesNotFound.classList.remove('vacancies__gallery-wrapper_hide');
+  vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
 }
 
-vacancieEduItemDesign.addEventListener('click', handleVacanciesEducationItemClick);
-vacancieEduItemProgramming.addEventListener('click', handleVacanciesEducationItemClick);
-vacancieEduItemAnalitics.addEventListener('click', handleVacanciesEducationItemClick);
-vacancieEduItemMarketing.addEventListener('click', handleVacanciesEducationItemClick);
-vacancieEduItemManagement.addEventListener('click', handleVacanciesEducationItemClick);
-vacancieProphSensey.addEventListener('click', handleVacanciesProphItemClick);
-vacancieProphReviewer.addEventListener('click', handleVacanciesProphItemClick);
+const handleMarketingBtnClick = (evt) => {
+  activateVacanciesEducationItem(vacancieEduItems, evt.target);
+  vacancieProphItems.forEach((item) => item.disabled = true);
+  vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
+  vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
+  vacancieProphSensey.classList.add('vacancies__proph-btn-menu_active');
+  vacanciesNoVac.classList.add('vacancies__novac-wrapper_active');
+  vacanciesNotFound.classList.add('vacancies__gallery-wrapper_hide');
+  vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+}
+
+const handleManagementBtnClick = (evt) => {
+  activateVacanciesEducationItem(vacancieEduItems, evt.target);
+  vacancieProphItems.forEach((item) => item.disabled = true);
+  vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
+  vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
+  vacancieProphSensey.classList.add('vacancies__proph-btn-menu_active');
+  vacanciesNoVac.classList.add('vacancies__novac-wrapper_active');
+  vacanciesNotFound.classList.add('vacancies__gallery-wrapper_hide');
+  vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+}
+
+vacancieEduItemDesign.addEventListener('click', handleDesignBtnClick);
+vacancieEduItemProgramming.addEventListener('click', handleProgrammingBtnClick);
+vacancieEduItemAnalitics.addEventListener('click', handleAnaliticsBtnClick);
+vacancieEduItemMarketing.addEventListener('click', handleMarketingBtnClick);
+vacancieEduItemManagement.addEventListener('click', handleManagementBtnClick);
+vacancieProphSensey.addEventListener('click', handleVacSenseyProphItemClick);
+vacancieProphReviewer.addEventListener('click', handleVacReviewerProphItemClick);
 
