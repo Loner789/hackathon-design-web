@@ -1,0 +1,58 @@
+@import '../../utils/styles/constants';
+
+.success-story-text {
+  //display: none;
+
+  .success-story-text__photo {
+    display: block;
+    max-width: 610px;
+    width: 100%;
+  }
+
+  .success-story-text__text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0 0 75px 60px;
+    display: grid;
+    row-gap: 10px;
+    list-style-type: none;
+    position: relative;
+    box-sizing: border-box;
+
+    .success-story-text__paragraph {
+      padding: 0 60px 0 0;
+      margin: 0;
+    }
+
+    .success-story-text__paragraph:first-child {
+      position: relative;
+    }
+
+    .success-story-text__paragraph:first-child::before {
+      content: '';
+      position: absolute;
+      border-right: $cardBorder;
+      top: 0;
+      right: 0;
+      height: 140px;
+    }
+  }
+
+  .success-story-text__text::before {
+    content: '';
+    position: absolute;
+    border-left: $cardBorder;
+    border-bottom: $cardBorder;
+    width: 290px;
+    bottom: 0;
+    left: 0;
+    height: 36%;
+  }
+}
+
+.success-story-text_visible {
+  display: block;
+}

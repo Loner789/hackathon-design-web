@@ -18,10 +18,57 @@
     <section class="duties"></section>
     <section class="advantages"></section>
     <section class="vacancies"></section>
-    <section class="success-stories"></section>
+    <section class="success-stories">
+      <div class="success-stories__text-container">
+        <ul class="success-stories__text-list"></ul>
+        <!-- ToDo: navigation -->
+        <nav class="success-stories__navigation">
+          <!-- ToDo: change tag img to background-image -->
+          <button class="success-stories__button" type="button" aria-label="Кнопка навигации по историям">
+            <img class="success-stories__arrow" src="<%=require('./images/block6-icon-arrow.svg')%>" alt="Иконка кнопки - стрелка влево">
+          </button>
+          <!-- ToDo: change tag img to background-image -->
+          <button class="success-stories__button" type="button" aria-label="Кнопка навигации по историям">
+            <img class="success-stories__arrow success-stories__arrow_right" src="<%=require('./images/block6-icon-arrow.svg')%>" alt="Иконка кнопки - стрелка вправо">
+          </button>
+        </nav>
+      </div>
+      <ul class="success-stories__video-list"></ul>
+    </section>
     <section class="faq"></section>
   </main>
   <footer class="footer"></footer>
+
+  <template id="template-success-story-text">
+    <li class="success-story-text">
+      <!-- ToDo: srcset? -->
+      <img class="success-story-text__photo">
+      <!-- ToDo: check header number" -->
+      <h3 class="success-story-title success-story-title_place_text"></h3>
+      <p class="success-story-subtitle success-story-subtitle_place_text"></p>
+      <ul class="success-story-text__text"></ul>
+    </li>
+  </template>
+
+  <template id="template-success-story-video">
+    <li class="success-story-video">
+      <div class="video-story">
+        <!-- ToDo: link to video -->
+        <a class="video-story__link" href="#">
+          <!-- ToDo: srcset? -->
+          <img class="video-story__image">
+        </a>
+        <!-- ToDo: common class of the button -->
+        <button type="button" class="video-button video-button_place_success-story" aria-label="Кнопка воспроизвести видео">
+          <!-- ToDo: change teg img to background-image of the button -->
+          <img src="<%=require('./images/button-play-video.png')%>" alt="Кнопка воспроизвести видео">
+        </button>
+      </div>
+      <!-- ToDo: check header number" -->
+      <h3 class="success-story-title success-story-title_place_video"></h3>
+      <p class="success-story-subtitle success-story-subtitle_place_video"></p>
+    </li>
+  </template>
 
   <!-- POPUP WITH FORM -->
 

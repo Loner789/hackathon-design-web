@@ -1,3 +1,13 @@
 /* VENDOR */
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts.css);
+
+/* success-stories */
+@import '../blocks/success-stories/success-stories.scss';
+@import '../blocks/success-story-text/success-story-text.scss';
+@import '../blocks/success-story-video/success-story-video.scss';
+@import '../blocks/success-story-title/success-story-title.scss';
+@import '../blocks/success-story-subtitle/success-story-subtitle.scss';
+
+/* video-button */
+@import '../blocks/video-button/video-button.scss';

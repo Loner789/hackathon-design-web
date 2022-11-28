@@ -1,0 +1,46 @@
+export default class SuccessStoryCard {
+  constructor(data, cardSelector, elementTemplateSelector) {
+    this._name = data.name;
+    this._img = data.img;
+    this._cardSelector = cardSelector;
+    this._elementTemplateSelector = elementTemplateSelector;
+    this._id = data._id;
+    this._card = data;
+    this._text = data.text;
+    this._position = data.position;
+  }
+
+  _getElementCard() {
+    // eslint-disable-next-line
+    const elementTemplate = document.querySelector(this._elementTemplateSelector).content;
+    const elementCard = elementTemplate.querySelector(this._cardSelector).cloneNode(true);
+
+    return elementCard;
+  }
+
+  _getListOfParagraphs(elementText) {
+    this._text.forEach((el) => {
+      // eslint-disable-next-line no-undef
+      const paragraph = document.createElement('li');
+      paragraph.textContent = el;
+      paragraph.classList.add('success-story-text__paragraph');
+      elementText.append(paragraph);
+    });
+  }
+
+  generateElementCard() {
+    this._element = this._getElementCard();
+    this._elementImg = this._element.querySelector('.success-story-text__photo');
+    this._elementTitle = this._element.querySelector('.success-story-title');
+    this._elementSubtitle = this._element.querySelector('.success-story-subtitle');
+    this._elementText = this._element.querySelector('.success-story-text__text');
+
+    this._elementImg.src = this._img;
+    this._elementImg.alt = this._name;
+    this._elementTitle.textContent = this._name;
+    this._elementSubtitle.textContent = this._position;
+    this._getListOfParagraphs(this._elementText);
+
+    return this._element;
+  }
+}
