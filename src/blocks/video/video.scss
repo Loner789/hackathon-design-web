@@ -12,17 +12,9 @@
     display: block;
   }
 
-  .video__button-play {
-    /* ToDo: fix background-image
-    background-image: url(../../images/button-play-video.svg); */
-    background-color: transparent;
-    background-repeat: no-repeat;
+  .video__iframe {
+    width: 820px;
+    height: 460px;
     border: none;
-    padding: 0;
-    width: 120px;
-    height: 120px;
-    position: absolute;
-    top: calc(50% - 60px);
-    left: calc(50% - 60px);
   }
 }
