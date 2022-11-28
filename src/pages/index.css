@@ -1,5 +1,11 @@
 @import '../vendor/normalize.css';
 @import '../vendor/fonts.css';
+:root {
+  margin: 0 auto;
+  padding: 0 60px;
+  max-width: 1440px;
+}
+
 .header {
   margin: 0;
   padding: 0;
@@ -54,8 +60,87 @@
   border: 2px solid black;
 }
 
-.footer {
-  font-size: 40px;
+.learning {
+  margin: 0;
+  padding: 0 0 100px;
+  font-family: "YS Display", Arial, sans-serif;
+}
+.learning__content {
+  margin: 0;
+  padding: 50px 0 0;
+  display: flex;
+  gap: 30px;
+}
+.learning__text-container {
+  margin: 0;
+  padding: 0;
+  width: 780px;
+  min-height: 200px;
+  flex-shrink: 0;
+}
+.learning__title {
+  margin: 0;
+  padding: 30px 0 25px;
+  width: 100%;
+  min-height: 180px;
+  display: inline-block;
+}
+.learning__title-span {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #6251C9;
+  display: inline;
+}
+.learning__subtitle {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.2;
+  display: inline;
+}
+.learning__learning-picture {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 581px;
+  background-image: url(../images/learning-pic.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.learning__link-button {
+  margin: 100px 0 0;
+  padding: 15px 50px;
+  width: 415px;
+  height: 75px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  box-sizing: border-box;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  color: #FFF;
+  background: #000;
+}
+
+/* cursor of learning-subtitle */
+.typed-cursor {
+  font-size: 70px;
+  font-weight: 500;
+  color: #6251C9;
+}
+
+.section-indent {
+  margin: 100px 0 0;
 }
 
 /*# sourceMappingURL=index.css.map */
