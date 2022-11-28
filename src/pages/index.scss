@@ -1,3 +1,4 @@
-/* VENDOR */
-@import url(../vendor/normalize.css);
-@import url(../vendor/fonts.css);
+@import '../vendor/normalize.css',
+'../vendor/fonts.css',
+'../blocks/header/header.scss',
+'../blocks/footer/footer.scss';
