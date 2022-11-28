@@ -10,6 +10,13 @@
     .video-story__image {
       display: block;
     }
+
+    .video-story__iframe {
+      max-width: 610px;
+      width: 100%;
+      border: none;
+      height: 500px;
+    }
   }
 }
 

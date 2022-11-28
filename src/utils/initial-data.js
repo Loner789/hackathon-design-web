@@ -45,11 +45,13 @@ export const successStoriesVideo = [
     name: 'Дмитрий Сульман',
     img: sulman610w,
     position: 'наставник на факультете маркетинга',
+    video: 'https://www.youtube.com/watch?v=COaXBeiKezw',
   },
   {
     id: 1,
     name: 'Толя Крестенко',
     img: krestenko610w,
     position: 'наставник на Data Science',
+    video: 'https://www.youtube.com/watch?v=COaXBeiKezw',
   },
 ];
