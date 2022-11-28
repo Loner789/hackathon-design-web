@@ -1,8 +1,12 @@
+/* eslint-disable no-undef */
 import './index.scss';
 import SuccessStoryCard from '../components/SuccessStoryCard';
 import SuccessStoryVideo from '../components/SuccessStoryVideo';
 import Section from '../components/Section';
 import { successStoriesText, successStoriesVideo } from '../utils/initial-data';
+
+const buttonArrowRight = document.querySelector('.button-arrow-right');
+const buttonArrowLeft = document.querySelector('.button-arrow-left');
 
 const createSuccessStoryCard = (data) => {
   const сardsList = new Section(
@@ -39,3 +43,36 @@ const createSuccessStoryVideo = (data) => {
 };
 
 createSuccessStoryVideo(successStoriesVideo);
+
+const handleClickOnArrowRight = () => {
+  const visibleCard = document.querySelector('.success-story-text_visible');
+  const currentId = Number(visibleCard.getAttribute('id'));
+  const nextId = currentId + 1;
+  const nextCard = document.getElementById(nextId);
+  buttonArrowLeft.removeAttribute('disabled');
+
+  if (nextId < successStoriesText.length) {
+    visibleCard.classList.remove('success-story-text_visible');
+    nextCard.classList.add('success-story-text_visible');
+  }
+
+  if (nextId === successStoriesText.length - 1) buttonArrowRight.setAttribute('disabled', true);
+};
+
+const handleClickOnArrowLeft = () => {
+  const visibleCard = document.querySelector('.success-story-text_visible');
+  const currentId = Number(visibleCard.getAttribute('id'));
+  const nextId = currentId - 1;
+  const nextCard = document.getElementById(nextId);
+  buttonArrowRight.removeAttribute('disabled');
+
+  if (nextId >= 0) {
+    visibleCard.classList.remove('success-story-text_visible');
+    nextCard.classList.add('success-story-text_visible');
+  }
+
+  if (nextId < 0) buttonArrowLeft.setAttribute('disabled', true);
+};
+
+buttonArrowRight.addEventListener('click', handleClickOnArrowRight);
+buttonArrowLeft.addEventListener('click', handleClickOnArrowLeft);

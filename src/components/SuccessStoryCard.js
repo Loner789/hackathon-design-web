@@ -4,7 +4,7 @@ export default class SuccessStoryCard {
     this._img = data.img;
     this._cardSelector = cardSelector;
     this._elementTemplateSelector = elementTemplateSelector;
-    this._id = data._id;
+    this._id = data.id;
     this._card = data;
     this._text = data.text;
     this._position = data.position;
@@ -28,6 +28,11 @@ export default class SuccessStoryCard {
     });
   }
 
+  // eslint-disable-next-line class-methods-use-this
+  _setHiddenClass(id, element) {
+    if (id === 0) element.classList.add('success-story-text_visible');
+  }
+
   generateElementCard() {
     this._element = this._getElementCard();
     this._elementImg = this._element.querySelector('.success-story-text__photo');
@@ -35,11 +40,13 @@ export default class SuccessStoryCard {
     this._elementSubtitle = this._element.querySelector('.success-story-subtitle');
     this._elementText = this._element.querySelector('.success-story-text__text');
 
+    this._element.setAttribute('id', this._id);
     this._elementImg.src = this._img;
     this._elementImg.alt = this._name;
     this._elementTitle.textContent = this._name;
     this._elementSubtitle.textContent = this._position;
     this._getListOfParagraphs(this._elementText);
+    this._setHiddenClass(this._id, this._element);
 
     return this._element;
   }
