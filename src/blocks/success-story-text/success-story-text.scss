@@ -1,4 +1,5 @@
 @import '../../utils/styles/constants';
+@import '../../utils/styles/animations.scss';
 
 .success-story-text {
   display: none;
@@ -7,6 +8,10 @@
     display: block;
     max-width: 610px;
     width: 100%;
+  }
+
+  .success-story-text__photo_animation {
+    animation: 1s fadeIn;
   }
 
   .success-story-text__text {

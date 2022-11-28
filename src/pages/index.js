@@ -44,12 +44,20 @@ const createSuccessStoryVideo = (data) => {
 
 createSuccessStoryVideo(successStoriesVideo);
 
+const addAnimationToImg = (nextCard) => {
+  const img = nextCard.querySelector('.success-story-text__photo');
+  if (!img.classList.contains('success-story-text__photo_animation')) {
+    img.classList.add('success-story-text__photo_animation');
+  }
+};
+
 const handleClickOnArrowRight = () => {
   const visibleCard = document.querySelector('.success-story-text_visible');
   const currentId = Number(visibleCard.getAttribute('id'));
   const nextId = currentId + 1;
   const nextCard = document.getElementById(nextId);
   buttonArrowLeft.removeAttribute('disabled');
+  addAnimationToImg(nextCard);
 
   if (nextId < successStoriesText.length) {
     visibleCard.classList.remove('success-story-text_visible');
@@ -65,6 +73,7 @@ const handleClickOnArrowLeft = () => {
   const nextId = currentId - 1;
   const nextCard = document.getElementById(nextId);
   buttonArrowRight.removeAttribute('disabled');
+  addAnimationToImg(nextCard);
 
   if (nextId >= 0) {
     visibleCard.classList.remove('success-story-text_visible');
