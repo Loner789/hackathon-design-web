@@ -1,11 +1,6 @@
 @import '../../utils/styles/constants';
-/* @import '../../utils/styles/animations.scss'; */
 
 .success-story-text {
- // display: none;
- /* display: grid;
- grid-template-columns: 190px 420px;
- */
  display: flex;
 
   .success-story-text__content {
@@ -21,9 +16,9 @@
       width: 100%;
     }
 
-    /* .success-story-text__photo_animation {
-      animation: 1s fadeIn;
-    } */
+    .success-story-text__photo:hover {
+      cursor: pointer;
+    }
 
     .success-story-text__text {
       font-style: normal;
@@ -48,34 +43,9 @@
         position: relative;
       }
     }
-
-
-    /* .success-story-text__paragraph:first-child::before {
-      content: '';
-      position: absolute;
-      border-right: $cardBorder;
-      top: 0;
-      right: 0;
-      height: 140px;
-    } */
   }
 
   .success-story-text__content_hidden {
     display: none;
   }
-
-/*   .success-story-text__text::before {
-    content: '';
-    position: absolute;
-    border-left: $cardBorder;
-    border-bottom: $cardBorder;
-    width: 290px;
-    bottom: 0;
-    left: 0;
-    height: 36%;
-  } */
 }
-
-/* .success-story-text_visible {
-  display: block;
-} */

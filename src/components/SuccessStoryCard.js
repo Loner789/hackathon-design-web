@@ -28,21 +28,28 @@ export default class SuccessStoryCard {
     });
   }
 
- /*  // eslint-disable-next-line class-methods-use-this
-  _setHiddenClass(id, element) {
-    if (id === 0) element.classList.add('success-story-text_visible');
-  } */
-
   _setHiddenClass() {
     if (this._id === 0) this._elementTextContent.classList.remove('success-story-text__content_hidden');
   }
 
   _setEventListeners() {
     this._elementImg.addEventListener('click', (evt) => {
+      // eslint-disable-next-line
       const target = evt.target;
-      const elementTextContent = target.querySelector('.success-story-text__content');
+      const container = target.parentNode;
+      const id = container.getAttribute('id');
+      // eslint-disable-next-line
+      const textContentlist = document.querySelectorAll('.success-story-text__content');
 
-      elementTextContent.remove('success-story-text__content_hidden');
+      textContentlist.forEach((el) => {
+        const elId = el.parentNode.getAttribute('id');
+
+        if (elId === id) {
+          el.classList.remove('success-story-text__content_hidden');
+        } else {
+          el.classList.add('success-story-text__content_hidden');
+        }
+      });
     });
   }
 

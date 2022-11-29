@@ -18,42 +18,10 @@
     .success-stories__text-list {
       padding: 0;
       list-style-type: none;
-      //display: grid;
       display: flex;
       margin: 0;
       column-gap: 20px;
     }
-
-    /* .success-stories__navigation {
-      position: absolute;
-      bottom: 15px;
-      right: 0;
-      display: flex;
-      column-gap: 20px;
-
-      .success-stories__button {
-        border: none;
-        background-color: #d9d9d9;
-        padding: 0;
-        width: 80px;
-        height: 50px;
-        /* ToDo: add background-image
-        background-image: url(../../images/block6-icon-arrow.svg);
-      }
-
-      .success-stories__button {
-        cursor: pointer;
-      }
-
-      .success-stories__arrow {
-        display: block;
-        margin: 0 auto;
-      }
-
-      .success-stories__arrow_right {
-        transform: rotate(180deg);
-      }
-    } */
   }
 
   .success-stories__video-list {
