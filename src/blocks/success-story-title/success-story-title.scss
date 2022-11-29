@@ -3,19 +3,19 @@
 .success-story-title {
   font-style: normal;
   font-weight: 500;
-  font-size: 48px;
+  font-size: 40px;
   line-height: 1.4;
   margin: 0;
-  padding: 25px 0 0 60px;
+  padding: 50px 0 0 50px;
   position: relative;
   box-sizing: border-box;
 }
 
-.success-story-title_place_text {
+/* .success-story-title_place_text {
   position: relative;
-}
+} */
 
-.success-story-title_place_text::before {
+/* .success-story-title_place_text::before {
   content: '';
   box-sizing: border-box;
   border-left: $cardBorder;
@@ -25,7 +25,7 @@
   top: 0;
   left: 0;
   position: absolute;
-}
+} */
 
 .success-story-title_place_video {
   position: relative;

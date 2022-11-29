@@ -1,52 +1,70 @@
 @import '../../utils/styles/constants';
-@import '../../utils/styles/animations.scss';
+/* @import '../../utils/styles/animations.scss'; */
 
 .success-story-text {
-  display: none;
+ // display: none;
+ /* display: grid;
+ grid-template-columns: 190px 420px;
+ */
+ display: flex;
 
-  .success-story-text__photo {
-    display: block;
-    max-width: 610px;
-    width: 100%;
-  }
-
-  .success-story-text__photo_animation {
-    animation: 1s fadeIn;
-  }
-
-  .success-story-text__text {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 1.4;
-    margin: 0;
-    padding: 0 0 75px 60px;
+  .success-story-text__content {
     display: grid;
-    row-gap: 10px;
-    list-style-type: none;
-    position: relative;
-    box-sizing: border-box;
+    max-height: 630px;
+    height: 100%;
+    overflow: hidden;
+    width: 420px;
 
-    .success-story-text__paragraph {
-      padding: 0 60px 0 0;
+    .success-story-text__photo {
+      display: block;
+      max-width: 610px;
+      width: 100%;
+    }
+
+    /* .success-story-text__photo_animation {
+      animation: 1s fadeIn;
+    } */
+
+    .success-story-text__text {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 1.4;
       margin: 0;
-    }
-
-    .success-story-text__paragraph:first-child {
+      padding: 25px 0 0 50px;
+      display: grid;
+      row-gap: 10px;
+      list-style-type: none;
       position: relative;
+      box-sizing: border-box;
+
+      .success-story-text__paragraph {
+        padding: 0 40px 0 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .success-story-text__paragraph:first-child {
+        position: relative;
+      }
     }
 
-    .success-story-text__paragraph:first-child::before {
+
+    /* .success-story-text__paragraph:first-child::before {
       content: '';
       position: absolute;
       border-right: $cardBorder;
       top: 0;
       right: 0;
       height: 140px;
-    }
+    } */
   }
 
-  .success-story-text__text::before {
+  .success-story-text__content_hidden {
+    display: none;
+  }
+
+/*   .success-story-text__text::before {
     content: '';
     position: absolute;
     border-left: $cardBorder;
@@ -55,9 +73,9 @@
     bottom: 0;
     left: 0;
     height: 36%;
-  }
+  } */
 }
 
-.success-story-text_visible {
+/* .success-story-text_visible {
   display: block;
-}
+} */
