@@ -6,8 +6,9 @@
   row-gap: 20px;
   width: 100%;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 30px;
   line-height: 1.4;
+  margin-top: 100px;
 
   .advantages-container__row {
     display: grid;
@@ -20,6 +21,7 @@
       list-style-type: none;
       align-items: center;
       grid-template-rows: repeat(2, 1fr);
+      row-gap: 20px;
     }
   }
 

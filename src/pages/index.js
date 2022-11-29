@@ -44,6 +44,7 @@ const setupVideo = (video) => {
 
     linkVideo.remove();
     button.remove();
+    video.innerHTML = '';
     video.appendChild(iframe);
   });
 

@@ -5,7 +5,6 @@
   box-sizing: border-box;
   list-style-type: none;
   margin-top: 120px;
-  margin-bottom: 120px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
@@ -13,14 +12,15 @@
 
   .advantages-list__item {
     position: relative;
+    height: 200px;
 
     .advantages-list__main-text {
       font-style: normal;
-      font-weight: 500;
-      font-size: 70px;
+      font-weight: 400;
+      font-size: 40px;
       line-height: 1.4;
-      padding: 0;
       margin: 0;
+      padding: 70px 0 0;
     }
 
     .advantages-list__text {
@@ -29,24 +29,27 @@
       font-size: 20px;
       line-height: 1.4;
       padding: 0;
-      margin-top: 10px;
-    }
-
-    .advantages-list__text_weight_medium {
-      font-weight: 500;
-      font-size: 48px;
-      margin-top: 25px;
+      margin: 0;
     }
   }
 
-  .advantages-list__item:nth-child(2n)::after {
+  .advantages-list__item:first-child::after {
     content: '';
     border-right: $cardBorder;
-    border-left: $cardBorder;
-    height: 100%;
-    width: 100%;
+    height: 200px;
     position: absolute;
     top: 0;
     right: 0;
+    box-sizing: border-box;
+  }
+
+  .advantages-list__item:last-child::after {
+    content: '';
+    border-right: $cardBorder;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
   }
 }
