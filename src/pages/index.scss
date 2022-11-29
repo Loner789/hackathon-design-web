@@ -2,6 +2,8 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts.css);
 
+@import '../blocks/section-title/section-title.scss';
+
 /* success-stories */
 @import '../blocks/success-stories/success-stories.scss';
 @import '../blocks/success-story-text/success-story-text.scss';

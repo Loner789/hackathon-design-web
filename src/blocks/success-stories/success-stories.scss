@@ -9,19 +9,12 @@
   width: 100%;
   margin: 0 auto;
 
-  .success-stories__text-container {
-    max-width: 610px;
-    width: 100%;
-    position: relative;
-    height: min-content;
-
-    .success-stories__text-list {
-      padding: 0;
-      list-style-type: none;
-      display: flex;
-      margin: 0;
-      column-gap: 20px;
-    }
+  .success-stories__text-list {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    margin: 100px 0 0 0;
+    column-gap: 20px;
   }
 
   .success-stories__video-list {

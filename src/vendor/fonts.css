@@ -31,5 +31,14 @@
   font-display: swap;
   src: local('YS Display'),
     url(../vendor/ys-display/YS-Display-Light.ttf) format('ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'YS Display';
+  font-style: normal;
+  font-display: swap;
+  src: local('YS Display'),
+    url(../vendor/ys-display/YS-Display-Regular.ttf) format('ttf');
   font-weight: 300;
 }
