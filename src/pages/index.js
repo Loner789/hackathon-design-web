@@ -2,8 +2,12 @@
 import './index.scss';
 
 const videoElement = document.querySelector('.video');
-const advantages = document.querySelector('.advantages');
-const cardAdvantagesList = advantages.querySelectorAll('.card')
+const cardLinePlaceFirstTop = document.querySelector('.card__line_place__first-top');
+const cardLinePlaceFirstTopParent = cardLinePlaceFirstTop.parentNode;
+const cardLinePlaceSecondTop = document.querySelector('.card__line_place__second-top');
+const cardLinePlaceSecondTopParent = cardLinePlaceSecondTop.parentNode;
+const cardLinePlaceSecondBottom = document.querySelector('.card__line_place__second-bottom');
+const cardLinePlaceSecondBottomParent = cardLinePlaceSecondBottom.parentNode;
 
 const parseURL = (link) => {
   const regexp = /https:\/\/www\.youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/i;
@@ -48,43 +52,24 @@ const setupVideo = (video) => {
 
 setupVideo(videoElement);
 
-cardAdvantagesList.forEach((el) => {
-  /* const classList = el.classList;
+/* animation of the advantage */
+cardLinePlaceFirstTopParent.addEventListener('mousemove', () => {
+  cardLinePlaceFirstTop.classList.add('card__line_hovered');
+});
+cardLinePlaceFirstTopParent.addEventListener('mouseout', () => {
+  cardLinePlaceFirstTop.classList.remove('card__line_hovered');
+});
 
-  console.log(classList) */
+cardLinePlaceSecondTopParent.addEventListener('mousemove', () => {
+  cardLinePlaceSecondTop.classList.add('card__line_hovered');
+});
+cardLinePlaceSecondTopParent.addEventListener('mouseout', () => {
+  cardLinePlaceSecondTop.classList.remove('card__line_hovered');
+});
 
-  el.addEventListener('mouseover', (evt) => {
-    // eslint-disable-next-line prefer-destructuring
-    const target = evt.target;
-    const text = target.querySelector('.card__text');
-    const description = target.querySelector('.card__description');
-
-    //console.log(text)
-
-    target.classList.add('card_hover-over');
-    text.classList.add('card__text_hidden');
-    description.classList.add('card__description_visible');
-
-
-
-    //console.log(target)
-  });
-
-  el.addEventListener('mouseout', (evt) => {
-    // eslint-disable-next-line prefer-destructuring
-    const target = evt.target;
-    const text = target.querySelector('.card__text');
-    const description = target.querySelector('.card__description');
-
-    //console.log(text)
-
-    target.classList.remove('card_hover-over');
-    target.classList.remove('card_hover-out');
-    text.classList.remove('card__text_hidden');
-    description.classList.remove('card__description_visible');
-
-
-
-    //console.log(target)
-  });
+cardLinePlaceSecondBottomParent.addEventListener('mousemove', () => {
+  cardLinePlaceSecondBottom.classList.add('card__line_hovered');
+});
+cardLinePlaceSecondBottomParent.addEventListener('mouseout', () => {
+  cardLinePlaceSecondBottom.classList.remove('card__line_hovered');
 });

@@ -30,19 +30,6 @@
       width: 610px;
       display: block;
     }
-
-  /*   .advantages-container__card-list_place_first-top {
-      position: relative;
-    }
-
-    .advantages-container__card-list_place_first-top::after {
-      content: '';
-      width: 467px;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      border-bottom: $cardBorder;
-    } */
   }
 
   .advantages-container__row_place_second {
@@ -51,48 +38,9 @@
 
   .advantages-container__row_place_third {
     grid-template-columns: 715px 485px;
-
-    .advantages-container__card-list_place_second-top {
-      position: relative;
-    }
-
-    .advantages-container__card-list_place_second-top::after {
-      content: '';
-      width: 88px;
-      height: 76px;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      border-bottom: $cardBorder;
-      border-left: $cardBorder;
-    }
-
-    .advantages-container__card-list_place_second-top::before {
-      content: '';
-      width: 106px;
-      height: 100px;
-      position: absolute;
-      top: 0;
-      right: 0;
-      border-top: $cardBorder;
-      border-right: $cardBorder;
-    }
   }
 
   .advantages-container__row_place_fourth {
     grid-template-columns: 590px 610px;
-
-    .advantages-container__card-list_place_second-bottom {
-      position: relative;
-    }
-
-    .advantages-container__card-list_place_second-bottom::before {
-      content: '';
-      width: 467px;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      border-bottom: $cardBorder;
-    }
   }
 }

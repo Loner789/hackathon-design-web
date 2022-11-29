@@ -1,41 +1,100 @@
 @import '../../utils/styles/constants';
-@import '../../utils/styles/animations.scss';
 
 .card {
   max-width: 590px;
   width: 100%;
   position: relative;
+  perspective: 1000px;
 
-  .card__text {
-    animation: initial;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 1.4;
-    margin: 77px 0;
-    box-sizing: border-box;
-    padding: 0;
+  .card__rotate {
+    transform-style: preserve-3d;
+    transition: .5s;
+
+    .card__text {
+      animation: initial;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 1.4;
+      margin: 77px 0;
+      box-sizing: border-box;
+      padding: 0;
+      backface-visibility: hidden;
+    }
+
+    .card__description {
+      animation: initial;
+      padding: 0 20px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 1.4;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      margin-top: -20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotateY(180deg);
+      backface-visibility: hidden;
+    }
   }
 
-  .card__text_hidden {
+  .card__line {
+    position: relative;
+  }
+
+  .card__line_place__first-top::after {
+    content: '';
+    width: 467px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: $cardBorder;
+    box-sizing: border-box;
+  }
+
+  .card__line_place__second-top::before {
+    content: '';
+    width: 106px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: $cardBorder;
+    border-right: $cardBorder;
+    box-sizing: border-box;
+  }
+
+  .card__line_place__second-bottom::before {
+    content: '';
+    width: 467px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: $cardBorder;
+  }
+
+  .card__line_hovered {
     display: none;
   }
+}
 
-  .card__description {
-    display: none;
-    animation: initial;
-    margin: 45px;
-    padding: 0;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 1.4;
-    box-sizing: border-box;
-  }
+.card:hover {
+  cursor: pointer;
+  background-color: $blueBackground;
+  color: $lightText;
 
-  .card__description_visible {
-    display: block;
+  .card__rotate {
+    transform: rotateY(180deg);
   }
+}
+
+.card:hover::after, .card:hover::before {
+  box-sizing: border-box;
+  content: '';
+  border: 3px solid #5686e3;
 }
 
 .card_place_right-top::after {
@@ -230,26 +289,3 @@
   box-sizing: border-box;
 }
 
-/* .card_line-bottom::after {
-  content: '';
-  width: 467px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  border-bottom: $cardBorder;
-  box-sizing: border-box;
-} */
-
-.card_hover-over {
-  cursor: pointer;
-  animation: .3s linear flipIn;
-  background-color: $blueBackground;
-  color: $lightText;
-}
-
-.card_hover-over::after, .card_hover-over::before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  border: none;
-}
