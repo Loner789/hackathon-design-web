@@ -1,55 +1,69 @@
+// IMPORTS:
 import './index.css';
 import Typed from 'typed.js';
-import { learningSubtitles } from '../utils/initial-data';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { learningSubtitles, conditionsCards } from '../utils/initial-data';
+import { scroller } from '../utils/constants';
 
+// FUNCTIONS:
 // Learning section typing
 // eslint-disable-next-line no-unused-vars
 const typed = new Typed('.learning__title-span', {
   strings: learningSubtitles,
-  typeSpeed: 80,
-  backSpeed: 40,
+  typeSpeed: 40,
+  backSpeed: 30,
   loop: true,
   backDelay: 1000,
 });
 
-// Conditions section slider
-(() => {
-  const isElementInViewport = (el) => {
-    const rect = el.getBoundingClientRect();
-    return rect.top <= 0 && rect.bottom > document.documentElement.clientHeight;
-  };
+// Creation of conditions-card element
+function createConditionsCard(cardData) {
+  const { title, image, text } = cardData;
+  const cardElement = document
+    .querySelector('#conditions-card')
+    .content.querySelector('.conditions__slide')
+    .cloneNode(true);
+  const [firstPart, secondPart] = title.split(' ');
 
-  const wheelHandler = (evt) => {
-    const containerInViewPort = Array.from(document.querySelectorAll('.conditions__container')).filter((container) => isElementInViewport(container))[0];
+  cardElement.querySelector('.conditions__card-title_side_left').textContent = firstPart;
+  cardElement.querySelector('.conditions__card-title_side_right').textContent = secondPart;
+  cardElement.querySelector('.conditions__card-image').style.backgroundImage = `url(${image})`;
+  cardElement.querySelector('.conditions__card-text').textContent = text;
 
-    if (!containerInViewPort) {
-      return;
-    }
+  return cardElement;
+}
 
-    const isPlaceHolderBelowTop = containerInViewPort.offsetTop
-    < document.documentElement.scrollTop;
-    const isPlaceHolderBelowBottom = containerInViewPort.offsetTop
-    + containerInViewPort.offsetHeight > document.documentElement.scrollTop;
-    const canScrollHorizontally = isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
+// Render function
+function renderItems(item, block) {
+  block.append(item);
+}
 
-    if (canScrollHorizontally) containerInViewPort.querySelector('.conditions__slider').scrollLeft += evt.deltaY;
-  };
+// Inserting data from the initial arrays
+function loadInitialData(data, createFunction, node) {
+  data.forEach((item) => {
+    const element = createFunction(item);
+    renderItems(element, node);
+  });
+}
 
-  const bindEvents = () => {
-    window.addEventListener('wheel', wheelHandler);
-  };
+loadInitialData(conditionsCards, createConditionsCard, scroller);
 
-  const setStickyContainersSize = () => {
-    document.querySelectorAll('.conditions__container').forEach((container) => {
-      const stikyContainerHeight = container.querySelector('.conditions__slider').scrollWidth;
-      container.setAttribute('style', `height: ${stikyContainerHeight}px`);
-    });
-  };
+// Conditions section scroller
+gsap.registerPlugin(ScrollTrigger);
 
-  const init = () => {
-    setStickyContainersSize();
-    bindEvents();
-  };
+const cards = gsap.utils.toArray('.conditions__slide');
 
-  init();
-})();
+gsap.to(cards, {
+  xPercent: -100 * (cards.length - 1),
+  ease: 'none',
+  scrollTrigger: {
+    trigger: '.conditions',
+    start: 'top top',
+    pin: true,
+    scrub: true,
+    snap: 1 / (cards.length - 1),
+    // eslint-disable-next-line prefer-template
+    end: () => '+=' + document.querySelector('.conditions__slider').offsetWidth,
+  },
+});

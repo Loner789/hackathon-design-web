@@ -1,6 +1,6 @@
 .learning {
   margin: 0;
-  padding: 0 0 100px;
+  padding: 0;
   font-family: 'YS Display', Arial, sans-serif;
 
   &__content {
@@ -13,7 +13,7 @@
   &__text-container {
     margin: 0;
     padding: 0;
-    width: 780px;
+    width: 715px;
     min-height: 200px;
     flex-shrink: 0;
   }
@@ -22,7 +22,7 @@
     margin: 0;
     padding: 30px 0 25px;
     width: 100%;
-    min-height: 180px;
+    min-height: 170px;
     display: inline-block;
   }
 
@@ -59,21 +59,22 @@
   }
 
   &__link-button {
-    margin: 100px 0 0;
+    margin: 80px 0 0;
     padding: 15px 50px;
-    width: 415px;
-    height: 75px;
-    font-size: 24px;
+    width: 400px;
+    height: 60px;
+    font-size: 20px;
     font-weight: 500;
-    line-height: 1.5;
+    line-height: 3;
     box-sizing: border-box;
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 100px;
+    border-radius: 8px;
     color: #FFF;
-    background: #000;
+    background: #4F7FDD;
+    ;
   }
 }
 

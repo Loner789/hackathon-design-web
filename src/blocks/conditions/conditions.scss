@@ -1,6 +1,7 @@
 .conditions {
-  padding: 0;
+  padding: 100px 0 0;
   font-family: 'YS Display', Arial, sans-serif;
+  width: 100%;
 
   &__text-container {
     margin: 0;
@@ -10,33 +11,25 @@
 
   &__title {
     margin: 0;
-    padding: 0 0 25px;
+    padding: 0 0 100px;
     width: 100%;
     font-size: 60px;
     font-weight: 700;
     line-height: 1.2;
   }
 
-  &__subtitle {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.4;
-  }
-
   &__slider {
+    margin: 0;
+    padding-left: calc(100% - 120px - 450px);
     overflow-x: hidden;
     display: flex;
-    position: sticky;
-    top: 25vh;
+    list-style: none;
   }
 
   &__slide {
-    margin: 0 30px 0 0;
+    margin: 0;
     min-width: max-content;
-    min-height: 50vh;
+    min-height: 360px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,20 +40,24 @@
   }
 
   &__card {
-    margin: 0;
-    padding: 25px;
-    width: 400px;
-    height: 370px;
-    background: #D9D9D9;
+    margin: 0 30px 0 0;
+    padding: 70px 45px;
+    width: 510px;
+    height: 360px;
+    background: transparent;
     box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
   }
 
   &__card-image {
     margin: 0;
     padding: 0;
-    width: 168px;
-    height: 98px;
-    background: #686868;
+    width: 360px;
+    height: 360px;
+    position: absolute;
+    top: 0;
+    right: 0;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -68,17 +65,47 @@
 
   &__card-title {
     margin: 0;
-    padding: 25px 0 0;
+    padding: 0;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 1.4;
+    font-size: 40px;
+    line-height: 1.2;
+
+    &_side_left {
+      text-align: left;;
+    }
+
+    &_side_right {
+      text-align: right;;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 140px;
+      height: 225px;
+      border-right: 3px solid rgba(133, 133, 133, 0.3);
+      border-bottom: 3px solid rgba(133, 133, 133, 0.3);;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 140px;
+      height: 225px;
+      border-left: 3px solid rgba(133, 133, 133, 0.3);
+      border-top: 3px solid rgba(133, 133, 133, 0.3);;
+    }
   }
 
   &__card-text {
     margin: 0;
-    padding: 15px 0 0;
+    padding: 40px 0 0;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.4;
   }
 }
