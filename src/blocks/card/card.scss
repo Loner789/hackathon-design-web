@@ -1,15 +1,40 @@
 @import '../../utils/styles/constants';
+@import '../../utils/styles/animations.scss';
 
 .card {
   max-width: 590px;
   width: 100%;
-  height: 100%;
   position: relative;
-  box-sizing: border-box;
-  padding-top: 50px;
+
+  .card__text {
+    animation: initial;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.4;
+    margin: 77px 0;
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  .card__text_hidden {
+    display: none;
+  }
 
   .card__description {
     display: none;
+    animation: initial;
+    margin: 45px;
+    padding: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.4;
+    box-sizing: border-box;
+  }
+
+  .card__description_visible {
+    display: block;
   }
 }
 
@@ -22,6 +47,7 @@
   right: 0;
   height: 100%;
   width: 315px;
+  box-sizing: border-box;
 }
 
 .card_place_right-top::before {
@@ -33,6 +59,7 @@
   left: 0;
   height: 100px;
   width: 242px;
+  box-sizing: border-box;
 }
 
 .card_place_right-bottom::after {
@@ -44,6 +71,7 @@
   right: 0;
   height: 100%;
   width: 73px;
+  box-sizing: border-box;
 }
 
 .card_place_right-bottom::before {
@@ -55,6 +83,7 @@
   left: 0;
   height: 76px;
   width: 73px;
+  box-sizing: border-box;
 }
 
 .card_place_left-top::after {
@@ -66,6 +95,7 @@
   right: 0;
   height: 100%;
   width: 233px;
+  box-sizing: border-box;
 }
 
 .card_place_left-top::before {
@@ -77,6 +107,7 @@
   left: 0;
   height: 162px;
   width: 125px;
+  box-sizing: border-box;
 }
 
 .card_place_left-bottom::after {
@@ -88,6 +119,7 @@
   right: 0;
   height: 134px;
   width: 42px;
+  box-sizing: border-box;
 }
 
 .card_place_left-bottom::before {
@@ -99,6 +131,7 @@
   left: 0;
   height: 100%;
   width: 259px;
+  box-sizing: border-box;
 }
 
 .card_place_second-right-top::after {
@@ -110,6 +143,7 @@
   right: 0;
   height: 57px;
   width: 286px;
+  box-sizing: border-box;
 }
 
 .card_place_second-right-top::before {
@@ -121,6 +155,7 @@
   left: 0;
   height: 78px;
   width: 259px;
+  box-sizing: border-box;
 }
 
 .card_place_second-right-bottom::after {
@@ -132,6 +167,7 @@
   right: 0;
   height: 109px;
   width: 252px;
+  box-sizing: border-box;
 }
 
 .card_place_second-right-bottom::before {
@@ -143,6 +179,7 @@
   left: 0;
   height: 44px;
   width: 342px;
+  box-sizing: border-box;
 }
 
 .card_place_second-left-top::after {
@@ -154,6 +191,7 @@
   right: 0;
   height: 100%;
   width: 315px;
+  box-sizing: border-box;
 }
 
 .card_place_second-left-top::before {
@@ -165,6 +203,7 @@
   left: 0;
   height: 100px;
   width: 242px;
+  box-sizing: border-box;
 }
 
 .card_place_second-left-bottom::after {
@@ -176,6 +215,7 @@
   right: 0;
   height: 100%;
   width: 73px;
+  box-sizing: border-box;
 }
 
 .card_place_second-left-bottom::before {
@@ -187,4 +227,29 @@
   left: 0;
   height: 76px;
   width: 73px;
+  box-sizing: border-box;
+}
+
+/* .card_line-bottom::after {
+  content: '';
+  width: 467px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: $cardBorder;
+  box-sizing: border-box;
+} */
+
+.card_hover-over {
+  cursor: pointer;
+  animation: .3s linear flipIn;
+  background-color: $blueBackground;
+  color: $lightText;
+}
+
+.card_hover-over::after, .card_hover-over::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border: none;
 }

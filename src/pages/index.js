@@ -2,6 +2,8 @@
 import './index.scss';
 
 const videoElement = document.querySelector('.video');
+const advantages = document.querySelector('.advantages');
+const cardAdvantagesList = advantages.querySelectorAll('.card')
 
 const parseURL = (link) => {
   const regexp = /https:\/\/www\.youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/i;
@@ -45,3 +47,44 @@ const setupVideo = (video) => {
 };
 
 setupVideo(videoElement);
+
+cardAdvantagesList.forEach((el) => {
+  /* const classList = el.classList;
+
+  console.log(classList) */
+
+  el.addEventListener('mouseover', (evt) => {
+    // eslint-disable-next-line prefer-destructuring
+    const target = evt.target;
+    const text = target.querySelector('.card__text');
+    const description = target.querySelector('.card__description');
+
+    //console.log(text)
+
+    target.classList.add('card_hover-over');
+    text.classList.add('card__text_hidden');
+    description.classList.add('card__description_visible');
+
+
+
+    //console.log(target)
+  });
+
+  el.addEventListener('mouseout', (evt) => {
+    // eslint-disable-next-line prefer-destructuring
+    const target = evt.target;
+    const text = target.querySelector('.card__text');
+    const description = target.querySelector('.card__description');
+
+    //console.log(text)
+
+    target.classList.remove('card_hover-over');
+    target.classList.remove('card_hover-out');
+    text.classList.remove('card__text_hidden');
+    description.classList.remove('card__description_visible');
+
+
+
+    //console.log(target)
+  });
+});
