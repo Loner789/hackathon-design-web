@@ -3,10 +3,8 @@ import './index.scss';
 import SuccessStoryCard from '../components/SuccessStoryCard';
 import SuccessStoryVideo from '../components/SuccessStoryVideo';
 import Section from '../components/Section';
+import PopupWithVideo from '../components/PopupWithVideo';
 import { successStoriesText, successStoriesVideo } from '../utils/initial-data';
-
-/* const buttonArrowRight = document.querySelector('.button-arrow-right');
-const buttonArrowLeft = document.querySelector('.button-arrow-left'); */
 
 const createSuccessStoryCard = (data) => {
   const сardsList = new Section(
@@ -26,13 +24,19 @@ const createSuccessStoryCard = (data) => {
 
 createSuccessStoryCard(successStoriesText);
 
+const popupWithVideo = new PopupWithVideo('#video-popup');
+popupWithVideo.setEventListeners();
+
 const createSuccessStoryVideo = (data) => {
   const videoList = new Section(
     {
       items: data,
       // eslint-disable-next-line arrow-parens
       renderer: item => {
-        const elementVideo = new SuccessStoryVideo(item, '.success-story-video', '#template-success-story-video');
+        const handleClickVideo = () => {
+          popupWithVideo.open(item);
+        };
+        const elementVideo = new SuccessStoryVideo(item, '.success-story-video', '#template-success-story-video', handleClickVideo);
         return elementVideo.generateElementCard();
       },
     },
@@ -43,45 +47,3 @@ const createSuccessStoryVideo = (data) => {
 };
 
 createSuccessStoryVideo(successStoriesVideo);
-
-/* const addAnimationToImg = (nextCard) => {
-  const img = nextCard.querySelector('.success-story-text__photo');
-  if (!img.classList.contains('success-story-text__photo_animation')) {
-    img.classList.add('success-story-text__photo_animation');
-  }
-}; */
-/*
-const handleClickOnArrowRight = () => {
-  const visibleCard = document.querySelector('.success-story-text_visible');
-  const currentId = Number(visibleCard.getAttribute('id'));
-  const nextId = currentId + 1;
-  const nextCard = document.getElementById(nextId);
-  buttonArrowLeft.removeAttribute('disabled');
-  addAnimationToImg(nextCard);
-
-  if (nextId < successStoriesText.length) {
-    visibleCard.classList.remove('success-story-text_visible');
-    nextCard.classList.add('success-story-text_visible');
-  }
-
-  if (nextId === successStoriesText.length - 1) buttonArrowRight.setAttribute('disabled', true);
-};
-
-const handleClickOnArrowLeft = () => {
-  const visibleCard = document.querySelector('.success-story-text_visible');
-  const currentId = Number(visibleCard.getAttribute('id'));
-  const nextId = currentId - 1;
-  const nextCard = document.getElementById(nextId);
-  buttonArrowRight.removeAttribute('disabled');
-  addAnimationToImg(nextCard);
-
-  if (nextId >= 0) {
-    visibleCard.classList.remove('success-story-text_visible');
-    nextCard.classList.add('success-story-text_visible');
-  }
-
-  if (nextId < 0) buttonArrowLeft.setAttribute('disabled', true);
-};
-
-buttonArrowRight.addEventListener('click', handleClickOnArrowRight);
-buttonArrowLeft.addEventListener('click', handleClickOnArrowLeft); */

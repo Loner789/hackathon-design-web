@@ -3,6 +3,7 @@
 @import url(../vendor/fonts.css);
 
 @import '../blocks/section-title/section-title.scss';
+@import '../blocks/button-close/button-close.scss';
 
 /* success-stories */
 @import '../blocks/success-stories/success-stories.scss';
@@ -13,3 +14,5 @@
 
 /* video-button */
 @import '../blocks/video-button/video-button.scss';
+
+@import '../blocks/popup/popup.scss';
