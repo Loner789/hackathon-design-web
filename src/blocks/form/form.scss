@@ -7,7 +7,7 @@
 
   .form__label {
     width: 100%;
-    margin-top: 47px;
+    margin-top: 23px;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -39,7 +39,7 @@
   }
 
   .form__label_place_textarea {
-    margin-top: 20px;
+    margin-top: 0;
   }
 
   .form__item_textarea {
@@ -51,11 +51,14 @@
   }
 
   .form__label_place_url {
-    margin-top: 40px;
+    margin-top: 0;
   }
 
   .form__label_place_checkbox {
-    margin-top: 20px;
+    margin-top: 0;
+  }
+
+  .form__label-text_checkbox {
     display: grid;
     grid-template-columns: 20px calc(100% - 20px);
     width: 100%;
@@ -63,10 +66,27 @@
   }
 
   .form__item_checkbox {
-    width: 20px;
-    height: 20px;
+    z-index: -1;
+    opacity: 0;
+    position: absolute;
+  }
+
+  .form__label-text_checkbox::before {
+    content: '';
+    display: inline-block;
     border: 1px solid rgba(133, 133, 133, 0.3);
     border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    opacity: 1;
+  }
+
+  .form__item_checkbox:checked + .form__label-text_checkbox::before {
+    border: 1px solid #37935B;
+    background-image: url(../images/custom-checkbox.png);
   }
 
   .form__item {
@@ -125,13 +145,20 @@
     text-decoration: none;
   }
 
-  .form__error_active {
+  .error-text {
+    visibility: hidden;
     font-family: 'YS Text';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 2;
     color: #FF3B30;
+    position: relative;
+    min-block-size: 24px;
+  }
+
+  .form__error_active {
+    visibility: visible;
   }
 
   .form__item_type_error {

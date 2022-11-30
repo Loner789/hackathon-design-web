@@ -40,5 +40,10 @@
 
   .duties__button:hover {
     cursor: pointer;
+    background-color: #2B68DE;
+  }
+
+  .duties__button:focus {
+    background-color: #00308C;
   }
 }
