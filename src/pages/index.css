@@ -659,13 +659,15 @@
 }
 
 .video-button {
-  /* ToDo: fix background-image
-  background-image: url(../../images/button-play-video.svg); */
+  background-image: url(../images/button-play-video.png);
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
   padding: 0;
   position: absolute;
+  width: 120px;
+  height: 120px;
+  display: block;
 }
 
 .video-button_place_success-story {
@@ -673,6 +675,7 @@
   height: 80px;
   bottom: 40px;
   right: 40px;
+  background-size: cover;
 }
 
 .video-button_place_advantages {
@@ -760,15 +763,6 @@
   box-sizing: border-box;
   padding: 0;
 }
-.position .position__mentor {
-  position: absolute;
-  width: 295px;
-  height: 295px;
-  bottom: 0;
-  right: 0;
-  display: block;
-  box-sizing: border-box;
-}
 .position .position__reviewer {
   position: absolute;
   width: 295px;
@@ -843,10 +837,25 @@
   box-sizing: border-box;
 }
 
+.position_mentor {
+  background: url(../images/block3-mentor-vector.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+
+.position_reviewer {
+  background: url(../images/block3-reviewer-vector.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+
 .position:hover {
   cursor: pointer;
   background-color: #4F7FDD;
   color: #fff;
+  background-image: none;
 }
 .position:hover .position__task {
   color: #fff;
@@ -1022,8 +1031,8 @@
   display: block;
   width: 32px;
   height: 32px;
-  /*ToDo: change tag to background
-  background-image: url(../../images/button-close-popup.svg);*/
+  background-image: url(../images/button-close-popup.svg);
+  background-repeat: no-repeat;
   background-color: transparent;
   box-sizing: border-box;
   border: none;
@@ -1033,6 +1042,10 @@
   top: 15px;
   right: 15px;
   background-size: contain;
+}
+
+.button-close_place_video-popup {
+  filter: invert(1);
 }
 
 .button-close:hover {
@@ -1236,13 +1249,15 @@
 }
 
 .video-button {
-  /* ToDo: fix background-image
-  background-image: url(../../images/button-play-video.svg); */
+  background-image: url(../images/button-play-video.png);
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
   padding: 0;
   position: absolute;
+  width: 120px;
+  height: 120px;
+  display: block;
 }
 
 .video-button_place_success-story {
@@ -1250,6 +1265,7 @@
   height: 80px;
   bottom: 40px;
   right: 40px;
+  background-size: cover;
 }
 
 .video-button_place_advantages {
@@ -2009,8 +2025,8 @@
   display: block;
   width: 32px;
   height: 32px;
-  /*ToDo: change tag to background
-  background-image: url(../../images/button-close-popup.svg);*/
+  background-image: url(../images/button-close-popup.svg);
+  background-repeat: no-repeat;
   background-color: transparent;
   box-sizing: border-box;
   border: none;
@@ -2020,6 +2036,10 @@
   top: 15px;
   right: 15px;
   background-size: contain;
+}
+
+.button-close_place_video-popup {
+  filter: invert(1);
 }
 
 .button-close:hover {

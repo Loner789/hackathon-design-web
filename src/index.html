@@ -41,7 +41,7 @@
     <section class="duties">
       <h2 class="section-title section-title_place_duties">Предлагаем различные задачи</h2>
       <ul class="duties__list-of-positions">
-        <li class="position position_line_top-right">
+        <li class="position position_line_top-right position_mentor">
           <div class="position__border_line_left-top"></div>
           <h3 class="position__title">Наставник</h3>
           <ul class="position__list-of-tasks">
@@ -50,10 +50,8 @@
             <li class="position__task">Отвечает на вопросы студентов в чате.</li>
             <li class="position__task">Помогает студентам ставить цели и достигать их.</li>
           </ul>
-          <!-- ToDo: change tag img to background -->
-          <img class="position__mentor" src="<%=require('./images/block3-mentor-vector.png')%>" alt="Иконка наставник">
         </li>
-        <li class="position position_line_left">
+        <li class="position position_line_left position_reviewer">
           <div class="position__border_line_right-top"></div>
           <h3 class="position__title">Ревьюер</h3>
           <ul class="position__list-of-tasks">
@@ -62,9 +60,6 @@
             <li class="position__task">Даёт корректирующую обратную связь.</li>
             <li class="position__task">Оценивает работы и ставит зачёты.</li>
           </ul>
-          <!-- ToDo: change tag img to background -->
-          <img class="position__reviewer" src="<%=require('./images/block3-reviewer-vector.png')%>"
-            alt="Иконка ревьюер">
         </li>
       </ul>
       <a href="#vacancies" class="duties__button">Отправить резюме</a>
@@ -125,8 +120,6 @@
             </a>
             <button type="button" class="video-button video-button_place_advantages"
               aria-label="Кнопка воспроизвести видео">
-              <!-- ToDo: change teg img to background-image of the button -->
-              <img src="<%=require('./images/button-play-video.png')%>" alt="Кнопка воспроизвести видео">
             </button>
           </div>
         </div>
@@ -973,14 +966,10 @@
           <!-- ToDo: srcset? -->
           <img class="video-story__image">
         </a>
-        <!-- ToDo: common class of the button -->
         <button type="button" class="video-button video-button_place_success-story"
           aria-label="Кнопка воспроизвести видео">
-          <!-- ToDo: change teg img to background-image of the button -->
-          <img src="<%=require('./images/button-play-video.png')%>" alt="Кнопка воспроизвести видео">
         </button>
       </div>
-      <!-- ToDo: check header number" -->
       <h3 class="success-story-title success-story-title_place_video"></h3>
       <p class="success-story-subtitle success-story-subtitle_place_video"></p>
     </li>
@@ -989,9 +978,8 @@
   <!-- VIDEO POPUP -->
   <section class="popup popup_background_opacity" id="video-popup">
     <div class="popup__container">
-      <button type="button" class="button-close" aria-label="Кнопка закрыть">
-        <!-- ToDo: change teg img to background-image of the button-->
-        <img src="<%=require('./images/button-close-popup.svg')%>" alt="Кнопка закрыть">
+      <button type="button" class="button-close button-close_place_video-popup"
+        aria-label="Кнопка закрыть">
       </button>
     </div>
   </section>
@@ -999,10 +987,7 @@
   <!-- POPUP WITH FORM -->
   <section class="popup popup_background_opacity" id="popup-with-form">
     <div class="popup__container">
-      <button type="button" class="button-close" aria-label="Кнопка закрыть">
-        <!-- ToDo: change teg img to background-image of the button-->
-        <img src="<%=require('./images/button-close-popup.svg')%>" alt="Кнопка закрыть">
-      </button>
+      <button type="button" class="button-close" aria-label="Кнопка закрыть"></button>
 
       <!-- ToDo: the title must be taken from the vacancy -->
       <h2 class="popup__title">Хочу быть ревьюером на факультете анализа данных или Data Science</h2>
@@ -1060,7 +1045,6 @@
         <h2 class="success__title">Спасибо, мы получили ваше резюме!</h2>
         <p class="success__text">Мы свяжемся с вами как только всё проверим. Обычно это 2 — 3 дня.</p>
         <a href="#" class="popup__button popup__button_place_success">Вернуться на сайт</a>
-        <!-- ToDo: change teg img to background -->
         <img class="success__vector success__vector_left" src="<%=require('./images/popup-vector-success.png')%>" alt="Векторная графика - успешная отправка формы">
         <img class="success__vector success__vector_right" src="<%=require('./images/popup-vector-success.png')%>" alt="Векторная графика - успешная отправка формы">
       </div>

@@ -2,8 +2,8 @@
   display: block;
   width: 32px;
   height: 32px;
-  /*ToDo: change tag to background
-  background-image: url(../../images/button-close-popup.svg);*/
+  background-image: url(../images/button-close-popup.svg);
+  background-repeat: no-repeat;
   background-color: transparent;
   box-sizing: border-box;
   border: none;
@@ -13,6 +13,10 @@
   top: 15px;
   right: 15px;
   background-size: contain;
+}
+
+.button-close_place_video-popup {
+  filter: invert(1);
 }
 
 .button-close:hover {
