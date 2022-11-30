@@ -16,29 +16,34 @@
     <section class="learning"></section>
     <section class="conditions"></section>
     <section class="duties">
+      <h2 class="section-title section-title_place_duties">Предлагаем различные задачи</h2>
       <ul class="duties__list-of-positions">
-        <li class="position position_dark">
-          <!-- ToDo: check heading number (h1 - main, h2 - section heading, h2 - heading in a section) -->
-          <h3 class="position__title">Что делает наставник:</h3>
+        <li class="position position_line_top-right">
+          <div class="position__border_line_left-top"></div>
+          <h3 class="position__title">Наставник</h3>
           <ul class="position__list-of-tasks">
             <li class="position__task">Проводит вебинары, даёт обратную связь.</li>
             <li class="position__task">Делиться опытом и мотивирует.</li>
             <li class="position__task">Отвечает на вопросы студентов в чате.</li>
             <li class="position__task">Помогает студентам ставить цели и достигать их.</li>
           </ul>
+          <!-- ToDo: change tag img to background -->
+          <img class="position__mentor" src="<%=require('./images/block3-mentor-vector.png')%>" alt="Иконка наставник">
         </li>
-        <li class="position">
-          <!-- ToDo: check heading number (h1 - main, h2 - section heading, h2 - heading in a section) -->
-          <h3 class="position__title">А что ревьюер:</h3>
+        <li class="position position_line_left">
+          <div class="position__border_line_right-top"></div>
+          <h3 class="position__title">Ревьюер</h3>
           <ul class="position__list-of-tasks">
             <li class="position__task">Проверяет код и проекты студентов.</li>
             <li class="position__task">Объясняет простыми словами ошибки.</li>
             <li class="position__task">Даёт корректирующую обратную связь.</li>
             <li class="position__task">Оценивает работы и ставит зачёты.</li>
           </ul>
+          <!-- ToDo: change tag img to background -->
+          <img class="position__reviewer" src="<%=require('./images/block3-reviewer-vector.png')%>" alt="Иконка ревьюер">
         </li>
       </ul>
-      <a href="#vacancies" class="duties__button">Присоединиться к команде</a>
+      <a href="#vacancies" class="duties__button">Отправить резюме</a>
     </section>
     <section class="advantages"></section>
     <section class="vacancies" id="vacancies"></section>

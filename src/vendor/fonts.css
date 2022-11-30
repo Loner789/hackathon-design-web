@@ -21,8 +21,8 @@
   font-style: normal;
   font-display: swap;
   src: local('YS Display'),
-    url(../vendor/ys-display/YS-Display-Bold.ttf) format('ttf');
-  font-weight: 700;
+    url(../vendor/ys-display/YS-Display-Medium.ttf) format('ttf');
+  font-weight: 500;
 }
 
 @font-face {
