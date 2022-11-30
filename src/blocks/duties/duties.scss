@@ -1,0 +1,44 @@
+@import '../../utils/styles/constants';
+
+.duties {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  font-family: 'YS Display', Arial, sans-serif;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  .duties__list-of-positions {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 100px 0 0;
+    padding: 0;
+    list-style-type: none;
+    column-gap: 20px;
+  }
+
+  .duties__button {
+    text-decoration: none;
+    color: $lightText;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.4;
+    border: none;
+    box-sizing: border-box;
+    width: 400px;
+    text-align: center;
+    margin-top: 60px;
+    background: #4F7FDD;
+    border-radius: 8px;
+    width: 330px;
+    padding: 10px 0;
+  }
+
+  .duties__button:hover {
+    cursor: pointer;
+  }
+}

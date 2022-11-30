@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" content="вакансии, эксперт сопровождения, работа в яндекс, наставник, ревьюер, работа парт-тайм, обучающие курсы">
+  <meta name="keywords"
+    content="вакансии, эксперт сопровождения, работа в яндекс, наставник, ревьюер, работа парт-тайм, обучающие курсы">
   <title>Яндекс Практикум</title>
   <link rel="icon" href="<%=require('./images/yandex-logo.svg')%>">
 </head>
@@ -15,7 +16,37 @@
   <main class="content">
     <section class="learning"></section>
     <section class="conditions"></section>
-    <section class="duties"></section>
+    <section class="duties">
+      <h2 class="section-title section-title_place_duties">Предлагаем различные задачи</h2>
+      <ul class="duties__list-of-positions">
+        <li class="position position_line_top-right">
+          <div class="position__border_line_left-top"></div>
+          <h3 class="position__title">Наставник</h3>
+          <ul class="position__list-of-tasks">
+            <li class="position__task">Проводит вебинары, даёт обратную связь.</li>
+            <li class="position__task">Делиться опытом и мотивирует.</li>
+            <li class="position__task">Отвечает на вопросы студентов в чате.</li>
+            <li class="position__task">Помогает студентам ставить цели и достигать их.</li>
+          </ul>
+          <!-- ToDo: change tag img to background -->
+          <img class="position__mentor" src="<%=require('./images/block3-mentor-vector.png')%>" alt="Иконка наставник">
+        </li>
+        <li class="position position_line_left">
+          <div class="position__border_line_right-top"></div>
+          <h3 class="position__title">Ревьюер</h3>
+          <ul class="position__list-of-tasks">
+            <li class="position__task">Проверяет код и проекты студентов.</li>
+            <li class="position__task">Объясняет простыми словами ошибки.</li>
+            <li class="position__task">Даёт корректирующую обратную связь.</li>
+            <li class="position__task">Оценивает работы и ставит зачёты.</li>
+          </ul>
+          <!-- ToDo: change tag img to background -->
+          <img class="position__reviewer" src="<%=require('./images/block3-reviewer-vector.png')%>"
+            alt="Иконка ревьюер">
+        </li>
+      </ul>
+      <a href="#vacancies" class="duties__button">Отправить резюме</a>
+    </section>
     <section class="advantages">
       <h2 class="section-title section-title_place_advantages">Предоставляем возможности</h2>
       <div class="advantages-container">
@@ -143,11 +174,729 @@
       </div>
 
     </section>
-    <section class="vacancies"></section>
-    <section class="success-stories"></section>
-    <section class="faq"></section>
+    <section id="vacancies" class="vacancies">
+      <div class="vacanсies__container">
+        <ul class="vacancies__education-menu">
+          <li class="vacancies__menu-item">
+            <button class="vacancies__btn-menu" type="button" id="disign">Дизайн</button>
+          </li>
+          <li class="vacancies__menu-item">
+            <button class="vacancies__btn-menu vacancies__btn-menu_active" type="button" id="programming">Программирование</button>
+          </li>
+          <li class="vacancies__menu-item">
+            <button class="vacancies__btn-menu" type="button" id="analitics">Аналитика</button>
+          </li>
+          <li class="vacancies__menu-item">
+            <button class="vacancies__btn-menu" type="button" id="marketing">Маркетинг</button>
+          </li>
+          <li class="vacancies__menu-item">
+            <button class="vacancies__btn-menu" type="button" id="management">Менеджмент</button>
+          </li>
+        </ul>
+        <div class="vacancies__info">
+          <ul class="vacancies__prophecy-menu">
+            <li class="vacancies__prophecy-item">
+              <button class="vacancies__proph-btn-menu vacancies__proph-btn-menu_active" type="button" id="sensey">Наставник</button>
+            </li>
+            <li class="vacancies__prophecy-item">
+              <button class="vacancies__proph-btn-menu" type="button" id="reviewer">Ревьюер</button>
+            </li>
+          </ul>
+          <div id="no-vac-available" class="vacancies__novac-wrapper">
+            <p class="vacancies__no-vac-text">К&nbsp;сожалению, пока вакансий по&nbsp;этому направлению нет. Не&nbsp;расстраивайтесь! Нам всё-равно интересно познакомиться. На&nbsp;будущее.</p>
+            <button class="vacancies__send-btn">Отправить резюме</button>
+          </div>
+          <ul id="sensey-gallary-prog" class="vacancies__gallery vacancies__gallery_active">
+            <li class="vacancies__gallery-item">
+              <div class="vacancies__gallery-wrapper">
+                <button class="vacancies__name" type="button" id="java-dev-sen">Наставник Java-разработчик</button>
+                <p class="vacancies__salary">от 55 тысяч рублей</p>
+              </div>
+              <div class="vacancies__line"></div>
+              <div class="vacancies__description" id="java-dev-description">
+                <p class="vacancies__work-time">5-6 часов в неделю</p>
+                <h2 class="vacancies__req-title">Требования</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">опыт разработки на Java от двух лет</li>
+                  <li class="vacancies__req-item">опыт со Spring, Spring Boot</li>
+                  <li class="vacancies__req-item">опыт базами данных и Hibenate</li>
+                  <li class="vacancies__req-item">знаете алгоритмы на базовом уровне</li>
+                  <li class="vacancies__req-item">любите делиться знаниями</li>
+                </ul>
+                <h2 class="vacancies__req-title">Что предстоит делать</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">помогать студентам на протяжении 9 месяцев (учебный цикл)</li>
+                  <li class="vacancies__req-item">отвечать на вопросы и помогать с трудностями</li>
+                  <li class="vacancies__req-item">курировать группу численностью от 60 человек</li>
+                  <li class="vacancies__req-item">общаться с ними в Slack</li>
+                  <li class="vacancies__req-item">проводить групповые и индивидуальные занятия</li>
+                </ul>
+                <div class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
+                  <button class="vacancies__send-btn">Отправить резюме</button>
+                  <button class="vacancies__share-btn"></button>
+                </div>
+              </div>
+            </li>
+            <li class="vacancies__gallery-item">
+              <div class="vacancies__gallery-wrapper">
+                <button class="vacancies__name vacancies__name_active" type="button" id="C++dev-sen">Наставник на курс “Разработчик С++”</button>
+                <p class="vacancies__salary">от 65 тысяч рублей</p>
+              </div>
+              <div class="vacancies__line"></div>
+              <div class="vacancies__description" id="java-dev-description">
+                <p class="vacancies__work-time">5-6 часов в неделю</p>
+                <h2 class="vacancies__req-title">Требования</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">опыт разработки на Java от двух лет</li>
+                  <li class="vacancies__req-item">опыт со Spring, Spring Boot</li>
+                  <li class="vacancies__req-item">опыт базами данных и Hibenate</li>
+                  <li class="vacancies__req-item">знаете алгоритмы на базовом уровне</li>
+                  <li class="vacancies__req-item">любите делиться знаниями</li>
+                </ul>
+                <h2 class="vacancies__req-title">Что предстоит делать</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">помогать студентам на протяжении 9 месяцев (учебный цикл)</li>
+                  <li class="vacancies__req-item">отвечать на вопросы и помогать с трудностями</li>
+                  <li class="vacancies__req-item">курировать группу численностью от 60 человек</li>
+                  <li class="vacancies__req-item">общаться с ними в Slack</li>
+                  <li class="vacancies__req-item">проводить групповые и индивидуальные занятия</li>
+                </ul>
+                <div class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
+                  <button class="vacancies__send-btn">Отправить резюме</button>
+                  <button class="vacancies__share-btn"></button>
+                </div>
+              </div>
+            </li>
+            <li class="vacancies__gallery-item">
+              <div class="vacancies__gallery-wrapper">
+                <button class="vacancies__name vacancies__name_active" type="button" id="python-dev-sen">Наставник на курс “Pyton-разработчик”</button>
+                <p class="vacancies__salary">от 45 тысяч рублей</p>
+              </div>
+              <div class="vacancies__line"></div>
+              <div class="vacancies__description" id="java-dev-description">
+                <p class="vacancies__work-time">5-6 часов в неделю</p>
+                <h2 class="vacancies__req-title">Требования</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">опыт разработки на Java от двух лет</li>
+                  <li class="vacancies__req-item">опыт со Spring, Spring Boot</li>
+                  <li class="vacancies__req-item">опыт базами данных и Hibenate</li>
+                  <li class="vacancies__req-item">знаете алгоритмы на базовом уровне</li>
+                  <li class="vacancies__req-item">любите делиться знаниями</li>
+                </ul>
+                <h2 class="vacancies__req-title">Что предстоит делать</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">помогать студентам на протяжении 9 месяцев (учебный цикл)</li>
+                  <li class="vacancies__req-item">отвечать на вопросы и помогать с трудностями</li>
+                  <li class="vacancies__req-item">курировать группу численностью от 60 человек</li>
+                  <li class="vacancies__req-item">общаться с ними в Slack</li>
+                  <li class="vacancies__req-item">проводить групповые и индивидуальные занятия</li>
+                </ul>
+                <div class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
+                  <button class="vacancies__send-btn">Отправить резюме</button>
+                  <button class="vacancies__share-btn"></button>
+                </div>
+              </div>
+            </li>
+            <li class="vacancies__gallery-item">
+              <div class="vacancies__gallery-wrapper">
+                <button class="vacancies__name vacancies__name_active" type="button" id="ios-dev-sen">Наставник на курс “IOS-разработчик”</button>
+                <p class="vacancies__salary">от 65 тысяч рублей</p>
+              </div>
+              <div class="vacancies__line"></div>
+              <div class="vacancies__description" id="java-dev-description">
+                <p class="vacancies__work-time">5-6 часов в неделю</p>
+                <h2 class="vacancies__req-title">Требования</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">опыт разработки на Java от двух лет</li>
+                  <li class="vacancies__req-item">опыт со Spring, Spring Boot</li>
+                  <li class="vacancies__req-item">опыт базами данных и Hibenate</li>
+                  <li class="vacancies__req-item">знаете алгоритмы на базовом уровне</li>
+                  <li class="vacancies__req-item">любите делиться знаниями</li>
+                </ul>
+                <h2 class="vacancies__req-title">Что предстоит делать</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">помогать студентам на протяжении 9 месяцев (учебный цикл)</li>
+                  <li class="vacancies__req-item">отвечать на вопросы и помогать с трудностями</li>
+                  <li class="vacancies__req-item">курировать группу численностью от 60 человек</li>
+                  <li class="vacancies__req-item">общаться с ними в Slack</li>
+                  <li class="vacancies__req-item">проводить групповые и индивидуальные занятия</li>
+                </ul>
+                <div class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
+                  <button class="vacancies__send-btn">Отправить резюме</button>
+                  <button class="vacancies__share-btn"></button>
+                </div>
+              </div>
+            </li>
+            <li class="vacancies__gallery-item">
+              <div class="vacancies__gallery-wrapper">
+                <button class="vacancies__name vacancies__name_active" type="button" id="go-dev-sen">Наставник на курс “Go-разработчик”</button>
+                <p class="vacancies__salary">от 45 тысяч рублей</p>
+              </div>
+              <div class="vacancies__line"></div>
+              <div class="vacancies__description" id="java-dev-description">
+                <p class="vacancies__work-time">5-6 часов в неделю</p>
+                <h2 class="vacancies__req-title">Требования</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">опыт разработки на Java от двух лет</li>
+                  <li class="vacancies__req-item">опыт со Spring, Spring Boot</li>
+                  <li class="vacancies__req-item">опыт базами данных и Hibenate</li>
+                  <li class="vacancies__req-item">знаете алгоритмы на базовом уровне</li>
+                  <li class="vacancies__req-item">любите делиться знаниями</li>
+                </ul>
+                <h2 class="vacancies__req-title">Что предстоит делать</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">помогать студентам на протяжении 9 месяцев (учебный цикл)</li>
+                  <li class="vacancies__req-item">отвечать на вопросы и помогать с трудностями</li>
+                  <li class="vacancies__req-item">курировать группу численностью от 60 человек</li>
+                  <li class="vacancies__req-item">общаться с ними в Slack</li>
+                  <li class="vacancies__req-item">проводить групповые и индивидуальные занятия</li>
+                </ul>
+                <div class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
+                  <button class="vacancies__send-btn">Отправить резюме</button>
+                  <button class="vacancies__share-btn"></button>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul id="reviewer-gallary-prog" class="vacancies__gallery">
+            <li class="vacancies__gallery-item">
+              <div class="vacancies__gallery-wrapper">
+                <button class="vacancies__name" type="button" id="java-dev-rev">Ревьюер Java</button>
+                <p class="vacancies__salary">от 55 тысяч рублей</p>
+              </div>
+              <div class="vacancies__line"></div>
+              <div class="vacancies__description" id="java-dev-description">
+                <p class="vacancies__work-time">5-6 часов в неделю</p>
+                <h2 class="vacancies__req-title">Требования</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">опыт разработки на Java от двух лет</li>
+                  <li class="vacancies__req-item">опыт со Spring, Spring Boot</li>
+                  <li class="vacancies__req-item">опыт базами данных и Hibenate</li>
+                  <li class="vacancies__req-item">знаете алгоритмы на базовом уровне</li>
+                  <li class="vacancies__req-item">любите делиться знаниями</li>
+                </ul>
+                <h2 class="vacancies__req-title">Что предстоит делать</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">помогать студентам на протяжении 9 месяцев (учебный цикл)</li>
+                  <li class="vacancies__req-item">отвечать на вопросы и помогать с трудностями</li>
+                  <li class="vacancies__req-item">курировать группу численностью от 60 человек</li>
+                  <li class="vacancies__req-item">общаться с ними в Slack</li>
+                  <li class="vacancies__req-item">проводить групповые и индивидуальные занятия</li>
+                </ul>
+                <div class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
+                  <button class="vacancies__send-btn">Отправить резюме</button>
+                  <button class="vacancies__share-btn"></button>
+                </div>
+              </div>
+            </li>
+            <li class="vacancies__gallery-item">
+              <div class="vacancies__gallery-wrapper">
+                <button class="vacancies__name vacancies__name_active" type="button" id="C++dev-rev">Ревьюер на курс “Разработчик С++”</button>
+                <p class="vacancies__salary">от 65 тысяч рублей</p>
+              </div>
+              <div class="vacancies__line"></div>
+              <div class="vacancies__description" id="java-dev-description">
+                <p class="vacancies__work-time">5-6 часов в неделю</p>
+                <h2 class="vacancies__req-title">Требования</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">опыт разработки на Java от двух лет</li>
+                  <li class="vacancies__req-item">опыт со Spring, Spring Boot</li>
+                  <li class="vacancies__req-item">опыт базами данных и Hibenate</li>
+                  <li class="vacancies__req-item">знаете алгоритмы на базовом уровне</li>
+                  <li class="vacancies__req-item">любите делиться знаниями</li>
+                </ul>
+                <h2 class="vacancies__req-title">Что предстоит делать</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">помогать студентам на протяжении 9 месяцев (учебный цикл)</li>
+                  <li class="vacancies__req-item">отвечать на вопросы и помогать с трудностями</li>
+                  <li class="vacancies__req-item">курировать группу численностью от 60 человек</li>
+                  <li class="vacancies__req-item">общаться с ними в Slack</li>
+                  <li class="vacancies__req-item">проводить групповые и индивидуальные занятия</li>
+                </ul>
+                <div class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
+                  <button class="vacancies__send-btn">Отправить резюме</button>
+                  <button class="vacancies__share-btn"></button>
+                </div>
+              </div>
+            </li>
+            <li class="vacancies__gallery-item">
+              <div class="vacancies__gallery-wrapper">
+                <button class="vacancies__name vacancies__name_active" type="button" id="python-dev-rev">Ревьюер на курс “Pyton-разработчик”</button>
+                <p class="vacancies__salary">от 45 тысяч рублей</p>
+              </div>
+              <div class="vacancies__line"></div>
+              <div class="vacancies__description" id="java-dev-description">
+                <p class="vacancies__work-time">5-6 часов в неделю</p>
+                <h2 class="vacancies__req-title">Требования</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">опыт разработки на Java от двух лет</li>
+                  <li class="vacancies__req-item">опыт со Spring, Spring Boot</li>
+                  <li class="vacancies__req-item">опыт базами данных и Hibenate</li>
+                  <li class="vacancies__req-item">знаете алгоритмы на базовом уровне</li>
+                  <li class="vacancies__req-item">любите делиться знаниями</li>
+                </ul>
+                <h2 class="vacancies__req-title">Что предстоит делать</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">помогать студентам на протяжении 9 месяцев (учебный цикл)</li>
+                  <li class="vacancies__req-item">отвечать на вопросы и помогать с трудностями</li>
+                  <li class="vacancies__req-item">курировать группу численностью от 60 человек</li>
+                  <li class="vacancies__req-item">общаться с ними в Slack</li>
+                  <li class="vacancies__req-item">проводить групповые и индивидуальные занятия</li>
+                </ul>
+                <div class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
+                  <button class="vacancies__send-btn">Отправить резюме</button>
+                  <button class="vacancies__share-btn"></button>
+                </div>
+              </div>
+            </li>
+            <li class="vacancies__gallery-item">
+              <div class="vacancies__gallery-wrapper">
+                <button class="vacancies__name vacancies__name_active" type="button" id="ios-dev-rev">Ревьюер на курс “IOS-разработчик”</button>
+                <p class="vacancies__salary">от 65 тысяч рублей</p>
+              </div>
+              <div class="vacancies__line"></div>
+              <div class="vacancies__description" id="java-dev-description">
+                <p class="vacancies__work-time">5-6 часов в неделю</p>
+                <h2 class="vacancies__req-title">Требования</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">опыт разработки на Java от двух лет</li>
+                  <li class="vacancies__req-item">опыт со Spring, Spring Boot</li>
+                  <li class="vacancies__req-item">опыт базами данных и Hibenate</li>
+                  <li class="vacancies__req-item">знаете алгоритмы на базовом уровне</li>
+                  <li class="vacancies__req-item">любите делиться знаниями</li>
+                </ul>
+                <h2 class="vacancies__req-title">Что предстоит делать</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">помогать студентам на протяжении 9 месяцев (учебный цикл)</li>
+                  <li class="vacancies__req-item">отвечать на вопросы и помогать с трудностями</li>
+                  <li class="vacancies__req-item">курировать группу численностью от 60 человек</li>
+                  <li class="vacancies__req-item">общаться с ними в Slack</li>
+                  <li class="vacancies__req-item">проводить групповые и индивидуальные занятия</li>
+                </ul>
+                <div class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
+                  <button class="vacancies__send-btn">Отправить резюме</button>
+                  <button class="vacancies__share-btn"></button>
+                </div>
+              </div>
+            </li>
+            <li class="vacancies__gallery-item">
+              <div class="vacancies__gallery-wrapper">
+                <button class="vacancies__name vacancies__name_active" type="button" id="go-dev-rev">Ревьюер на курс “Go-разработчик”</button>
+                <p class="vacancies__salary">от 45 тысяч рублей</p>
+              </div>
+              <div class="vacancies__line"></div>
+              <div class="vacancies__description" id="java-dev-description">
+                <p class="vacancies__work-time">5-6 часов в неделю</p>
+                <h2 class="vacancies__req-title">Требования</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">опыт разработки на Java от двух лет</li>
+                  <li class="vacancies__req-item">опыт со Spring, Spring Boot</li>
+                  <li class="vacancies__req-item">опыт базами данных и Hibenate</li>
+                  <li class="vacancies__req-item">знаете алгоритмы на базовом уровне</li>
+                  <li class="vacancies__req-item">любите делиться знаниями</li>
+                </ul>
+                <h2 class="vacancies__req-title">Что предстоит делать</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">помогать студентам на протяжении 9 месяцев (учебный цикл)</li>
+                  <li class="vacancies__req-item">отвечать на вопросы и помогать с трудностями</li>
+                  <li class="vacancies__req-item">курировать группу численностью от 60 человек</li>
+                  <li class="vacancies__req-item">общаться с ними в Slack</li>
+                  <li class="vacancies__req-item">проводить групповые и индивидуальные занятия</li>
+                </ul>
+                <div class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
+                  <button class="vacancies__send-btn">Отправить резюме</button>
+                  <button class="vacancies__share-btn"></button>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul id="sensey-gallary-analitics" class="vacancies__gallery">
+            <li class="vacancies__gallery-item">
+              <div class="vacancies__gallery-wrapper">
+                <button class="vacancies__name" type="button" id="java-dev-sen">Наставник на курс "Аналитик данных"</button>
+                <p class="vacancies__salary">от 55 тысяч рублей</p>
+              </div>
+              <div class="vacancies__line"></div>
+              <div class="vacancies__description" id="java-dev-description">
+                <p class="vacancies__work-time">5-6 часов в неделю</p>
+                <h2 class="vacancies__req-title">Требования</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">опыт разработки на Java от двух лет</li>
+                  <li class="vacancies__req-item">опыт со Spring, Spring Boot</li>
+                  <li class="vacancies__req-item">опыт базами данных и Hibenate</li>
+                  <li class="vacancies__req-item">знаете алгоритмы на базовом уровне</li>
+                  <li class="vacancies__req-item">любите делиться знаниями</li>
+                </ul>
+                <h2 class="vacancies__req-title">Что предстоит делать</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">помогать студентам на протяжении 9 месяцев (учебный цикл)</li>
+                  <li class="vacancies__req-item">отвечать на вопросы и помогать с трудностями</li>
+                  <li class="vacancies__req-item">курировать группу численностью от 60 человек</li>
+                  <li class="vacancies__req-item">общаться с ними в Slack</li>
+                  <li class="vacancies__req-item">проводить групповые и индивидуальные занятия</li>
+                </ul>
+                <div class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
+                  <button class="vacancies__send-btn">Отправить резюме</button>
+                  <button class="vacancies__share-btn"></button>
+                </div>
+              </div>
+            </li>
+            <li class="vacancies__gallery-item">
+              <div class="vacancies__gallery-wrapper">
+                <button class="vacancies__name vacancies__name_active" type="button" id="C++dev-sen">Наставник на курс "Системный аналитик"</button>
+                <p class="vacancies__salary">от 65 тысяч рублей</p>
+              </div>
+              <div class="vacancies__line"></div>
+              <div class="vacancies__description" id="java-dev-description">
+                <p class="vacancies__work-time">5-6 часов в неделю</p>
+                <h2 class="vacancies__req-title">Требования</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">опыт разработки на Java от двух лет</li>
+                  <li class="vacancies__req-item">опыт со Spring, Spring Boot</li>
+                  <li class="vacancies__req-item">опыт базами данных и Hibenate</li>
+                  <li class="vacancies__req-item">знаете алгоритмы на базовом уровне</li>
+                  <li class="vacancies__req-item">любите делиться знаниями</li>
+                </ul>
+                <h2 class="vacancies__req-title">Что предстоит делать</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">помогать студентам на протяжении 9 месяцев (учебный цикл)</li>
+                  <li class="vacancies__req-item">отвечать на вопросы и помогать с трудностями</li>
+                  <li class="vacancies__req-item">курировать группу численностью от 60 человек</li>
+                  <li class="vacancies__req-item">общаться с ними в Slack</li>
+                  <li class="vacancies__req-item">проводить групповые и индивидуальные занятия</li>
+                </ul>
+                <div class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
+                  <button class="vacancies__send-btn">Отправить резюме</button>
+                  <button class="vacancies__share-btn"></button>
+                </div>
+              </div>
+            </li>
+            <li class="vacancies__gallery-item">
+              <div class="vacancies__gallery-wrapper">
+                <button class="vacancies__name vacancies__name_active" type="button" id="python-dev-sen">Наставник на курс "Специалист по Data Science"</button>
+                <p class="vacancies__salary">от 45 тысяч рублей</p>
+              </div>
+              <div class="vacancies__line"></div>
+              <div class="vacancies__description" id="java-dev-description">
+                <p class="vacancies__work-time">5-6 часов в неделю</p>
+                <h2 class="vacancies__req-title">Требования</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">опыт разработки на Java от двух лет</li>
+                  <li class="vacancies__req-item">опыт со Spring, Spring Boot</li>
+                  <li class="vacancies__req-item">опыт базами данных и Hibenate</li>
+                  <li class="vacancies__req-item">знаете алгоритмы на базовом уровне</li>
+                  <li class="vacancies__req-item">любите делиться знаниями</li>
+                </ul>
+                <h2 class="vacancies__req-title">Что предстоит делать</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">помогать студентам на протяжении 9 месяцев (учебный цикл)</li>
+                  <li class="vacancies__req-item">отвечать на вопросы и помогать с трудностями</li>
+                  <li class="vacancies__req-item">курировать группу численностью от 60 человек</li>
+                  <li class="vacancies__req-item">общаться с ними в Slack</li>
+                  <li class="vacancies__req-item">проводить групповые и индивидуальные занятия</li>
+                </ul>
+                <div class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
+                  <button class="vacancies__send-btn">Отправить резюме</button>
+                  <button class="vacancies__share-btn"></button>
+                </div>
+              </div>
+            </li>
+            <li class="vacancies__gallery-item">
+              <div class="vacancies__gallery-wrapper">
+                <button class="vacancies__name vacancies__name_active" type="button" id="ios-dev-sen">Наставник на курс "Инженер данных"</button>
+                <p class="vacancies__salary">от 65 тысяч рублей</p>
+              </div>
+              <div class="vacancies__line"></div>
+              <div class="vacancies__description" id="java-dev-description">
+                <p class="vacancies__work-time">5-6 часов в неделю</p>
+                <h2 class="vacancies__req-title">Требования</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">опыт разработки на Java от двух лет</li>
+                  <li class="vacancies__req-item">опыт со Spring, Spring Boot</li>
+                  <li class="vacancies__req-item">опыт базами данных и Hibenate</li>
+                  <li class="vacancies__req-item">знаете алгоритмы на базовом уровне</li>
+                  <li class="vacancies__req-item">любите делиться знаниями</li>
+                </ul>
+                <h2 class="vacancies__req-title">Что предстоит делать</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">помогать студентам на протяжении 9 месяцев (учебный цикл)</li>
+                  <li class="vacancies__req-item">отвечать на вопросы и помогать с трудностями</li>
+                  <li class="vacancies__req-item">курировать группу численностью от 60 человек</li>
+                  <li class="vacancies__req-item">общаться с ними в Slack</li>
+                  <li class="vacancies__req-item">проводить групповые и индивидуальные занятия</li>
+                </ul>
+                <div class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
+                  <button class="vacancies__send-btn">Отправить резюме</button>
+                  <button class="vacancies__share-btn"></button>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul id="reviewer-gallary-analitics" class="vacancies__gallery">
+            <li class="vacancies__gallery-item">
+              <div class="vacancies__gallery-wrapper">
+                <button class="vacancies__name" type="button" id="data-analitics-rev">Ревьюер на курс "Аналитик данных"</button>
+                <p class="vacancies__salary">от 55 тысяч рублей</p>
+              </div>
+              <div class="vacancies__line"></div>
+              <div class="vacancies__description" id="java-dev-description">
+                <p class="vacancies__work-time">5-6 часов в неделю</p>
+                <h2 class="vacancies__req-title">Требования</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">опыт разработки на Java от двух лет</li>
+                  <li class="vacancies__req-item">опыт со Spring, Spring Boot</li>
+                  <li class="vacancies__req-item">опыт базами данных и Hibenate</li>
+                  <li class="vacancies__req-item">знаете алгоритмы на базовом уровне</li>
+                  <li class="vacancies__req-item">любите делиться знаниями</li>
+                </ul>
+                <h2 class="vacancies__req-title">Что предстоит делать</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">помогать студентам на протяжении 9 месяцев (учебный цикл)</li>
+                  <li class="vacancies__req-item">отвечать на вопросы и помогать с трудностями</li>
+                  <li class="vacancies__req-item">курировать группу численностью от 60 человек</li>
+                  <li class="vacancies__req-item">общаться с ними в Slack</li>
+                  <li class="vacancies__req-item">проводить групповые и индивидуальные занятия</li>
+                </ul>
+                <div class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
+                  <button class="vacancies__send-btn">Отправить резюме</button>
+                  <button class="vacancies__share-btn"></button>
+                </div>
+              </div>
+            </li>
+            <li class="vacancies__gallery-item">
+              <div class="vacancies__gallery-wrapper">
+                <button class="vacancies__name vacancies__name_active" type="button" id="system-analitics-rev">Ревьюер на курс "Системный аналитик"</button>
+                <p class="vacancies__salary">от 65 тысяч рублей</p>
+              </div>
+              <div class="vacancies__line"></div>
+              <div class="vacancies__description" id="java-dev-description">
+                <p class="vacancies__work-time">5-6 часов в неделю</p>
+                <h2 class="vacancies__req-title">Требования</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">опыт разработки на Java от двух лет</li>
+                  <li class="vacancies__req-item">опыт со Spring, Spring Boot</li>
+                  <li class="vacancies__req-item">опыт базами данных и Hibenate</li>
+                  <li class="vacancies__req-item">знаете алгоритмы на базовом уровне</li>
+                  <li class="vacancies__req-item">любите делиться знаниями</li>
+                </ul>
+                <h2 class="vacancies__req-title">Что предстоит делать</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">помогать студентам на протяжении 9 месяцев (учебный цикл)</li>
+                  <li class="vacancies__req-item">отвечать на вопросы и помогать с трудностями</li>
+                  <li class="vacancies__req-item">курировать группу численностью от 60 человек</li>
+                  <li class="vacancies__req-item">общаться с ними в Slack</li>
+                  <li class="vacancies__req-item">проводить групповые и индивидуальные занятия</li>
+                </ul>
+                <div class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
+                  <button class="vacancies__send-btn">Отправить резюме</button>
+                  <button class="vacancies__share-btn"></button>
+                </div>
+              </div>
+            </li>
+            <li class="vacancies__gallery-item">
+              <div class="vacancies__gallery-wrapper">
+                <button class="vacancies__name vacancies__name_active" type="button" id="data-science-rev">Ревьюер на курс "Специалист по Data Science"</button>
+                <p class="vacancies__salary">от 45 тысяч рублей</p>
+              </div>
+              <div class="vacancies__line"></div>
+              <div class="vacancies__description" id="java-dev-description">
+                <p class="vacancies__work-time">5-6 часов в неделю</p>
+                <h2 class="vacancies__req-title">Требования</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">опыт разработки на Java от двух лет</li>
+                  <li class="vacancies__req-item">опыт со Spring, Spring Boot</li>
+                  <li class="vacancies__req-item">опыт базами данных и Hibenate</li>
+                  <li class="vacancies__req-item">знаете алгоритмы на базовом уровне</li>
+                  <li class="vacancies__req-item">любите делиться знаниями</li>
+                </ul>
+                <h2 class="vacancies__req-title">Что предстоит делать</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">помогать студентам на протяжении 9 месяцев (учебный цикл)</li>
+                  <li class="vacancies__req-item">отвечать на вопросы и помогать с трудностями</li>
+                  <li class="vacancies__req-item">курировать группу численностью от 60 человек</li>
+                  <li class="vacancies__req-item">общаться с ними в Slack</li>
+                  <li class="vacancies__req-item">проводить групповые и индивидуальные занятия</li>
+                </ul>
+                <div class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
+                  <button class="vacancies__send-btn">Отправить резюме</button>
+                  <button class="vacancies__share-btn"></button>
+                </div>
+              </div>
+            </li>
+            <li class="vacancies__gallery-item">
+              <div class="vacancies__gallery-wrapper">
+                <button class="vacancies__name vacancies__name_active" type="button" id="data-eng-rev">Ревьюер на курс "Инженер даннных"</button>
+                <p class="vacancies__salary">от 65 тысяч рублей</p>
+              </div>
+              <div class="vacancies__line"></div>
+              <div class="vacancies__description" id="java-dev-description">
+                <p class="vacancies__work-time">5-6 часов в неделю</p>
+                <h2 class="vacancies__req-title">Требования</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">опыт разработки на Java от двух лет</li>
+                  <li class="vacancies__req-item">опыт со Spring, Spring Boot</li>
+                  <li class="vacancies__req-item">опыт базами данных и Hibenate</li>
+                  <li class="vacancies__req-item">знаете алгоритмы на базовом уровне</li>
+                  <li class="vacancies__req-item">любите делиться знаниями</li>
+                </ul>
+                <h2 class="vacancies__req-title">Что предстоит делать</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">помогать студентам на протяжении 9 месяцев (учебный цикл)</li>
+                  <li class="vacancies__req-item">отвечать на вопросы и помогать с трудностями</li>
+                  <li class="vacancies__req-item">курировать группу численностью от 60 человек</li>
+                  <li class="vacancies__req-item">общаться с ними в Slack</li>
+                  <li class="vacancies__req-item">проводить групповые и индивидуальные занятия</li>
+                </ul>
+                <div class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
+                  <button class="vacancies__send-btn">Отправить резюме</button>
+                  <button class="vacancies__share-btn"></button>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div id="vac-notfound" class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
+            <p class="vacancies__notfound-vac-text">Нет подходящей вакансии?</p>
+            <button class="vacancies__notfound-vac-btn">Оставить заявку</button>
+          </div>
+        </div>
+      </div>
+      <div class="vacancies__popup-share">
+        <div class="vacancies__popup-list">
+          <!--Скопировать ссылку-->
+          <div id="copyLink" class="vacancies__popup-link-wrapper">
+            <div class="vacancies__popup-copy-icon"></div>
+            <a href="#" rel="nofollow" class="vacancies__popup-link">
+              Скопировать ссылку
+            </a>
+          </div>
+          <!--Telegram-->
+          <div class="vacancies__popup-link-wrapper">
+            <div class="vacancies__popup-telegram-icon"></div>
+            <a href="#" target="_blank" rel="nofollow" class="vacancies__popup-link">
+              Telegram
+            </a>
+          </div>
+          <!--Вконтакте-->
+          <div class="vacancies__popup-link-wrapper">
+            <div class="vacancies__popup-vk-icon"></div>
+            <a href="#" target="_blank" rel="nofollow" class="vacancies__popup-link">
+              Вконтакте
+            </a>
+          </div>
+          <!--Twitter-->
+          <div class="vacancies__popup-link-wrapper">
+            <div class="vacancies__popup-twitter-icon"></div>
+            <a href="#" target="_blank" rel="nofollow" class="vacancies__popup-link">
+            Twitter
+            </a>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <section class="success-stories">
+      <h2 class="section-title">Истории ребят из нашей команды</h2>
+      <ul class="success-stories__text-list"></ul>
+      <ul class="success-stories__video-list"></ul>
+    </section>
+    <section id="faq" class="faq">
+      <div class="faq__container">
+        <h2 class="faq__title">FAQ</h2>
+        <div class="faq__line"></div>
+        <article class="faq__question-block">
+          <div class="faq__question-wrapper">
+            <h3 class="faq__question-text-main">Как я&nbsp;пойму, что у&nbsp;меня достаточно экспертизы, чтобы делиться
+              знаниями со&nbsp;студентами?</h3>
+            <button class="faq__question-button"></button>
+          </div>
+          <p class="faq__question-text">Наставник помогает студентам учиться: отвечает на&nbsp;вопросы и&nbsp;помогает
+            с&nbsp;трудностями. Каждый наставник курирует группу численностью от&nbsp;60&nbsp;студентов. Общается
+            с&nbsp;ними в&nbsp;Slack, проводит групповые и&nbsp;индивидуальные звонки на&nbsp;протяжении 9&nbsp;месяцев
+            обучения.</p>
+        </article>
+        <div class="faq__line"></div>
+        <article class="faq__question-block">
+          <div class="faq__question-wrapper">
+            <h3 class="faq__question-text-main">Как я&nbsp;пойму, что у&nbsp;меня достаточно экспертизы, чтобы делиться
+              знаниями со&nbsp;студентами?</h3>
+            <button class="faq__question-button"></button>
+          </div>
+          <p class="faq__question-text">Наставник помогает студентам учиться: отвечает на&nbsp;вопросы и&nbsp;помогает
+            с&nbsp;трудностями. Каждый наставник курирует группу численностью от&nbsp;60&nbsp;студентов. Общается
+            с&nbsp;ними в&nbsp;Slack, проводит групповые и&nbsp;индивидуальные звонки на&nbsp;протяжении 9&nbsp;месяцев
+            обучения.</p>
+        </article>
+        <div class="faq__line"></div>
+        <article class="faq__question-block">
+          <div class="faq__question-wrapper">
+            <h3 class="faq__question-text-main">Как я&nbsp;пойму, что у&nbsp;меня достаточно экспертизы, чтобы делиться
+              знаниями со&nbsp;студентами?</h3>
+            <button class="faq__question-button"></button>
+          </div>
+          <p class="faq__question-text">Наставник помогает студентам учиться: отвечает на&nbsp;вопросы и&nbsp;помогает
+            с&nbsp;трудностями. Каждый наставник курирует группу численностью от&nbsp;60&nbsp;студентов. Общается
+            с&nbsp;ними в&nbsp;Slack, проводит групповые и&nbsp;индивидуальные звонки на&nbsp;протяжении 9&nbsp;месяцев
+            обучения.</p>
+        </article>
+        <div class="faq__line"></div>
+        <article class="faq__question-block">
+          <div class="faq__question-wrapper">
+            <h3 class="faq__question-text-main">Как я&nbsp;пойму, что у&nbsp;меня достаточно экспертизы, чтобы делиться
+              знаниями со&nbsp;студентами?</h3>
+            <button class="faq__question-button"></button>
+          </div>
+          <p class="faq__question-text">Наставник помогает студентам учиться: отвечает на&nbsp;вопросы и&nbsp;помогает
+            с&nbsp;трудностями. Каждый наставник курирует группу численностью от&nbsp;60&nbsp;студентов. Общается
+            с&nbsp;ними в&nbsp;Slack, проводит групповые и&nbsp;индивидуальные звонки на&nbsp;протяжении 9&nbsp;месяцев
+            обучения.</p>
+        </article>
+        <div class="faq__line"></div>
+      </div>
+    </section>
   </main>
   <footer class="footer"></footer>
+
+  <template id="template-success-story-text">
+    <li class="success-story-text">
+      <!-- ToDo: srcset? -->
+      <img class="success-story-text__photo">
+      <!-- ToDo: check header number" -->
+      <div class="success-story-text__content success-story-text__content_hidden">
+        <h3 class="success-story-title success-story-title_place_text"></h3>
+        <p class="success-story-subtitle success-story-subtitle_place_text"></p>
+        <ul class="success-story-text__text"></ul>
+      </div>
+      <div class="success-story-text__bottom-line success-story-text__bottom-line_hidden"></div>
+    </li>
+  </template>
+
+  <template id="template-success-story-video">
+    <li class="success-story-video">
+      <div class="video-story">
+        <a class="video-story__link">
+          <!-- ToDo: srcset? -->
+          <img class="video-story__image">
+        </a>
+        <!-- ToDo: common class of the button -->
+        <button type="button" class="video-button video-button_place_success-story"
+          aria-label="Кнопка воспроизвести видео">
+          <!-- ToDo: change teg img to background-image of the button -->
+          <img src="<%=require('./images/button-play-video.png')%>" alt="Кнопка воспроизвести видео">
+        </button>
+      </div>
+      <!-- ToDo: check header number" -->
+      <h3 class="success-story-title success-story-title_place_video"></h3>
+      <p class="success-story-subtitle success-story-subtitle_place_video"></p>
+    </li>
+  </template>
+
+  <section class="popup popup_background_opacity" id="video-popup">
+    <div class="popup__container">
+      <button type="button" class="button-close" aria-label="Кнопка закрыть">
+        <!-- ToDo: change teg img to background-image of the button -->
+        <img src="<%=require('./images/button-close-popup.svg')%>" alt="Кнопка закрыть">
+      </button>
+    </div>
+  </section>
 
   <!-- POPUP WITH FORM -->
 
