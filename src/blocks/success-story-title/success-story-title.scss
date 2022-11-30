@@ -1,0 +1,27 @@
+@import '../../utils/styles/constants';
+
+.success-story-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.success-story-title_place_video {
+  position: relative;
+  margin: 25px 0 0 60px;
+}
+
+.success-story-title_place_video::before {
+  content: '';
+  box-sizing: border-box;
+  border-right: $cardBorder;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+}

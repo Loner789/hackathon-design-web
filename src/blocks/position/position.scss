@@ -1,0 +1,153 @@
+@import '../../utils/styles/constants';
+
+.position {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+
+  .position__list-of-tasks {
+    box-sizing: border-box;
+    margin: 35px 0 65px 120px;
+    padding: 0;
+    max-width: 475px;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    .position__task {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.4;
+      color: #585A5B;
+      box-sizing: border-box;
+    }
+  }
+
+  .position__title {
+    margin: 70px 0 0 120px;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 1.4;
+    max-width: 610px;
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  .position__mentor {
+    position: absolute;
+    width: 295px;
+    height: 295px;
+    bottom: 0;
+    right: 0;
+    display: block;
+    box-sizing: border-box;
+  }
+
+  .position__reviewer {
+    position: absolute;
+    width: 295px;
+    height: 295px;
+    right: 0;
+    bottom: 0;
+    display: block;
+    box-sizing: border-box;
+  }
+
+  .position__border_line_left-top {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 240px;
+    border-top: $cardBorder;
+    border-left: $cardBorder;
+  }
+
+  .position__border_line_right-top {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 343px;
+    height: 343px;
+    border-top: $cardBorder;
+    border-right: $cardBorder;
+  }
+}
+
+.position_line_top-right::after {
+  content: '';
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 132px;
+  height: 181px;
+  border-top: $cardBorder;
+  border-right: $cardBorder;
+  box-sizing: border-box;
+}
+
+.position_line_top-right::before {
+  content: '';
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 240px;
+  height: 30px;
+  border-left: $cardBorder;
+  border-bottom: $cardBorder;
+  box-sizing: border-box;
+}
+
+.position_line_left::after {
+  content: '';
+  bottom: 23;
+  left: 0;
+  position: absolute;
+  height: 251px;
+  border-left: $cardBorder;
+  box-sizing: border-box;
+}
+
+.position_line_left::before {
+  content: '';
+  bottom: 0;
+  left: 65px;
+  position: absolute;
+  width: 215px;
+  border-bottom: $cardBorder;
+  box-sizing: border-box;
+}
+
+.position:hover {
+  cursor: pointer;
+  background-color: #4F7FDD;
+  color: #fff;
+
+  .position__task {
+    color: #fff;
+  }
+
+  .position__mentor,
+  .position__reviewer,
+  .position__border_line_right-top,
+  .position__border_line_left-top {
+    display: none;
+  }
+}
+
+  .position_line_left:hover::after,
+  .position_line_left:hover::before,
+  .position_line_top-right:hover::after,
+  .position_line_top-right:hover::before {
+    display: none;
+  }

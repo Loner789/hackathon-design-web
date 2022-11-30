@@ -1,0 +1,13 @@
+@import '../../utils/styles/constants';
+
+.advantages {
+  max-width: 1240px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  font-family: 'YS Dysplay', Arial, sans-serif;
+  color: $darkText;
+  justify-items: center;
+  text-align: center;
+  margin: 0 auto;
+}

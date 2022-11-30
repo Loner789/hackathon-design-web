@@ -1,0 +1,27 @@
+@import '../../utils/styles/constants';
+
+.card-back {
+  display: none;
+  transform: rotateY(180deg);
+  background-color: $blueBackground;
+  color: $lightText;
+}
+
+.card-back:hover {
+  cursor: pointer;
+}
+
+.card-back__description {
+  animation: initial;
+  margin: 45px;
+  padding: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.4;
+  box-sizing: border-box;
+}
+
+.card-back_visible {
+  display: block;
+}

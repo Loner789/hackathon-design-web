@@ -1,0 +1,23 @@
+@import '../../utils/styles/constants';
+
+.video {
+  display: block;
+  position: relative;
+
+  .video__link {
+    display: block;
+  }
+
+  .video__image {
+    display: block;
+    width: 820px;
+    height: 420px;
+    object-fit: cover;
+  }
+
+  .video__iframe {
+    width: 820px;
+    height: 420px;
+    border: none;
+  }
+}
