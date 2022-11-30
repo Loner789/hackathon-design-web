@@ -1,5 +1,4 @@
 // ------- ИМПОРТЫ -------
-import './index.scss';
 
 // ------- ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ -------
 // ------- vacancies -------
@@ -22,6 +21,10 @@ const vacancieReviewerGallaryAnalitics = vacancies.querySelector('#reviewer-gall
 const vacanciesGallaries = vacancies.querySelectorAll('.vacancies__gallery');
 const vacanciesNoVac = vacancies.querySelector('#no-vac-available');
 const vacanciesNotFound = vacancies.querySelector('#vac-notfound');
+const vacanciesShareBtns = vacancies.querySelectorAll('.vacancies__share-btn');
+const vacanciesPopupShare = vacancies.querySelector('.vacancies__popup-share');
+const vacanciesCopyBtn = vacanciesPopupShare.querySelector('.vacancies__popup-copy-icon');
+const vacanciesCopyLink = vacanciesPopupShare.querySelector('#copyLink');
 
 
 // ------- КОД -------
@@ -39,6 +42,26 @@ vacancieNameBtn.forEach(btn => {
     }
   });
 });
+
+vacanciesShareBtns.forEach(btn => {
+  btn.addEventListener('click', function handleClick(evt) {
+    if (!vacanciesPopupShare.classList.contains('vacancies__popup-share_active')) {
+      vacanciesPopupShare.classList.add('vacancies__popup-share_active');
+      document.addEventListener("mousedown", (evt) => {
+        if (!evt.target.classList.contains('vacancies__popup-share') &&
+        !evt.target.classList.contains('vacancies__popup-list') &&
+        !evt.target.classList.contains('vacancies__popup-link-wrapper') &&
+        !evt.target.classList.contains('vacancies__popup-copy-icon') &&
+        !evt.target.classList.contains('vacancies__popup-link')) {
+          vacanciesPopupShare.classList.remove('vacancies__popup-share_active');
+          vacanciesCopyBtn.classList.remove('vacancies__popup-copy-icon_done');
+        }})
+    } else {
+      vacanciesPopupShare.classList.remove('vacancies__popup-share_active');
+      vacanciesCopyBtn.classList.remove('vacancies__popup-copy-icon_done');
+    }
+  })
+})
 
 const activateVacanciesProphItem = (menuItems, menuItemElement) => {
   menuItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
@@ -126,6 +149,10 @@ const handleManagementBtnClick = (evt) => {
   vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
 }
 
+const handleCopyShareBtnClick = () => {
+  vacanciesCopyBtn.classList.add('vacancies__popup-copy-icon_done');
+}
+
 vacancieEduItemDesign.addEventListener('click', handleDesignBtnClick);
 vacancieEduItemProgramming.addEventListener('click', handleProgrammingBtnClick);
 vacancieEduItemAnalitics.addEventListener('click', handleAnaliticsBtnClick);
@@ -133,4 +160,4 @@ vacancieEduItemMarketing.addEventListener('click', handleMarketingBtnClick);
 vacancieEduItemManagement.addEventListener('click', handleManagementBtnClick);
 vacancieProphSensey.addEventListener('click', handleVacSenseyProphItemClick);
 vacancieProphReviewer.addEventListener('click', handleVacReviewerProphItemClick);
-
+vacanciesCopyLink.addEventListener('click', handleCopyShareBtnClick);
