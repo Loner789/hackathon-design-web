@@ -27,9 +27,9 @@
     padding: 90px 190px 60px;
 
     .popup__video {
-      width: 700px;
-      height: 500px;
+      width: 100%;
       border: none;
+      height: 500px;
     }
 
     .popup__title {
@@ -75,6 +75,11 @@
     .popup__success_visible {
       display: block;
     }
+  }
+
+  .popup__container_place_video-popup {
+    padding: 0;
+    width: 900px;
   }
 }
 
