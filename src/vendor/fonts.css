@@ -35,10 +35,10 @@
 }
 
 @font-face {
-  font-family: 'YS Text';
+  font-family: 'YS Display';
   font-style: normal;
   font-display: swap;
   src: local('YS Display'),
-    url(../vendor/ys-text/YS-Text-Medium.ttf) format('ttf');
-  font-weight: 500;
+    url(../vendor/ys-display/YS-Display-Light.ttf) format('ttf');
+  font-weight: 300;
 }

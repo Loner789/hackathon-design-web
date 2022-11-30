@@ -1,0 +1,30 @@
+@import '../../utils/styles/constants';
+
+.success-story-video {
+  display: grid;
+  position: relative;
+
+  .video-story {
+    position: relative;
+
+    .video-story__image {
+      display: block;
+    }
+
+    .video-story__iframe {
+      max-width: 610px;
+      width: 100%;
+      border: none;
+      height: 500px;
+    }
+  }
+}
+
+.success-story-video::after {
+  content: '';
+  box-sizing: border-box;
+  border-bottom: $cardBorder;
+  bottom: 0;
+  right: 0;
+  width: 288px;
+}
