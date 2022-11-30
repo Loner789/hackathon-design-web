@@ -2,6 +2,8 @@
 const scroller = document.querySelector('.conditions__slider');
 const faq = document.querySelector('.faq');
 const faqBtn = faq.querySelectorAll('.faq__question-button');
+const faqAnswers = faq.querySelectorAll('.faq__question-text');
+const faqQuestions = faq.querySelectorAll('.faq__question-text-main');
 const vacancies = document.querySelector('.vacancies');
 const vacancieNameBtn = vacancies.querySelectorAll('.vacancies__name');
 const vacancieEduItems = vacancies.querySelectorAll('.vacancies__btn-menu');
@@ -39,6 +41,7 @@ const vacanciesCopyBtn = vacanciesPopupShare.querySelector(
   '.vacancies__popup-copy-icon',
 );
 const vacanciesCopyLink = vacanciesPopupShare.querySelector('#copyLink');
+const vacGalleryArrows = vacancies.querySelectorAll('.vacancies__gallery-arrow');
 const videoElement = document.querySelector('.video');
 const cardLinePlaceFirstTop = document.querySelector(
   '.card__line_place__first-top',
@@ -67,6 +70,8 @@ const configFormValidator = {
 export {
   scroller,
   faqBtn,
+  faqAnswers,
+  faqQuestions,
   vacancieNameBtn,
   vacancieEduItems,
   vacanciesDescriptionItems,
@@ -89,6 +94,7 @@ export {
   vacanciesPopupShare,
   vacanciesCopyBtn,
   vacanciesCopyLink,
+  vacGalleryArrows,
   videoElement,
   cardLinePlaceFirstTop,
   cardLinePlaceFirstTopParent,

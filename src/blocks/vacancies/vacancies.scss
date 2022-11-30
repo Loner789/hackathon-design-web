@@ -13,7 +13,18 @@
   align-items: center;
   width: calc(100% - 200px);
   max-width: 1240px;
-  margin: 50px 0 147px 0;
+  margin: 160px 0 147px 0;
+}
+
+.vacancies__title {
+  font-family: 'YS Display';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 64px;
+  color: #1E2027;
+  align-self: start;
+  margin: 0;
 }
 
 .vacancies__education-menu {
@@ -23,9 +34,9 @@
   justify-content: center;
   width: 100%;
   min-height: 69px;
-  background-color: #000000;
+  background-color: #4F7FDD;
   padding: 0;
-  margin: 0;
+  margin: 100px 0 0 0;
 }
 
 .vacancies__menu-item {
@@ -34,10 +45,10 @@
 
 .vacancies__btn-menu {
   border-style: none;
-  background-color: #000000;
+  background-color: #4F7FDD;
   font-family: 'Inter';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   line-height: 19px;
   color: #FFFFFF;
@@ -49,7 +60,7 @@
 .vacancies__btn-menu_active {
   background-color: #FFFFFF;
   padding: 10px 15px;
-  border-radius: 23px;
+  border-radius: 8px;
   color: #000000;
   margin: 0 40px 0 0px;
 }
@@ -58,7 +69,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-width: 820px;
+  min-width: 1030px;
   margin: 60px 10px 0 0;
 }
 
@@ -98,7 +109,7 @@
 .vacancies__novac-wrapper {
   display: none;
   flex-direction: column;
-  width: 820px;
+  width: 1030px;
   margin: 45px 0 0 0;
 }
 
@@ -120,7 +131,7 @@
 
 .vacancies__gallery {
   padding: 0;
-  margin: 20px 0 0 0;
+  margin: 5px 0 0 0;
   display: none;
 }
 
@@ -130,7 +141,7 @@
 
 .vacancies__gallery-item {
   list-style: none;
-  margin-top: 25px;
+  margin-top: 40px;
 }
 
 .vacancies__gallery-wrapper {
@@ -147,6 +158,25 @@
   display: none;
 }
 
+.vacancies__name-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.vacancies__gallery-arrow {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/icon-arrow-backward.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: all .3s linear;
+}
+
+.vacancies__gallery-arrow_active {
+  transform: rotate(90deg);
+}
+
 .vacancies__name {
   border-style: none;
   background-color: #FFFFFF;
@@ -156,13 +186,13 @@
   font-size: 20px;
   line-height: 140%;
   color: #000000;
-  margin: 0;
+  margin: 0 0 0 10px;
   padding: 0;
   cursor: pointer;
 }
 
 .vacancies__name_active {
-
+  color: #4F7FDD;
 }
 
 .vacancies__salary {
@@ -177,7 +207,7 @@
 
 .vacancies__line {
   width: 100%;
-  max-width: 820px;
+  max-width: 1030px;
   height: 0.5px;
   background-color: #000000;
   margin-top: 15px;
@@ -236,25 +266,31 @@
 .vacancies__send-btn {
   width: 295px;
   height: 50px;
-  background-color: #000000;
-  font-family: 'YS Text';
+  background-color: #4F7FDD;
+  font-family: 'YS Display';
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 50px;
   text-align: center;
   color: #FFFFFF;
   padding: 0;
   margin: 25px 0 35px 0;
   border-style: none;
-  border-radius: 100px;
+  border-radius: 8px;
   cursor: pointer;
+}
+
+.vacancies__send-btn_noVac {
+  background-color: #FFFFFF;
+  border: 1px solid #4F7FDD;
+  color: #4F7FDD;
 }
 
 .vacancies__share-btn {
   width: 50px;
   height: 50px;
-  background-image: url(../images/share-button.svg);
+  background-image: url(../images/share.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -266,9 +302,9 @@
 }
 
 .vacancies__notfound-vac-text {
-  font-family: 'Inter';
+  font-family: 'YS Display';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 20px;
   line-height: 50px;
   display: flex;
@@ -280,18 +316,18 @@
 .vacancies__notfound-vac-btn {
   width: 293px;
   height: 50px;
-  background-color: #1A1B22;
-  font-family: 'YS Text';
+  background-color: #FFFFFF;
+  font-family: 'YS Display';
   font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 20px;
   line-height: 50px;
   text-align: center;
-  color: #FFFFFF;
+  color: #4F7FDD;
   padding: 0;
   margin: 45px 0 0 20px;
-  border-style: none;
-  border-radius: 100px;
+  border: 1px solid #4F7FDD;
+  border-radius: 8px;
   cursor: pointer;
 }
 
@@ -304,7 +340,7 @@
   min-height: 181px;
   background: #FFFFFF;
   border-radius: 8px;
-  border: 1px dashed black;
+  border: 1px solid #4f7fdd;
   z-index: 2;
   visibility: hidden;
   transition: visibility 0s linear 0.5s, opacity 0.5s linear;
@@ -322,22 +358,22 @@
 }
 
 .vacancies__popup-share:hover .vacancies__popup-copy-icon {
-  // background-image: url(../images/icon-copy-blue.svg);
+  background-image: url(../images/icon-copy-blue.svg);
   transition: .5s;
 }
 
 .vacancies__popup-share:hover .vacancies__popup-telegram-icon {
-  // background-image: url(../images/icon-telegram-blue.svg);
+  background-image: url(../images/icon-telegram-blue.svg);
   transition: .5s;
 }
 
 .vacancies__popup-share:hover .vacancies__popup-vk-icon {
-  // background-image: url(../images/icon-vk-blue.svg);
+  background-image: url(../images/icon-vk-blue.svg);
   transition: .5s;
 }
 
 .vacancies__popup-share:hover .vacancies__popup-twitter-icon {
-  // background-image: url(../images/icon-twitter-blue.svg);
+  background-image: url(../images/icon-twitter-blue.svg);
   transition: .5s;
 }
 
@@ -377,25 +413,25 @@
 .vacancies__popup-copy-icon {
   width: 24px;
   height: 24px;
-  // background-image: url(../images/icon-copy-black.svg);
+  background-image: url(../images/icon-copy-black.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
 
 .vacancies__popup-copy-icon_done {
-  // background-image: url(../images/icon-copy-success.svg);
+  background-image: url(../images/icon-copy-success.svg);
 }
 
 .vacancies__popup-share:hover .vacancies__popup-copy-icon_done {
-  // background-image: url(../images/icon-copy-success.svg);
+  background-image: url(../images/icon-copy-success.svg);
   transition: .5s;
 }
 
 .vacancies__popup-telegram-icon {
   width: 24px;
   height: 24px;
-  // background-image: url(../images/icon-telegram-black.svg);
+  background-image: url(../images/icon-telegram-black.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -404,7 +440,7 @@
 .vacancies__popup-vk-icon {
   width: 24px;
   height: 24px;
-  // background-image: url(../images/icon-vk-black.svg);
+  background-image: url(../images/icon-vk-black.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -413,7 +449,7 @@
 .vacancies__popup-twitter-icon {
   width: 24px;
   height: 24px;
-  // background-image: url(../images/icon-twitter-black.svg);
+  background-image: url(../images/icon-twitter-black.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

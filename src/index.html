@@ -202,13 +202,13 @@
     </section>
     <section id="vacancies" class="vacancies">
       <div class="vacanсies__container">
+        <h2 class="vacancies__title">Открытые предложения</h2>
         <ul class="vacancies__education-menu">
           <li class="vacancies__menu-item">
             <button class="vacancies__btn-menu" type="button" id="disign">Дизайн</button>
           </li>
           <li class="vacancies__menu-item">
-            <button class="vacancies__btn-menu vacancies__btn-menu_active" type="button"
-              id="programming">Программирование</button>
+            <button class="vacancies__btn-menu vacancies__btn-menu_active" type="button" id="programming">Программирование</button>
           </li>
           <li class="vacancies__menu-item">
             <button class="vacancies__btn-menu" type="button" id="analitics">Аналитика</button>
@@ -223,22 +223,23 @@
         <div class="vacancies__info">
           <ul class="vacancies__prophecy-menu">
             <li class="vacancies__prophecy-item">
-              <button class="vacancies__proph-btn-menu vacancies__proph-btn-menu_active" type="button"
-                id="sensey">Наставник</button>
+              <button class="vacancies__proph-btn-menu vacancies__proph-btn-menu_active" type="button" id="sensey">Наставник</button>
             </li>
             <li class="vacancies__prophecy-item">
               <button class="vacancies__proph-btn-menu" type="button" id="reviewer">Ревьюер</button>
             </li>
           </ul>
           <div id="no-vac-available" class="vacancies__novac-wrapper">
-            <p class="vacancies__no-vac-text">К&nbsp;сожалению, пока вакансий по&nbsp;этому направлению нет.
-              Не&nbsp;расстраивайтесь! Нам всё-равно интересно познакомиться. На&nbsp;будущее.</p>
-            <button class="vacancies__send-btn">Отправить резюме</button>
+            <p class="vacancies__no-vac-text">К&nbsp;сожалению, пока вакансий по&nbsp;этому направлению нет. Не&nbsp;расстраивайтесь! Нам всё-равно интересно познакомиться. На&nbsp;будущее.</p>
+            <button class="vacancies__send-btn vacancies__send-btn_noVac">Отправить резюме</button>
           </div>
           <ul id="sensey-gallary-prog" class="vacancies__gallery vacancies__gallery_active">
             <li class="vacancies__gallery-item">
               <div class="vacancies__gallery-wrapper">
-                <button class="vacancies__name" type="button" id="java-dev-sen">Наставник Java-разработчик</button>
+                <div class="vacancies__name-wrapper">
+                  <div class="vacancies__gallery-arrow"></div>
+                  <button class="vacancies__name" type="button" id="java-dev-sen">Наставник Java-разработчик</button>
+                </div>
                 <p class="vacancies__salary">от 55 тысяч рублей</p>
               </div>
               <div class="vacancies__line"></div>
@@ -268,9 +269,11 @@
             </li>
             <li class="vacancies__gallery-item">
               <div class="vacancies__gallery-wrapper">
-                <button class="vacancies__name vacancies__name_active" type="button" id="C++dev-sen">Наставник на курс
-                  “Разработчик С++”</button>
-                <p class="vacancies__salary">от 65 тысяч рублей</p>
+                <div class="vacancies__name-wrapper">
+                  <div class="vacancies__gallery-arrow"></div>
+                  <button class="vacancies__name" type="button" id="C++dev-sen">Наставник на курс “Разработчик С++”</button>
+                </div>
+                  <p class="vacancies__salary">от 65 тысяч рублей</p>
               </div>
               <div class="vacancies__line"></div>
               <div class="vacancies__description" id="java-dev-description">
@@ -299,8 +302,10 @@
             </li>
             <li class="vacancies__gallery-item">
               <div class="vacancies__gallery-wrapper">
-                <button class="vacancies__name vacancies__name_active" type="button" id="python-dev-sen">Наставник на
-                  курс “Pyton-разработчик”</button>
+                <div class="vacancies__name-wrapper">
+                  <div class="vacancies__gallery-arrow"></div>
+                  <button class="vacancies__name" type="button" id="python-dev-sen">Наставник на курс “Pyton-разработчик”</button>
+                </div>
                 <p class="vacancies__salary">от 45 тысяч рублей</p>
               </div>
               <div class="vacancies__line"></div>
@@ -330,8 +335,10 @@
             </li>
             <li class="vacancies__gallery-item">
               <div class="vacancies__gallery-wrapper">
-                <button class="vacancies__name vacancies__name_active" type="button" id="ios-dev-sen">Наставник на курс
-                  “IOS-разработчик”</button>
+                <div class="vacancies__name-wrapper">
+                  <div class="vacancies__gallery-arrow"></div>
+                  <button class="vacancies__name" type="button" id="ios-dev-sen">Наставник на курс “IOS-разработчик”</button>
+                </div>
                 <p class="vacancies__salary">от 65 тысяч рублей</p>
               </div>
               <div class="vacancies__line"></div>
@@ -361,8 +368,10 @@
             </li>
             <li class="vacancies__gallery-item">
               <div class="vacancies__gallery-wrapper">
-                <button class="vacancies__name vacancies__name_active" type="button" id="go-dev-sen">Наставник на курс
-                  “Go-разработчик”</button>
+                <div class="vacancies__name-wrapper">
+                  <div class="vacancies__gallery-arrow"></div>
+                  <button class="vacancies__name" type="button" id="go-dev-sen">Наставник на курс “Go-разработчик”</button>
+                </div>
                 <p class="vacancies__salary">от 45 тысяч рублей</p>
               </div>
               <div class="vacancies__line"></div>
@@ -394,7 +403,10 @@
           <ul id="reviewer-gallary-prog" class="vacancies__gallery">
             <li class="vacancies__gallery-item">
               <div class="vacancies__gallery-wrapper">
-                <button class="vacancies__name" type="button" id="java-dev-rev">Ревьюер Java</button>
+                <div class="vacancies__name-wrapper">
+                  <div class="vacancies__gallery-arrow"></div>
+                  <button class="vacancies__name" type="button" id="java-dev-rev">Ревьюер Java</button>
+                </div>
                 <p class="vacancies__salary">от 55 тысяч рублей</p>
               </div>
               <div class="vacancies__line"></div>
@@ -424,8 +436,10 @@
             </li>
             <li class="vacancies__gallery-item">
               <div class="vacancies__gallery-wrapper">
-                <button class="vacancies__name vacancies__name_active" type="button" id="C++dev-rev">Ревьюер на курс
-                  “Разработчик С++”</button>
+                <div class="vacancies__name-wrapper">
+                  <div class="vacancies__gallery-arrow"></div>
+                  <button class="vacancies__name" type="button" id="C++dev-rev">Ревьюер на курс “Разработчик С++”</button>
+                </div>
                 <p class="vacancies__salary">от 65 тысяч рублей</p>
               </div>
               <div class="vacancies__line"></div>
@@ -455,8 +469,10 @@
             </li>
             <li class="vacancies__gallery-item">
               <div class="vacancies__gallery-wrapper">
-                <button class="vacancies__name vacancies__name_active" type="button" id="python-dev-rev">Ревьюер на курс
-                  “Pyton-разработчик”</button>
+                <div class="vacancies__name-wrapper">
+                  <div class="vacancies__gallery-arrow"></div>
+                  <button class="vacancies__name" type="button" id="python-dev-rev">Ревьюер на курс “Pyton-разработчик”</button>
+                </div>
                 <p class="vacancies__salary">от 45 тысяч рублей</p>
               </div>
               <div class="vacancies__line"></div>
@@ -486,8 +502,10 @@
             </li>
             <li class="vacancies__gallery-item">
               <div class="vacancies__gallery-wrapper">
-                <button class="vacancies__name vacancies__name_active" type="button" id="ios-dev-rev">Ревьюер на курс
-                  “IOS-разработчик”</button>
+                <div class="vacancies__name-wrapper">
+                  <div class="vacancies__gallery-arrow"></div>
+                  <button class="vacancies__name" type="button" id="ios-dev-rev">Ревьюер на курс “IOS-разработчик”</button>
+                </div>
                 <p class="vacancies__salary">от 65 тысяч рублей</p>
               </div>
               <div class="vacancies__line"></div>
@@ -517,8 +535,10 @@
             </li>
             <li class="vacancies__gallery-item">
               <div class="vacancies__gallery-wrapper">
-                <button class="vacancies__name vacancies__name_active" type="button" id="go-dev-rev">Ревьюер на курс
-                  “Go-разработчик”</button>
+                <div class="vacancies__name-wrapper">
+                  <div class="vacancies__gallery-arrow"></div>
+                  <button class="vacancies__name" type="button" id="go-dev-rev">Ревьюер на курс “Go-разработчик”</button>
+                </div>
                 <p class="vacancies__salary">от 45 тысяч рублей</p>
               </div>
               <div class="vacancies__line"></div>
@@ -550,8 +570,10 @@
           <ul id="sensey-gallary-analitics" class="vacancies__gallery">
             <li class="vacancies__gallery-item">
               <div class="vacancies__gallery-wrapper">
-                <button class="vacancies__name" type="button" id="java-dev-sen">Наставник на курс "Аналитик
-                  данных"</button>
+                <div class="vacancies__name-wrapper">
+                  <div class="vacancies__gallery-arrow"></div>
+                  <button class="vacancies__name" type="button" id="java-dev-sen">Наставник на курс "Аналитик данных"</button>
+                </div>
                 <p class="vacancies__salary">от 55 тысяч рублей</p>
               </div>
               <div class="vacancies__line"></div>
@@ -581,8 +603,10 @@
             </li>
             <li class="vacancies__gallery-item">
               <div class="vacancies__gallery-wrapper">
-                <button class="vacancies__name vacancies__name_active" type="button" id="C++dev-sen">Наставник на курс
-                  "Системный аналитик"</button>
+                <div class="vacancies__name-wrapper">
+                  <div class="vacancies__gallery-arrow"></div>
+                  <button class="vacancies__name" type="button" id="C++dev-sen">Наставник на курс "Системный аналитик"</button>
+                </div>
                 <p class="vacancies__salary">от 65 тысяч рублей</p>
               </div>
               <div class="vacancies__line"></div>
@@ -612,8 +636,10 @@
             </li>
             <li class="vacancies__gallery-item">
               <div class="vacancies__gallery-wrapper">
-                <button class="vacancies__name vacancies__name_active" type="button" id="python-dev-sen">Наставник на
-                  курс "Специалист по Data Science"</button>
+                <div class="vacancies__name-wrapper">
+                  <div class="vacancies__gallery-arrow"></div>
+                  <button class="vacancies__name" type="button" id="python-dev-sen">Наставник на курс "Специалист по Data Science"</button>
+                </div>
                 <p class="vacancies__salary">от 45 тысяч рублей</p>
               </div>
               <div class="vacancies__line"></div>
@@ -643,8 +669,10 @@
             </li>
             <li class="vacancies__gallery-item">
               <div class="vacancies__gallery-wrapper">
-                <button class="vacancies__name vacancies__name_active" type="button" id="ios-dev-sen">Наставник на курс
-                  "Инженер данных"</button>
+                <div class="vacancies__name-wrapper">
+                  <div class="vacancies__gallery-arrow"></div>
+                  <button class="vacancies__name" type="button" id="ios-dev-sen">Наставник на курс "Инженер данных"</button>
+                </div>
                 <p class="vacancies__salary">от 65 тысяч рублей</p>
               </div>
               <div class="vacancies__line"></div>
@@ -676,8 +704,10 @@
           <ul id="reviewer-gallary-analitics" class="vacancies__gallery">
             <li class="vacancies__gallery-item">
               <div class="vacancies__gallery-wrapper">
-                <button class="vacancies__name" type="button" id="data-analitics-rev">Ревьюер на курс "Аналитик
-                  данных"</button>
+                <div class="vacancies__name-wrapper">
+                  <div class="vacancies__gallery-arrow"></div>
+                  <button class="vacancies__name" type="button" id="data-analitics-rev">Ревьюер на курс "Аналитик данных"</button>
+                </div>
                 <p class="vacancies__salary">от 55 тысяч рублей</p>
               </div>
               <div class="vacancies__line"></div>
@@ -707,8 +737,10 @@
             </li>
             <li class="vacancies__gallery-item">
               <div class="vacancies__gallery-wrapper">
-                <button class="vacancies__name vacancies__name_active" type="button" id="system-analitics-rev">Ревьюер
-                  на курс "Системный аналитик"</button>
+                <div class="vacancies__name-wrapper">
+                  <div class="vacancies__gallery-arrow"></div>
+                  <button class="vacancies__name" type="button" id="system-analitics-rev">Ревьюер на курс "Системный аналитик"</button>
+                </div>
                 <p class="vacancies__salary">от 65 тысяч рублей</p>
               </div>
               <div class="vacancies__line"></div>
@@ -738,8 +770,10 @@
             </li>
             <li class="vacancies__gallery-item">
               <div class="vacancies__gallery-wrapper">
-                <button class="vacancies__name vacancies__name_active" type="button" id="data-science-rev">Ревьюер на
-                  курс "Специалист по Data Science"</button>
+                <div class="vacancies__name-wrapper">
+                  <div class="vacancies__gallery-arrow"></div>
+                  <button class="vacancies__name" type="button" id="data-science-rev">Ревьюер на курс "Специалист по Data Science"</button>
+                </div>
                 <p class="vacancies__salary">от 45 тысяч рублей</p>
               </div>
               <div class="vacancies__line"></div>
@@ -769,8 +803,10 @@
             </li>
             <li class="vacancies__gallery-item">
               <div class="vacancies__gallery-wrapper">
-                <button class="vacancies__name vacancies__name_active" type="button" id="data-eng-rev">Ревьюер на курс
-                  "Инженер даннных"</button>
+                <div class="vacancies__name-wrapper">
+                  <div class="vacancies__gallery-arrow"></div>
+                  <button class="vacancies__name" type="button" id="data-eng-rev">Ревьюер на курс "Инженер даннных"</button>
+                </div>
                 <p class="vacancies__salary">от 65 тысяч рублей</p>
               </div>
               <div class="vacancies__line"></div>
@@ -800,7 +836,7 @@
             </li>
           </ul>
           <div id="vac-notfound" class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
-            <p class="vacancies__notfound-vac-text">Нет подходящей вакансии?</p>
+            <p class="vacancies__notfound-vac-text">Нет подходящего предложения?</p>
             <button class="vacancies__notfound-vac-btn">Оставить заявку</button>
           </div>
         </div>
@@ -832,11 +868,11 @@
           <div class="vacancies__popup-link-wrapper">
             <div class="vacancies__popup-twitter-icon"></div>
             <a href="#" target="_blank" rel="nofollow" class="vacancies__popup-link">
-              Twitter
+            Twitter
             </a>
           </div>
-          </nav>
-        </div>
+        </nav>
+      </div>
     </section>
     <section class="success-stories">
       <h2 class="section-title">Истории ребят из нашей команды</h2>
@@ -844,57 +880,43 @@
       <ul class="success-stories__video-list"></ul>
     </section>
     <section id="faq" class="faq">
-      <div class="faq__container">
-        <h2 class="faq__title">FAQ</h2>
-        <div class="faq__line"></div>
-        <article class="faq__question-block">
-          <div class="faq__question-wrapper">
-            <h3 class="faq__question-text-main">Как я&nbsp;пойму, что у&nbsp;меня достаточно экспертизы, чтобы делиться
-              знаниями со&nbsp;студентами?</h3>
-            <button class="faq__question-button"></button>
-          </div>
-          <p class="faq__question-text">Наставник помогает студентам учиться: отвечает на&nbsp;вопросы и&nbsp;помогает
-            с&nbsp;трудностями. Каждый наставник курирует группу численностью от&nbsp;60&nbsp;студентов. Общается
-            с&nbsp;ними в&nbsp;Slack, проводит групповые и&nbsp;индивидуальные звонки на&nbsp;протяжении 9&nbsp;месяцев
-            обучения.</p>
-        </article>
-        <div class="faq__line"></div>
-        <article class="faq__question-block">
-          <div class="faq__question-wrapper">
-            <h3 class="faq__question-text-main">Как я&nbsp;пойму, что у&nbsp;меня достаточно экспертизы, чтобы делиться
-              знаниями со&nbsp;студентами?</h3>
-            <button class="faq__question-button"></button>
-          </div>
-          <p class="faq__question-text">Наставник помогает студентам учиться: отвечает на&nbsp;вопросы и&nbsp;помогает
-            с&nbsp;трудностями. Каждый наставник курирует группу численностью от&nbsp;60&nbsp;студентов. Общается
-            с&nbsp;ними в&nbsp;Slack, проводит групповые и&nbsp;индивидуальные звонки на&nbsp;протяжении 9&nbsp;месяцев
-            обучения.</p>
-        </article>
-        <div class="faq__line"></div>
-        <article class="faq__question-block">
-          <div class="faq__question-wrapper">
-            <h3 class="faq__question-text-main">Как я&nbsp;пойму, что у&nbsp;меня достаточно экспертизы, чтобы делиться
-              знаниями со&nbsp;студентами?</h3>
-            <button class="faq__question-button"></button>
-          </div>
-          <p class="faq__question-text">Наставник помогает студентам учиться: отвечает на&nbsp;вопросы и&nbsp;помогает
-            с&nbsp;трудностями. Каждый наставник курирует группу численностью от&nbsp;60&nbsp;студентов. Общается
-            с&nbsp;ними в&nbsp;Slack, проводит групповые и&nbsp;индивидуальные звонки на&nbsp;протяжении 9&nbsp;месяцев
-            обучения.</p>
-        </article>
-        <div class="faq__line"></div>
-        <article class="faq__question-block">
-          <div class="faq__question-wrapper">
-            <h3 class="faq__question-text-main">Как я&nbsp;пойму, что у&nbsp;меня достаточно экспертизы, чтобы делиться
-              знаниями со&nbsp;студентами?</h3>
-            <button class="faq__question-button"></button>
-          </div>
-          <p class="faq__question-text">Наставник помогает студентам учиться: отвечает на&nbsp;вопросы и&nbsp;помогает
-            с&nbsp;трудностями. Каждый наставник курирует группу численностью от&nbsp;60&nbsp;студентов. Общается
-            с&nbsp;ними в&nbsp;Slack, проводит групповые и&nbsp;индивидуальные звонки на&nbsp;протяжении 9&nbsp;месяцев
-            обучения.</p>
-        </article>
-        <div class="faq__line"></div>
+      <div class="faq__background">
+        <div class="faq__container">
+          <h2 class="faq__title">FAQ</h2>
+          <div class="faq__line"></div>
+          <article class="faq__question-block">
+            <div class="faq__question-wrapper">
+              <h3 class="faq__question-text-main">Как оформляется сотрудничество?</h3>
+              <button class="faq__question-button"></button>
+            </div>
+            <p class="faq__question-text">Наставник помогает студентам учиться: отвечает на&nbsp;вопросы и&nbsp;помогает с&nbsp;трудностями. Каждый наставник курирует группу численностью от&nbsp;60&nbsp;студентов. Общается с&nbsp;ними в&nbsp;Slack, проводит групповые и&nbsp;индивидуальные звонки на&nbsp;протяжении 9&nbsp;месяцев обучения.</p>
+          </article>
+          <div class="faq__line"></div>
+          <article class="faq__question-block">
+            <div class="faq__question-wrapper">
+              <h3 class="faq__question-text-main">Как понять, что моей экспертизы досточно?</h3>
+              <button class="faq__question-button"></button>
+            </div>
+            <p class="faq__question-text">Наставник помогает студентам учиться: отвечает на&nbsp;вопросы и&nbsp;помогает с&nbsp;трудностями. Каждый наставник курирует группу численностью от&nbsp;60&nbsp;студентов. Общается с&nbsp;ними в&nbsp;Slack, проводит групповые и&nbsp;индивидуальные звонки на&nbsp;протяжении 9&nbsp;месяцев обучения.</p>
+          </article>
+          <div class="faq__line"></div>
+          <article class="faq__question-block">
+            <div class="faq__question-wrapper">
+              <h3 class="faq__question-text-main">Как оформляется сотрудничество?</h3>
+              <button class="faq__question-button"></button>
+            </div>
+            <p class="faq__question-text">Наставник помогает студентам учиться: отвечает на&nbsp;вопросы и&nbsp;помогает с&nbsp;трудностями. Каждый наставник курирует группу численностью от&nbsp;60&nbsp;студентов. Общается с&nbsp;ними в&nbsp;Slack, проводит групповые и&nbsp;индивидуальные звонки на&nbsp;протяжении 9&nbsp;месяцев обучения.</p>
+          </article>
+          <div class="faq__line"></div>
+          <article class="faq__question-block">
+            <div class="faq__question-wrapper">
+              <h3 class="faq__question-text-main">Что мне нужно для работы?</h3>
+              <button class="faq__question-button"></button>
+            </div>
+            <p class="faq__question-text">Ревьюерам требуется компьютер и&nbsp;стабильное соединение с&nbsp;интернетом.Наставникам потребуется компьютер с&nbsp;камерой и&nbsp;микрофоном, стабильное соединение с&nbsp;интернетом (не&nbsp;менее 20&nbsp;мбит) и&nbsp;тихое помещение на&nbsp;время проведения вебинаров.</p>
+          </article>
+          <div class="faq__line"></div>
+        </div>
       </div>
     </section>
   </main>
