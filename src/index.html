@@ -20,80 +20,72 @@
     <section class="vacancies"></section>
     <section class="success-stories"></section>
     <section class="faq"></section>
+
+
+    <button type="button" class="button">Test</button>
+
+
   </main>
   <footer class="footer"></footer>
 
   <!-- POPUP WITH FORM -->
   <section class="popup">
     <div class="popup__container">
-      <!-- ToDo: button close -->
-      <!-- <button type="button" class="button-close" aria-label="Кнопка закрыть"></button> -->
+      <button type="button" class="button-close" aria-label="Кнопка закрыть">
+        <!-- ToDo: change teg img to background-image of the button -->
+        <img src="<%=require('./images/button-close-popup.svg')%>" alt="Кнопка закрыть">
+      </button>
 
-      <!-- ToDo: title -->
-      <!-- <h2 class="popup__title"></h2> -->
+      <!-- ToDo: the title must be taken from the vacancy -->
+      <h2 class="popup__title">Хочу быть ревьюером на факультете анализа данных или Data Science</h2>
 
       <form class="popup__form form" id="form" novalidate>
-        <label for="name" class="form__label">
-          ФИО
-          <input type="text" class="form__item" id="name" name="name" minlength="2" maxlength="100" required>
+        <label for="name" class="form__label form__label_place_input">
+          <input type="text" class="form__item form__item_input" id="name" name="name" minlength="2" maxlength="100" required placeholder="ФИО">
         </label>
         <span class="form__name-error"></span>
 
-        <label for="email" class="form__label">
-          Почта
-          <input type="email" class="form__item" id="email" name="email" minlength="2" maxlength="30" required>
+        <label for="email" class="form__label form__label_place_input">
+          <input type="email" class="form__item form__item_input" id="email" name="email" minlength="2" maxlength="30" required placeholder="Почта">
         </label>
         <span class="form__email-error"></span>
 
-        <label for="contact" class="form__label">
-          Telegram или телефон
-          <input type="text" class="form__item" id="contact" name="contact" minlength="2" maxlength="30" required>
-        </label>
-        <span class="form__contact-error"></span>
-
-        <label for="position" class="form__label">
-          Какая роль вам ближе?
-          <select name="position" id="position" class="form__item" required>
-            <option value="">--</option>
-            <option value="Наставник">Наставник</option>
-            <option value="Ревьюер">Ревьюер</option>
-          </select>
-        </label>
-        <span class="form__position-error"></span>
-
-        <label for="faculty" class="form__label">
-          Выберете направление (факультет)
-          <select name="faculty" id="faculty" class="form__item" required>
-            <option value="">--</option>
-            <option value="Middle frontend developer">Мидл фронтенд-разработчик</option>
-            <option value="Java developer">Java-разработчик</option>
-            <option value="Go developer">Go-разработчик</option>
-          </select>
-        </label>
-        <span class="form__faculty-error"></span>
-
         <label for="stack" class="form__label">
-          Перечислите набор технологий, которыми вы владеете и уровень владения каждой
-          <textarea class="form__item" id="stack" name="stack" minlength="2" maxlength="500" required></textarea>
+          <p class="form__label-text">
+            Перечислите набор технологий, которыми вы владеете и уровень владения каждой
+            <span class="form__required-input">*</span>
+          </p>
+          <textarea class="form__item form__item_textarea" id="stack" name="stack" minlength="2" maxlength="1000" required></textarea>
         </label>
         <span class="form__stack-error"></span>
 
-        <label for="cv" class="form__label">
-          Ссылка на резюме (пожалуйста, проверьте, что вы открыли достут к документу)
-          <input type="url" class="form__item" id="cv" name="cv" minlength="2" maxlength="100" required>
+        <label for="aboutYou" class="form__label form__label_place_textarea">
+          <p class="form__label-text">
+            Почему вы хотите стать частью команды Яндекс.Практикума?
+          </p>
+          <textarea class="form__item form__item_textarea" id="aboutYou" name="aboutYou" minlength="2" maxlength="1000" required></textarea>
+        </label>
+        <span class="form__aboutYou-error"></span>
+
+        <label for="cv" class="form__label form__label_place_input form__label_place_url">
+          <input type="url" class="form__item form__item_input" id="cv" name="cv" minlength="2" maxlength="100" required placeholder="Ссылка на резюме">
+          <p class="form__label-prompt">
+            Пожалуйста, проверьте, что вы открыли достут к документу
+            <span class="form__required-input">*</span>
+          </p>
         </label>
         <span class="form__cv-error"></span>
 
-        <label for="confidential" class="form__label">
-          <input type="checkbox" class="form__item" id="confidential" name="confidential" required>
-          Я даю согласие АНО ДПО «ШАД» и ООО «ЯНДЕКС» на обработку
-          <a href="https://yandex.ru/legal/confidential/">указанных данных</a>
-          для целей рассмотрения анкеты и обратной связи по ней.
+        <label for="confidential" class="form__label form__label_place_checkbox">
+          <input type="checkbox" class="form__item form__item_checkbox" id="confidential" name="confidential" required>
+          <p class="form__label-text">
+            Я даю согласие АНО ДПО «ШАД» и ООО «ЯНДЕКС» на обработку <a class="form__link" href="https://yandex.ru/legal/confidential/">указанных данных</a> для целей рассмотрения анкеты и обратной связи по ней.
+            <span class="form__required-input">*</span>
+          </p>
         </label>
         <span class="form__confidential-error"></span>
 
-        <!-- Common button? -->
-        <button type="submit" class="form__button">Отправить</button>
+        <button type="submit" class="form__button">Отправить резюме</button>
       </form>
     </div>
   </section>

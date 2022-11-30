@@ -1,6 +1,6 @@
 .popup {
   display: grid;
-  /* visibility: hidden; */
+  visibility: hidden;
   justify-content: center;
   align-items: center;
   z-index: 1;
@@ -11,16 +11,36 @@
   left: 0;
   top: 0;
   cursor: pointer;
+  overflow: scroll;
 
   .popup__container {
+    font-family: 'YS Disolay', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
-    width: 600px;
+    width: 1030px;
     background-color: #fff;
     z-index: 2;
     cursor: default;
     justify-items: center;
-    padding: 30px;
+    padding: 90px 190px 60px;
+
+    .popup__title {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 1.4;
+      text-align: center;
+      color: #1E2027;
+      max-width: 630px;
+      width: 100%;
+    }
   }
+}
+
+.popup_opened {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility .9s, opacity .7s linear;
 }
