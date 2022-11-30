@@ -6,6 +6,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SuccessStoryCard from '../components/SuccessStoryCard';
 import SuccessStoryVideo from '../components/SuccessStoryVideo';
 import Section from '../components/Section';
+import PopupWithForm from '../components/PopupWithForm';
+import FormValidator from '../components/FormValidator';
 import PopupWithVideo from '../components/PopupWithVideo';
 import {
   learningTitles,
@@ -45,6 +47,9 @@ import {
   cardLinePlaceSecondTopParent,
   cardLinePlaceSecondBottom,
   cardLinePlaceSecondBottomParent,
+  popupSelector,
+  formSelector,
+  configFormValidator,
 } from '../utils/constants';
 
 // FUNCTIONS:
@@ -390,3 +395,24 @@ vacancieEduItemManagement.addEventListener('click', handleManagementBtnClick);
 vacancieProphSensey.addEventListener('click', handleVacSenseyProphItemClick);
 vacancieProphReviewer.addEventListener('click', handleVacReviewerProphItemClick);
 vacanciesCopyLink.addEventListener('click', handleCopyShareBtnClick);
+
+/* button for the oppening popup */
+const button = document.querySelector('.vacancies__notfound-vac-btn');
+
+const popupWithForm = new PopupWithForm(popupSelector, submitHandlerForm, formSelector);
+popupWithForm.setEventListeners();
+
+/* to open popup */
+button.addEventListener('click', () => {
+  popupWithForm.open();
+});
+
+const FormInPopupValidator = new FormValidator(configFormValidator, '#form');
+FormInPopupValidator.enableValidation();
+
+function submitHandlerForm(data) {
+  console.log(data);
+
+  /* on successful submission */
+  popupWithForm.showBlockSuccess();
+};

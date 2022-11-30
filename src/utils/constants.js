@@ -53,6 +53,17 @@ const cardLinePlaceSecondBottom = document.querySelector(
 );
 const cardLinePlaceSecondBottomParent = cardLinePlaceSecondBottom.parentNode;
 
+const popupSelector = '#popup-with-form';
+const formSelector = '.popup__form';
+
+const configFormValidator = {
+  inputSelector: '.form__item',
+  submitButtonSelector: '.popup__button',
+  inactiveButtonClass: 'popup__button_disabled',
+  inputErrorClass: 'form__item_type_error',
+  errorClass: 'form__error_active',
+};
+
 export {
   scroller,
   faqBtn,
@@ -85,4 +96,7 @@ export {
   cardLinePlaceSecondTopParent,
   cardLinePlaceSecondBottom,
   cardLinePlaceSecondBottomParent,
+  popupSelector,
+  formSelector,
+  configFormValidator,
 };
