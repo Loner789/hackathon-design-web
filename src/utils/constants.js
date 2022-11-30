@@ -75,6 +75,7 @@ export {
   vacanciesNoVac,
   vacanciesNotFound,
   vacanciesShareBtns,
+  vacanciesPopupShare,
   vacanciesCopyBtn,
   vacanciesCopyLink,
   videoElement,
