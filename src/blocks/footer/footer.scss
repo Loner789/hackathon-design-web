@@ -1,0 +1,182 @@
+.footer {
+  padding: 0 0 100px;
+  font-family: 'YS Display', Arial, sans-serif;
+
+  &__container {
+    margin: 0;
+    padding: 0;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__block {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    justify-content: space-between;
+
+    &_type_contacts {
+      width: max-content;;
+    }
+
+    &_type_navbar {
+      min-width: 400px;
+      flex-direction: row;
+    }
+
+    &_type_info {
+      max-width: 400px;
+    }
+  }
+
+  &__tel {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__tel-number {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  &__tel-caption {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  &__social-links {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  &__social-link {
+    margin: 0 10px 0 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-decoration: none;
+    color: #000;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &_type_vk {
+      width: 24px;
+      height: 24px;
+      background-image: url(../images/vk-icon.svg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &_type_tg {
+      width: 32px;
+      height: 24px;
+      background-image: url(../images/telegram-icon.svg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__vacancies-link {
+    margin: 0;
+    padding: 0 14px 0 38px;
+    width: 225px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid #1E2027;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #000;
+    background-image: url(../images/tg-icon-2.svg);
+    background-position: 8px center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    box-sizing: border-box;
+  }
+
+  &__brand {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.2;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &__navbar {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__navbar-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__navbar-item {
+    margin: 0;
+    padding: 0 0 25px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__navbar-link {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-decoration: none;
+    color: #000;
+  }
+
+  &__info-item {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.2;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__info-link {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.2;
+    color: #000;
+  }
+}

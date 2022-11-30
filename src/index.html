@@ -5,18 +5,201 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" content="вакансии, эксперт сопровождения, работа в яндекс, наставник, ревьюер, работа парт-тайм, обучающие курсы">
+  <meta name="keywords"
+    content="вакансии, эксперт сопровождения, работа в яндекс, наставник, ревьюер, работа парт-тайм, обучающие курсы">
   <title>Яндекс Практикум</title>
-  <link rel="icon" href="<%=require('./images/yandex-logo.svg')%>">
+  <link rel="icon" href="<%=require('./images/yandex-favicon.svg')%>">
 </head>
 
 <body>
-  <header class="header"></header>
+  <header class="header">
+    <a href="#" class="header__logo-link">
+      <img src="<%=require('./images/yandex-logo.svg')%>" alt="Логотип яндекс." class="header__logo-image">
+    </a>
+    <a href="#vacancies" class="header__link-button">Вакансии</a>
+  </header>
   <main class="content">
-    <section class="learning"></section>
-    <section class="conditions"></section>
-    <section class="duties"></section>
-    <section class="advantages"></section>
+    <section class="learning">
+      <div class="learning__content">
+        <div class="learning__text-container">
+          <h1 class="learning__title"><span class="learning__title-span"></span></h1>
+          <p class="learning__subtitle">Мы ищем наставников и ревьюеров</p>
+          <a href="#vacancies" class="learning__link-button">Посмотреть предложения</a>
+        </div>
+        <div class="learning__learning-picture"></div>
+      </div>
+    </section>
+    <section class="conditions section-indent">
+      <div class="conditions__text-container">
+        <h2 class="conditions__title">Создаём условия для комфортной работы</h2>
+      </div>
+      <div class="conditions__container">
+        <ul class="conditions__slider">
+        </ul>
+      </div>
+    </section>
+    <section class="duties">
+      <h2 class="section-title section-title_place_duties">Предлагаем различные задачи</h2>
+      <ul class="duties__list-of-positions">
+        <li class="position position_line_top-right">
+          <div class="position__border_line_left-top"></div>
+          <h3 class="position__title">Наставник</h3>
+          <ul class="position__list-of-tasks">
+            <li class="position__task">Проводит вебинары, даёт обратную связь.</li>
+            <li class="position__task">Делиться опытом и мотивирует.</li>
+            <li class="position__task">Отвечает на вопросы студентов в чате.</li>
+            <li class="position__task">Помогает студентам ставить цели и достигать их.</li>
+          </ul>
+          <!-- ToDo: change tag img to background -->
+          <img class="position__mentor" src="<%=require('./images/block3-mentor-vector.png')%>" alt="Иконка наставник">
+        </li>
+        <li class="position position_line_left">
+          <div class="position__border_line_right-top"></div>
+          <h3 class="position__title">Ревьюер</h3>
+          <ul class="position__list-of-tasks">
+            <li class="position__task">Проверяет код и проекты студентов.</li>
+            <li class="position__task">Объясняет простыми словами ошибки.</li>
+            <li class="position__task">Даёт корректирующую обратную связь.</li>
+            <li class="position__task">Оценивает работы и ставит зачёты.</li>
+          </ul>
+          <!-- ToDo: change tag img to background -->
+          <img class="position__reviewer" src="<%=require('./images/block3-reviewer-vector.png')%>"
+            alt="Иконка ревьюер">
+        </li>
+      </ul>
+      <a href="#vacancies" class="duties__button">Отправить резюме</a>
+    </section>
+    <section class="advantages">
+      <h2 class="section-title section-title_place_advantages">Предоставляем возможности</h2>
+      <div class="advantages-container">
+        <div class="advantages-container__row advantages-container__row_place_first">
+          <!-- ToDo: srcset? -->
+          <img class="advantages-container__image" alt="Фото наставник практикума"
+            src="<%=require('./images/block4-mentor-first-610w.png')%>">
+          <ul class="advantages-container__card-list">
+            <li class="card card_place_right-top">
+              <div class="card__rotate">
+                <p class="card__text">Развивать личный бренд</p>
+                <p class="card__description">
+                  Публикуйте статьи в нашем блоге и выступайте на мероприятиях,
+                  чтобы как можно больше людей узнали о вас как об эксперте
+                </p>
+              </div>
+            </li>
+            <li class="card card_place_right-bottom card_line-bottom">
+              <div class="card__rotate">
+                <p class="card__text">Менять жизнь людей</p>
+                <p class="card__description">
+                  Тысячи наших студентов нуждаются в ваших знаниях и
+                  опыте — не бойтесь ими делиться.
+                </p>
+              </div>
+              <div class="card__line card__line_place__first-top"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="advantages-container__row advantages-container__row_place_second">
+          <ul class="advantages-container__card-list">
+            <li class="card card_place_left-top">
+              <div class="card__rotate">
+                <p class="card__text">Гибкий график</p>
+                <p class="card__description">
+                  Удаленно, 2–3 часа в день, график выберете сами
+                </p>
+              </div>
+            </li>
+            <!-- ToDo: change content -->
+            <li class="card card_place_left-bottom">
+              <div class="card__rotate">
+                <p class="card__text">Удалённая работа</p>
+                <p class="card__description">
+                  Проверять работы можно когда угодно, занятия проводятся онлайн
+                </p>
+              </div>
+            </li>
+          </ul>
+          <div class="video">
+            <a class="video__link" href="https://www.youtube.com/watch?v=COaXBeiKezw">
+              <!-- ToDo: srcset? -->
+              <img class="video__image" src="<%=require('./images/block4-video-820w.png')%>" alt="Обложка видео">
+            </a>
+            <button type="button" class="video-button video-button_place_advantages"
+              aria-label="Кнопка воспроизвести видео">
+              <!-- ToDo: change teg img to background-image of the button -->
+              <img src="<%=require('./images/button-play-video.png')%>" alt="Кнопка воспроизвести видео">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <ul class="advantages-list">
+        <li class="advantages-list__item">
+          <p class="advantages-list__main-text">2—3</p>
+          <p class="advantages-list__text">часа в неделю</p>
+        </li>
+        <li class="advantages-list__item">
+          <p class="advantages-list__main-text">Гибкий график</p>
+        </li>
+        <li class="advantages-list__item">
+          <p class="advantages-list__main-text">35—50</p>
+          <p class="advantages-list__text">тысяч в месяц</p>
+        </li>
+      </ul>
+
+      <div class="advantages-container">
+        <div class="advantages-container__row advantages-container__row_place_third">
+          <!-- ToDo: srcset? -->
+          <img class="advantages-container__image" alt="Фото наставник практикума"
+            src="<%=require('./images/block4-mentor-second-715w.png')%>">
+          <ul class="advantages-container__card-list">
+            <li class="card card_place_second-right-top">
+              <div class="card__line card__line_place__second-top"></div>
+              <div class="card__rotate">
+                <p class="card__text">Сообщество EdTech</p>
+                <p class="card__description">
+                  Станете частью сообщества экспертов и посмотрите на мир онлайн-образования изнутри
+                </p>
+              </div>
+            </li>
+            <li class="card card_place_second-right-bottom">
+              <div class="card__rotate">
+                <p class="card__text">Дополнительный доход</p>
+                <p class="card__description">
+                  Иметь заработок в среднем от 35 до 50 тысяч ₽ в месяц
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="advantages-container__row advantages-container__row_place_fourth">
+          <ul class="advantages-container__card-list">
+            <li class="card card_place_second-left-top">
+              <div class="card__rotate">
+                <p class="card__text">Развивать лидерские качества</p>
+                <p class="card__description">
+                  Научитесь проводить воркшопы для передачи знаний и опыта,
+                  давать обратную связь, выступать на публике и мотивировать людей.
+                </p>
+              </div>
+            </li>
+            <li class="card card_place_second-left-bottom">
+              <div class="card__rotate">
+                <p class="card__text">Осваивать новые знания</p>
+                <p class="card__description">
+                  Бесплатно учиться на том курсе, где вы помогаете студентам,
+                  и со скидкой на остальных направлениях Практикума
+                </p>
+              </div>
+              <div class="card__line card__line_place__second-bottom"></div>
+            </li>
+          </ul>
+          <!-- ToDo: srcset? -->
+          <img class="advantages-container__image" alt="Фото наставник практикума"
+            src="<%=require('./images/block4-mentor-third-610w.png')%>">
+        </div>
+      </div>
+
+    </section>
     <section id="vacancies" class="vacancies">
       <div class="vacanсies__container">
         <ul class="vacancies__education-menu">
@@ -24,7 +207,8 @@
             <button class="vacancies__btn-menu" type="button" id="disign">Дизайн</button>
           </li>
           <li class="vacancies__menu-item">
-            <button class="vacancies__btn-menu vacancies__btn-menu_active" type="button" id="programming">Программирование</button>
+            <button class="vacancies__btn-menu vacancies__btn-menu_active" type="button"
+              id="programming">Программирование</button>
           </li>
           <li class="vacancies__menu-item">
             <button class="vacancies__btn-menu" type="button" id="analitics">Аналитика</button>
@@ -39,15 +223,17 @@
         <div class="vacancies__info">
           <ul class="vacancies__prophecy-menu">
             <li class="vacancies__prophecy-item">
-              <button class="vacancies__proph-btn-menu vacancies__proph-btn-menu_active" type="button" id="sensey">Наставник</button>
+              <button class="vacancies__proph-btn-menu vacancies__proph-btn-menu_active" type="button"
+                id="sensey">Наставник</button>
             </li>
             <li class="vacancies__prophecy-item">
               <button class="vacancies__proph-btn-menu" type="button" id="reviewer">Ревьюер</button>
             </li>
           </ul>
           <div id="no-vac-available" class="vacancies__novac-wrapper">
-            <p class="vacancies__no-vac-text">К&nbsp;сожалению, пока вакансий по&nbsp;этому направлению нет. Не&nbsp;расстраивайтесь! Нам всё-равно интересно познакомиться. На&nbsp;будущее.</p>
-            <button class="vacancies__send-btn vacancies__send-btn_noVac">Отправить резюме</button>
+            <p class="vacancies__no-vac-text">К&nbsp;сожалению, пока вакансий по&nbsp;этому направлению нет.
+              Не&nbsp;расстраивайтесь! Нам всё-равно интересно познакомиться. На&nbsp;будущее.</p>
+            <button class="vacancies__send-btn">Отправить резюме</button>
           </div>
           <ul id="sensey-gallary-prog" class="vacancies__gallery vacancies__gallery_active">
             <li class="vacancies__gallery-item">
@@ -684,18 +870,169 @@
           <div class="vacancies__popup-link-wrapper">
             <div class="vacancies__popup-twitter-icon"></div>
             <a href="#" target="_blank" rel="nofollow" class="vacancies__popup-link">
-            Twitter
+              Twitter
             </a>
           </div>
-        </nav>
+          </nav>
+        </div>
+    </section>
+    <section class="success-stories">
+      <h2 class="section-title">Истории ребят из нашей команды</h2>
+      <ul class="success-stories__text-list"></ul>
+      <ul class="success-stories__video-list"></ul>
+    </section>
+    <section id="faq" class="faq">
+      <div class="faq__container">
+        <h2 class="faq__title">FAQ</h2>
+        <div class="faq__line"></div>
+        <article class="faq__question-block">
+          <div class="faq__question-wrapper">
+            <h3 class="faq__question-text-main">Как я&nbsp;пойму, что у&nbsp;меня достаточно экспертизы, чтобы делиться
+              знаниями со&nbsp;студентами?</h3>
+            <button class="faq__question-button"></button>
+          </div>
+          <p class="faq__question-text">Наставник помогает студентам учиться: отвечает на&nbsp;вопросы и&nbsp;помогает
+            с&nbsp;трудностями. Каждый наставник курирует группу численностью от&nbsp;60&nbsp;студентов. Общается
+            с&nbsp;ними в&nbsp;Slack, проводит групповые и&nbsp;индивидуальные звонки на&nbsp;протяжении 9&nbsp;месяцев
+            обучения.</p>
+        </article>
+        <div class="faq__line"></div>
+        <article class="faq__question-block">
+          <div class="faq__question-wrapper">
+            <h3 class="faq__question-text-main">Как я&nbsp;пойму, что у&nbsp;меня достаточно экспертизы, чтобы делиться
+              знаниями со&nbsp;студентами?</h3>
+            <button class="faq__question-button"></button>
+          </div>
+          <p class="faq__question-text">Наставник помогает студентам учиться: отвечает на&nbsp;вопросы и&nbsp;помогает
+            с&nbsp;трудностями. Каждый наставник курирует группу численностью от&nbsp;60&nbsp;студентов. Общается
+            с&nbsp;ними в&nbsp;Slack, проводит групповые и&nbsp;индивидуальные звонки на&nbsp;протяжении 9&nbsp;месяцев
+            обучения.</p>
+        </article>
+        <div class="faq__line"></div>
+        <article class="faq__question-block">
+          <div class="faq__question-wrapper">
+            <h3 class="faq__question-text-main">Как я&nbsp;пойму, что у&nbsp;меня достаточно экспертизы, чтобы делиться
+              знаниями со&nbsp;студентами?</h3>
+            <button class="faq__question-button"></button>
+          </div>
+          <p class="faq__question-text">Наставник помогает студентам учиться: отвечает на&nbsp;вопросы и&nbsp;помогает
+            с&nbsp;трудностями. Каждый наставник курирует группу численностью от&nbsp;60&nbsp;студентов. Общается
+            с&nbsp;ними в&nbsp;Slack, проводит групповые и&nbsp;индивидуальные звонки на&nbsp;протяжении 9&nbsp;месяцев
+            обучения.</p>
+        </article>
+        <div class="faq__line"></div>
+        <article class="faq__question-block">
+          <div class="faq__question-wrapper">
+            <h3 class="faq__question-text-main">Как я&nbsp;пойму, что у&nbsp;меня достаточно экспертизы, чтобы делиться
+              знаниями со&nbsp;студентами?</h3>
+            <button class="faq__question-button"></button>
+          </div>
+          <p class="faq__question-text">Наставник помогает студентам учиться: отвечает на&nbsp;вопросы и&nbsp;помогает
+            с&nbsp;трудностями. Каждый наставник курирует группу численностью от&nbsp;60&nbsp;студентов. Общается
+            с&nbsp;ними в&nbsp;Slack, проводит групповые и&nbsp;индивидуальные звонки на&nbsp;протяжении 9&nbsp;месяцев
+            обучения.</p>
+        </article>
+        <div class="faq__line"></div>
       </div>
     </section>
-    <section class="success-stories"></section>
-    <section class="faq"></section>
   </main>
-  <footer class="footer"></footer>
+  <footer class="footer section-indent">
+    <div class="footer__container">
+      <div class="footer__block footer__block_type_contacts">
+        <div class="footer__tel">
+          <p class="footer__tel-number">8-800-700-93-29</p>
+          <p class="footer__tel-caption">Звонок по России бесплатный</p>
+        </div>
+        <div class="footer__social-links">
+          <a href="#" class="footer__social-link">Журнал</a>
+          <a href="#" class="footer__social-link footer__social-link_type_tg"></a>
+          <a href="#" class="footer__social-link footer__social-link_type_vk"></a>
+        </div>
+        <a href="#" class="footer__vacancies-link">Все вакансии Практикума</a>
+        <p class="footer__brand">&copy; 2022 АНО ДПО "ШАД", ООО "Яндекс"</p>
+      </div>
+      <nav class="footer__block footer__block_type_navbar">
+        <ul class="footer__navbar-links">
+          <li class="footer__navbar-item"><a href="#" class="footer__navbar-link">Помощь</a></li>
+          <li class="footer__navbar-item"><a href="#" class="footer__navbar-link">Вакансии</a></li>
+          <li class="footer__navbar-item"><a href="#" class="footer__navbar-link">Лицензия</a></li>
+        </ul>
+        <ul class="footer__navbar-links">
+          <li class="footer__navbar-item"><a href="#" class="footer__navbar-link">Правовая информация</a></li>
+          <li class="footer__navbar-item"><a href="#" class="footer__navbar-link">Для работодателей</a></li>
+          <li class="footer__navbar-item"><a href="#" class="footer__navbar-link">Отзывы</a></li>
+        </ul>
+      </nav>
+      <div class="footer__block footer__block_type_info">
+        <p class="footer__info-item">Информация на данной странице описывает возможные варианты получения
+          дополнительного дохода в месяц (т.н. подработка). Не является предложением о работе. Размещённые объявления
+          о потребоности в тех или иных услугах не являются вакансиями.</p>
+        <p class="footer__info-item">Образовательные услуги оказываются АНО ДПО "ШАД". ШАД - это <a href="#"
+            class="footer__info-link">Школа анализа данных</a>, основанная Яндексом и оказывающая образовательные
+          услуги на основании <a href="#" class="footer__info-link">Лицензии №036031</a> от 24 марта 2015 года.</p>
+        <p class="footer__info-item">Сертификат о прохождение обучения по программе дополнительного профессионального
+          образования также выдаётся АНО ДПО "ШАД".</p>
+      </div>
+    </div>
+  </footer>
 
-  <!-- POPUP WITH FORM -->
+  <!-- CONDITIONS CARD TEMPLATE -->
+  <template id="conditions-card">
+    <li class="conditions__slide">
+      <div class="conditions__card">
+        <div class="conditions__card-image"></div>
+        <p class="conditions__card-title conditions__card-title_side_left"></p>
+        <p class="conditions__card-title conditions__card-title_side_right"></p>
+        <p class="conditions__card-text"></p>
+      </div>
+    </li>
+  </template>
+
+  <!-- SUCCESS STORY TEXT TEMPLATE -->
+  <template id="template-success-story-text">
+    <li class="success-story-text">
+      <!-- ToDo: srcset? -->
+      <img class="success-story-text__photo">
+      <!-- ToDo: check header number" -->
+      <div class="success-story-text__content success-story-text__content_hidden">
+        <h3 class="success-story-title success-story-title_place_text"></h3>
+        <p class="success-story-subtitle success-story-subtitle_place_text"></p>
+        <ul class="success-story-text__text"></ul>
+      </div>
+      <div class="success-story-text__bottom-line success-story-text__bottom-line_hidden"></div>
+    </li>
+  </template>
+
+  <!-- SUCCESS STORY VIDEO TEMPLATE -->
+  <template id="template-success-story-video">
+    <li class="success-story-video">
+      <div class="video-story">
+        <a class="video-story__link">
+          <!-- ToDo: srcset? -->
+          <img class="video-story__image">
+        </a>
+        <!-- ToDo: common class of the button -->
+        <button type="button" class="video-button video-button_place_success-story"
+          aria-label="Кнопка воспроизвести видео">
+          <!-- ToDo: change teg img to background-image of the button -->
+          <img src="<%=require('./images/button-play-video.png')%>" alt="Кнопка воспроизвести видео">
+        </button>
+      </div>
+      <!-- ToDo: check header number" -->
+      <h3 class="success-story-title success-story-title_place_video"></h3>
+      <p class="success-story-subtitle success-story-subtitle_place_video"></p>
+    </li>
+  </template>
+
+  <!-- VIDEO POPUP -->
+  <section class="popup popup_background_opacity" id="video-popup">
+    <div class="popup__container">
+      <button type="button" class="button-close" aria-label="Кнопка закрыть">
+        <!-- ToDo: change teg img to background-image of the button -->
+        <img src="<%=require('./images/button-close-popup.svg')%>" alt="Кнопка закрыть">
+      </button>
+    </div>
+  </section>
 
 </body>
 

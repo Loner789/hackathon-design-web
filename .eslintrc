@@ -1,6 +1,12 @@
 {
   "extends": "airbnb-base",
   "rules": {
-    "no-underscore-dangle": ["off", { "allow": ["_id"] }]
+    "no-underscore-dangle": ["off", { "allow": ["_id"] }],
+    "no-return-assign": ["error", "except-parens"],
+    "no-param-reassign": ["off"]
+  },
+  "env": {
+    "browser": true,
+    "node": true
   }
 }

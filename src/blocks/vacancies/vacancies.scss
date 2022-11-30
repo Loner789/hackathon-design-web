@@ -279,7 +279,7 @@
 .vacancies__share-btn {
   width: 50px;
   height: 50px;
-  background-image: url(../images/share.svg);
+  background-image: url(../images/share-button.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -347,22 +347,22 @@
 }
 
 .vacancies__popup-share:hover .vacancies__popup-copy-icon {
-  background-image: url(../images/icon-copy-blue.svg);
+  // background-image: url(../images/icon-copy-blue.svg);
   transition: .5s;
 }
 
 .vacancies__popup-share:hover .vacancies__popup-telegram-icon {
-  background-image: url(../images/icon-telegram-blue.svg);
+  // background-image: url(../images/icon-telegram-blue.svg);
   transition: .5s;
 }
 
 .vacancies__popup-share:hover .vacancies__popup-vk-icon {
-  background-image: url(../images/icon-vk-blue.svg);
+  // background-image: url(../images/icon-vk-blue.svg);
   transition: .5s;
 }
 
 .vacancies__popup-share:hover .vacancies__popup-twitter-icon {
-  background-image: url(../images/icon-twitter-blue.svg);
+  // background-image: url(../images/icon-twitter-blue.svg);
   transition: .5s;
 }
 
@@ -402,25 +402,25 @@
 .vacancies__popup-copy-icon {
   width: 24px;
   height: 24px;
-  background-image: url(../images/icon-copy-black.svg);
+  // background-image: url(../images/icon-copy-black.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
 
 .vacancies__popup-copy-icon_done {
-  background-image: url(../images/icon-copy-success.svg);
+  // background-image: url(../images/icon-copy-success.svg);
 }
 
 .vacancies__popup-share:hover .vacancies__popup-copy-icon_done {
-  background-image: url(../images/icon-copy-success.svg);
+  // background-image: url(../images/icon-copy-success.svg);
   transition: .5s;
 }
 
 .vacancies__popup-telegram-icon {
   width: 24px;
   height: 24px;
-  background-image: url(../images/icon-telegram-black.svg);
+  // background-image: url(../images/icon-telegram-black.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -429,7 +429,7 @@
 .vacancies__popup-vk-icon {
   width: 24px;
   height: 24px;
-  background-image: url(../images/icon-vk-black.svg);
+  // background-image: url(../images/icon-vk-black.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -438,7 +438,7 @@
 .vacancies__popup-twitter-icon {
   width: 24px;
   height: 24px;
-  background-image: url(../images/icon-twitter-black.svg);
+  // background-image: url(../images/icon-twitter-black.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

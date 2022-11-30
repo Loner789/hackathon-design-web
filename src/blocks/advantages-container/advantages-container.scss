@@ -1,0 +1,48 @@
+@import '../../utils/styles/constants';
+
+.advantages-container {
+  display: grid;
+  column-gap: 20px;
+  row-gap: 20px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.4;
+  margin-top: 100px;
+
+  .advantages-container__row {
+    display: grid;
+    column-gap: 20px;
+
+    .advantages-container__card-list {
+      padding: 0;
+      margin: 0;
+      display: grid;
+      list-style-type: none;
+      align-items: center;
+      grid-template-rows: repeat(2, 1fr);
+      row-gap: 20px;
+    }
+  }
+
+  .advantages-container__row_place_first {
+    grid-template-columns: 610px 590px;
+
+    .advantages-container__image {
+      width: 610px;
+      display: block;
+    }
+  }
+
+  .advantages-container__row_place_second {
+    grid-template-columns: 380px 820px;
+  }
+
+  .advantages-container__row_place_third {
+    grid-template-columns: 715px 485px;
+  }
+
+  .advantages-container__row_place_fourth {
+    grid-template-columns: 590px 610px;
+  }
+}
