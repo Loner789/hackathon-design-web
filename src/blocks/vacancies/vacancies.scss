@@ -23,7 +23,7 @@
   justify-content: center;
   width: 100%;
   min-height: 69px;
-  background-color: #000000;
+  background-color: #4F7FDD;
   padding: 0;
   margin: 0;
 }
@@ -34,10 +34,10 @@
 
 .vacancies__btn-menu {
   border-style: none;
-  background-color: #000000;
+  background-color: #4F7FDD;
   font-family: 'Inter';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   line-height: 19px;
   color: #FFFFFF;
@@ -49,7 +49,7 @@
 .vacancies__btn-menu_active {
   background-color: #FFFFFF;
   padding: 10px 15px;
-  border-radius: 23px;
+  border-radius: 8px;
   color: #000000;
   margin: 0 40px 0 0px;
 }
@@ -147,6 +147,25 @@
   display: none;
 }
 
+.vacancies__name-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.vacancies__gallery-arrow {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/icon-arrow-backward.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: all .3s linear;
+}
+
+.vacancies__gallery-arrow_active {
+  transform: rotate(90deg);
+}
+
 .vacancies__name {
   border-style: none;
   background-color: #FFFFFF;
@@ -156,13 +175,13 @@
   font-size: 20px;
   line-height: 140%;
   color: #000000;
-  margin: 0;
+  margin: 0 0 0 10px;
   padding: 0;
   cursor: pointer;
 }
 
 .vacancies__name_active {
-
+  color: #4F7FDD;
 }
 
 .vacancies__salary {
@@ -236,25 +255,25 @@
 .vacancies__send-btn {
   width: 295px;
   height: 50px;
-  background-color: #000000;
-  font-family: 'YS Text';
+  background-color: #4F7FDD;
+  font-family: 'YS Display';
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 50px;
   text-align: center;
   color: #FFFFFF;
   padding: 0;
   margin: 25px 0 35px 0;
   border-style: none;
-  border-radius: 100px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
 .vacancies__share-btn {
   width: 50px;
   height: 50px;
-  background-image: url(../../images/share-button.svg);
+  background-image: url(../images/share.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -266,9 +285,9 @@
 }
 
 .vacancies__notfound-vac-text {
-  font-family: 'Inter';
+  font-family: 'YS Display';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 20px;
   line-height: 50px;
   display: flex;
@@ -280,18 +299,18 @@
 .vacancies__notfound-vac-btn {
   width: 293px;
   height: 50px;
-  background-color: #1A1B22;
-  font-family: 'YS Text';
+  background-color: #FFFFFF;
+  font-family: 'YS Display';
   font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 20px;
   line-height: 50px;
   text-align: center;
-  color: #FFFFFF;
+  color: #4F7FDD;
   padding: 0;
   margin: 45px 0 0 20px;
-  border-style: none;
-  border-radius: 100px;
+  border: 1px solid #4F7FDD;
+  border-radius: 8px;
   cursor: pointer;
 }
 

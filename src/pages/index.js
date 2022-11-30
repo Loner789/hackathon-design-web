@@ -25,17 +25,31 @@ const vacanciesShareBtns = vacancies.querySelectorAll('.vacancies__share-btn');
 const vacanciesPopupShare = vacancies.querySelector('.vacancies__popup-share');
 const vacanciesCopyBtn = vacanciesPopupShare.querySelector('.vacancies__popup-copy-icon');
 const vacanciesCopyLink = vacanciesPopupShare.querySelector('#copyLink');
+const vacGalleryArrows = vacancies.querySelectorAll('.vacancies__gallery-arrow');
 
 
 // ------- КОД -------
 
 // ------- vacancies -------
 vacancieNameBtn.forEach(btn => {
-  btn.addEventListener('click', function handleClick(event) {
+  btn.addEventListener('click', function handleClick(evt) {
     const vacItem = btn.closest('.vacancies__gallery-item')
     const vacDescription = vacItem.querySelector('.vacancies__description');
+    const vacName = vacItem.querySelector('.vacancies__name');
+    const vacArrow = vacItem.querySelector('.vacancies__gallery-arrow');
+    vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
+    vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
+    if (vacName.classList.contains('vacancies__name_active')) {
+      vacName.classList.remove('vacancies__name_active');
+      vacArrow.classList.remove('vacancies__gallery-arrow_active');
+    } else {
+      vacName.classList.add('vacancies__name_active');
+      vacArrow.classList.add('vacancies__gallery-arrow_active');
+    }
     if (vacDescription.classList.contains('vacancies__description_active')) {
       vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+      vacName.classList.remove('vacancies__name_active');
+      vacArrow.classList.remove('vacancies__gallery-arrow_active');
     } else {
       vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
       vacDescription.classList.add('vacancies__description_active');
