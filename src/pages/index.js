@@ -115,6 +115,8 @@ const handleDesignBtnClick = (evt) => {
   vacanciesNoVac.classList.add('vacancies__novac-wrapper_active');
   vacanciesNotFound.classList.add('vacancies__gallery-wrapper_hide');
   vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
+  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
 }
 
 const handleProgrammingBtnClick = (evt) => {
@@ -127,6 +129,8 @@ const handleProgrammingBtnClick = (evt) => {
   vacanciesNoVac.classList.remove('vacancies__novac-wrapper_active');
   vacanciesNotFound.classList.remove('vacancies__gallery-wrapper_hide');
   vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
+  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
 }
 
 const handleAnaliticsBtnClick = (evt) => {
@@ -139,6 +143,8 @@ const handleAnaliticsBtnClick = (evt) => {
   vacanciesNoVac.classList.remove('vacancies__novac-wrapper_active');
   vacanciesNotFound.classList.remove('vacancies__gallery-wrapper_hide');
   vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
+  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
 }
 
 const handleMarketingBtnClick = (evt) => {
@@ -150,6 +156,8 @@ const handleMarketingBtnClick = (evt) => {
   vacanciesNoVac.classList.add('vacancies__novac-wrapper_active');
   vacanciesNotFound.classList.add('vacancies__gallery-wrapper_hide');
   vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
+  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
 }
 
 const handleManagementBtnClick = (evt) => {
@@ -161,6 +169,8 @@ const handleManagementBtnClick = (evt) => {
   vacanciesNoVac.classList.add('vacancies__novac-wrapper_active');
   vacanciesNotFound.classList.add('vacancies__gallery-wrapper_hide');
   vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
+  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
 }
 
 const handleCopyShareBtnClick = () => {
