@@ -6,7 +6,10 @@ export default class PopupWithForm extends Popup {
     this._submitHandlerForm = submitHandlerForm;
     this._formElement = this._elementPopup.querySelector(formSelector);
     this._inputsList = Array.from(this._formElement.querySelectorAll('.form__item'));
-    this._buttonForm = this._formElement.querySelector('.form__button');
+    this._buttonForm = this._formElement.querySelector('.popup__button');
+    this._success = this._elementPopup.querySelector('.success');
+    this._successButton = this._success.querySelector('.popup__button');
+    this._popupTitle = this._elementPopup.querySelector('.popup__title');
   }
 
   _getInputValues() {
@@ -22,12 +25,30 @@ export default class PopupWithForm extends Popup {
     this._formElement.reset();
   }
 
+  showBlockSuccess() {
+    this._popupTitle.classList.add('popup__title_hidden');
+    this._formElement.classList.add('form_hidden');
+    this._success.classList.add('success_visible');
+  }
+
+  open() {
+    super.open();
+    this._popupTitle.classList.remove('popup__title_hidden');
+    this._formElement.classList.remove('form_hidden');
+    this._success.classList.remove('success_visible');
+    this._buttonForm.setAttribute('disabled', true);
+  }
+
   setEventListeners() {
     super.setEventListeners();
 
     this._formElement.addEventListener('submit', (evt) => {
       evt.preventDefault();
       this._submitHandlerForm(this._getInputValues());
+    });
+
+    this._successButton.addEventListener('click', () => {
+      this.close();
     });
   }
 }

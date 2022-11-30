@@ -9,17 +9,20 @@ import {
 /* button for the oppening popup */
 const button = document.querySelector('.button');
 
-const submitHandlerForm = (data) => {
-  console.log(data);
-};
-
 const popupWithForm = new PopupWithForm(popupSelector, submitHandlerForm, formSelector);
 popupWithForm.setEventListeners();
-
-const FormInPopupValidator = new FormValidator(configFormValidator, '#form');
-FormInPopupValidator.enableValidation();
 
 /* to open popup */
 button.addEventListener('click', () => {
   popupWithForm.open();
 });
+
+const FormInPopupValidator = new FormValidator(configFormValidator, '#form');
+FormInPopupValidator.enableValidation();
+
+function submitHandlerForm(data) {
+  console.log(data);
+
+  /* on successful submission */
+  popupWithForm.showBlockSuccess();
+};

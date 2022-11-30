@@ -36,6 +36,39 @@
       max-width: 630px;
       width: 100%;
     }
+
+    .popup__title_hidden {
+      display: none;
+    }
+
+    .popup__button {
+      margin-top: 40px;
+      background: #4F7FDD;
+      border-radius: 8px;
+      width: 330px;
+      box-sizing: border-box;
+      color: #fff;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.4;
+      border: none;
+      padding: 11px 0;
+      align-self: center;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .popup__button:hover {
+      cursor: pointer;
+    }
+
+    .popup__button_place_success {
+      margin-top: 86px;
+    }
+
+    .popup__success_visible {
+      display: block;
+    }
   }
 }
 

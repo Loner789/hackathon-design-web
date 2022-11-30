@@ -125,25 +125,6 @@
     text-decoration: none;
   }
 
-  .form__button {
-    margin-top: 40px;
-    background: #4F7FDD;
-    border-radius: 8px;
-    width: 330px;
-    box-sizing: border-box;
-    color: #fff;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.4;
-    border: none;
-    padding: 11px 0;
-    align-self: center;
-  }
-
-  .form__button:hover {
-    cursor: pointer;
-  }
-
   .form__error_active {
     font-family: 'YS Text';
     font-style: normal;
@@ -164,4 +145,8 @@
   .form__item:valid {
     border-bottom: 2px solid #37935B;
   }
+}
+
+.form_hidden {
+  display: none;
 }

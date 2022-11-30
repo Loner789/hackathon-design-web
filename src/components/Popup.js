@@ -2,6 +2,7 @@ export default class Popup {
   constructor(popupSelector) {
     this._elementPopup = document.querySelector(popupSelector);
     this._handleEscClose = this._handleEscClose.bind(this);
+    this._buttonClose = this._elementPopup.querySelector('.button-close');
   }
 
   /* ToDo: check linter */
@@ -29,6 +30,10 @@ export default class Popup {
       if (evt.target.classList.contains('button-close')) {
         this.close();
       }
+    });
+
+    this._buttonClose.addEventListener('click', () => {
+      this.close();
     });
   }
 }
