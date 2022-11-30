@@ -46,6 +46,36 @@ import {
   cardLinePlaceSecondBottomParent,
 } from '../utils/constants';
 
+// ------- ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ -------
+// ------- vacancies -------
+const vacancies = document.querySelector('.vacancies');
+const vacancieNameBtn = vacancies.querySelectorAll('.vacancies__name');
+const vacancieEduItems = vacancies.querySelectorAll('.vacancies__btn-menu');
+const vacanciesDescriptionItems = vacancies.querySelectorAll('.vacancies__description');
+const vacancieEduItemDesign = vacancies.querySelector('#disign');
+const vacancieEduItemProgramming = vacancies.querySelector('#programming');
+const vacancieEduItemAnalitics = vacancies.querySelector('#analitics');
+const vacancieEduItemMarketing = vacancies.querySelector('#marketing');
+const vacancieEduItemManagement = vacancies.querySelector('#management');
+const vacancieProphItems = vacancies.querySelectorAll('.vacancies__proph-btn-menu');
+const vacancieProphSensey = vacancies.querySelector('#sensey');
+const vacancieProphReviewer = vacancies.querySelector('#reviewer');
+const vacancieSenseyGallaryProg = vacancies.querySelector('#sensey-gallary-prog');
+const vacancieReviewerGallaryProg = vacancies.querySelector('#reviewer-gallary-prog');
+const vacancieSenseyGallaryAnalitics = vacancies.querySelector('#sensey-gallary-analitics');
+const vacancieReviewerGallaryAnalitics = vacancies.querySelector('#reviewer-gallary-analitics');
+const vacanciesGallaries = vacancies.querySelectorAll('.vacancies__gallery');
+const vacanciesNoVac = vacancies.querySelector('#no-vac-available');
+const vacanciesNotFound = vacancies.querySelector('#vac-notfound');
+const vacanciesShareBtns = vacancies.querySelectorAll('.vacancies__share-btn');
+const vacanciesPopupShare = vacancies.querySelector('.vacancies__popup-share');
+const vacanciesCopyBtn = vacanciesPopupShare.querySelector('.vacancies__popup-copy-icon');
+const vacanciesCopyLink = vacanciesPopupShare.querySelector('#copyLink');
+const vacGalleryArrows = vacancies.querySelectorAll('.vacancies__gallery-arrow');
+
+
+
+=======
 // FUNCTIONS:
 // Learning section typing
 // eslint-disable-next-line no-unused-vars
@@ -223,14 +253,28 @@ const createSuccessStoryVideo = (data) => {
 };
 
 createSuccessStoryVideo(successStoriesVideo);
+// ------- КОД -------
 
 // ------- vacancies -------
-vacancieNameBtn.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const vacItem = btn.closest('.vacancies__gallery-item');
+vacancieNameBtn.forEach(btn => {
+  btn.addEventListener('click', function handleClick(evt) {
+    const vacItem = btn.closest('.vacancies__gallery-item')
     const vacDescription = vacItem.querySelector('.vacancies__description');
+    const vacName = vacItem.querySelector('.vacancies__name');
+    const vacArrow = vacItem.querySelector('.vacancies__gallery-arrow');
+    vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
+    vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
+    if (vacName.classList.contains('vacancies__name_active')) {
+      vacName.classList.remove('vacancies__name_active');
+      vacArrow.classList.remove('vacancies__gallery-arrow_active');
+    } else {
+      vacName.classList.add('vacancies__name_active');
+      vacArrow.classList.add('vacancies__gallery-arrow_active');
+    }
     if (vacDescription.classList.contains('vacancies__description_active')) {
       vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+      vacName.classList.remove('vacancies__name_active');
+      vacArrow.classList.remove('vacancies__gallery-arrow_active');
     } else {
       vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
       vacDescription.classList.add('vacancies__description_active');
@@ -271,9 +315,10 @@ const activateVacanciesProphItem = (menuItems, menuItemElement) => {
 
 const handleVacSenseyProphItemClick = (evt) => {
   activateVacanciesProphItem(vacancieProphItems, evt.target);
-  if (
-    vacancieEduItemProgramming.classList.contains('vacancies__btn-menu_active')
-  ) {
+  vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
+  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
+  if (vacancieEduItemProgramming.classList.contains('vacancies__btn-menu_active')) {
     vacancieSenseyGallaryProg.classList.add('vacancies__gallery_active');
   } else {
     vacancieSenseyGallaryAnalitics.classList.add('vacancies__gallery_active');
@@ -282,9 +327,10 @@ const handleVacSenseyProphItemClick = (evt) => {
 
 const handleVacReviewerProphItemClick = (evt) => {
   activateVacanciesProphItem(vacancieProphItems, evt.target);
-  if (
-    vacancieEduItemProgramming.classList.contains('vacancies__btn-menu_active')
-  ) {
+  vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
+  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
+  if (vacancieEduItemProgramming.classList.contains('vacancies__btn-menu_active')) {
     vacancieReviewerGallaryProg.classList.add('vacancies__gallery_active');
   } else {
     vacancieReviewerGallaryAnalitics.classList.add('vacancies__gallery_active');
@@ -305,7 +351,9 @@ const handleDesignBtnClick = (evt) => {
   vacanciesNoVac.classList.add('vacancies__novac-wrapper_active');
   vacanciesNotFound.classList.add('vacancies__gallery-wrapper_hide');
   vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
-};
+  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
+  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
+}
 
 const handleProgrammingBtnClick = (evt) => {
   activateVacanciesEducationItem(vacancieEduItems, evt.target);
@@ -317,7 +365,10 @@ const handleProgrammingBtnClick = (evt) => {
   vacanciesNoVac.classList.remove('vacancies__novac-wrapper_active');
   vacanciesNotFound.classList.remove('vacancies__gallery-wrapper_hide');
   vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
-};
+  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
+  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
+}
+
 
 const handleAnaliticsBtnClick = (evt) => {
   activateVacanciesEducationItem(vacancieEduItems, evt.target);
@@ -329,7 +380,9 @@ const handleAnaliticsBtnClick = (evt) => {
   vacanciesNoVac.classList.remove('vacancies__novac-wrapper_active');
   vacanciesNotFound.classList.remove('vacancies__gallery-wrapper_hide');
   vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
-};
+  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
+  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
+}
 
 const handleMarketingBtnClick = (evt) => {
   activateVacanciesEducationItem(vacancieEduItems, evt.target);
@@ -340,7 +393,9 @@ const handleMarketingBtnClick = (evt) => {
   vacanciesNoVac.classList.add('vacancies__novac-wrapper_active');
   vacanciesNotFound.classList.add('vacancies__gallery-wrapper_hide');
   vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
-};
+  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
+  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
+}
 
 const handleManagementBtnClick = (evt) => {
   activateVacanciesEducationItem(vacancieEduItems, evt.target);
@@ -351,7 +406,9 @@ const handleManagementBtnClick = (evt) => {
   vacanciesNoVac.classList.add('vacancies__novac-wrapper_active');
   vacanciesNotFound.classList.add('vacancies__gallery-wrapper_hide');
   vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
-};
+  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
+  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
+}
 
 const handleCopyShareBtnClick = () => {
   vacanciesCopyBtn.classList.add('vacancies__popup-copy-icon_done');
