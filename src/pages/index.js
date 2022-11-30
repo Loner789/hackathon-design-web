@@ -85,6 +85,9 @@ const activateVacanciesProphItem = (menuItems, menuItemElement) => {
 
 const handleVacSenseyProphItemClick = (evt) => {
   activateVacanciesProphItem(vacancieProphItems, evt.target);
+  vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
+  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
   if (vacancieEduItemProgramming.classList.contains('vacancies__btn-menu_active')) {
     vacancieSenseyGallaryProg.classList.add('vacancies__gallery_active');
   } else {
@@ -94,6 +97,9 @@ const handleVacSenseyProphItemClick = (evt) => {
 
 const handleVacReviewerProphItemClick = (evt) => {
   activateVacanciesProphItem(vacancieProphItems, evt.target);
+  vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
+  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
   if (vacancieEduItemProgramming.classList.contains('vacancies__btn-menu_active')) {
     vacancieReviewerGallaryProg.classList.add('vacancies__gallery_active');
   } else {
