@@ -24,3 +24,12 @@
     url(../vendor/ys-display/YS-Display-Light.ttf) format('ttf');
   font-weight: 300;
 }
+
+@font-face {
+  font-family: 'YS Text';
+  font-style: normal;
+  font-display: swap;
+  src: local('YS Text'),
+    url(../vendor/ys-text/YS-Text-Regular.ttf) format('ttf');
+  font-weight: 400;
+}
