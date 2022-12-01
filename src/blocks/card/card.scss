@@ -9,6 +9,8 @@
   .card__rotate {
     transform-style: preserve-3d;
     transition: .5s;
+    position: relative;
+    height: 100%;
 
     .card__text {
       animation: initial;
@@ -32,12 +34,16 @@
       box-sizing: border-box;
       width: 100%;
       height: 100%;
-      margin-top: -20px;
+      margin: 0;
       position: absolute;
-      top: 0;
+      bottom: 50%;
       left: 0;
       transform: rotateY(180deg);
       backface-visibility: hidden;
+    }
+
+    .card__description_offset {
+      bottom: calc(100% - 50% - 11px);
     }
   }
 
@@ -94,7 +100,7 @@
 .card:hover::after, .card:hover::before {
   box-sizing: border-box;
   content: '';
-  border: 3px solid #5686e3;
+  border: none;
 }
 
 .card_place_right-top::after {

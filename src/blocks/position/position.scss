@@ -41,16 +41,6 @@
     padding: 0;
   }
 
-  .position__mentor {
-    position: absolute;
-    width: 295px;
-    height: 295px;
-    bottom: 0;
-    right: 0;
-    display: block;
-    box-sizing: border-box;
-  }
-
   .position__reviewer {
     position: absolute;
     width: 295px;
@@ -128,10 +118,25 @@
   box-sizing: border-box;
 }
 
+.position_mentor {
+  background: url(../images/block3-mentor-vector.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+
+.position_reviewer {
+  background: url(../images/block3-reviewer-vector.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+
 .position:hover {
   cursor: pointer;
   background-color: #4F7FDD;
   color: #fff;
+  background-image: none;
 
   .position__task {
     color: #fff;
@@ -145,9 +150,9 @@
   }
 }
 
-  .position_line_left:hover::after,
-  .position_line_left:hover::before,
-  .position_line_top-right:hover::after,
-  .position_line_top-right:hover::before {
-    display: none;
-  }
+.position_line_left:hover::after,
+.position_line_left:hover::before,
+.position_line_top-right:hover::after,
+.position_line_top-right:hover::before {
+  display: none;
+}

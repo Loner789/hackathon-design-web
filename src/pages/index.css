@@ -319,6 +319,8 @@
 .card .card__rotate {
   transform-style: preserve-3d;
   transition: 0.5s;
+  position: relative;
+  height: 100%;
 }
 .card .card__rotate .card__text {
   animation: initial;
@@ -341,12 +343,15 @@
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  margin-top: -20px;
+  margin: 0;
   position: absolute;
-  top: 0;
+  bottom: 50%;
   left: 0;
   transform: rotateY(180deg);
   backface-visibility: hidden;
+}
+.card .card__rotate .card__description_offset {
+  bottom: calc(50% - 11px);
 }
 .card .card__line {
   position: relative;
@@ -395,7 +400,7 @@
 .card:hover::after, .card:hover::before {
   box-sizing: border-box;
   content: "";
-  border: 3px solid #5686e3;
+  border: none;
 }
 
 .card_place_right-top::after {
@@ -658,14 +663,20 @@
   border: none;
 }
 
+.video:hover {
+  cursor: pointer;
+}
+
 .video-button {
-  /* ToDo: fix background-image
-  background-image: url(../../images/button-play-video.svg); */
+  background-image: url(../images/button-play-video.png);
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
   padding: 0;
   position: absolute;
+  width: 120px;
+  height: 120px;
+  display: block;
 }
 
 .video-button_place_success-story {
@@ -673,6 +684,7 @@
   height: 80px;
   bottom: 40px;
   right: 40px;
+  background-size: cover;
 }
 
 .video-button_place_advantages {
@@ -720,6 +732,10 @@
 }
 .duties .duties__button:hover {
   cursor: pointer;
+  background-color: #2B68DE;
+}
+.duties .duties__button:focus {
+  background-color: #00308C;
 }
 
 .position {
@@ -759,15 +775,6 @@
   font-weight: 400;
   box-sizing: border-box;
   padding: 0;
-}
-.position .position__mentor {
-  position: absolute;
-  width: 295px;
-  height: 295px;
-  bottom: 0;
-  right: 0;
-  display: block;
-  box-sizing: border-box;
 }
 .position .position__reviewer {
   position: absolute;
@@ -843,10 +850,25 @@
   box-sizing: border-box;
 }
 
+.position_mentor {
+  background: url(../images/block3-mentor-vector.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+
+.position_reviewer {
+  background: url(../images/block3-reviewer-vector.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+
 .position:hover {
   cursor: pointer;
   background-color: #4F7FDD;
   color: #fff;
+  background-image: none;
 }
 .position:hover .position__task {
   color: #fff;
@@ -1022,17 +1044,23 @@
   display: block;
   width: 32px;
   height: 32px;
-  /*ToDo: change tag to background
-  background-image: url(../../images/button-close-popup.svg);*/
+  background-image: url(../images/button-close-popup.svg);
+  background-repeat: no-repeat;
   background-color: transparent;
   box-sizing: border-box;
   border: none;
   padding: 0;
   text-decoration: none;
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 30px;
+  right: 30px;
   background-size: contain;
+}
+
+.button-close_place_video-popup {
+  background-image: url(../images/button-close-popup-white.png);
+  top: -40px;
+  right: -40px;
 }
 
 .button-close:hover {
@@ -1236,13 +1264,15 @@
 }
 
 .video-button {
-  /* ToDo: fix background-image
-  background-image: url(../../images/button-play-video.svg); */
+  background-image: url(../images/button-play-video.png);
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
   padding: 0;
   position: absolute;
+  width: 120px;
+  height: 120px;
+  display: block;
 }
 
 .video-button_place_success-story {
@@ -1250,6 +1280,7 @@
   height: 80px;
   bottom: 40px;
   right: 40px;
+  background-size: cover;
 }
 
 .video-button_place_advantages {
@@ -1288,9 +1319,9 @@
   padding: 90px 190px 60px;
 }
 .popup .popup__container .popup__video {
-  width: 700px;
-  height: 500px;
+  width: 100%;
   border: none;
+  height: 500px;
 }
 .popup .popup__container .popup__title {
   font-style: normal;
@@ -1306,7 +1337,7 @@
   display: none;
 }
 .popup .popup__container .popup__button {
-  margin-top: 40px;
+  margin-top: 16px;
   background: #4F7FDD;
   border-radius: 8px;
   width: 330px;
@@ -1323,12 +1354,26 @@
 }
 .popup .popup__container .popup__button:hover {
   cursor: pointer;
+  background-color: #2B68DE;
+}
+.popup .popup__container .popup__button:focus {
+  background-color: #00308C;
+}
+.popup .popup__container .popup__button_disabled {
+  background-color: rgba(133, 133, 133, 0.3);
+}
+.popup .popup__container .popup__button:disabled {
+  background-color: rgba(133, 133, 133, 0.3);
 }
 .popup .popup__container .popup__button_place_success {
   margin-top: 86px;
 }
 .popup .popup__container .popup__success_visible {
   display: block;
+}
+.popup .popup__container_place_video-popup {
+  padding: 0;
+  width: 900px;
 }
 
 .popup_opened {
@@ -1755,7 +1800,7 @@
 }
 .form .form__label {
   width: 100%;
-  margin-top: 47px;
+  margin-top: 23px;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1783,7 +1828,7 @@
   max-width: 418px;
 }
 .form .form__label_place_textarea {
-  margin-top: 20px;
+  margin-top: 0;
 }
 .form .form__item_textarea {
   height: 200px;
@@ -1793,20 +1838,37 @@
   display: inline-block;
 }
 .form .form__label_place_url {
-  margin-top: 40px;
+  margin-top: 0;
 }
 .form .form__label_place_checkbox {
-  margin-top: 20px;
+  margin-top: 0;
+}
+.form .form__label-text_checkbox {
   display: grid;
   grid-template-columns: 20px calc(100% - 20px);
   width: 100%;
   column-gap: 10px;
 }
 .form .form__item_checkbox {
-  width: 20px;
-  height: 20px;
+  z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+.form .form__label-text_checkbox::before {
+  content: "";
+  display: inline-block;
   border: 1px solid rgba(133, 133, 133, 0.3);
   border-radius: 5px;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  opacity: 1;
+}
+.form .form__item_checkbox:checked + .form__label-text_checkbox::before {
+  border: 1px solid #37935B;
+  background-image: url(../images/custom-checkbox.png);
 }
 .form .form__item {
   width: 100%;
@@ -1857,13 +1919,19 @@
   color: #1E2027;
   text-decoration: none;
 }
-.form .form__error_active {
+.form .error-text {
+  visibility: hidden;
   font-family: "YS Text";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 2;
   color: #FF3B30;
+  position: relative;
+  min-block-size: 24px;
+}
+.form .form__error_active {
+  visibility: visible;
 }
 .form .form__item_type_error {
   border-bottom: 2px solid #FF3B30;
@@ -1908,9 +1976,9 @@
   padding: 90px 190px 60px;
 }
 .popup .popup__container .popup__video {
-  width: 700px;
-  height: 500px;
+  width: 100%;
   border: none;
+  height: 500px;
 }
 .popup .popup__container .popup__title {
   font-style: normal;
@@ -1926,7 +1994,7 @@
   display: none;
 }
 .popup .popup__container .popup__button {
-  margin-top: 40px;
+  margin-top: 16px;
   background: #4F7FDD;
   border-radius: 8px;
   width: 330px;
@@ -1943,12 +2011,26 @@
 }
 .popup .popup__container .popup__button:hover {
   cursor: pointer;
+  background-color: #2B68DE;
+}
+.popup .popup__container .popup__button:focus {
+  background-color: #00308C;
+}
+.popup .popup__container .popup__button_disabled {
+  background-color: rgba(133, 133, 133, 0.3);
+}
+.popup .popup__container .popup__button:disabled {
+  background-color: rgba(133, 133, 133, 0.3);
 }
 .popup .popup__container .popup__button_place_success {
   margin-top: 86px;
 }
 .popup .popup__container .popup__success_visible {
   display: block;
+}
+.popup .popup__container_place_video-popup {
+  padding: 0;
+  width: 900px;
 }
 
 .popup_opened {
@@ -2009,17 +2091,23 @@
   display: block;
   width: 32px;
   height: 32px;
-  /*ToDo: change tag to background
-  background-image: url(../../images/button-close-popup.svg);*/
+  background-image: url(../images/button-close-popup.svg);
+  background-repeat: no-repeat;
   background-color: transparent;
   box-sizing: border-box;
   border: none;
   padding: 0;
   text-decoration: none;
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 30px;
+  right: 30px;
   background-size: contain;
+}
+
+.button-close_place_video-popup {
+  background-image: url(../images/button-close-popup-white.png);
+  top: -40px;
+  right: -40px;
 }
 
 .button-close:hover {

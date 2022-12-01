@@ -41,7 +41,7 @@
     <section class="duties">
       <h2 class="section-title section-title_place_duties">Предлагаем различные задачи</h2>
       <ul class="duties__list-of-positions">
-        <li class="position position_line_top-right">
+        <li class="position position_line_top-right position_mentor">
           <div class="position__border_line_left-top"></div>
           <h3 class="position__title">Наставник</h3>
           <ul class="position__list-of-tasks">
@@ -50,10 +50,8 @@
             <li class="position__task">Отвечает на вопросы студентов в чате.</li>
             <li class="position__task">Помогает студентам ставить цели и достигать их.</li>
           </ul>
-          <!-- ToDo: change tag img to background -->
-          <img class="position__mentor" src="<%=require('./images/block3-mentor-vector.png')%>" alt="Иконка наставник">
         </li>
-        <li class="position position_line_left">
+        <li class="position position_line_left position_reviewer">
           <div class="position__border_line_right-top"></div>
           <h3 class="position__title">Ревьюер</h3>
           <ul class="position__list-of-tasks">
@@ -62,9 +60,6 @@
             <li class="position__task">Даёт корректирующую обратную связь.</li>
             <li class="position__task">Оценивает работы и ставит зачёты.</li>
           </ul>
-          <!-- ToDo: change tag img to background -->
-          <img class="position__reviewer" src="<%=require('./images/block3-reviewer-vector.png')%>"
-            alt="Иконка ревьюер">
         </li>
       </ul>
       <a href="#vacancies" class="duties__button">Отправить резюме</a>
@@ -89,7 +84,7 @@
             <li class="card card_place_right-bottom card_line-bottom">
               <div class="card__rotate">
                 <p class="card__text">Менять жизнь людей</p>
-                <p class="card__description">
+                <p class="card__description card__description_offset">
                   Тысячи наших студентов нуждаются в ваших знаниях и
                   опыте — не бойтесь ими делиться.
                 </p>
@@ -103,7 +98,7 @@
             <li class="card card_place_left-top">
               <div class="card__rotate">
                 <p class="card__text">Гибкий график</p>
-                <p class="card__description">
+                <p class="card__description card__description_offset">
                   Удаленно, 2–3 часа в день, график выберете сами
                 </p>
               </div>
@@ -125,8 +120,6 @@
             </a>
             <button type="button" class="video-button video-button_place_advantages"
               aria-label="Кнопка воспроизвести видео">
-              <!-- ToDo: change teg img to background-image of the button -->
-              <img src="<%=require('./images/button-play-video.png')%>" alt="Кнопка воспроизвести видео">
             </button>
           </div>
         </div>
@@ -164,7 +157,7 @@
             <li class="card card_place_second-right-bottom">
               <div class="card__rotate">
                 <p class="card__text">Дополнительный доход</p>
-                <p class="card__description">
+                <p class="card__description card__description_offset">
                   Иметь заработок в среднем от 35 до 50 тысяч ₽ в месяц
                 </p>
               </div>
@@ -973,14 +966,10 @@
           <!-- ToDo: srcset? -->
           <img class="video-story__image">
         </a>
-        <!-- ToDo: common class of the button -->
         <button type="button" class="video-button video-button_place_success-story"
           aria-label="Кнопка воспроизвести видео">
-          <!-- ToDo: change teg img to background-image of the button -->
-          <img src="<%=require('./images/button-play-video.png')%>" alt="Кнопка воспроизвести видео">
         </button>
       </div>
-      <!-- ToDo: check header number" -->
       <h3 class="success-story-title success-story-title_place_video"></h3>
       <p class="success-story-subtitle success-story-subtitle_place_video"></p>
     </li>
@@ -988,10 +977,9 @@
 
   <!-- VIDEO POPUP -->
   <section class="popup popup_background_opacity" id="video-popup">
-    <div class="popup__container">
-      <button type="button" class="button-close" aria-label="Кнопка закрыть">
-        <!-- ToDo: change teg img to background-image of the button-->
-        <img src="<%=require('./images/button-close-popup.svg')%>" alt="Кнопка закрыть">
+    <div class="popup__container popup__container_place_video-popup">
+      <button type="button" class="button-close button-close_place_video-popup"
+        aria-label="Кнопка закрыть">
       </button>
     </div>
   </section>
@@ -999,10 +987,7 @@
   <!-- POPUP WITH FORM -->
   <section class="popup popup_background_opacity" id="popup-with-form">
     <div class="popup__container">
-      <button type="button" class="button-close" aria-label="Кнопка закрыть">
-        <!-- ToDo: change teg img to background-image of the button-->
-        <img src="<%=require('./images/button-close-popup.svg')%>" alt="Кнопка закрыть">
-      </button>
+      <button type="button" class="button-close" aria-label="Кнопка закрыть"></button>
 
       <!-- ToDo: the title must be taken from the vacancy -->
       <h2 class="popup__title">Хочу быть ревьюером на факультете анализа данных или Data Science</h2>
@@ -1011,12 +996,12 @@
         <label for="name" class="form__label form__label_place_input">
           <input type="text" class="form__item form__item_input" id="name" name="name" minlength="2" maxlength="100" required placeholder="ФИО">
         </label>
-        <span class="form__name-error"></span>
+        <span class="form__name-error error-text"></span>
 
         <label for="email" class="form__label form__label_place_input">
           <input type="email" class="form__item form__item_input" id="email" name="email" minlength="2" maxlength="30" required placeholder="Почта">
         </label>
-        <span class="form__email-error"></span>
+        <span class="form__email-error error-text"></span>
 
         <label for="stack" class="form__label">
           <p class="form__label-text">
@@ -1025,7 +1010,7 @@
           </p>
           <textarea class="form__item form__item_textarea" id="stack" name="stack" minlength="2" maxlength="1000" required></textarea>
         </label>
-        <span class="form__stack-error"></span>
+        <span class="form__stack-error error-text"></span>
 
         <label for="aboutYou" class="form__label form__label_place_textarea">
           <p class="form__label-text">
@@ -1033,7 +1018,7 @@
           </p>
           <textarea class="form__item form__item_textarea" id="aboutYou" name="aboutYou" minlength="2" maxlength="1000" required></textarea>
         </label>
-        <span class="form__aboutYou-error"></span>
+        <span class="form__aboutYou-error error-text"></span>
 
         <label for="cv" class="form__label form__label_place_input form__label_place_url">
           <input type="url" class="form__item form__item_input" id="cv" name="cv" minlength="2" maxlength="100" required placeholder="Ссылка на резюме">
@@ -1042,16 +1027,18 @@
             <span class="form__required-input">*</span>
           </p>
         </label>
-        <span class="form__cv-error"></span>
+        <span class="form__cv-error error-text"></span>
 
-        <label for="confidential" class="form__label form__label_place_checkbox">
+        <div class="form__label form__label_place_checkbox">
           <input type="checkbox" class="form__item form__item_checkbox" id="confidential" name="confidential" required>
-          <p class="form__label-text">
-            Я даю согласие АНО ДПО «ШАД» и ООО «ЯНДЕКС» на обработку <a class="form__link" href="https://yandex.ru/legal/confidential/">указанных данных</a> для целей рассмотрения анкеты и обратной связи по ней.
-            <span class="form__required-input">*</span>
-          </p>
-        </label>
-        <span class="form__confidential-error"></span>
+          <label class="form__label-text form__label-text_checkbox" for="confidential">
+            <div>
+              Я даю согласие АНО ДПО «ШАД» и ООО «ЯНДЕКС» на обработку <a class="form__link" href="https://yandex.ru/legal/confidential/">указанных данных</a> для целей рассмотрения анкеты и обратной связи по ней.
+              <span class="form__required-input">*</span>
+            </div>
+          </label>
+        </div>
+        <span class="form__confidential-error error-text"></span>
 
         <button type="submit" class="popup__button">Отправить резюме</button>
       </form>
@@ -1060,7 +1047,6 @@
         <h2 class="success__title">Спасибо, мы получили ваше резюме!</h2>
         <p class="success__text">Мы свяжемся с вами как только всё проверим. Обычно это 2 — 3 дня.</p>
         <a href="#" class="popup__button popup__button_place_success">Вернуться на сайт</a>
-        <!-- ToDo: change teg img to background -->
         <img class="success__vector success__vector_left" src="<%=require('./images/popup-vector-success.png')%>" alt="Векторная графика - успешная отправка формы">
         <img class="success__vector success__vector_right" src="<%=require('./images/popup-vector-success.png')%>" alt="Векторная графика - успешная отправка формы">
       </div>

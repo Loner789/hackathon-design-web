@@ -1,11 +1,13 @@
 .video-button {
-  /* ToDo: fix background-image
-  background-image: url(../../images/button-play-video.svg); */
+  background-image: url(../images/button-play-video.png);
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
   padding: 0;
   position: absolute;
+  width: 120px;
+  height: 120px;
+  display: block;
 }
 
 .video-button_place_success-story {
@@ -13,6 +15,7 @@
   height: 80px;
   bottom: 40px;
   right: 40px;
+  background-size: cover;
 }
 
 .video-button_place_advantages {

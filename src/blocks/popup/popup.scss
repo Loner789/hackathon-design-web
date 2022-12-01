@@ -27,9 +27,9 @@
     padding: 90px 190px 60px;
 
     .popup__video {
-      width: 700px;
-      height: 500px;
+      width: 100%;
       border: none;
+      height: 500px;
     }
 
     .popup__title {
@@ -48,7 +48,7 @@
     }
 
     .popup__button {
-      margin-top: 40px;
+      margin-top: 16px;
       background: #4F7FDD;
       border-radius: 8px;
       width: 330px;
@@ -66,6 +66,19 @@
 
     .popup__button:hover {
       cursor: pointer;
+      background-color: #2B68DE;
+    }
+
+    .popup__button:focus {
+      background-color: #00308C;
+    }
+
+    .popup__button_disabled {
+      background-color: rgba(133, 133, 133, 0.3);
+    }
+
+    .popup__button:disabled {
+      background-color: rgba(133, 133, 133, 0.3);
     }
 
     .popup__button_place_success {
@@ -75,6 +88,11 @@
     .popup__success_visible {
       display: block;
     }
+  }
+
+  .popup__container_place_video-popup {
+    padding: 0;
+    width: 900px;
   }
 }
 
