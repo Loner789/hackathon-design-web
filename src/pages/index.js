@@ -39,10 +39,9 @@ import {
   vacanciesNoVac,
   vacanciesNotFound,
   vacanciesShareBtns,
-  vacanciesPopupShare,
-  vacanciesCopyBtn,
-  vacanciesCopyLink,
   vacGalleryArrows,
+  vacanciesPopupShareEmptyCode,
+  vacanciesPopupShareFullCode,
   videoElement,
   cardLinePlaceFirstTop,
   cardLinePlaceFirstTopParent,
@@ -290,26 +289,6 @@ vacancieNameBtn.forEach(btn => {
   });
 });
 
-vacanciesShareBtns.forEach(btn => {
-  btn.addEventListener('click', function handleClick(evt) {
-    if (!vacanciesPopupShare.classList.contains('vacancies__popup-share_active')) {
-      vacanciesPopupShare.classList.add('vacancies__popup-share_active');
-      document.addEventListener("mousedown", (evt) => {
-        if (!evt.target.classList.contains('vacancies__popup-share') &&
-        !evt.target.classList.contains('vacancies__popup-list') &&
-        !evt.target.classList.contains('vacancies__popup-link-wrapper') &&
-        !evt.target.classList.contains('vacancies__popup-copy-icon') &&
-        !evt.target.classList.contains('vacancies__popup-link')) {
-          vacanciesPopupShare.classList.remove('vacancies__popup-share_active');
-          vacanciesCopyBtn.classList.remove('vacancies__popup-copy-icon_done');
-        }})
-    } else {
-      vacanciesPopupShare.classList.remove('vacancies__popup-share_active');
-      vacanciesCopyBtn.classList.remove('vacancies__popup-copy-icon_done');
-    }
-  })
-})
-
 const activateVacanciesProphItem = (menuItems, menuItemElement) => {
   menuItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
   vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
@@ -412,9 +391,56 @@ const handleManagementBtnClick = (evt) => {
   vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
 }
 
-const handleCopyShareBtnClick = () => {
-  vacanciesCopyBtn.classList.add('vacancies__popup-copy-icon_done');
+function copy() {
+  let url = document.location.href;
+  navigator.clipboard.writeText(url);
 }
+
+vacanciesShareBtns.forEach(btn => {
+  btn.addEventListener('click', function handleClick() {
+    const vacGalWrap = btn.closest('.vacancies__gallery-wrapper');
+    const vacPopupShare = vacGalWrap.querySelector('.vacancies__popup-share');
+    if (!btn.classList.contains('vacancies__share-btn_active')) {
+      vacanciesShareBtns.forEach((item) => item.classList.remove('vacancies__share-btn_active'));
+      btn.classList.add('vacancies__share-btn_active');
+      if (!vacPopupShare.classList.contains('vacancies__popup-share_active')) {
+        vacPopupShare.innerHTML = vacanciesPopupShareFullCode;
+        const vacanciesCopyBtn = vacGalWrap.querySelector('.vacancies__popup-copy-icon');
+        const vacanciesPopupLink = vacGalWrap.querySelector('.vacancies__popup-link');
+        const handleCopyShareBtnClick = () => {
+        vacanciesCopyBtn.classList.add('vacancies__popup-copy-icon_done');
+        vacanciesPopupLink.classList.add('vacancies__popup-link_active');
+        copy();
+        }
+        const vacanciesCopyLink = vacGalWrap.querySelector('#copyLink');
+        vacanciesCopyLink.addEventListener('click', handleCopyShareBtnClick);
+        vacPopupShare.classList.add('vacancies__popup-share_active');
+        document.addEventListener("mousedown", (evt) => {
+          if (!evt.target.classList.contains('vacancies__popup-share') &&
+          !evt.target.classList.contains('vacancies__popup-list') &&
+          !evt.target.classList.contains('vacancies__popup-link-wrapper') &&
+          !evt.target.classList.contains('vacancies__popup-copy-icon') &&
+          !evt.target.classList.contains('vacancies__popup-link') &&
+          !evt.target.classList.contains('vacancies__share-btn')) {
+            vacanciesCopyLink.removeEventListener('click', handleCopyShareBtnClick);
+            vacPopupShare.classList.remove('vacancies__popup-share_active');
+            vacanciesCopyBtn.classList.remove('vacancies__popup-copy-icon_done');
+            vacanciesPopupLink.classList.remove('vacancies__popup-link_active');
+            btn.classList.remove('vacancies__share-btn_active');
+            vacPopupShare.innerHTML = vacanciesPopupShareEmptyCode;
+          }})
+      } else {
+        vacanciesCopyLink.removeEventListener('click', handleCopyShareBtnClick);
+        btn.classList.remove('vacancies__share-btn_active');
+        vacPopupShare.innerHTML = vacanciesPopupShareEmptyCode;
+      }
+    } else {
+      vacanciesShareBtns.forEach((item) => item.classList.remove('vacancies__share-btn_active'));
+      vacPopupShare.classList.remove('vacancies__popup-share_active');
+      vacPopupShare.innerHTML = vacanciesPopupShareEmptyCode;
+    }
+  })
+})
 
 // EVENT LISTENERS:
 // Animation of the advantage
@@ -447,7 +473,6 @@ vacancieEduItemMarketing.addEventListener('click', handleMarketingBtnClick);
 vacancieEduItemManagement.addEventListener('click', handleManagementBtnClick);
 vacancieProphSensey.addEventListener('click', handleVacSenseyProphItemClick);
 vacancieProphReviewer.addEventListener('click', handleVacReviewerProphItemClick);
-vacanciesCopyLink.addEventListener('click', handleCopyShareBtnClick);
 
 /* button for the oppening popup */
 const button = document.querySelector('.vacancies__notfound-vac-btn');
