@@ -1,12 +1,22 @@
+@import '../../utils/styles/mixins';
+
 .section-title {
   font-style: normal;
   font-weight: 500;
   font-size: 55px;
-  line-height: 64px;
+  line-height: 1.16;
   padding: 0;
   color: #1E2027;
   margin: 0;
   text-align: left;
+
+  @include media_600 {
+    font-size: 35px;
+  }
+
+  @include media_480 {
+    font-size: 25px;
+  }
 }
 
 .section-title_place_advantages {

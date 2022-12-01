@@ -1,5 +1,15 @@
+@import '../../utils/styles/mixins';
+
 :root {
   margin: 0 auto;
   padding: 0 100px;
   max-width: 1440px;
+
+  @include media_1400 {
+    padding: 0 5%;
+  }
+
+  @include media_480 {
+    padding: 0 12px;
+  }
 }
