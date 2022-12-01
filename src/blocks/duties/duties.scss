@@ -1,4 +1,5 @@
 @import '../../utils/styles/constants';
+@import '../../utils/styles/mixins';
 
 .duties {
   display: flex;
@@ -18,6 +19,15 @@
     padding: 0;
     list-style-type: none;
     column-gap: 20px;
+
+    @include media_1280 {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+    }
+
+    @include media_600 {
+      margin-top: 50px;
+    }
   }
 
   .duties__button {
@@ -29,13 +39,18 @@
     line-height: 1.4;
     border: none;
     box-sizing: border-box;
-    width: 400px;
     text-align: center;
     margin-top: 60px;
     background: #4F7FDD;
     border-radius: 8px;
     width: 330px;
     padding: 10px 0;
+
+    @include media_480 {
+      margin-top: 30px;
+      width: 300px;
+      font-size: 15px;
+    }
   }
 
   .duties__button:hover {

@@ -52,6 +52,16 @@ import {
   popupSelector,
   formSelector,
   configFormValidator,
+  dutiesBorderTapClass,
+  dutiesTitleTapClass,
+  dutiesTapClass,
+  dutiesTaskListSelector,
+  positionList,
+  dutiesTaskListTapClass,
+  dutiesBorderSelector,
+  dutiesTitleSelector,
+  dutiesTaskTapClass,
+  dutiesTaskSelector,
 } from '../utils/constants';
 
 // FUNCTIONS:
@@ -170,7 +180,7 @@ const setupVideo = (video) => {
 
 setupVideo(videoElement);
 
-// ------- faq -------
+// -------- faq --------
 faqBtn.forEach((btn) => {
   btn.addEventListener('click', () => {
     const qblock = btn.closest('.faq__question-block');
@@ -497,3 +507,36 @@ function submitHandlerForm(data) {
   /* on successful submission */
   popupWithForm.showBlockSuccess();
 }
+
+const clientScreenWidth = () => document.documentElement.clientWidth;
+
+positionList.forEach((el) => {
+  const screenWidth = clientScreenWidth();
+
+  if (screenWidth < 768) {
+    el.addEventListener('click', (evt) => {
+      // eslint-disable-next-line prefer-destructuring
+      const target = evt.target;
+      const cardPosition = target.parentElement.closest('.position')
+        ? target.parentElement.closest('.position') : el;
+      const borderElement = cardPosition.querySelector(dutiesBorderSelector);
+      const title = cardPosition.querySelector(dutiesTitleSelector);
+      const taskListElement = cardPosition.querySelector(dutiesTaskListSelector);
+      const taskList = cardPosition.querySelectorAll(dutiesTaskSelector);
+
+      if (cardPosition.closest(`.${dutiesTapClass}`)) {
+        borderElement.classList.remove(dutiesBorderTapClass);
+        title.classList.remove(dutiesTitleTapClass);
+        cardPosition.classList.remove(dutiesTapClass);
+        taskListElement.classList.remove(dutiesTaskListTapClass);
+        taskList.forEach((element) => element.classList.remove(dutiesTaskTapClass));
+      } else {
+        borderElement.classList.add(dutiesBorderTapClass);
+        title.classList.add(dutiesTitleTapClass);
+        cardPosition.classList.add(dutiesTapClass);
+        taskListElement.classList.add(dutiesTaskListTapClass);
+        taskList.forEach((element) => element.classList.add(dutiesTaskTapClass));
+      }
+    });
+  }
+});
