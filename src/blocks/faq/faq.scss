@@ -7,31 +7,44 @@
   max-width: 1440px;
 }
 
+.faq__background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-image: url(../images/faq-book-background.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: #FFFFFF;
+  background-position: right bottom;
+}
+
 .faq__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 57%;
-  max-width: 820px;
-  margin: 202px 0 394px 0;
+  width: 100%;
+  max-width: 1030px;
+  margin: 160px 0 160px 0;
 }
 
 .faq__title {
+  font-family: 'YS Display';
   font-style: normal;
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 70px;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 64px;
+  text-align: center;
   color: #000000;
-  margin: 0;
+  margin: 0 0 50px 0;
 }
 
 .faq__line {
   width: 100%;
-  max-width: 820px;
+  max-width: 1030px;
   height: 0.5px;
   background-color: #000000;
-  margin-top: 15px;
-  margin-bottom: 25px;
+  margin: 0 0 31px 0;
 }
 
 .faq__question-block {
@@ -45,32 +58,39 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  max-width: 715px;
-  margin-bottom: 25px;
+  max-width: 1030px;
+  margin-bottom: 31px;
+}
+
+.faq__question-wrapper_active {
+  margin-bottom: 16px;
 }
 
 .faq__question-text-main {
+  font-family: 'YS Display';
   font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 400;
+  font-size: 30px;
   line-height: 140%;
-  color: #000000;
-  width: 559px;
-  min-height: 28px;
+  color: #1E2027;
+  width: 906px;
+  min-height: 42px;
   margin: 0;
+  cursor: pointer;
 }
 
 .faq__question-button {
-  width: 16.8px;
-  height: 16.8px;
+  width: 26.4px;
+  height: 26.4px;
   background-image: url(../images/plus-btn.svg);
+  border-radius: 50%;
   background-repeat: no-repeat;
   background-size: contain;
   background-color: #FFFFFF;
   border-style: none;
   cursor: pointer;
   align-self: center;
-  margin-right: 53.6px;
+  margin: 0;
   transition: all .3s linear;
 }
 
@@ -79,14 +99,15 @@
 }
 
 .faq__question-text {
+  font-family: 'YS Display';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 140%;
-  color: #000000;
+  color: #585A5B;
   margin: 0;
-  margin-bottom: 25px;
-  width: calc(100% - 158.6px - 16.8px);
+  margin-bottom: 30px;
+  width: 820px;
   display: none;
 }
 
