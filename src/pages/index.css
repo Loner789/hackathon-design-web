@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import '../vendor/normalize.css';
 @import '../vendor/fonts.css';
 :root {
@@ -916,7 +915,6 @@
   width: 100%;
   max-width: 1440px;
 }
-
 .faq__background {
   display: flex;
   flex-direction: column;
@@ -928,7 +926,6 @@
   background-color: #FFFFFF;
   background-position: right bottom;
 }
-
 .faq__container {
   display: flex;
   flex-direction: column;
@@ -937,7 +934,6 @@
   max-width: 1030px;
   margin: 160px 0 160px 0;
 }
-
 .faq__title {
   font-family: "YS Display";
   font-style: normal;
@@ -948,7 +944,6 @@
   color: #000000;
   margin: 0 0 50px 0;
 }
-
 .faq__line {
   width: 100%;
   max-width: 1030px;
@@ -956,13 +951,11 @@
   background-color: #000000;
   margin: 0 0 31px 0;
 }
-
 .faq__question-block {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-
 .faq__question-wrapper {
   display: flex;
   flex-direction: row;
@@ -971,11 +964,9 @@
   max-width: 1030px;
   margin-bottom: 31px;
 }
-
 .faq__question-wrapper_active {
   margin-bottom: 16px;
 }
-
 .faq__question-text-main {
   font-family: "YS Display";
   font-style: normal;
@@ -988,7 +979,6 @@
   margin: 0;
   cursor: pointer;
 }
-
 .faq__question-button {
   width: 26.4px;
   height: 26.4px;
@@ -1003,11 +993,9 @@
   margin: 0;
   transition: all 0.3s linear;
 }
-
 .faq__question-button_active {
   transform: rotate(45deg);
 }
-
 .faq__question-text {
   font-family: "YS Display";
   font-style: normal;
@@ -1020,12 +1008,10 @@
   width: 820px;
   display: none;
 }
-
 .faq__question-text_active {
   display: block;
   animation: fadeIn 0.5s ease-in-out;
 }
-
 @keyframes fadeIn {
   0% {
     display: none;
@@ -1040,6 +1026,7 @@
     opacity: 1;
   }
 }
+
 .section-title {
   font-style: normal;
   font-weight: 500;
@@ -1415,16 +1402,14 @@
   width: 100%;
   max-width: 1440px;
 }
-
-.vacanсies__container {
+.vacancies__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100% - 200px);
+  width: 100%;
   max-width: 1240px;
   margin: 160px 0 147px 0;
 }
-
 .vacancies__title {
   font-family: "YS Display";
   font-style: normal;
@@ -1435,7 +1420,6 @@
   align-self: start;
   margin: 0;
 }
-
 .vacancies__education-menu {
   display: flex;
   flex-direction: row;
@@ -1447,11 +1431,9 @@
   padding: 0;
   margin: 100px 0 0 0;
 }
-
 .vacancies__menu-item {
   list-style: none;
 }
-
 .vacancies__btn-menu {
   border-style: none;
   background-color: #4F7FDD;
@@ -1465,7 +1447,6 @@
   padding: 0;
   margin: 0 55px 0 15px;
 }
-
 .vacancies__btn-menu_active {
   background-color: #FFFFFF;
   padding: 10px 15px;
@@ -1473,7 +1454,6 @@
   color: #000000;
   margin: 0 40px 0 0px;
 }
-
 .vacancies__info {
   display: flex;
   flex-direction: column;
@@ -1481,7 +1461,6 @@
   min-width: 1030px;
   margin: 60px 10px 0 0;
 }
-
 .vacancies__prophecy-menu {
   display: flex;
   flex-direction: row;
@@ -1490,11 +1469,9 @@
   padding: 0;
   margin: 0;
 }
-
 .vacancies__prophecy-item {
   list-style: none;
 }
-
 .vacancies__proph-btn-menu {
   border-style: none;
   background-color: #FFFFFF;
@@ -1510,22 +1487,18 @@
   padding: 0;
   cursor: pointer;
 }
-
 .vacancies__proph-btn-menu_active {
   border-bottom: solid #000000 1px;
 }
-
 .vacancies__novac-wrapper {
   display: none;
   flex-direction: column;
   width: 1030px;
   margin: 45px 0 0 0;
 }
-
 .vacancies__novac-wrapper_active {
   display: flex;
 }
-
 .vacancies__no-vac-text {
   font-family: "YS Display";
   font-style: normal;
@@ -1537,41 +1510,34 @@
   margin: 0;
   margin-bottom: 45px;
 }
-
 .vacancies__gallery {
   padding: 0;
   margin: 5px 0 0 0;
   display: none;
 }
-
 .vacancies__gallery_active {
   display: block;
 }
-
 .vacancies__gallery-item {
   list-style: none;
   margin-top: 40px;
 }
-
 .vacancies__gallery-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
 }
-
 .vacancies__gallery-wrapper_share {
   justify-content: flex-start;
 }
-
 .vacancies__gallery-wrapper_hide {
   display: none;
 }
-
 .vacancies__name-wrapper {
   display: flex;
   flex-direction: row;
 }
-
 .vacancies__gallery-arrow {
   width: 24px;
   height: 24px;
@@ -1581,11 +1547,9 @@
   background-position: center;
   transition: all 0.3s linear;
 }
-
 .vacancies__gallery-arrow_active {
   transform: rotate(90deg);
 }
-
 .vacancies__name {
   border-style: none;
   background-color: #FFFFFF;
@@ -1599,11 +1563,9 @@
   padding: 0;
   cursor: pointer;
 }
-
 .vacancies__name_active {
   color: #4F7FDD;
 }
-
 .vacancies__salary {
   font-family: "YS Display";
   font-style: normal;
@@ -1613,16 +1575,14 @@
   color: #000000;
   margin: 0;
 }
-
 .vacancies__line {
   width: 100%;
   max-width: 1030px;
   height: 0.5px;
-  background-color: #000000;
+  background-color: rgba(133, 133, 133, 0.3);
   margin-top: 15px;
   margin-bottom: 15px;
 }
-
 .vacancies__work-time {
   font-family: "YS Display";
   font-style: normal;
@@ -1633,15 +1593,12 @@
   text-align: right;
   margin: 0;
 }
-
 .vacancies__description {
   display: none;
 }
-
 .vacancies__description_active {
   display: block;
 }
-
 .vacancies__req-title {
   margin: 10px 0 20px 0;
   font-family: "YS Display";
@@ -1651,17 +1608,14 @@
   line-height: 140%;
   color: #000000;
 }
-
 .vacancies__req-list {
   list-style: square;
   padding: 0;
   padding-left: 25px;
 }
-
 .vacancies__req-list :last-child {
   margin: 0 0 20px 10px;
 }
-
 .vacancies__req-item {
   font-family: "YS Display";
   font-style: normal;
@@ -1671,7 +1625,6 @@
   color: #000000;
   margin: 0 0 15px 10px;
 }
-
 .vacancies__send-btn {
   width: 295px;
   height: 50px;
@@ -1680,7 +1633,6 @@
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
-  line-height: 50px;
   text-align: center;
   color: #FFFFFF;
   padding: 0;
@@ -1689,13 +1641,11 @@
   border-radius: 8px;
   cursor: pointer;
 }
-
 .vacancies__send-btn_noVac {
   background-color: #FFFFFF;
   border: 1px solid #4F7FDD;
   color: #4F7FDD;
 }
-
 .vacancies__share-btn {
   width: 50px;
   height: 50px;
@@ -1709,7 +1659,6 @@
   border-style: none;
   cursor: pointer;
 }
-
 .vacancies__notfound-vac-text {
   font-family: "YS Display";
   font-style: normal;
@@ -1721,7 +1670,6 @@
   color: #000000;
   margin: 45px 0 0 0;
 }
-
 .vacancies__notfound-vac-btn {
   width: 293px;
   height: 50px;
@@ -1730,7 +1678,6 @@
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  line-height: 50px;
   text-align: center;
   color: #4F7FDD;
   padding: 0;
@@ -1739,7 +1686,6 @@
   border-radius: 8px;
   cursor: pointer;
 }
-
 .vacancies__popup-share {
   display: flex;
   flex-direction: column;
@@ -1752,41 +1698,28 @@
   border: 1px solid #4f7fdd;
   z-index: 2;
   visibility: hidden;
-  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 36%;
+  bottom: 70%;
 }
-
 .vacancies__popup-share_active {
   visibility: visible;
 }
-
-.vacancies__popup-share:hover .vacancies__popup-link {
+.vacancies__popup-link-wrapper:hover .vacancies__popup-link {
   color: #4F7FDD;
 }
-
-.vacancies__popup-share:hover .vacancies__popup-copy-icon {
+.vacancies__popup-link-wrapper:hover .vacancies__popup-copy-icon {
   background-image: url(../images/icon-copy-blue.svg);
-  transition: 0.5s;
 }
-
-.vacancies__popup-share:hover .vacancies__popup-telegram-icon {
+.vacancies__popup-link-wrapper:hover .vacancies__popup-telegram-icon {
   background-image: url(../images/icon-telegram-blue.svg);
-  transition: 0.5s;
 }
-
-.vacancies__popup-share:hover .vacancies__popup-vk-icon {
+.vacancies__popup-link-wrapper:hover .vacancies__popup-vk-icon {
   background-image: url(../images/icon-vk-blue.svg);
-  transition: 0.5s;
 }
-
-.vacancies__popup-share:hover .vacancies__popup-twitter-icon {
+.vacancies__popup-link-wrapper:hover .vacancies__popup-twitter-icon {
   background-image: url(../images/icon-twitter-blue.svg);
-  transition: 0.5s;
 }
-
 .vacancies__popup-list {
   display: flex;
   flex-direction: column;
@@ -1794,11 +1727,9 @@
   justify-content: center;
   margin: 0;
 }
-
 .vacancies__popup-list :first-child {
   margin: 0;
 }
-
 .vacancies__popup-link-wrapper {
   display: flex;
   flex-direction: row;
@@ -1807,7 +1738,6 @@
   margin: 17px 0 0 0;
   cursor: pointer;
 }
-
 .vacancies__popup-link {
   font-family: "YS Display";
   font-style: normal;
@@ -1819,7 +1749,9 @@
   margin: 0 0 0 11px;
   padding: 0;
 }
-
+.vacancies__popup-link_active {
+  color: #37935B;
+}
 .vacancies__popup-copy-icon {
   width: 24px;
   height: 24px;
@@ -1828,16 +1760,13 @@
   background-size: contain;
   background-position: center;
 }
-
 .vacancies__popup-copy-icon_done {
   background-image: url(../images/icon-copy-success.svg);
 }
-
 .vacancies__popup-share:hover .vacancies__popup-copy-icon_done {
   background-image: url(../images/icon-copy-success.svg);
   transition: 0.5s;
 }
-
 .vacancies__popup-telegram-icon {
   width: 24px;
   height: 24px;
@@ -1846,7 +1775,6 @@
   background-size: contain;
   background-position: center;
 }
-
 .vacancies__popup-vk-icon {
   width: 24px;
   height: 24px;
@@ -1855,7 +1783,6 @@
   background-size: contain;
   background-position: center;
 }
-
 .vacancies__popup-twitter-icon {
   width: 24px;
   height: 24px;
