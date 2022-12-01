@@ -10,6 +10,8 @@ export default class PopupWithForm extends Popup {
     this._success = this._elementPopup.querySelector('.success');
     this._successButton = this._success.querySelector('.popup__button');
     this._popupTitle = this._elementPopup.querySelector('.popup__title');
+    this._formErrorList = this._formElement.querySelectorAll('.error-text');
+    this._formInputList = this._formElement.querySelectorAll('.form__item');
   }
 
   _getInputValues() {
@@ -23,6 +25,12 @@ export default class PopupWithForm extends Popup {
   close() {
     super.close();
     this._formElement.reset();
+    this._formErrorList.forEach((el) => {
+      el.textContent = '';
+    });
+    this._formInputList.forEach((el) => {
+      el.classList.remove('form__item_type_error');
+    });
   }
 
   showBlockSuccess() {
