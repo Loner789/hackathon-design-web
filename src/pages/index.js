@@ -491,6 +491,7 @@ const FormInPopupValidator = new FormValidator(configFormValidator, '#form');
 FormInPopupValidator.enableValidation();
 
 function submitHandlerForm(data) {
+  // eslint-disable-next-line
   console.log(data);
 
   /* on successful submission */
