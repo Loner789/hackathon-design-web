@@ -5,130 +5,134 @@
   align-items: center;
   width: 100%;
   max-width: 1440px;
-}
 
-.faq__background {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  background-image: url(../images/faq-book-background.svg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-color: #FFFFFF;
-  background-position: right bottom;
-}
 
-.faq__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 1030px;
-  margin: 160px 0 160px 0;
-}
+  &__background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-image: url(../images/faq-book-background.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: #FFFFFF;
+    background-position: right bottom;
+  }
 
-.faq__title {
-  font-family: 'YS Display';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 55px;
-  line-height: 64px;
-  text-align: center;
-  color: #000000;
-  margin: 0 0 50px 0;
-}
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1030px;
+    margin: 160px 0 160px 0;
+  }
 
-.faq__line {
-  width: 100%;
-  max-width: 1030px;
-  height: 0.5px;
-  background-color: #000000;
-  margin: 0 0 31px 0;
-}
+  &__title {
+    font-family: 'YS Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 64px;
+    text-align: center;
+    color: #000000;
+    margin: 0 0 50px 0;
+  }
 
-.faq__question-block {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
+  &__line {
+    width: 100%;
+    max-width: 1030px;
+    height: 0.5px;
+    background-color: #000000;
+    margin: 0 0 31px 0;
+  }
 
-.faq__question-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1030px;
-  margin-bottom: 31px;
-}
+  &__question-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 
-.faq__question-wrapper_active {
-  margin-bottom: 16px;
-}
+  &__question-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1030px;
+    margin-bottom: 31px;
 
-.faq__question-text-main {
-  font-family: 'YS Display';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 140%;
-  color: #1E2027;
-  width: 906px;
-  min-height: 42px;
-  margin: 0;
-  cursor: pointer;
-}
 
-.faq__question-button {
-  width: 26.4px;
-  height: 26.4px;
-  background-image: url(../images/plus-btn.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: #FFFFFF;
-  border-style: none;
-  cursor: pointer;
-  align-self: center;
-  margin: 0;
-  transition: all .3s linear;
-}
+    &_active {
+      margin-bottom: 16px;
+    }
+  }
 
-.faq__question-button_active {
-  transform: rotate(45deg);
-}
+  &__question-text-main {
+    font-family: 'YS Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 140%;
+    color: #1E2027;
+    width: 906px;
+    min-height: 42px;
+    margin: 0;
+    cursor: pointer;
+  }
 
-.faq__question-text {
-  font-family: 'YS Display';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 140%;
-  color: #585A5B;
-  margin: 0;
-  margin-bottom: 30px;
-  width: 820px;
-  display: none;
-}
+  &__question-button {
+    width: 26.4px;
+    height: 26.4px;
+    background-image: url(../images/plus-btn.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #FFFFFF;
+    border-style: none;
+    cursor: pointer;
+    align-self: center;
+    margin: 0;
+    transition: all .3s linear;
 
-.faq__question-text_active {
-  display: block;
-  animation: fadeIn .5s ease-in-out;
-}
 
-@keyframes fadeIn {
-  0% {
+    &_active {
+      transform: rotate(45deg);
+    }
+  }
+
+  &__question-text {
+    font-family: 'YS Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: #585A5B;
+    margin: 0;
+    margin-bottom: 30px;
+    width: 820px;
     display: none;
-    opacity: 0;
+
+
+    &_active {
+      display: block;
+      animation: fadeIn .5s ease-in-out;
+    }
   }
 
-  1% {
-    display: block;
-    opacity: 0;
-  }
+  @keyframes fadeIn {
+    0% {
+      display: none;
+      opacity: 0;
+    }
 
-  100% {
-    display: block;
-    opacity: 1;
+    1% {
+      display: block;
+      opacity: 0;
+    }
+
+    100% {
+      display: block;
+      opacity: 1;
+    }
   }
 }
 

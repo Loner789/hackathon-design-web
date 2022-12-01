@@ -36,12 +36,10 @@ const vacanciesGallaries = vacancies.querySelectorAll('.vacancies__gallery');
 const vacanciesNoVac = vacancies.querySelector('#no-vac-available');
 const vacanciesNotFound = vacancies.querySelector('#vac-notfound');
 const vacanciesShareBtns = vacancies.querySelectorAll('.vacancies__share-btn');
-const vacanciesPopupShare = vacancies.querySelector('.vacancies__popup-share');
-const vacanciesCopyBtn = vacanciesPopupShare.querySelector(
-  '.vacancies__popup-copy-icon',
-);
-const vacanciesCopyLink = vacanciesPopupShare.querySelector('#copyLink');
 const vacGalleryArrows = vacancies.querySelectorAll('.vacancies__gallery-arrow');
+const vacanciesPopupShareEmptyCode = '';
+const vacanciesPopupShareFullCode = '<nav class="vacancies__popup-list"><div id="copyLink" class="vacancies__popup-link-wrapper"><div class="vacancies__popup-copy-icon"></div><a rel="nofollow" class="vacancies__popup-link">Скопировать ссылку</a></div><div class="vacancies__popup-link-wrapper"><div class="vacancies__popup-telegram-icon"></div><a href="#" target="_blank" rel="nofollow" class="vacancies__popup-link">Telegram</a></div><div class="vacancies__popup-link-wrapper"><div class="vacancies__popup-vk-icon"></div><a href="#" target="_blank" rel="nofollow" class="vacancies__popup-link">Вконтакте</a></div><div class="vacancies__popup-link-wrapper"><div class="vacancies__popup-twitter-icon"></div><a href="#" target="_blank" rel="nofollow" class="vacancies__popup-link">Twitter</a></div></nav>';
+
 const videoElement = document.querySelector('.video');
 const cardLinePlaceFirstTop = document.querySelector(
   '.card__line_place__first-top',
@@ -91,10 +89,9 @@ export {
   vacanciesNoVac,
   vacanciesNotFound,
   vacanciesShareBtns,
-  vacanciesPopupShare,
-  vacanciesCopyBtn,
-  vacanciesCopyLink,
   vacGalleryArrows,
+  vacanciesPopupShareEmptyCode,
+  vacanciesPopupShareFullCode,
   videoElement,
   cardLinePlaceFirstTop,
   cardLinePlaceFirstTopParent,
