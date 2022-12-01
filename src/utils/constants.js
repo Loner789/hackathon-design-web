@@ -55,6 +55,17 @@ const cardLinePlaceSecondBottomParent = cardLinePlaceSecondBottom.parentNode;
 
 const popupSelector = '#popup-with-form';
 const formSelector = '.popup__form';
+const dutiesBorderTapClass = 'position__border_tap';
+const dutiesTitleTapClass = 'position__title_tap';
+const dutiesTapClass = 'position_tap';
+const dutiesTaskListTapClass = 'position__list-of-tasks_tap';
+const dutiesBorderSelector = '.position__border';
+const dutiesTitleSelector = '.position__title';
+const dutiesTaskListSelector = '.position__list-of-tasks';
+const dutiesTaskTapClass = 'position__task_tap';
+const dutiesTaskSelector = '.position__task';
+
+const positionList = document.querySelectorAll('.position');
 
 const configFormValidator = {
   inputSelector: '.form__item',
@@ -99,4 +110,14 @@ export {
   popupSelector,
   formSelector,
   configFormValidator,
+  dutiesBorderTapClass,
+  dutiesTitleTapClass,
+  dutiesTapClass,
+  dutiesTaskListSelector,
+  positionList,
+  dutiesTaskListTapClass,
+  dutiesBorderSelector,
+  dutiesTitleSelector,
+  dutiesTaskTapClass,
+  dutiesTaskSelector,
 };
