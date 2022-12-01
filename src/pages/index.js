@@ -180,7 +180,7 @@ const setupVideo = (video) => {
 
 setupVideo(videoElement);
 
-// ------- faq -------
+// -------- faq --------
 faqBtn.forEach((btn) => {
   btn.addEventListener('click', () => {
     const qblock = btn.closest('.faq__question-block');
