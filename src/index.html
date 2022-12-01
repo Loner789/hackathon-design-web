@@ -64,15 +64,15 @@
       </ul>
       <a href="#vacancies" class="duties__button">Отправить резюме</a>
     </section>
+
     <section class="advantages">
       <h2 class="section-title section-title_place_advantages">Предоставляем возможности</h2>
       <div class="advantages-container">
         <div class="advantages-container__row advantages-container__row_place_first">
-          <!-- ToDo: srcset? -->
           <img class="advantages-container__image" alt="Фото наставник практикума"
-            src="<%=require('./images/block4-mentor-first-610w.png')%>">
+            src="<%=require('./images/block4-mentor-first-1220w.png')%>">
           <ul class="advantages-container__card-list">
-            <li class="card card_place_right-top">
+            <li class="card card_place_right-top" id="0">
               <div class="card__rotate">
                 <p class="card__text">Развивать личный бренд</p>
                 <p class="card__description">
@@ -80,8 +80,12 @@
                   чтобы как можно больше людей узнали о вас как об эксперте
                 </p>
               </div>
+              <p class="card__mobile">
+                Публикуйте статьи в нашем блоге и выступайте на мероприятиях,
+                чтобы как можно больше людей узнали о вас как об эксперте
+              </p>
             </li>
-            <li class="card card_place_right-bottom card_line-bottom">
+            <li class="card card_place_right-bottom card_line-bottom" id="1">
               <div class="card__rotate">
                 <p class="card__text">Менять жизнь людей</p>
                 <p class="card__description card__description_offset">
@@ -90,33 +94,41 @@
                 </p>
               </div>
               <div class="card__line card__line_place__first-top"></div>
+              <p class="card__mobile">
+                Тысячи наших студентов нуждаются в ваших знаниях и
+                опыте — не бойтесь ими делиться.
+              </p>
             </li>
           </ul>
         </div>
         <div class="advantages-container__row advantages-container__row_place_second">
           <ul class="advantages-container__card-list">
-            <li class="card card_place_left-top">
+            <li class="card card_place_left-top" id="2">
               <div class="card__rotate">
-                <p class="card__text">Гибкий график</p>
+                <p class="card__text">Управлять графиком</p>
                 <p class="card__description card__description_offset">
-                  Удаленно, 2–3 часа в день, график выберете сами
+                  Работайте 2—3 часа в день, график устанавливаете сами
                 </p>
               </div>
+              <p class="card__mobile">
+                Работайте 2—3 часа в день, график устанавливаете сами
+              </p>
             </li>
-            <!-- ToDo: change content -->
-            <li class="card card_place_left-bottom">
+            <li class="card card_place_left-bottom" id="3">
               <div class="card__rotate">
-                <p class="card__text">Удалённая работа</p>
+                <p class="card__text">Работать удалённо</p>
                 <p class="card__description">
                   Проверять работы можно когда угодно, занятия проводятся онлайн
                 </p>
               </div>
+              <p class="card__mobile">
+                Проверять работы можно когда угодно, занятия проводятся онлайн
+              </p>
             </li>
           </ul>
           <div class="video">
-            <a class="video__link" href="https://www.youtube.com/watch?v=COaXBeiKezw">
-              <!-- ToDo: srcset? -->
-              <img class="video__image" src="<%=require('./images/block4-video-820w.png')%>" alt="Обложка видео">
+            <a class="video__link" href="https://www.youtube.com/watch?v=RFFt6ge-yxE">
+              <img class="video__image" src="<%=require('./images/block4-video-1640w.png')%>" alt="Обложка видео">
             </a>
             <button type="button" class="video-button video-button_place_advantages"
               aria-label="Кнопка воспроизвести видео">
@@ -141,54 +153,66 @@
 
       <div class="advantages-container">
         <div class="advantages-container__row advantages-container__row_place_third">
-          <!-- ToDo: srcset? -->
-          <img class="advantages-container__image" alt="Фото наставник практикума"
-            src="<%=require('./images/block4-mentor-second-715w.png')%>">
+          <img class="advantages-container__image advantages-container__image_size_715" alt="Фото наставник практикума"
+            src="<%=require('./images/block4-mentor-second-1430w.png')%>">
           <ul class="advantages-container__card-list">
-            <li class="card card_place_second-right-top">
+            <li class="card card_place_second-right-top" id="4">
               <div class="card__line card__line_place__second-top"></div>
               <div class="card__rotate">
-                <p class="card__text">Сообщество EdTech</p>
+                <p class="card__text">Влиться в EdTech</p>
                 <p class="card__description">
                   Станете частью сообщества экспертов и посмотрите на мир онлайн-образования изнутри
                 </p>
               </div>
+              <p class="card__mobile">
+                Станете частью сообщества экспертов и посмотрите на мир онлайн-образования изнутри
+              </p>
             </li>
-            <li class="card card_place_second-right-bottom">
+            <li class="card card_place_second-right-bottom" id="5">
               <div class="card__rotate">
-                <p class="card__text">Дополнительный доход</p>
+                <p class="card__text">Увеличить свой доход</p>
                 <p class="card__description card__description_offset">
-                  Иметь заработок в среднем от 35 до 50 тысяч ₽ в месяц
+                  Зарабатывайте в среднем от 35 до 50 тысяч ₽ в месяц
                 </p>
               </div>
+              <p class="card__mobile">
+                Зарабатывайте в среднем от 35 до 50 тысяч ₽ в месяц
+              </p>
             </li>
           </ul>
         </div>
         <div class="advantages-container__row advantages-container__row_place_fourth">
           <ul class="advantages-container__card-list">
-            <li class="card card_place_second-left-top">
+            <li class="card card_place_second-left-top" id="6">
               <div class="card__rotate">
-                <p class="card__text">Развивать лидерские качества</p>
+                <p class="card__text">Прокачать лидерские качества</p>
                 <p class="card__description">
-                  Научитесь проводить воркшопы для передачи знаний и опыта,
-                  давать обратную связь, выступать на публике и мотивировать людей.
+                  Научитесь проводить воркшопы, давать обратную связь,
+                  выступать на публике и мотивировать людей
                 </p>
               </div>
+              <p class="card__mobile">
+                Научитесь проводить воркшопы, давать обратную связь,
+                выступать на публике и мотивировать людей
+              </p>
             </li>
-            <li class="card card_place_second-left-bottom">
+            <li class="card card_place_second-left-bottom" id="7">
               <div class="card__rotate">
                 <p class="card__text">Осваивать новые знания</p>
                 <p class="card__description">
-                  Бесплатно учиться на том курсе, где вы помогаете студентам,
+                  Учитесь бесплатно на том курсе, где вы помогаете студентам,
                   и со скидкой на остальных направлениях Практикума
                 </p>
               </div>
               <div class="card__line card__line_place__second-bottom"></div>
+              <p class="card__mobile">
+                Учитесь бесплатно на том курсе, где вы помогаете студентам,
+                и со скидкой на остальных направлениях Практикума
+              </p>
             </li>
           </ul>
-          <!-- ToDo: srcset? -->
           <img class="advantages-container__image" alt="Фото наставник практикума"
-            src="<%=require('./images/block4-mentor-third-610w.png')%>">
+            src="<%=require('./images/block4-mentor-third-1220w.png')%>">
         </div>
       </div>
 

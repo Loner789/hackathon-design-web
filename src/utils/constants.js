@@ -58,6 +58,14 @@ const cardLinePlaceSecondBottomParent = cardLinePlaceSecondBottom.parentNode;
 
 const popupSelector = '#popup-with-form';
 const formSelector = '.popup__form';
+const advantagesCardTapClass = 'card_tap';
+const advantageCardMobileVisebleClass = 'card__mobile_visible';
+const advantagesRotateSelector = '.card__rotate';
+const advantagesCardMobileSelector = '.card__mobile';
+const advantageRotateTapClass = 'card__rotate_tap';
+const advantageCardHidden = 'card_hidden';
+
+const advantageList = document.querySelectorAll('.card');
 
 const configFormValidator = {
   inputSelector: '.form__item',
@@ -105,4 +113,11 @@ export {
   popupSelector,
   formSelector,
   configFormValidator,
+  advantageList,
+  advantagesCardTapClass,
+  advantageCardMobileVisebleClass,
+  advantagesRotateSelector,
+  advantagesCardMobileSelector,
+  advantageRotateTapClass,
+  advantageCardHidden,
 };
