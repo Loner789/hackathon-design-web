@@ -1,4 +1,5 @@
 @import '../../utils/styles/constants';
+@import '../../utils/styles/mixins';
 
 .success-story-subtitle {
   font-style: normal;
@@ -8,11 +9,23 @@
   padding: 5px 0 0;
   margin: 0;
   box-sizing: border-box;
+
+  @include media_1430 {
+    font-size: 16px;
+  }
+
+  @include media_600 {
+    font-size: 15px;
+  }
 }
 
 .success-story-subtitle_place_video {
   position: relative;
   padding: 5px 0 47px 50px;
+
+  @include media_600 {
+    padding: 5px 0 13px 10px;
+  }
 }
 
 .success-story-subtitle_place_video::before {
@@ -33,6 +46,6 @@
   border-bottom: $cardBorder;
   bottom: 0;
   right: 0;
-  width: 214px;
+  width: 35%;
   position: absolute;
 }
