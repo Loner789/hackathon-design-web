@@ -16,7 +16,7 @@
     <a href="#" class="header__logo-link">
       <img src="<%=require('./images/yandex-logo.svg')%>" alt="Логотип яндекс." class="header__logo-image">
     </a>
-    <a href="#vacancies" class="header__link-button">Вакансии</a>
+    <a href="#vacancies" class="header__link-button">Сотрудничать</a>
   </header>
   <main class="content">
     <section class="learning">
@@ -27,6 +27,7 @@
           <a href="#vacancies" class="learning__link-button">Посмотреть предложения</a>
         </div>
         <div class="learning__learning-picture"></div>
+        <a href="#vacancies" class="learning__mobile-button">Посмотреть предложения</a>
       </div>
     </section>
     <section class="conditions section-indent">
@@ -45,34 +46,34 @@
           <div class="position__border_line_left-top position__border"></div>
           <h3 class="position__title">Наставник</h3>
           <ul class="position__list-of-tasks">
-            <li class="position__task">Проводит вебинары, даёт обратную связь.</li>
-            <li class="position__task">Делиться опытом и мотивирует.</li>
-            <li class="position__task">Отвечает на вопросы студентов в чате.</li>
-            <li class="position__task">Помогает ставить цели и достигать их.</li>
+            <li class="position__task">Проводит вебинары, даёт обратную связь</li>
+            <li class="position__task">Делиться опытом и мотивирует</li>
+            <li class="position__task">Отвечает на вопросы студентов в чате</li>
+            <li class="position__task">Помогает ставить цели и достигать их</li>
           </ul>
         </li>
         <li class="position position_line_left position_reviewer">
           <div class="position__border_line_right-top position__border"></div>
           <h3 class="position__title">Ревьюер</h3>
           <ul class="position__list-of-tasks">
-            <li class="position__task">Проверяет код и проекты студентов.</li>
-            <li class="position__task">Объясняет простыми словами ошибки.</li>
-            <li class="position__task">Даёт корректирующую обратную связь.</li>
-            <li class="position__task">Оценивает работы и ставит зачёты.</li>
+            <li class="position__task">Проверяет код и проекты студентов</li>
+            <li class="position__task">Объясняет простыми словами ошибки</li>
+            <li class="position__task">Даёт корректирующую обратную связь</li>
+            <li class="position__task">Оценивает работы и ставит зачёты</li>
           </ul>
         </li>
       </ul>
       <a href="#vacancies" class="duties__button">Отправить резюме</a>
     </section>
+
     <section class="advantages">
       <h2 class="section-title section-title_place_advantages">Предоставляем возможности</h2>
       <div class="advantages-container">
         <div class="advantages-container__row advantages-container__row_place_first">
-          <!-- ToDo: srcset? -->
           <img class="advantages-container__image" alt="Фото наставник практикума"
-            src="<%=require('./images/block4-mentor-first-610w.png')%>">
+            src="<%=require('./images/block4-mentor-first-1220w.png')%>">
           <ul class="advantages-container__card-list">
-            <li class="card card_place_right-top">
+            <li class="card card_place_right-top" id="0">
               <div class="card__rotate">
                 <p class="card__text">Развивать личный бренд</p>
                 <p class="card__description">
@@ -80,8 +81,12 @@
                   чтобы как можно больше людей узнали о вас как об эксперте
                 </p>
               </div>
+              <p class="card__mobile">
+                Публикуйте статьи в нашем блоге и выступайте на мероприятиях,
+                чтобы как можно больше людей узнали о вас как об эксперте
+              </p>
             </li>
-            <li class="card card_place_right-bottom card_line-bottom">
+            <li class="card card_place_right-bottom card_line-bottom" id="1">
               <div class="card__rotate">
                 <p class="card__text">Менять жизнь людей</p>
                 <p class="card__description card__description_offset">
@@ -90,33 +95,41 @@
                 </p>
               </div>
               <div class="card__line card__line_place__first-top"></div>
+              <p class="card__mobile">
+                Тысячи наших студентов нуждаются в ваших знаниях и
+                опыте — не бойтесь ими делиться.
+              </p>
             </li>
           </ul>
         </div>
         <div class="advantages-container__row advantages-container__row_place_second">
           <ul class="advantages-container__card-list">
-            <li class="card card_place_left-top">
+            <li class="card card_place_left-top" id="2">
               <div class="card__rotate">
-                <p class="card__text">Гибкий график</p>
+                <p class="card__text">Управлять графиком</p>
                 <p class="card__description card__description_offset">
-                  Удаленно, 2–3 часа в день, график выберете сами
+                  Работайте 2—3 часа в день, график устанавливаете сами
                 </p>
               </div>
+              <p class="card__mobile">
+                Работайте 2—3 часа в день, график устанавливаете сами
+              </p>
             </li>
-            <!-- ToDo: change content -->
-            <li class="card card_place_left-bottom">
+            <li class="card card_place_left-bottom" id="3">
               <div class="card__rotate">
-                <p class="card__text">Удалённая работа</p>
+                <p class="card__text">Работать удалённо</p>
                 <p class="card__description">
                   Проверять работы можно когда угодно, занятия проводятся онлайн
                 </p>
               </div>
+              <p class="card__mobile">
+                Проверять работы можно когда угодно, занятия проводятся онлайн
+              </p>
             </li>
           </ul>
           <div class="video">
-            <a class="video__link" href="https://www.youtube.com/watch?v=COaXBeiKezw">
-              <!-- ToDo: srcset? -->
-              <img class="video__image" src="<%=require('./images/block4-video-820w.png')%>" alt="Обложка видео">
+            <a class="video__link" href="https://www.youtube.com/watch?v=RFFt6ge-yxE">
+              <img class="video__image" src="<%=require('./images/block4-video-1640w.png')%>" alt="Обложка видео">
             </a>
             <button type="button" class="video-button video-button_place_advantages"
               aria-label="Кнопка воспроизвести видео">
@@ -141,54 +154,66 @@
 
       <div class="advantages-container">
         <div class="advantages-container__row advantages-container__row_place_third">
-          <!-- ToDo: srcset? -->
-          <img class="advantages-container__image" alt="Фото наставник практикума"
-            src="<%=require('./images/block4-mentor-second-715w.png')%>">
+          <img class="advantages-container__image advantages-container__image_size_715" alt="Фото наставник практикума"
+            src="<%=require('./images/block4-mentor-second-1430w.png')%>">
           <ul class="advantages-container__card-list">
-            <li class="card card_place_second-right-top">
+            <li class="card card_place_second-right-top" id="4">
               <div class="card__line card__line_place__second-top"></div>
               <div class="card__rotate">
-                <p class="card__text">Сообщество EdTech</p>
+                <p class="card__text">Влиться в EdTech</p>
                 <p class="card__description">
                   Станете частью сообщества экспертов и посмотрите на мир онлайн-образования изнутри
                 </p>
               </div>
+              <p class="card__mobile">
+                Станете частью сообщества экспертов и посмотрите на мир онлайн-образования изнутри
+              </p>
             </li>
-            <li class="card card_place_second-right-bottom">
+            <li class="card card_place_second-right-bottom" id="5">
               <div class="card__rotate">
-                <p class="card__text">Дополнительный доход</p>
+                <p class="card__text">Увеличить свой доход</p>
                 <p class="card__description card__description_offset">
-                  Иметь заработок в среднем от 35 до 50 тысяч ₽ в месяц
+                  Зарабатывайте в среднем от 35 до 50 тысяч ₽ в месяц
                 </p>
               </div>
+              <p class="card__mobile">
+                Зарабатывайте в среднем от 35 до 50 тысяч ₽ в месяц
+              </p>
             </li>
           </ul>
         </div>
         <div class="advantages-container__row advantages-container__row_place_fourth">
           <ul class="advantages-container__card-list">
-            <li class="card card_place_second-left-top">
+            <li class="card card_place_second-left-top" id="6">
               <div class="card__rotate">
-                <p class="card__text">Развивать лидерские качества</p>
+                <p class="card__text">Прокачать лидерские качества</p>
                 <p class="card__description">
-                  Научитесь проводить воркшопы для передачи знаний и опыта,
-                  давать обратную связь, выступать на публике и мотивировать людей.
+                  Научитесь проводить воркшопы, давать обратную связь,
+                  выступать на публике и мотивировать людей
                 </p>
               </div>
+              <p class="card__mobile">
+                Научитесь проводить воркшопы, давать обратную связь,
+                выступать на публике и мотивировать людей
+              </p>
             </li>
-            <li class="card card_place_second-left-bottom">
+            <li class="card card_place_second-left-bottom" id="7">
               <div class="card__rotate">
                 <p class="card__text">Осваивать новые знания</p>
                 <p class="card__description">
-                  Бесплатно учиться на том курсе, где вы помогаете студентам,
+                  Учитесь бесплатно на том курсе, где вы помогаете студентам,
                   и со скидкой на остальных направлениях Практикума
                 </p>
               </div>
               <div class="card__line card__line_place__second-bottom"></div>
+              <p class="card__mobile">
+                Учитесь бесплатно на том курсе, где вы помогаете студентам,
+                и со скидкой на остальных направлениях Практикума
+              </p>
             </li>
           </ul>
-          <!-- ToDo: srcset? -->
           <img class="advantages-container__image" alt="Фото наставник практикума"
-            src="<%=require('./images/block4-mentor-third-610w.png')%>">
+            src="<%=require('./images/block4-mentor-third-1220w.png')%>">
         </div>
       </div>
 
@@ -221,14 +246,16 @@
         <div class="vacancies__info">
           <ul class="vacancies__prophecy-menu">
             <li class="vacancies__prophecy-item">
-              <button class="vacancies__proph-btn-menu vacancies__proph-btn-menu_active" type="button" id="sensey">Наставник</button>
+              <button class="vacancies__proph-btn-menu vacancies__proph-btn-menu_active" type="button"
+                id="sensey">Наставник</button>
             </li>
             <li class="vacancies__prophecy-item">
               <button class="vacancies__proph-btn-menu" type="button" id="reviewer">Ревьюер</button>
             </li>
           </ul>
           <div id="no-vac-available" class="vacancies__novac-wrapper">
-            <p class="vacancies__no-vac-text">К&nbsp;сожалению, пока вакансий по&nbsp;этому направлению нет. Не&nbsp;расстраивайтесь! Нам всё-равно интересно познакомиться. На&nbsp;будущее.</p>
+            <p class="vacancies__no-vac-text">К&nbsp;сожалению, пока вакансий по&nbsp;этому направлению нет.
+              Не&nbsp;расстраивайтесь! Нам всё-равно интересно познакомиться. На&nbsp;будущее.</p>
             <button class="vacancies__send-btn vacancies__send-btn_noVac">Отправить резюме</button>
           </div>
           <ul id="sensey-gallary-prog" class="vacancies__gallery vacancies__gallery_active">
@@ -270,75 +297,8 @@
               <div class="vacancies__gallery-wrapper">
                 <div class="vacancies__name-wrapper">
                   <div class="vacancies__gallery-arrow"></div>
-                  <button class="vacancies__name" type="button" id="C++dev-sen">Наставник на курс “Разработчик С++”</button>
-                </div>
-                  <p class="vacancies__salary">от 65 тысяч рублей</p>
-              </div>
-              <div class="vacancies__line"></div>
-              <div class="vacancies__description" id="java-dev-description">
-                <p class="vacancies__work-time">5-6 часов в неделю</p>
-                <h2 class="vacancies__req-title">Требования</h2>
-                <ul class="vacancies__req-list">
-                  <li class="vacancies__req-item">опыт разработки на Java от двух лет</li>
-                  <li class="vacancies__req-item">опыт со Spring, Spring Boot</li>
-                  <li class="vacancies__req-item">опыт базами данных и Hibenate</li>
-                  <li class="vacancies__req-item">знаете алгоритмы на базовом уровне</li>
-                  <li class="vacancies__req-item">любите делиться знаниями</li>
-                </ul>
-                <h2 class="vacancies__req-title">Что предстоит делать</h2>
-                <ul class="vacancies__req-list">
-                  <li class="vacancies__req-item">помогать студентам на протяжении 9 месяцев (учебный цикл)</li>
-                  <li class="vacancies__req-item">отвечать на вопросы и помогать с трудностями</li>
-                  <li class="vacancies__req-item">курировать группу численностью от 60 человек</li>
-                  <li class="vacancies__req-item">общаться с ними в Slack</li>
-                  <li class="vacancies__req-item">проводить групповые и индивидуальные занятия</li>
-                </ul>
-                <div class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
-                  <button class="vacancies__send-btn">Отправить резюме</button>
-                  <button class="vacancies__share-btn"></button>
-                  <div class="vacancies__popup-share"></div>
-                </div>
-              </div>
-            </li>
-            <li class="vacancies__gallery-item">
-              <div class="vacancies__gallery-wrapper">
-                <div class="vacancies__name-wrapper">
-                  <div class="vacancies__gallery-arrow"></div>
-                  <button class="vacancies__name" type="button" id="python-dev-sen">Наставник на курс “Pyton-разработчик”</button>
-                </div>
-                <p class="vacancies__salary">от 45 тысяч рублей</p>
-              </div>
-              <div class="vacancies__line"></div>
-              <div class="vacancies__description" id="java-dev-description">
-                <p class="vacancies__work-time">5-6 часов в неделю</p>
-                <h2 class="vacancies__req-title">Требования</h2>
-                <ul class="vacancies__req-list">
-                  <li class="vacancies__req-item">опыт разработки на Java от двух лет</li>
-                  <li class="vacancies__req-item">опыт со Spring, Spring Boot</li>
-                  <li class="vacancies__req-item">опыт базами данных и Hibenate</li>
-                  <li class="vacancies__req-item">знаете алгоритмы на базовом уровне</li>
-                  <li class="vacancies__req-item">любите делиться знаниями</li>
-                </ul>
-                <h2 class="vacancies__req-title">Что предстоит делать</h2>
-                <ul class="vacancies__req-list">
-                  <li class="vacancies__req-item">помогать студентам на протяжении 9 месяцев (учебный цикл)</li>
-                  <li class="vacancies__req-item">отвечать на вопросы и помогать с трудностями</li>
-                  <li class="vacancies__req-item">курировать группу численностью от 60 человек</li>
-                  <li class="vacancies__req-item">общаться с ними в Slack</li>
-                  <li class="vacancies__req-item">проводить групповые и индивидуальные занятия</li>
-                </ul>
-                <div class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
-                  <button class="vacancies__send-btn">Отправить резюме</button>
-                  <button class="vacancies__share-btn"></button>
-                  <div class="vacancies__popup-share"></div>
-                </div>
-              </div>
-            </li>
-            <li class="vacancies__gallery-item">
-              <div class="vacancies__gallery-wrapper">
-                <div class="vacancies__name-wrapper">
-                  <div class="vacancies__gallery-arrow"></div>
-                  <button class="vacancies__name" type="button" id="ios-dev-sen">Наставник на курс “IOS-разработчик”</button>
+                  <button class="vacancies__name" type="button" id="C++dev-sen">Наставник на курс “Разработчик
+                    С++”</button>
                 </div>
                 <p class="vacancies__salary">от 65 тысяч рублей</p>
               </div>
@@ -372,7 +332,78 @@
               <div class="vacancies__gallery-wrapper">
                 <div class="vacancies__name-wrapper">
                   <div class="vacancies__gallery-arrow"></div>
-                  <button class="vacancies__name" type="button" id="go-dev-sen">Наставник на курс “Go-разработчик”</button>
+                  <button class="vacancies__name" type="button" id="python-dev-sen">Наставник на курс
+                    “Pyton-разработчик”</button>
+                </div>
+                <p class="vacancies__salary">от 45 тысяч рублей</p>
+              </div>
+              <div class="vacancies__line"></div>
+              <div class="vacancies__description" id="java-dev-description">
+                <p class="vacancies__work-time">5-6 часов в неделю</p>
+                <h2 class="vacancies__req-title">Требования</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">опыт разработки на Java от двух лет</li>
+                  <li class="vacancies__req-item">опыт со Spring, Spring Boot</li>
+                  <li class="vacancies__req-item">опыт базами данных и Hibenate</li>
+                  <li class="vacancies__req-item">знаете алгоритмы на базовом уровне</li>
+                  <li class="vacancies__req-item">любите делиться знаниями</li>
+                </ul>
+                <h2 class="vacancies__req-title">Что предстоит делать</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">помогать студентам на протяжении 9 месяцев (учебный цикл)</li>
+                  <li class="vacancies__req-item">отвечать на вопросы и помогать с трудностями</li>
+                  <li class="vacancies__req-item">курировать группу численностью от 60 человек</li>
+                  <li class="vacancies__req-item">общаться с ними в Slack</li>
+                  <li class="vacancies__req-item">проводить групповые и индивидуальные занятия</li>
+                </ul>
+                <div class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
+                  <button class="vacancies__send-btn">Отправить резюме</button>
+                  <button class="vacancies__share-btn"></button>
+                  <div class="vacancies__popup-share"></div>
+                </div>
+              </div>
+            </li>
+            <li class="vacancies__gallery-item">
+              <div class="vacancies__gallery-wrapper">
+                <div class="vacancies__name-wrapper">
+                  <div class="vacancies__gallery-arrow"></div>
+                  <button class="vacancies__name" type="button" id="ios-dev-sen">Наставник на курс
+                    “IOS-разработчик”</button>
+                </div>
+                <p class="vacancies__salary">от 65 тысяч рублей</p>
+              </div>
+              <div class="vacancies__line"></div>
+              <div class="vacancies__description" id="java-dev-description">
+                <p class="vacancies__work-time">5-6 часов в неделю</p>
+                <h2 class="vacancies__req-title">Требования</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">опыт разработки на Java от двух лет</li>
+                  <li class="vacancies__req-item">опыт со Spring, Spring Boot</li>
+                  <li class="vacancies__req-item">опыт базами данных и Hibenate</li>
+                  <li class="vacancies__req-item">знаете алгоритмы на базовом уровне</li>
+                  <li class="vacancies__req-item">любите делиться знаниями</li>
+                </ul>
+                <h2 class="vacancies__req-title">Что предстоит делать</h2>
+                <ul class="vacancies__req-list">
+                  <li class="vacancies__req-item">помогать студентам на протяжении 9 месяцев (учебный цикл)</li>
+                  <li class="vacancies__req-item">отвечать на вопросы и помогать с трудностями</li>
+                  <li class="vacancies__req-item">курировать группу численностью от 60 человек</li>
+                  <li class="vacancies__req-item">общаться с ними в Slack</li>
+                  <li class="vacancies__req-item">проводить групповые и индивидуальные занятия</li>
+                </ul>
+                <div class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
+                  <button class="vacancies__send-btn">Отправить резюме</button>
+                  <button class="vacancies__share-btn"></button>
+                  <div class="vacancies__popup-share"></div>
+                </div>
+              </div>
+            </li>
+            <li class="vacancies__gallery-item">
+              <div class="vacancies__gallery-wrapper">
+                <div class="vacancies__name-wrapper">
+                  <div class="vacancies__gallery-arrow"></div>
+                  <button class="vacancies__name" type="button" id="go-dev-sen">Наставник на курс
+                    “Go-разработчик”</button>
                 </div>
                 <p class="vacancies__salary">от 45 тысяч рублей</p>
               </div>
@@ -442,7 +473,8 @@
               <div class="vacancies__gallery-wrapper">
                 <div class="vacancies__name-wrapper">
                   <div class="vacancies__gallery-arrow"></div>
-                  <button class="vacancies__name" type="button" id="C++dev-rev">Ревьюер на курс “Разработчик С++”</button>
+                  <button class="vacancies__name" type="button" id="C++dev-rev">Ревьюер на курс “Разработчик
+                    С++”</button>
                 </div>
                 <p class="vacancies__salary">от 65 тысяч рублей</p>
               </div>
@@ -476,7 +508,8 @@
               <div class="vacancies__gallery-wrapper">
                 <div class="vacancies__name-wrapper">
                   <div class="vacancies__gallery-arrow"></div>
-                  <button class="vacancies__name" type="button" id="python-dev-rev">Ревьюер на курс “Pyton-разработчик”</button>
+                  <button class="vacancies__name" type="button" id="python-dev-rev">Ревьюер на курс
+                    “Pyton-разработчик”</button>
                 </div>
                 <p class="vacancies__salary">от 45 тысяч рублей</p>
               </div>
@@ -510,7 +543,8 @@
               <div class="vacancies__gallery-wrapper">
                 <div class="vacancies__name-wrapper">
                   <div class="vacancies__gallery-arrow"></div>
-                  <button class="vacancies__name" type="button" id="ios-dev-rev">Ревьюер на курс “IOS-разработчик”</button>
+                  <button class="vacancies__name" type="button" id="ios-dev-rev">Ревьюер на курс
+                    “IOS-разработчик”</button>
                 </div>
                 <p class="vacancies__salary">от 65 тысяч рублей</p>
               </div>
@@ -544,7 +578,8 @@
               <div class="vacancies__gallery-wrapper">
                 <div class="vacancies__name-wrapper">
                   <div class="vacancies__gallery-arrow"></div>
-                  <button class="vacancies__name" type="button" id="go-dev-rev">Ревьюер на курс “Go-разработчик”</button>
+                  <button class="vacancies__name" type="button" id="go-dev-rev">Ревьюер на курс
+                    “Go-разработчик”</button>
                 </div>
                 <p class="vacancies__salary">от 45 тысяч рублей</p>
               </div>
@@ -580,7 +615,8 @@
               <div class="vacancies__gallery-wrapper">
                 <div class="vacancies__name-wrapper">
                   <div class="vacancies__gallery-arrow"></div>
-                  <button class="vacancies__name" type="button" id="java-dev-sen">Наставник на курс "Аналитик данных"</button>
+                  <button class="vacancies__name" type="button" id="java-dev-sen">Наставник на курс "Аналитик
+                    данных"</button>
                 </div>
                 <p class="vacancies__salary">от 55 тысяч рублей</p>
               </div>
@@ -614,7 +650,8 @@
               <div class="vacancies__gallery-wrapper">
                 <div class="vacancies__name-wrapper">
                   <div class="vacancies__gallery-arrow"></div>
-                  <button class="vacancies__name" type="button" id="C++dev-sen">Наставник на курс "Системный аналитик"</button>
+                  <button class="vacancies__name" type="button" id="C++dev-sen">Наставник на курс "Системный
+                    аналитик"</button>
                 </div>
                 <p class="vacancies__salary">от 65 тысяч рублей</p>
               </div>
@@ -648,7 +685,8 @@
               <div class="vacancies__gallery-wrapper">
                 <div class="vacancies__name-wrapper">
                   <div class="vacancies__gallery-arrow"></div>
-                  <button class="vacancies__name" type="button" id="python-dev-sen">Наставник на курс "Специалист по Data Science"</button>
+                  <button class="vacancies__name" type="button" id="python-dev-sen">Наставник на курс "Специалист по
+                    Data Science"</button>
                 </div>
                 <p class="vacancies__salary">от 45 тысяч рублей</p>
               </div>
@@ -682,7 +720,8 @@
               <div class="vacancies__gallery-wrapper">
                 <div class="vacancies__name-wrapper">
                   <div class="vacancies__gallery-arrow"></div>
-                  <button class="vacancies__name" type="button" id="ios-dev-sen">Наставник на курс "Инженер данных"</button>
+                  <button class="vacancies__name" type="button" id="ios-dev-sen">Наставник на курс "Инженер
+                    данных"</button>
                 </div>
                 <p class="vacancies__salary">от 65 тысяч рублей</p>
               </div>
@@ -718,7 +757,8 @@
               <div class="vacancies__gallery-wrapper">
                 <div class="vacancies__name-wrapper">
                   <div class="vacancies__gallery-arrow"></div>
-                  <button class="vacancies__name" type="button" id="data-analitics-rev">Ревьюер на курс "Аналитик данных"</button>
+                  <button class="vacancies__name" type="button" id="data-analitics-rev">Ревьюер на курс "Аналитик
+                    данных"</button>
                 </div>
                 <p class="vacancies__salary">от 55 тысяч рублей</p>
               </div>
@@ -752,7 +792,8 @@
               <div class="vacancies__gallery-wrapper">
                 <div class="vacancies__name-wrapper">
                   <div class="vacancies__gallery-arrow"></div>
-                  <button class="vacancies__name" type="button" id="system-analitics-rev">Ревьюер на курс "Системный аналитик"</button>
+                  <button class="vacancies__name" type="button" id="system-analitics-rev">Ревьюер на курс "Системный
+                    аналитик"</button>
                 </div>
                 <p class="vacancies__salary">от 65 тысяч рублей</p>
               </div>
@@ -786,7 +827,8 @@
               <div class="vacancies__gallery-wrapper">
                 <div class="vacancies__name-wrapper">
                   <div class="vacancies__gallery-arrow"></div>
-                  <button class="vacancies__name" type="button" id="data-science-rev">Ревьюер на курс "Специалист по Data Science"</button>
+                  <button class="vacancies__name" type="button" id="data-science-rev">Ревьюер на курс "Специалист по
+                    Data Science"</button>
                 </div>
                 <p class="vacancies__salary">от 45 тысяч рублей</p>
               </div>
@@ -820,7 +862,8 @@
               <div class="vacancies__gallery-wrapper">
                 <div class="vacancies__name-wrapper">
                   <div class="vacancies__gallery-arrow"></div>
-                  <button class="vacancies__name" type="button" id="data-eng-rev">Ревьюер на курс "Инженер даннных"</button>
+                  <button class="vacancies__name" type="button" id="data-eng-rev">Ревьюер на курс "Инженер
+                    даннных"</button>
                 </div>
                 <p class="vacancies__salary">от 65 тысяч рублей</p>
               </div>
@@ -862,6 +905,11 @@
     <section class="success-stories">
       <h2 class="section-title">Истории ребят из нашей команды</h2>
       <ul class="success-stories__text-list"></ul>
+      <div class="success-story-mobile">
+        <h3 class="success-story-title success-story-title_place_text"></h3>
+        <p class="success-story-subtitle success-story-subtitle_place_text"></p>
+        <ul class="success-story-mobile__text"></ul>
+      </div>
       <ul class="success-stories__video-list"></ul>
     </section>
     <section id="faq" class="faq">
@@ -898,7 +946,10 @@
               <h3 class="faq__question-text-main">Что мне нужно для работы?</h3>
               <button class="faq__question-button"></button>
             </div>
-            <p class="faq__question-text">Ревьюерам требуется компьютер и&nbsp;стабильное соединение с&nbsp;интернетом.Наставникам потребуется компьютер с&nbsp;камерой и&nbsp;микрофоном, стабильное соединение с&nbsp;интернетом (не&nbsp;менее 20&nbsp;мбит) и&nbsp;тихое помещение на&nbsp;время проведения вебинаров.</p>
+            <p class="faq__question-text">Ревьюерам требуется компьютер и&nbsp;стабильное соединение
+              с&nbsp;интернетом.Наставникам потребуется компьютер с&nbsp;камерой и&nbsp;микрофоном, стабильное
+              соединение с&nbsp;интернетом (не&nbsp;менее 20&nbsp;мбит) и&nbsp;тихое помещение на&nbsp;время проведения
+              вебинаров.</p>
           </article>
           <div class="faq__line"></div>
         </div>
@@ -913,34 +964,36 @@
           <p class="footer__tel-caption">Звонок по России бесплатный</p>
         </div>
         <div class="footer__social-links">
-          <a href="#" class="footer__social-link">Журнал</a>
-          <a href="#" class="footer__social-link footer__social-link_type_tg"></a>
-          <a href="#" class="footer__social-link footer__social-link_type_vk"></a>
+          <a href="https://thecode.media" target="_blank" class="footer__social-link">Журнал</a>
+          <a href="https://t.me/yndx_practicum" target="_blank"
+            class="footer__social-link footer__social-link_type_tg"></a>
+          <a href="https://vk.com/yandex.practicum" target="_blank"
+            class="footer__social-link footer__social-link_type_vk"></a>
         </div>
-        <a href="#" class="footer__vacancies-link">Все вакансии Практикума</a>
+        <a href="https://t.me/practicum_experts" target="_blank" class="footer__vacancies-link">Все вакансии
+          Практикума</a>
         <p class="footer__brand">&copy; 2022 АНО ДПО "ШАД", ООО "Яндекс"</p>
       </div>
       <nav class="footer__block footer__block_type_navbar">
         <ul class="footer__navbar-links">
-          <li class="footer__navbar-item"><a href="#" class="footer__navbar-link">Помощь</a></li>
-          <li class="footer__navbar-item"><a href="#" class="footer__navbar-link">Вакансии</a></li>
-          <li class="footer__navbar-item"><a href="#" class="footer__navbar-link">Лицензия</a></li>
+          <li class="footer__navbar-item"><a href="#" class="footer__navbar-link">Правовая база</a></li>
+          <li class="footer__navbar-item"><a href="#" class="footer__navbar-link">Работодателям</a></li>
+          <li class="footer__navbar-item"><a href="#" class="footer__navbar-link">Отзывы</a></li>
         </ul>
         <ul class="footer__navbar-links">
-          <li class="footer__navbar-item"><a href="#" class="footer__navbar-link">Правовая информация</a></li>
-          <li class="footer__navbar-item"><a href="#" class="footer__navbar-link">Для работодателей</a></li>
-          <li class="footer__navbar-item"><a href="#" class="footer__navbar-link">Отзывы</a></li>
+          <li class="footer__navbar-item"><a href="#" class="footer__navbar-link">Помощь</a></li>
+          <li class="footer__navbar-item"><a href="#" class="footer__navbar-link">Вакансии</a></li>
+          <li class="footer__navbar-item"><a href="#" class="footer__navbar-link">Лицензии</a></li>
         </ul>
       </nav>
       <div class="footer__block footer__block_type_info">
         <p class="footer__info-item">Информация на данной странице описывает возможные варианты получения
           дополнительного дохода в месяц (т.н. подработка). Не является предложением о работе. Размещённые объявления
           о потребоности в тех или иных услугах не являются вакансиями.</p>
-        <p class="footer__info-item">Образовательные услуги оказываются АНО ДПО "ШАД". ШАД - это <a href="#"
-            class="footer__info-link">Школа анализа данных</a>, основанная Яндексом и оказывающая образовательные
-          услуги на основании <a href="#" class="footer__info-link">Лицензии №036031</a> от 24 марта 2015 года.</p>
         <p class="footer__info-item">Сертификат о прохождение обучения по программе дополнительного профессионального
           образования также выдаётся АНО ДПО "ШАД".</p>
+        <p class="footer__info-item">Образовательные услуги оказываются АНО ДПО "ШАД". ШАД - это Школа анализа данных, основанная Яндексом и оказывающая образовательные
+          услуги на основании Лицензии №036031 от 24 марта 2015 года.</p>
       </div>
     </div>
   </footer>
@@ -960,9 +1013,7 @@
   <!-- SUCCESS STORY TEXT TEMPLATE -->
   <template id="template-success-story-text">
     <li class="success-story-text">
-      <!-- ToDo: srcset? -->
       <img class="success-story-text__photo">
-      <!-- ToDo: check header number" -->
       <div class="success-story-text__content success-story-text__content_hidden">
         <h3 class="success-story-title success-story-title_place_text"></h3>
         <p class="success-story-subtitle success-story-subtitle_place_text"></p>
@@ -977,7 +1028,6 @@
     <li class="success-story-video">
       <div class="video-story">
         <a class="video-story__link">
-          <!-- ToDo: srcset? -->
           <img class="video-story__image">
         </a>
         <button type="button" class="video-button video-button_place_success-story"
@@ -992,8 +1042,7 @@
   <!-- VIDEO POPUP -->
   <section class="popup popup_background_opacity" id="video-popup">
     <div class="popup__container popup__container_place_video-popup">
-      <button type="button" class="button-close button-close_place_video-popup"
-        aria-label="Кнопка закрыть">
+      <button type="button" class="button-close button-close_place_video-popup" aria-label="Кнопка закрыть">
       </button>
     </div>
   </section>
@@ -1008,12 +1057,14 @@
 
       <form class="popup__form form" id="form" novalidate>
         <label for="name" class="form__label form__label_place_input">
-          <input type="text" class="form__item form__item_input" id="name" name="name" minlength="2" maxlength="100" required placeholder="ФИО">
+          <input type="text" class="form__item form__item_input" id="name" name="name" minlength="2" maxlength="100"
+            required placeholder="ФИО">
         </label>
         <span class="form__name-error error-text"></span>
 
         <label for="email" class="form__label form__label_place_input">
-          <input type="email" class="form__item form__item_input" id="email" name="email" minlength="2" maxlength="30" required placeholder="Почта">
+          <input type="email" class="form__item form__item_input" id="email" name="email" minlength="2" maxlength="30"
+            required placeholder="Почта">
         </label>
         <span class="form__email-error error-text"></span>
 
@@ -1022,7 +1073,8 @@
             Перечислите набор технологий, которыми вы владеете и уровень владения каждой
             <span class="form__required-input">*</span>
           </p>
-          <textarea class="form__item form__item_textarea" id="stack" name="stack" minlength="2" maxlength="1000" required></textarea>
+          <textarea class="form__item form__item_textarea" id="stack" name="stack" minlength="2" maxlength="1000"
+            required></textarea>
         </label>
         <span class="form__stack-error error-text"></span>
 
@@ -1030,12 +1082,14 @@
           <p class="form__label-text">
             Почему вы хотите стать частью команды Яндекс.Практикума?
           </p>
-          <textarea class="form__item form__item_textarea" id="aboutYou" name="aboutYou" minlength="2" maxlength="1000" required></textarea>
+          <textarea class="form__item form__item_textarea" id="aboutYou" name="aboutYou" minlength="2" maxlength="1000"
+            required></textarea>
         </label>
         <span class="form__aboutYou-error error-text"></span>
 
         <label for="cv" class="form__label form__label_place_input form__label_place_url">
-          <input type="url" class="form__item form__item_input" id="cv" name="cv" minlength="2" maxlength="100" required placeholder="Ссылка на резюме">
+          <input type="url" class="form__item form__item_input" id="cv" name="cv" minlength="2" maxlength="100" required
+            placeholder="Ссылка на резюме">
           <p class="form__label-prompt">
             Пожалуйста, проверьте, что вы открыли достут к документу
             <span class="form__required-input">*</span>
@@ -1047,7 +1101,9 @@
           <input type="checkbox" class="form__item form__item_checkbox" id="confidential" name="confidential" required>
           <label class="form__label-text form__label-text_checkbox" for="confidential">
             <div>
-              Я даю согласие АНО ДПО «ШАД» и ООО «ЯНДЕКС» на обработку <a class="form__link" href="https://yandex.ru/legal/confidential/">указанных данных</a> для целей рассмотрения анкеты и обратной связи по ней.
+              Я даю согласие АНО ДПО «ШАД» и ООО «ЯНДЕКС» на обработку <a class="form__link"
+                href="https://yandex.ru/legal/confidential/">указанных данных</a> для целей рассмотрения анкеты и
+              обратной связи по ней.
               <span class="form__required-input">*</span>
             </div>
           </label>
@@ -1061,8 +1117,10 @@
         <h2 class="success__title">Спасибо, мы получили ваше резюме!</h2>
         <p class="success__text">Мы свяжемся с вами как только всё проверим. Обычно это 2 — 3 дня.</p>
         <a href="#" class="popup__button popup__button_place_success">Вернуться на сайт</a>
-        <img class="success__vector success__vector_left" src="<%=require('./images/popup-vector-success.png')%>" alt="Векторная графика - успешная отправка формы">
-        <img class="success__vector success__vector_right" src="<%=require('./images/popup-vector-success.png')%>" alt="Векторная графика - успешная отправка формы">
+        <img class="success__vector success__vector_left" src="<%=require('./images/popup-vector-success.png')%>"
+          alt="Векторная графика - успешная отправка формы">
+        <img class="success__vector success__vector_right" src="<%=require('./images/popup-vector-success.png')%>"
+          alt="Векторная графика - успешная отправка формы">
       </div>
     </div>
   </section>

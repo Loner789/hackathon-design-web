@@ -1,3 +1,5 @@
+@import '../../utils/styles/mixins';
+
 .header {
   margin: 0;
   padding: 0;
@@ -17,8 +19,6 @@
     padding: 0;
     width: max-content;
     text-decoration: none;
-    display: flex;
-    color: black;
   }
 
   &__logo-image {
@@ -26,12 +26,16 @@
     padding: 0 10px 0 0;
     width: 163px;
     height: 50px;
+
+    @include media_768 {
+      width: 145px;
+    }
   }
 
   &__link-button {
     margin: 0;
     padding: 16px;
-    width: 115px;
+    width: 144px;
     height: 50px;
     font-size: 18px;
     font-weight: 400;
@@ -41,11 +45,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 100px;
-    color: black;
+    border: 1px solid rgba(133, 133, 133, 0.3);
+    border-radius: 8px;
+    color: #1E2027;
 
     &:hover {
-      border: 2px solid black;
+      border: 1px solid #4F7FDD;
+      color: #4F7FDD;;
     }
+
+    @include media_768 {
+      width: 125px;
+      height: 40px;
+      font-size: 15px;
+    }
+  }
+
+  @include media_1024 {
+    min-height: 90px;
+  }
+
+  @include media_768 {
+    min-height: 70px;
   }
 }

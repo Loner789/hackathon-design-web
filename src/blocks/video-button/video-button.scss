@@ -1,3 +1,5 @@
+@import '../../utils/styles/mixins';
+
 .video-button {
   background-image: url(../images/button-play-video.png);
   background-color: transparent;
@@ -16,6 +18,18 @@
   bottom: 40px;
   right: 40px;
   background-size: cover;
+
+  @include media_1110 {
+    width: 60px;
+    height: 60px;
+  }
+
+  @include media_600 {
+    width: 45px;
+    height: 45px;
+    bottom: 30px;
+    right: 30px;
+  }
 }
 
 .video-button_place_advantages {
@@ -23,5 +37,21 @@
   height: 120px;
   top: calc(50% - 60px);
   left: calc(50% - 60px);
+
+  @include media_768 {
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    top: calc(50% - 12.5px);
+    left: calc(50% - 12.5px);
+  }
+}
+
+.video-button:hover {
+  cursor: pointer;
+}
+
+.video-button:hover {
+  cursor: pointer;
 }
 

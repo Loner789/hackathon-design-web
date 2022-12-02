@@ -1,3 +1,9 @@
+@mixin media_1430 {
+  @media screen and (max-width: 1430px) {
+    @content;
+  }
+}
+
 @mixin media_1400 {
   @media screen and (max-width: 1400px) {
     @content;
@@ -6,6 +12,31 @@
 
 @mixin media_1280 {
   @media screen and (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin media_1024 {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+
+@mixin media_1110 {
+  @media screen and (max-width: 1110px) {
+    @content;
+  }
+}
+
+@mixin media_1010 {
+  @media screen and (max-width: 1010px) {
+    @content;
+  }
+}
+
+@mixin media_970 {
+  @media screen and (max-width: 970px) {
     @content;
   }
 }
@@ -40,4 +71,10 @@
 
 @mixin size-vector-duties {
   background-size: 150px 170px;
+}
+
+@mixin advantages-container-column {
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+  justify-items: center;
 }
