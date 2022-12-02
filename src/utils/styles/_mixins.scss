@@ -35,6 +35,12 @@
   }
 }
 
+@mixin media_970 {
+  @media screen and (max-width: 970px) {
+    @content;
+  }
+}
+
 @mixin media_768 {
   @media screen and (max-width: 768px) {
     @content;
@@ -65,4 +71,10 @@
 
 @mixin size-vector-duties {
   background-size: 150px 170px;
+}
+
+@mixin advantages-container-column {
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+  justify-items: center;
 }

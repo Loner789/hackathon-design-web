@@ -70,6 +70,14 @@ const dutiesTaskTapClass = 'position__task_tap';
 const dutiesTaskSelector = '.position__task';
 
 const positionList = document.querySelectorAll('.position');
+const advantagesCardTapClass = 'card_tap';
+const advantageCardMobileVisebleClass = 'card__mobile_visible';
+const advantagesRotateSelector = '.card__rotate';
+const advantagesCardMobileSelector = '.card__mobile';
+const advantageRotateTapClass = 'card__rotate_tap';
+const advantageCardHidden = 'card_hidden';
+
+const advantageList = document.querySelectorAll('.card');
 
 const configFormValidator = {
   inputSelector: '.form__item',
@@ -130,4 +138,11 @@ export {
   dutiesTitleSelector,
   dutiesTaskTapClass,
   dutiesTaskSelector,
+  advantageList,
+  advantagesCardTapClass,
+  advantageCardMobileVisebleClass,
+  advantagesRotateSelector,
+  advantagesCardMobileSelector,
+  advantageRotateTapClass,
+  advantageCardHidden,
 };
