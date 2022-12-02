@@ -199,18 +199,23 @@
         <ul class="vacancies__education-menu">
           <li class="vacancies__menu-item">
             <button class="vacancies__btn-menu" type="button" id="disign">Дизайн</button>
+            <button class="vacancies__btn-menu-arrow"></button>
           </li>
-          <li class="vacancies__menu-item">
+          <li class="vacancies__menu-item vacancies__menu-item_visible">
             <button class="vacancies__btn-menu vacancies__btn-menu_active" type="button" id="programming">Программирование</button>
+            <button class="vacancies__btn-menu-arrow"></button>
           </li>
           <li class="vacancies__menu-item">
             <button class="vacancies__btn-menu" type="button" id="analitics">Аналитика</button>
+            <button class="vacancies__btn-menu-arrow"></button>
           </li>
           <li class="vacancies__menu-item">
             <button class="vacancies__btn-menu" type="button" id="marketing">Маркетинг</button>
+            <button class="vacancies__btn-menu-arrow"></button>
           </li>
           <li class="vacancies__menu-item">
             <button class="vacancies__btn-menu" type="button" id="management">Менеджмент</button>
+            <button class="vacancies__btn-menu-arrow"></button>
           </li>
         </ul>
         <div class="vacancies__info">
@@ -846,7 +851,7 @@
               </div>
             </li>
           </ul>
-          <div id="vac-notfound" class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share">
+          <div id="vac-notfound" class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share vacancies__gallery-wrapper_small">
             <p class="vacancies__notfound-vac-text">Нет подходящего предложения?</p>
             <button class="vacancies__notfound-vac-btn">Оставить заявку</button>
             <div class="vacancies__popup-share"></div>
@@ -869,23 +874,23 @@
               <h3 class="faq__question-text-main">Как оформляется сотрудничество?</h3>
               <button class="faq__question-button"></button>
             </div>
-            <p class="faq__question-text">Наставник помогает студентам учиться: отвечает на&nbsp;вопросы и&nbsp;помогает с&nbsp;трудностями. Каждый наставник курирует группу численностью от&nbsp;60&nbsp;студентов. Общается с&nbsp;ними в&nbsp;Slack, проводит групповые и&nbsp;индивидуальные звонки на&nbsp;протяжении 9&nbsp;месяцев обучения.</p>
+            <p class="faq__question-text">Для сотрудничества с&nbsp;нами вам нужно формить статус&nbsp;ИП или самозанятого.</p>
           </article>
           <div class="faq__line"></div>
           <article class="faq__question-block">
             <div class="faq__question-wrapper">
-              <h3 class="faq__question-text-main">Как понять, что моей экспертизы досточно?</h3>
+              <h3 class="faq__question-text-main">Как я пойму, что подхожу?</h3>
               <button class="faq__question-button"></button>
             </div>
-            <p class="faq__question-text">Наставник помогает студентам учиться: отвечает на&nbsp;вопросы и&nbsp;помогает с&nbsp;трудностями. Каждый наставник курирует группу численностью от&nbsp;60&nbsp;студентов. Общается с&nbsp;ними в&nbsp;Slack, проводит групповые и&nbsp;индивидуальные звонки на&nbsp;протяжении 9&nbsp;месяцев обучения.</p>
+            <p class="faq__question-text">В&nbsp;описании предложения указаны подробные требования. Мы&nbsp;так&nbsp;же дополнительно проводим собеседования со&nbsp;всеми кандидатами.</p>
           </article>
           <div class="faq__line"></div>
           <article class="faq__question-block">
             <div class="faq__question-wrapper">
-              <h3 class="faq__question-text-main">Как оформляется сотрудничество?</h3>
+              <h3 class="faq__question-text-main">Могу ли я быть наставником и ревьюером одновременно?</h3>
               <button class="faq__question-button"></button>
             </div>
-            <p class="faq__question-text">Наставник помогает студентам учиться: отвечает на&nbsp;вопросы и&nbsp;помогает с&nbsp;трудностями. Каждый наставник курирует группу численностью от&nbsp;60&nbsp;студентов. Общается с&nbsp;ними в&nbsp;Slack, проводит групповые и&nbsp;индивидуальные звонки на&nbsp;протяжении 9&nbsp;месяцев обучения.</p>
+            <p class="faq__question-text">К&nbsp;сожалению, вы&nbsp;не&nbsp;можете совмещать работу наставником и&nbsp;ревьюером. Но&nbsp;вы&nbsp;можете стать ревьюером по&nbsp;нескольким направлениям.</p>
           </article>
           <div class="faq__line"></div>
           <article class="faq__question-block">
@@ -999,7 +1004,7 @@
       <button type="button" class="button-close" aria-label="Кнопка закрыть"></button>
 
       <!-- ToDo: the title must be taken from the vacancy -->
-      <h2 class="popup__title">Хочу быть ревьюером на факультете анализа данных или Data Science</h2>
+      <h2 class="popup__title">Хочу стать частью команды Яндекс Практикума</h2>
 
       <form class="popup__form form" id="form" novalidate>
         <label for="name" class="form__label form__label_place_input">

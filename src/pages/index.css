@@ -1084,7 +1084,7 @@
   background-repeat: no-repeat;
   background-size: auto;
   background-color: #FFFFFF;
-  background-position: right bottom;
+  background-position: right -60px top 140px;
 }
 .faq__container {
   display: flex;
@@ -1152,6 +1152,7 @@
   align-self: center;
   margin: 0;
   transition: all 0.3s linear;
+  padding: 0;
 }
 .faq__question-button_active {
   transform: rotate(45deg);
@@ -1187,6 +1188,137 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .faq {
+    max-width: 1024px;
+  }
+  .faq__container {
+    width: calc(100% - 40px);
+    max-width: 1024px;
+    margin: 150px 0 150px 0;
+  }
+  .faq__title {
+    font-size: 45px;
+    line-height: 53px;
+  }
+  .faq__line {
+    width: calc(100% - 40px);
+    max-width: 1024px;
+  }
+  .faq__question-block {
+    width: calc(100% - 40px);
+    max-width: 1024px;
+  }
+  .faq__question-wrapper {
+    width: calc(100% - 40px);
+    max-width: 1024px;
+  }
+  .faq__question-text-main {
+    width: 860px;
+  }
+  .faq__question-text {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .faq {
+    width: 100vw;
+    max-width: 768px;
+  }
+  .faq__background {
+    background-size: 550px;
+    background-position: right -20px top 40px;
+  }
+  .faq__container {
+    width: calc(100% - 40px);
+    max-width: 768px;
+    margin: 100px 0 181px 0;
+  }
+  .faq__title {
+    font-size: 30px;
+    line-height: 35px;
+    margin: 0 0 23px 0;
+  }
+  .faq__line {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 0 23px 0;
+  }
+  .faq__question-block {
+    width: 100%;
+    max-width: 768px;
+  }
+  .faq__question-wrapper {
+    width: 100%;
+    max-width: 768px;
+    margin-bottom: 23px;
+  }
+  .faq__question-wrapper_active {
+    margin-bottom: 26px;
+  }
+  .faq__question-text-main {
+    font-size: 16px;
+    line-height: 26.4px;
+    width: 604px;
+    min-height: 26.4px;
+  }
+  .faq__question-text {
+    font-size: 15px;
+    margin-bottom: 18px;
+    width: 728px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .faq {
+    max-width: 320px;
+  }
+  .faq__background {
+    background-image: none;
+  }
+  .faq__container {
+    width: calc(100% - 20px);
+    max-width: 320px;
+    margin: 92px 0 90px 0;
+  }
+  .faq__title {
+    font-size: 25px;
+    line-height: 29px;
+    margin: 0 0 30px 0;
+  }
+  .faq__line {
+    width: calc(100% - 20px);
+    max-width: 320px;
+    margin: 0 0 20px 0;
+  }
+  .faq__question-block {
+    width: calc(100% - 20px);
+    max-width: 320px;
+  }
+  .faq__question-wrapper {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 20px;
+  }
+  .faq__question-wrapper_active {
+    margin-bottom: 10.5px;
+  }
+  .faq__question-text-main {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21px;
+    width: 239px;
+    min-height: 21px;
+  }
+  .faq__question-button {
+    width: 14.48px;
+    height: 14.48px;
+  }
+  .faq__question-text {
+    font-size: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+}
 .section-title {
   font-style: normal;
   font-weight: 500;
@@ -1607,7 +1739,7 @@
 .vacancies__btn-menu {
   border-style: none;
   background-color: #4F7FDD;
-  font-family: "Inter";
+  font-family: "YS Display";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -1617,19 +1749,22 @@
   padding: 0;
   margin: 0 55px 0 15px;
 }
+.vacancies__btn-menu-arrow {
+  display: none;
+}
 .vacancies__btn-menu_active {
   background-color: #FFFFFF;
   padding: 10px 15px;
   border-radius: 8px;
   color: #000000;
-  margin: 0 40px 0 0px;
+  margin: 0 40px 0 0;
 }
 .vacancies__info {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-width: 1030px;
-  margin: 60px 10px 0 0;
+  width: 100%;
+  margin: 60px 0 0 0;
 }
 .vacancies__prophecy-menu {
   display: flex;
@@ -1647,7 +1782,7 @@
   background-color: #FFFFFF;
   font-family: "YS Display";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 20px;
   line-height: 38px;
   text-align: center;
@@ -1659,11 +1794,12 @@
 }
 .vacancies__proph-btn-menu_active {
   border-bottom: solid #000000 1px;
+  font-weight: 700;
 }
 .vacancies__novac-wrapper {
   display: none;
   flex-direction: column;
-  width: 1030px;
+  width: 100%;
   margin: 45px 0 0 0;
 }
 .vacancies__novac-wrapper_active {
@@ -1678,7 +1814,7 @@
   color: #000000;
   padding: 0;
   margin: 0;
-  margin-bottom: 45px;
+  margin-bottom: 20px;
 }
 .vacancies__gallery {
   padding: 0;
@@ -1725,10 +1861,10 @@
   background-color: #FFFFFF;
   font-family: "YS Display";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 20px;
   line-height: 140%;
-  color: #000000;
+  color: #1E2027;
   margin: 0 0 0 10px;
   padding: 0;
   cursor: pointer;
@@ -1742,7 +1878,7 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 140%;
-  color: #000000;
+  color: #585A5B;
   margin: 0;
 }
 .vacancies__line {
@@ -1759,7 +1895,7 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 140%;
-  color: #979797;
+  color: #585A5B;
   text-align: right;
   margin: 0;
 }
@@ -1776,7 +1912,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 140%;
-  color: #000000;
+  color: #1E2027;
 }
 .vacancies__req-list {
   list-style: square;
@@ -1784,7 +1920,7 @@
   padding-left: 25px;
 }
 .vacancies__req-list :last-child {
-  margin: 0 0 20px 10px;
+  margin: 0 0 30px 10px;
 }
 .vacancies__req-item {
   font-family: "YS Display";
@@ -1796,22 +1932,23 @@
   margin: 0 0 15px 10px;
 }
 .vacancies__send-btn {
-  width: 295px;
+  width: 330px;
   height: 50px;
   background-color: #4F7FDD;
   font-family: "YS Display";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 20px;
   text-align: center;
   color: #FFFFFF;
   padding: 0;
-  margin: 25px 0 35px 0;
+  margin: 15px 0 35px 0;
   border-style: none;
   border-radius: 8px;
   cursor: pointer;
 }
 .vacancies__send-btn_noVac {
+  width: 205px;
   background-color: #FFFFFF;
   border: 1px solid #4F7FDD;
   color: #4F7FDD;
@@ -1823,10 +1960,11 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  border-radius: 15px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
   padding: 0;
-  margin: 25px 0 35px 20px;
-  border-style: none;
+  margin: 15px 0 35px 20px;
+  border: 1px solid #585A5B;
   cursor: pointer;
 }
 .vacancies__notfound-vac-text {
@@ -1837,11 +1975,11 @@
   line-height: 50px;
   display: flex;
   align-items: center;
-  color: #000000;
+  color: #1E2027;
   margin: 45px 0 0 0;
 }
 .vacancies__notfound-vac-btn {
-  width: 293px;
+  width: 205px;
   height: 50px;
   background-color: #FFFFFF;
   font-family: "YS Display";
@@ -1962,6 +2100,292 @@
   background-position: center;
 }
 
+@media screen and (max-width: 1024px) {
+  .vacancies {
+    max-width: 1024px;
+    min-width: 100vw;
+  }
+  .vacancies__container {
+    width: 100%;
+    max-width: 1024px;
+    margin: 150px 0 150px 0;
+  }
+  .vacancies__title {
+    font-size: 45px;
+    line-height: 53px;
+    margin: 0 0 0 21px;
+  }
+  .vacancies__education-menu {
+    width: 100%;
+    max-width: 1024px;
+    min-height: 71px;
+    margin: 80px 0 0 0;
+  }
+  .vacancies__btn-menu {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .vacancies__info {
+    width: calc(100% - 40px);
+    margin: 60px 0 0 0;
+  }
+  .vacancies__prophecy-menu {
+    min-height: 43px;
+  }
+  .vacancies__popup-share {
+    left: 41%;
+    bottom: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .vacancies {
+    max-width: 768px;
+    min-width: 100vw;
+  }
+  .vacancies__container {
+    width: 100%;
+    max-width: 768px;
+    margin: 100px 0 110px 0;
+  }
+  .vacancies__title {
+    font-size: 30px;
+    line-height: 35px;
+    margin: 0 0 0 20px;
+  }
+  .vacancies__education-menu {
+    width: 100%;
+    max-width: 768px;
+    min-height: 72px;
+    margin: 55px 0 0 0;
+  }
+  .vacancies__btn-menu {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 30px 0 15px;
+  }
+  .vacancies__info {
+    width: calc(100% - 40px);
+    margin: 22px 0 0 0;
+  }
+  .vacancies__prophecy-menu {
+    min-height: 37px;
+  }
+  .vacancies__proph-btn-menu {
+    font-size: 16px;
+  }
+  .vacancies__name {
+    font-size: 16px;
+  }
+  .vacancies__salary {
+    font-size: 16px;
+  }
+  .vacancies__line {
+    max-width: 768px;
+  }
+  .vacancies__work-time {
+    font-size: 16px;
+  }
+  .vacancies__req-title {
+    font-size: 15px;
+  }
+  .vacancies__req-item {
+    font-size: 15px;
+  }
+  .vacancies__send-btn {
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .vacancies__notfound-vac-text {
+    font-size: 16px;
+  }
+  .vacancies__notfound-vac-btn {
+    font-size: 16px;
+  }
+  .vacancies__popup-share {
+    left: 55%;
+    bottom: 85%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .vacancies {
+    max-width: 320px;
+    min-width: 100vw;
+  }
+  .vacancies__container {
+    width: 100%;
+    max-width: 320px;
+    margin: 90px 0 90px 0;
+  }
+  .vacancies__title {
+    font-size: 25px;
+    line-height: 29px;
+    margin: 0 0 0 10px;
+  }
+  .vacancies__education-menu {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 320px;
+    min-height: 20px;
+    height: 40px;
+    padding: 15px 0 15px 0;
+    margin: 50px 0 0 0;
+    z-index: 10;
+    overflow: hidden;
+  }
+  .vacancies__education-menu_active {
+    overflow: visible;
+    min-height: 230px;
+    height: 230px;
+  }
+  .vacancies__menu-item {
+    margin: 0 0 0 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    display: none;
+  }
+  .vacancies__menu-item_visible {
+    display: flex;
+  }
+  .vacancies__btn-menu {
+    background-color: #FFFFFF;
+    font-size: 15px;
+    line-height: 40px;
+    color: #000000;
+    border-radius: 8px;
+    padding: 0 0 0 15px;
+    text-align: left;
+    width: 300px;
+    margin: 0;
+  }
+  .vacancies__btn-menu_active {
+    padding: 0 0 0 15px;
+    margin: 0;
+  }
+  .vacancies__btn-menu-arrow {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../images/icon-arrow-320.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: rotate(90deg);
+    border-style: none;
+    padding: 0;
+    margin: 0 15px 0 0;
+    cursor: pointer;
+  }
+  .vacancies__info {
+    width: calc(100% - 20px);
+    margin: 20px 0 0 0;
+  }
+  .vacancies__prophecy-menu {
+    justify-content: space-between;
+    min-height: 50px;
+  }
+  .vacancies__prophecy-item {
+    margin: 0 0 0 34.5px;
+  }
+  .vacancies__prophecy-item:last-child {
+    margin: 0 34.5px 0 0;
+  }
+  .vacancies__proph-btn-menu {
+    margin: 0;
+    font-weight: 500;
+  }
+  .vacancies__novac-wrapper {
+    margin: 20.5px 0 0 0;
+  }
+  .vacancies__no-vac-text {
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .vacancies__gallery {
+    margin: 0;
+  }
+  .vacancies__gallery-item {
+    margin-top: 30px;
+  }
+  .vacancies__gallery-wrapper {
+    flex-direction: column;
+  }
+  .vacancies__gallery-wrapper_share {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .vacancies__gallery-wrapper_small {
+    flex-direction: column;
+  }
+  .vacancies__name-wrapper {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .vacancies__gallery-arrow {
+    width: 15px;
+    height: 15px;
+    background-image: url(../images/icon-arrow-320.svg);
+  }
+  .vacancies__name {
+    font-size: 15px;
+    margin: 0;
+    text-align: left;
+  }
+  .vacancies__salary {
+    font-size: 13px;
+  }
+  .vacancies__line {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .vacancies__work-time {
+    font-size: 13px;
+    text-align: left;
+  }
+  .vacancies__req-title {
+    font-weight: 400;
+    font-size: 15px;
+  }
+  .vacancies__req-list {
+    padding-left: 17px;
+  }
+  .vacancies__req-item {
+    font-size: 13px;
+  }
+  .vacancies__send-btn {
+    width: 240px;
+    font-size: 15px;
+    margin: 0 0 30px 0;
+  }
+  .vacancies__send-btn_noVac {
+    width: 300px;
+    margin: 10px 0 35px 0;
+  }
+  .vacancies__share-btn {
+    margin: 0 0 30px 10px;
+  }
+  .vacancies__notfound-vac-text {
+    font-size: 15px;
+    margin: 30px 0 0 0;
+  }
+  .vacancies__notfound-vac-btn {
+    width: 300px;
+    font-size: 15px;
+    margin: 0 0 0 0;
+  }
+  .vacancies__popup-share {
+    left: 10%;
+    bottom: 110%;
+  }
+  .vacancies__popup-link {
+    font-size: 13px;
+  }
+}
 .form {
   display: flex;
   flex-direction: column;

@@ -22,6 +22,7 @@ import {
   faqQuestions,
   vacancieNameBtn,
   vacancieEduItems,
+  vacanciesMenuItems,
   vacanciesDescriptionItems,
   vacancieEduItemDesign,
   vacancieEduItemProgramming,
@@ -42,6 +43,9 @@ import {
   vacGalleryArrows,
   vacanciesPopupShareEmptyCode,
   vacanciesPopupShareFullCode,
+  vacanciesBtnMenuArrows,
+  vacanciesEduMenu,
+  vacanciesSendBtns,
   videoElement,
   cardLinePlaceFirstTop,
   cardLinePlaceFirstTopParent,
@@ -330,7 +334,11 @@ const handleVacReviewerProphItemClick = (evt) => {
 
 const activateVacanciesEducationItem = (menuItems, menuItemElement) => {
   menuItems.forEach((item) => item.classList.remove('vacancies__btn-menu_active'));
+  vacanciesMenuItems.forEach((item) => item.classList.remove('vacancies__menu-item_visible'));
   menuItemElement.classList.add('vacancies__btn-menu_active');
+  const vacEdMenuItem = menuItemElement.closest('.vacancies__menu-item');
+  vacEdMenuItem.classList.add('vacancies__menu-item_visible');
+  vacanciesEduMenu.classList.remove('vacancies__education-menu_active');
 };
 
 const handleDesignBtnClick = (evt) => {
@@ -453,6 +461,13 @@ vacanciesShareBtns.forEach((btn) => {
   });
 });
 
+vacanciesBtnMenuArrows.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    vacanciesMenuItems.forEach((item) => item.classList.add('vacancies__menu-item_visible'));
+    vacanciesEduMenu.classList.add('vacancies__education-menu_active');
+  });
+});
+
 // EVENT LISTENERS:
 // Animation of the advantage
 cardLinePlaceFirstTopParent.addEventListener('mousemove', () => {
@@ -495,6 +510,12 @@ popupWithForm.setEventListeners();
 /* to open popup */
 button.addEventListener('click', () => {
   popupWithForm.open();
+});
+
+vacanciesSendBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    popupWithForm.open();
+  });
 });
 
 const FormInPopupValidator = new FormValidator(configFormValidator, '#form');
