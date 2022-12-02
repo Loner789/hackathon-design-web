@@ -1,0 +1,297 @@
+@import '../../utils/styles/constants';
+
+.card {
+  max-width: 590px;
+  width: 100%;
+  position: relative;
+  perspective: 1000px;
+
+  .card__rotate {
+    transform-style: preserve-3d;
+    transition: .5s;
+    position: relative;
+    height: 100%;
+
+    .card__text {
+      animation: initial;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 1.4;
+      margin: 75px 0;
+      box-sizing: border-box;
+      padding: 0;
+      backface-visibility: hidden;
+    }
+
+    .card__description {
+      animation: initial;
+      padding: 0 50px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.4;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      position: absolute;
+      bottom: 50%;
+      left: 0;
+      transform: rotateY(180deg);
+      backface-visibility: hidden;
+    }
+
+    .card__description_offset {
+      bottom: calc(100% - 50% - 11px);
+    }
+  }
+
+  .card__line {
+    position: relative;
+  }
+
+  .card__line_place__first-top::after {
+    content: '';
+    width: 467px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: $cardBorder;
+    box-sizing: border-box;
+  }
+
+  .card__line_place__second-top::before {
+    content: '';
+    width: 106px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: $cardBorder;
+    border-right: $cardBorder;
+    box-sizing: border-box;
+  }
+
+  .card__line_place__second-bottom::before {
+    content: '';
+    width: 467px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: $cardBorder;
+  }
+
+  .card__line_hovered {
+    display: none;
+  }
+}
+
+.card:hover {
+  cursor: pointer;
+  background-color: $blueBackground;
+  color: $lightText;
+
+  .card__rotate {
+    transform: rotateY(180deg);
+  }
+}
+
+.card:hover::after, .card:hover::before {
+  box-sizing: border-box;
+  content: '';
+  border: none;
+}
+
+.card_place_right-top::after {
+  content: '';
+  border-right: $cardBorder;
+  border-top: $cardBorder;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 315px;
+  box-sizing: border-box;
+}
+
+.card_place_right-top::before {
+  content: '';
+  border-left: $cardBorder;
+  border-bottom: $cardBorder;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 242px;
+  box-sizing: border-box;
+}
+
+.card_place_right-bottom::after {
+  content: '';
+  border-right: $cardBorder;
+  border-top: $cardBorder;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 73px;
+  box-sizing: border-box;
+}
+
+.card_place_right-bottom::before {
+  content: '';
+  border-left: $cardBorder;
+  border-top: $cardBorder;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 76px;
+  width: 73px;
+  box-sizing: border-box;
+}
+
+.card_place_left-top::after {
+  content: '';
+  border-right: $cardBorder;
+  border-bottom: $cardBorder;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 233px;
+  box-sizing: border-box;
+}
+
+.card_place_left-top::before {
+  content: '';
+  border-left: $cardBorder;
+  border-top: $cardBorder;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 162px;
+  width: 125px;
+  box-sizing: border-box;
+}
+
+.card_place_left-bottom::after {
+  content: '';
+  border-right: $cardBorder;
+  border-bottom: $cardBorder;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 134px;
+  width: 42px;
+  box-sizing: border-box;
+}
+
+.card_place_left-bottom::before {
+  content: '';
+  border-left: $cardBorder;
+  border-top: $cardBorder;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 259px;
+  box-sizing: border-box;
+}
+
+.card_place_second-right-top::after {
+  content: '';
+  border-right: $cardBorder;
+  border-bottom: $cardBorder;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 57px;
+  width: 286px;
+  box-sizing: border-box;
+}
+
+.card_place_second-right-top::before {
+  content: '';
+  border-left: $cardBorder;
+  border-top: $cardBorder;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 78px;
+  width: 259px;
+  box-sizing: border-box;
+}
+
+.card_place_second-right-bottom::after {
+  content: '';
+  border-right: $cardBorder;
+  border-bottom: $cardBorder;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 109px;
+  width: 252px;
+  box-sizing: border-box;
+}
+
+.card_place_second-right-bottom::before {
+  content: '';
+  border-left: $cardBorder;
+  border-top: $cardBorder;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 44px;
+  width: 342px;
+  box-sizing: border-box;
+}
+
+.card_place_second-left-top::after {
+  content: '';
+  border-right: $cardBorder;
+  border-top: $cardBorder;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 315px;
+  box-sizing: border-box;
+}
+
+.card_place_second-left-top::before {
+  content: '';
+  border-left: $cardBorder;
+  border-bottom: $cardBorder;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 242px;
+  box-sizing: border-box;
+}
+
+.card_place_second-left-bottom::after {
+  content: '';
+  border-right: $cardBorder;
+  border-top: $cardBorder;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 73px;
+  box-sizing: border-box;
+}
+
+.card_place_second-left-bottom::before {
+  content: '';
+  border-left: $cardBorder;
+  border-top: $cardBorder;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 76px;
+  width: 73px;
+  box-sizing: border-box;
+}
+

@@ -1,28 +1,10 @@
 @font-face {
-  font-family: 'Formular';
-  font-style: normal;
-  font-display: swap;
-  src: local('Formular'),
-    url(../vendor/formular/formular-300.woff) format('woff'), url(../vendor/formular/formular-300.woff2) format('woff2');
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: 'Neue Machina';
-  font-style: normal;
-  font-display: swap;
-  src: local('Neue Machina'),
-    url(../vendor/neue-machina/neue-machina-400.woff) format('woff'), url(../vendor/neue-machina/neue-machina-400.woff2) format('woff2');
-  font-weight: 400;
-}
-
-@font-face {
   font-family: 'YS Display';
   font-style: normal;
   font-display: swap;
   src: local('YS Display'),
-    url(../vendor/ys-display/YS-Display-Bold.ttf) format('ttf');
-  font-weight: 700;
+    url(../vendor/ys-display/YS-Display-Medium.ttf) format('ttf');
+  font-weight: 500;
 }
 
 @font-face {
@@ -35,10 +17,19 @@
 }
 
 @font-face {
-  font-family: 'YS Text';
+  font-family: 'YS Display';
   font-style: normal;
   font-display: swap;
   src: local('YS Display'),
-    url(../vendor/ys-text/YS-Text-Medium.ttf) format('ttf');
-  font-weight: 500;
+    url(../vendor/ys-display/YS-Display-Light.ttf) format('ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'YS Text';
+  font-style: normal;
+  font-display: swap;
+  src: local('YS Text'),
+    url(../vendor/ys-text/YS-Text-Regular.ttf) format('ttf');
+  font-weight: 400;
 }

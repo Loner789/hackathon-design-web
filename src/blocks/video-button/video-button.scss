@@ -1,0 +1,27 @@
+.video-button {
+  background-image: url(../images/button-play-video.png);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  padding: 0;
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  display: block;
+}
+
+.video-button_place_success-story {
+  width: 80px;
+  height: 80px;
+  bottom: 40px;
+  right: 40px;
+  background-size: cover;
+}
+
+.video-button_place_advantages {
+  width: 120px;
+  height: 120px;
+  top: calc(50% - 60px);
+  left: calc(50% - 60px);
+}
+

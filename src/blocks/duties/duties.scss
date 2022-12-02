@@ -1,4 +1,5 @@
 @import '../../utils/styles/constants';
+@import '../../utils/styles/mixins';
 
 .duties {
   display: flex;
@@ -7,36 +8,57 @@
   width: 100%;
   max-width: 1440px;
   font-family: 'YS Display', Arial, sans-serif;
+  margin: 160px auto 0;
+  box-sizing: border-box;
 
   .duties__list-of-positions {
     display: grid;
-    max-width: 1240px;
     width: 100%;
     grid-template-columns: repeat(2, 1fr);
-    margin: 70px 0 0;
+    margin: 100px 0 0;
     padding: 0;
     list-style-type: none;
     column-gap: 20px;
+
+    @include media_1280 {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+    }
+
+    @include media_600 {
+      margin-top: 50px;
+    }
   }
 
   .duties__button {
     text-decoration: none;
-    color: $darckText;
-    font-family: 'YS Text';
+    color: $lightText;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 3.12;
-    font-family: 'YS Text', Arial, sans-serif;
-    border: 1px solid #000000;
+    font-size: 20px;
+    line-height: 1.4;
+    border: none;
     box-sizing: border-box;
-    border-radius: 100px;
-    width: 400px;
     text-align: center;
-    margin-top: 45px;
+    margin-top: 60px;
+    background: #4F7FDD;
+    border-radius: 8px;
+    width: 330px;
+    padding: 10px 0;
+
+    @include media_480 {
+      margin-top: 30px;
+      width: 300px;
+      font-size: 15px;
+    }
   }
 
   .duties__button:hover {
     cursor: pointer;
+    background-color: #2B68DE;
+  }
+
+  .duties__button:focus {
+    background-color: #00308C;
   }
 }

@@ -1,0 +1,28 @@
+.button-close {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-image: url(../images/button-close-popup.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+  text-decoration: none;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-size: contain;
+}
+
+.button-close_place_video-popup {
+  background-image: url(../images/button-close-popup-white.png);
+  top: -40px;
+  right: -40px;
+}
+
+.button-close:hover {
+  cursor: pointer;
+  opacity: .6;
+  transition: .7s;
+}

@@ -1,14 +1,16 @@
+@import '../../utils/styles/mixins';
 @import '../../utils/styles/constants';
 
 .position {
-  border: 1px solid #000;
   display: flex;
   justify-content: center;
   flex-direction: column;
   box-sizing: border-box;
+  position: relative;
 
   .position__list-of-tasks {
-    margin: 40px 30px 65px 105px;
+    box-sizing: border-box;
+    margin: 35px 0 65px 20%;
     padding: 0;
     max-width: 475px;
     width: 100%;
@@ -16,30 +18,234 @@
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+
+    @include media_1400 {
+      margin-left: 10%;
+    }
+
+    @include media_600 {
+      max-width: 350px;
+      row-gap: 10px;
+    }
+
+    @include media_480 {
+      margin-bottom: 30px;
+      margin-top: 20px;
+      max-width: 260px;
+      margin-left: 30px;
+      row-gap: 5px;
+    }
+
+    .position__task {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.4;
+      color: #585A5B;
+      box-sizing: border-box;
+
+      @include media_768 {
+        font-size: 15px;
+      }
+
+      @include media_480 {
+        font-size: 13px;
+      }
+    }
+
+    .position__task_tap {
+      color: #fff;
+    }
   }
 
-  .position__task {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.5;
-    max-width: 477px;
-    width: 100%;
+  .position__list-of-tasks_tap {
+    margin-top: 161px;
+
+    @include media_600 {
+      margin-top: 147px;
+    }
+
+    @include media_480 {
+      margin-top: 0;
+      margin-bottom: 0;
+      align-self: center;
+    }
   }
 
   .position__title {
-    margin: 70px auto 0;
+    margin: 70px 0 0 20%;
     font-style: normal;
-    font-weight: 700;
     font-size: 40px;
-    line-height: 1.175;
-    text-align: center;
-    max-width: 610px;
+    line-height: 1.4;
+    max-width: 380px;
     width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    box-sizing: border-box;
+    padding: 0;
+
+    @include media_1400 {
+      margin-left: 10%;
+    }
+
+    @include media_600 {
+      font-size: 30px;
+      max-width: 250px;
+    }
+
+    @include media_480 {
+      font-size: 20px;
+      margin-top: 33px;
+      margin-left: 30px;
+    }
+  }
+
+  .position__title_tap {
+    display: none;
+  }
+
+  .position__reviewer {
+    position: absolute;
+    width: 295px;
+    height: 295px;
+    right: 0;
+    bottom: 0;
+    display: block;
+    box-sizing: border-box;
+  }
+
+  .position__border_line_left-top {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 39%;
+    height: 39%;
+    border-top: $cardBorder;
+    border-left: $cardBorder;
+  }
+
+  .position__border_line_right-top {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 56%;
+    height: 56%;
+    border-top: $cardBorder;
+    border-right: $cardBorder;
+  }
+
+  .position__border_tap {
+    display: none;
   }
 }
 
-.position_dark {
-  background-color: #000;
-  color: $lightText;
+.position_line_top-right::after {
+  content: '';
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 22%;
+  height: 30%;
+  border-top: $cardBorder;
+  border-right: $cardBorder;
+  box-sizing: border-box;
+}
+
+.position_line_top-right::before {
+  content: '';
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 39%;
+  height: 5%;
+  border-left: $cardBorder;
+  border-bottom: $cardBorder;
+  box-sizing: border-box;
+}
+
+.position_line_left::after {
+  content: '';
+  bottom: 23;
+  left: 0;
+  position: absolute;
+  height: 41%;
+  border-left: $cardBorder;
+  box-sizing: border-box;
+}
+
+.position_line_left::before {
+  content: '';
+  bottom: 0;
+  left: 65px;
+  position: absolute;
+  width: 35%;
+  border-bottom: $cardBorder;
+  box-sizing: border-box;
+}
+
+.position_mentor {
+  background-image: url(../images/block3-mentor-vector.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+
+  @include media_480 {
+    @include size-vector-duties;
+  }
+}
+
+.position_reviewer {
+  background-image: url(../images/block3-reviewer-vector.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+
+  @include media_480 {
+    @include size-vector-duties;
+  }
+}
+
+.position_tap {
+  background-image: none;
+  background-color: #4F7FDD;
+
+  @include media_480 {
+    height: 199px;
+    display: grid;
+  }
+}
+
+.position_tap::after {
+  @include reset-border;
+}
+
+.position_tap::before {
+  @include reset-border;
+}
+
+.position:hover {
+  cursor: pointer;
+  background-color: #4F7FDD;
+  color: #fff;
+  background-image: none;
+
+  .position__task {
+    color: #fff;
+  }
+
+  .position__mentor,
+  .position__reviewer,
+  .position__border_line_right-top,
+  .position__border_line_left-top {
+    display: none;
+  }
+}
+
+.position_line_left:hover::after,
+.position_line_left:hover::before,
+.position_line_top-right:hover::after,
+.position_line_top-right:hover::before {
+  display: none;
 }
