@@ -7,6 +7,7 @@ const faqQuestions = faq.querySelectorAll('.faq__question-text-main');
 const vacancies = document.querySelector('.vacancies');
 const vacancieNameBtn = vacancies.querySelectorAll('.vacancies__name');
 const vacancieEduItems = vacancies.querySelectorAll('.vacancies__btn-menu');
+const vacanciesMenuItems = vacancies.querySelectorAll('.vacancies__menu-item');
 const vacanciesDescriptionItems = vacancies.querySelectorAll(
   '.vacancies__description',
 );
@@ -39,7 +40,9 @@ const vacanciesShareBtns = vacancies.querySelectorAll('.vacancies__share-btn');
 const vacGalleryArrows = vacancies.querySelectorAll('.vacancies__gallery-arrow');
 const vacanciesPopupShareEmptyCode = '';
 const vacanciesPopupShareFullCode = '<nav class="vacancies__popup-list"><div id="copyLink" class="vacancies__popup-link-wrapper"><div class="vacancies__popup-copy-icon"></div><a rel="nofollow" class="vacancies__popup-link">Скопировать ссылку</a></div><div class="vacancies__popup-link-wrapper"><div class="vacancies__popup-telegram-icon"></div><a href="#" target="_blank" rel="nofollow" class="vacancies__popup-link">Telegram</a></div><div class="vacancies__popup-link-wrapper"><div class="vacancies__popup-vk-icon"></div><a href="#" target="_blank" rel="nofollow" class="vacancies__popup-link">Вконтакте</a></div><div class="vacancies__popup-link-wrapper"><div class="vacancies__popup-twitter-icon"></div><a href="#" target="_blank" rel="nofollow" class="vacancies__popup-link">Twitter</a></div></nav>';
-
+const vacanciesBtnMenuArrows = vacancies.querySelectorAll('.vacancies__btn-menu-arrow');
+const vacanciesEduMenu = vacancies.querySelector('.vacancies__education-menu');
+const vacanciesSendBtns = vacancies.querySelectorAll('.vacancies__send-btn');
 const videoElement = document.querySelector('.video');
 const cardLinePlaceFirstTop = document.querySelector(
   '.card__line_place__first-top',
@@ -83,6 +86,7 @@ export {
   faqQuestions,
   vacancieNameBtn,
   vacancieEduItems,
+  vacanciesMenuItems,
   vacanciesDescriptionItems,
   vacancieEduItemDesign,
   vacancieEduItemProgramming,
@@ -103,6 +107,9 @@ export {
   vacGalleryArrows,
   vacanciesPopupShareEmptyCode,
   vacanciesPopupShareFullCode,
+  vacanciesBtnMenuArrows,
+  vacanciesEduMenu,
+  vacanciesSendBtns,
   videoElement,
   cardLinePlaceFirstTop,
   cardLinePlaceFirstTopParent,
