@@ -70,6 +70,7 @@ export default class SuccessStoryCard {
       this._elementImg.addEventListener('click', (evt) => {
         // eslint-disable-next-line
         const target = evt.target;
+        if (target.closest('.success-story-text__photo_mobile')) return;
         const currentImg = document.querySelector('.success-story-text__photo_mobile');
         const currentPerson = currentImg.alt;
 
