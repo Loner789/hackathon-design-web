@@ -228,6 +228,7 @@ const createSuccessStoryCard = (data) => {
           item,
           '.success-story-text',
           '#template-success-story-text',
+          data,
         );
 
         return elementCard.generateElementCard();

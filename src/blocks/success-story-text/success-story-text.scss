@@ -1,4 +1,5 @@
 @import '../../utils/styles/constants';
+@import '../../utils/styles/constants';
 
 .success-story-text {
  display: flex;
@@ -6,10 +7,28 @@
 
   .success-story-text__photo {
     display: block;
+
+    @include media_1400 {
+      width: 150px;
+    }
+
+    @include media_768 {
+      height: 220px;
+      width: auto;
+    }
   }
 
   .success-story-text__photo:hover {
     cursor: pointer;
+  }
+
+  .success-story-text__photo_mobile {
+    width: 300px;
+
+    @include media_768 {
+      height: 220px;
+      width: auto;
+    }
   }
 
   .success-story-text__content {
@@ -17,10 +36,18 @@
     max-height: 630px;
     height: min-content;
     overflow: hidden;
-    width: 420px;
-    padding: 50px 40px 0 50px;
+    width: 70%;
+    padding: 50px 4.5% 0 7%;
     box-sizing: border-box;
     position: relative;
+
+    @include media_1110 {
+      padding: 30px 3% 0 5%;
+    }
+
+    @include media_1010 {
+      display: none;
+    }
 
     .success-story-text__text {
       font-style: normal;
@@ -34,6 +61,14 @@
       list-style-type: none;
       position: relative;
       box-sizing: border-box;
+
+      @include media_1430 {
+        font-size: 16px;
+      }
+
+      @include media_1110 {
+        padding-top: 15px;
+      }
 
       .success-story-text__paragraph {
         padding: 0;
@@ -53,8 +88,8 @@
     border-right: $cardBorder;
     top: 0;
     right: 0;
-    width: 222px;
-    height: 297px;
+    width: 53%;
+    height: 53%;
     position: absolute;
     box-sizing: border-box;
   }
@@ -69,7 +104,11 @@
     left: 190px;
     border-bottom: $cardBorder;
     content: '';
-    width: 139px;
+    width: 22.5%;
+
+    @include media_1400 {
+      left: 20%;
+    }
   }
 
   .success-story-text__bottom-line_hidden {
@@ -78,14 +117,22 @@
 
 }
 
+.success-story-text_hidden {
+  display: none;
+}
+
+.success-story-mobile_hidden {
+  display: none;
+}
+
 .success-story-text::after {
   content: '';
   border-bottom: $cardBorder;
   border-right: $cardBorder;
   bottom: 0;
   right: 0;
-  width: 56px;
-  height: 139px;
+  width: 9%;
+  height: 22%;
   position: absolute;
   box-sizing: border-box;
 }
