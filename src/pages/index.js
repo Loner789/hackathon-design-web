@@ -581,6 +581,8 @@ advantageList.forEach((card) => {
       const cardMobile = target.querySelector(advantagesCardMobileSelector);
       const id = target.getAttribute('id');
 
+
+
       advantageList.forEach((el) => {
         if (id !== el.getAttribute('id')) {
           const rotateEl = el.querySelector(advantagesRotateSelector);
