@@ -857,6 +857,11 @@
     <section class="success-stories">
       <h2 class="section-title">Истории ребят из нашей команды</h2>
       <ul class="success-stories__text-list"></ul>
+      <div class="success-story-mobile">
+        <h3 class="success-story-title success-story-title_place_text"></h3>
+        <p class="success-story-subtitle success-story-subtitle_place_text"></p>
+        <ul class="success-story-mobile__text"></ul>
+      </div>
       <ul class="success-stories__video-list"></ul>
     </section>
     <section id="faq" class="faq">
@@ -955,9 +960,7 @@
   <!-- SUCCESS STORY TEXT TEMPLATE -->
   <template id="template-success-story-text">
     <li class="success-story-text">
-      <!-- ToDo: srcset? -->
       <img class="success-story-text__photo">
-      <!-- ToDo: check header number" -->
       <div class="success-story-text__content success-story-text__content_hidden">
         <h3 class="success-story-title success-story-title_place_text"></h3>
         <p class="success-story-subtitle success-story-subtitle_place_text"></p>
@@ -972,7 +975,6 @@
     <li class="success-story-video">
       <div class="video-story">
         <a class="video-story__link">
-          <!-- ToDo: srcset? -->
           <img class="video-story__image">
         </a>
         <button type="button" class="video-button video-button_place_success-story"

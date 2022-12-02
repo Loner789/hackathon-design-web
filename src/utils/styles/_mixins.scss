@@ -1,3 +1,9 @@
+@mixin media_1430 {
+  @media screen and (max-width: 1430px) {
+    @content;
+  }
+}
+
 @mixin media_1400 {
   @media screen and (max-width: 1400px) {
     @content;
@@ -6,6 +12,18 @@
 
 @mixin media_1280 {
   @media screen and (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin media_1110 {
+  @media screen and (max-width: 1110px) {
+    @content;
+  }
+}
+
+@mixin media_1010 {
+  @media screen and (max-width: 1010px) {
     @content;
   }
 }

@@ -1,4 +1,5 @@
 @import '../../utils/styles/constants';
+@import '../../utils/styles/mixins';
 
 .success-stories {
   font-family: 'YS Display', Arial, sans-serif;
@@ -15,6 +16,15 @@
     display: flex;
     margin: 100px 0 0 0;
     column-gap: 20px;
+
+    @include media_1110 {
+      margin-top: 80px;
+    }
+
+    @include media_600 {
+      margin-top: 50px;
+      column-gap: 0;
+    }
   }
 
   .success-stories__video-list {
@@ -25,5 +35,10 @@
     column-gap: 20px;
     align-content: start;
     margin: 0;
+
+    @include media_768 {
+      grid-template-columns: 1fr;
+      row-gap: 32px;
+    }
   }
 }
