@@ -8,6 +8,37 @@
     height: 250px;
     display: flex;
     justify-content: space-between;
+
+    @include media_1280 {
+      height: 260px;
+    }
+
+    @include media_1024 {
+      height: 300px;
+      display: grid;
+      grid-template-areas:
+      'navbar info'
+      'contacts info';
+      column-gap: 60px;
+    }
+
+    @include media_768 {
+      margin-left: auto;
+      margin-right: auto;
+      height: 622px;
+      max-width: 400px;
+      grid-template-areas:
+      'contacts'
+      'navbar'
+      'info';
+      row-gap: 30px;
+    }
+
+    @include media_480 {
+      height: 670px;
+      max-width: 300px;
+      row-gap: 25px;
+    }
   }
 
   &__block {
@@ -19,16 +50,58 @@
     justify-content: space-between;
 
     &_type_contacts {
-      width: max-content;;
+      width: max-content;
+
+      @include media_1024 {
+        grid-area: contacts;
+        width: 100%;
+      }
+
+      @include media_768 {
+        align-items: center;
+      }
+
+      @include media_480 {
+        min-height: 200px;
+        align-items: unset;
+      }
     }
 
     &_type_navbar {
       min-width: 400px;
       flex-direction: row;
+
+      @include media_1280 {
+        min-width: 280px;
+      }
+
+      @include media_1024 {
+        grid-area: navbar;
+        min-width: 350px;
+      }
+
+      @include media_480 {
+        min-width: 300px;
+        align-items: center;
+      }
     }
 
     &_type_info {
       max-width: 400px;
+
+      @include media_1280 {
+        max-width: 340px;
+      }
+
+      @include media_1024 {
+        grid-area: info;
+        max-width: 400px;
+        min-height: 250px;
+      }
+
+      @include media_480 {
+        font-size: 13px;
+      }
     }
   }
 
@@ -45,6 +118,10 @@
     font-size: 30px;
     font-weight: 400;
     line-height: 1.4;
+
+    @include media_480 {
+      font-size: 25px;
+    }
   }
 
   &__tel-caption {
@@ -53,12 +130,17 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 1.4;
+
+    @include media_480 {
+      font-size: 13px;
+    }
   }
 
   &__social-links {
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
   }
 
   &__social-link {
@@ -68,28 +150,51 @@
     font-weight: 500;
     line-height: 1.4;
     text-decoration: none;
-    color: #000;
+    color: #1E2027;
 
     &:last-child {
       margin-right: 0;
     }
 
+    &:hover {
+      color: #4F7FDD;
+    }
+
     &_type_vk {
       width: 24px;
       height: 24px;
-      background-image: url(../images/vk-icon.svg);
+      background-image: url(../images/icon-vk-black.svg);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+
+      &:hover {
+        transform: scale(1.1);
+        background-image: url(../images/icon-vk-blue.svg);
+      }
+
+      @include media_1024 {
+        width: 40px;
+        height: 40px;
+      }
     }
 
     &_type_tg {
-      width: 32px;
+      width: 24px;
       height: 24px;
-      background-image: url(../images/telegram-icon.svg);
+      background-image: url(../images/icon-telegram-black.svg);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+
+      &:hover {
+        background-image: url(../images/icon-telegram-blue.svg);
+      }
+
+      @include media_1024 {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 
@@ -109,12 +214,25 @@
     border: 1px solid #1E2027;
     border-radius: 8px;
     text-decoration: none;
-    color: #000;
+    color: #1E2027;
     background-image: url(../images/tg-icon-2.svg);
     background-position: 8px center;
     background-repeat: no-repeat;
     background-size: 24px 24px;
     box-sizing: border-box;
+
+    &:hover {
+      border: 1px solid #4F7FDD;
+      color: #4F7FDD;
+      background-color: #F3F7FF;
+      background-image: url(../images/tg-icon-2-blue.svg);
+    }
+
+    @include media_480 {
+      padding: 0 20%;
+      background-position: 12% center;
+      width: 100%;
+    }
   }
 
   &__brand {
@@ -125,6 +243,7 @@
     line-height: 1.2;
     text-decoration: none;
     text-transform: uppercase;
+    color: #585A5B;
   }
 
   &__navbar {
@@ -147,6 +266,10 @@
     &:last-child {
       padding-bottom: 0;
     }
+
+    @include media_1024 {
+      padding-bottom: 15px;
+    }
   }
 
   &__navbar-link {
@@ -156,7 +279,11 @@
     font-weight: 400;
     line-height: 1.4;
     text-decoration: none;
-    color: #000;
+    color: #1E2027;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__info-item {
@@ -165,18 +292,18 @@
     font-size: 14px;
     font-weight: normal;
     line-height: 1.2;
+    color: #585A5B;
 
     &:last-child {
       padding-bottom: 0;
     }
   }
 
-  &__info-link {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 1.2;
-    color: #000;
+  @include media_1280 {
+    padding-bottom: 80px;
+  }
+
+  @include media_1280 {
+    padding-bottom: 30px;
   }
 }

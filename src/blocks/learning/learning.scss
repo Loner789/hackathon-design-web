@@ -1,3 +1,5 @@
+@import '../../utils/styles/mixins';
+
 .learning {
   margin: 0;
   padding: 0;
@@ -5,25 +7,75 @@
 
   &__content {
     margin: 0;
-    padding: 50px 0 0;
+    padding: 58px 0 0;
     display: flex;
     gap: 30px;
+
+    @include media_1280 {
+      padding-top: 5px;
+    }
+
+    @include media_1024 {
+      gap: 0;
+    }
+
+    @include media_768 {
+      padding-top: 0;
+      flex-direction: column;
+      gap: 30px;
+      box-sizing: border-box;
+    }
   }
 
   &__text-container {
     margin: 0;
     padding: 0;
-    width: 715px;
+    width: 630px;
     min-height: 200px;
     flex-shrink: 0;
+
+    @include media_1280 {
+      width: 550px;
+    }
+
+    @include media_1024 {
+      width: 370px;
+    }
+
+    @include media_768 {
+      align-self: center;
+      text-align: center;
+    }
+
+    @include media_480 {
+      width: 100%;
+      align-self: flex-start;
+      text-align: left;
+    }
   }
 
   &__title {
     margin: 0;
-    padding: 30px 0 25px;
+    padding: 145px 0 30px;
     width: 100%;
     min-height: 170px;
     display: inline-block;
+
+    @include media_1280 {
+      padding-top: 75px;
+      min-height: 145px;
+    }
+
+    @include media_1024 {
+      min-height: 100px;
+      padding-bottom: 20px;
+    }
+
+    @include media_768 {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      min-height: 75px;
+    }
   }
 
   &__title-span {
@@ -31,10 +83,22 @@
     padding: 0;
     width: 100%;
     font-size: 70px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.2;
     color: #6251C9;
     display: inline;
+
+    @include media_1280 {
+      font-size: 60px;
+    }
+
+    @include media_1024 {
+      font-size: 40px;
+    }
+
+    @include media_768 {
+      font-size: 30px;
+    }
   }
 
   &__subtitle {
@@ -45,17 +109,30 @@
     font-weight: 500;
     line-height: 1.2;
     display: inline;
+    color: #1E2027;
+
+    @include media_1024 {
+      font-size: 24px;
+    }
   }
 
   &__learning-picture {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 581px;
+    height: 642px;
     background-image: url(../images/learning-pic.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    @include media_1024 {
+      height: 450px;
+    }
+
+    @include media_768 {
+      min-height: 350px;
+    }
   }
 
   &__link-button {
@@ -74,7 +151,46 @@
     border-radius: 8px;
     color: #FFF;
     background: #4F7FDD;
-    ;
+
+    &:hover {
+      background: #2B68DE;
+    }
+
+    &:active {
+      background: #00308C;;
+    }
+
+    @include media_1024 {
+      width: 286px;
+      font-size: 15px;
+    }
+
+    @include media_768 {
+      display: none;
+    }
+  }
+
+  &__mobile-button {
+    margin: 0;
+    padding: 15px 50px;
+    width: 300px;
+    height: 60px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 3;
+    box-sizing: border-box;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: #FFF;
+    background: #4F7FDD;
+    align-self: center;
+    display: none;
+
+    @include media_768 {
+      display: flex;
+    }
   }
 }
 
@@ -83,4 +199,16 @@
   font-size: 70px;
   font-weight: 500;
   color: #6251C9;
+
+  @include media_1280 {
+    font-size: 60px;
+  }
+
+  @include media_1024 {
+    font-size: 40px;
+  }
+
+  @include media_768 {
+    font-size: 30px;
+  }
 }

@@ -13,14 +13,31 @@
     margin: 0;
     padding: 0 0 100px;
     width: 100%;
-    font-size: 60px;
+    font-size: 55px;
     font-weight: 700;
     line-height: 1.2;
+
+    @include media_1280 {
+      font-size: 45px;
+      padding-bottom: 80px;
+    }
+
+    @include media_1024 {
+      max-width: 370px;
+      font-size: 30px;
+      padding-bottom: 55px;
+    }
+
+    @include media_768 {
+      max-width: 300px;
+      font-size: 24px;
+      padding-bottom: 50px;
+    }
   }
 
   &__slider {
     margin: 0;
-    padding-left: calc(100% - 120px - 450px);
+    padding: 0;
     overflow-x: hidden;
     display: flex;
     list-style: none;
@@ -37,10 +54,22 @@
     &:last-child {
       margin-right: 0;
     }
+
+    @include media_1280 {
+      min-height: 344px;
+    }
+
+    @include media_1024 {
+      min-height: 253px;
+    }
+
+    @include media_768 {
+      min-height: 182px;
+    }
   }
 
   &__card {
-    margin: 0 30px 0 0;
+    margin: 0 90px 0 0;
     padding: 70px 45px;
     width: 510px;
     height: 360px;
@@ -48,6 +77,27 @@
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
+
+    @include media_1280 {
+      width: 482px;
+      height: 344px;
+      padding: 60px 40px;
+      margin-right: 25px;
+    }
+
+    @include media_1024 {
+      width: 354px;
+      height: 253px;
+      padding: 50px 27px;
+      margin-right: 20px;
+    }
+
+    @include media_768 {
+      width: 260px;
+      height: 182px;
+      padding: 20px 20px;
+      margin-right: 15px;
+    }
   }
 
   &__card-image {
@@ -61,6 +111,22 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+
+
+    @include media_1280 {
+      width: 344px;
+      height: 344px;
+    }
+
+    @include media_1024 {
+      width: 253px;
+      height: 253px;
+    }
+
+    @include media_768 {
+      width: 182px;
+      height: 182px;
+    }
   }
 
   &__card-title {
@@ -71,11 +137,11 @@
     line-height: 1.2;
 
     &_side_left {
-      text-align: left;;
+      text-align: left;
     }
 
     &_side_right {
-      text-align: right;;
+      text-align: right;
     }
 
     &:before {
@@ -86,7 +152,14 @@
       width: 140px;
       height: 225px;
       border-right: 3px solid rgba(133, 133, 133, 0.3);
-      border-bottom: 3px solid rgba(133, 133, 133, 0.3);;
+      border-bottom: 3px solid rgba(133, 133, 133, 0.3);
+
+      @include media_768 {
+        width: 75px;
+        height: 100px;
+        border-right: 2px solid rgba(133, 133, 133, 0.3);
+      border-bottom: 2px solid rgba(133, 133, 133, 0.3);
+      }
     }
 
     &:after {
@@ -97,7 +170,26 @@
       width: 140px;
       height: 225px;
       border-left: 3px solid rgba(133, 133, 133, 0.3);
-      border-top: 3px solid rgba(133, 133, 133, 0.3);;
+      border-top: 3px solid rgba(133, 133, 133, 0.3);
+
+      @include media_768 {
+        width: 75px;
+        height: 100px;
+        border-left: 2px solid rgba(133, 133, 133, 0.3);
+        border-top: 2px solid rgba(133, 133, 133, 0.3);
+      }
+    }
+
+    @include media_1280 {
+      font-size: 35px;
+    }
+
+    @include media_1024 {
+      font-size: 25px;
+    }
+
+    @include media_768 {
+      font-size: 20px;
     }
   }
 
@@ -107,5 +199,23 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 1.4;
+
+    @include media_1024 {
+      padding-top: 30px;
+      font-size: 13px;
+    }
+
+    @include media_768 {
+      padding-top: 10px;
+      font-size: 12px;
+    }
+  }
+
+  @include media_1024 {
+    padding-top: 90px;
+  }
+
+  @include media_1024 {
+    padding-top: 70px;
   }
 }

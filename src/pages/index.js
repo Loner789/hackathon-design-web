@@ -82,14 +82,14 @@ function createConditionsCard(cardData) {
     .querySelector('#conditions-card')
     .content.querySelector('.conditions__slide')
     .cloneNode(true);
-  const [firstPart, secondPart] = title.split(' ');
+  const [firstPart, ...rest] = title.split(' ');
 
   cardElement.querySelector(
     '.conditions__card-title_side_left',
   ).textContent = firstPart;
   cardElement.querySelector(
     '.conditions__card-title_side_right',
-  ).textContent = secondPart;
+  ).textContent = rest.join(' ');
   cardElement.querySelector(
     '.conditions__card-image',
   ).style.backgroundImage = `url(${image})`;
@@ -119,7 +119,7 @@ gsap.registerPlugin(ScrollTrigger);
 const cards = gsap.utils.toArray('.conditions__slide');
 
 gsap.to(cards, {
-  xPercent: -100 * (cards.length - 1),
+  xPercent: -100 * (cards.length - 2),
   ease: 'none',
   scrollTrigger: {
     trigger: '.conditions',
@@ -128,7 +128,7 @@ gsap.to(cards, {
     scrub: true,
     snap: 1 / (cards.length - 1),
     // eslint-disable-next-line prefer-template
-    end: () => '+=' + document.querySelector('.conditions__slider').offsetWidth,
+    end: () => '+=' + (document.querySelector('.conditions__slider').offsetWidth),
   },
 });
 

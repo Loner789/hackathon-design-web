@@ -9,6 +9,10 @@
     padding: 0 5%;
   }
 
+  @include media_1280 {
+    padding: 0 24px;
+  }
+
   @include media_480 {
     padding: 0 12px;
   }
