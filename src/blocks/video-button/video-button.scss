@@ -37,6 +37,18 @@
   height: 120px;
   top: calc(50% - 60px);
   left: calc(50% - 60px);
+
+  @include media_768 {
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    top: calc(50% - 12.5px);
+    left: calc(50% - 12.5px);
+  }
+}
+
+.video-button:hover {
+  cursor: pointer;
 }
 
 .video-button:hover {

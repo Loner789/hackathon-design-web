@@ -1,14 +1,24 @@
 @import '../../utils/styles/constants';
+@import '../../utils/styles/mixins';
 
 .advantages-container {
   display: grid;
-  column-gap: 20px;
+  column-gap: 2%;
   row-gap: 20px;
   width: 100%;
   font-weight: 400;
   font-size: 30px;
   line-height: 1.4;
   margin-top: 100px;
+
+  @include media_1280 {
+    margin-top: 70px;
+  }
+
+  @include media_600 {
+    margin-top: 45px;
+    max-width: 296px;
+  }
 
   .advantages-container__row {
     display: grid;
@@ -22,27 +32,107 @@
       align-items: center;
       grid-template-rows: repeat(2, 1fr);
       row-gap: 20px;
+
+      @include media_970 {
+        width: 610px;
+      }
+
+      @include media_768 {
+        width: 500px;
+      }
+
+      @include media_600 {
+        justify-content: center;
+        grid-template-rows: 1fr;
+        max-width: 296px;
+      }
+    }
+
+    .advantages-container__image_size_715 {
+      max-width: 715px;
+      width: 100%;
+
+      @include media_1280 {
+        height: 372px;
+        object-fit: cover;
+      }
+
+      @include media_768 {
+        width: 80%;
+        height: auto;
+      }
+
+      @include media_600 {
+        width: 290px;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    .advantages-container__image {
+      max-width: 610px;
+      width: 100%;
+      display: block;
+
+      @include media_1280 {
+        height: 372px;
+        object-fit: cover;
+      }
+
+      @include media_768 {
+        width: 80%;
+        height: auto;
+      }
+
+      @include media_600 {
+        width: 290px;
+        margin: 0;
+        padding: 0;
+      }
     }
   }
 
   .advantages-container__row_place_first {
-    grid-template-columns: 610px 590px;
+    grid-template-columns: 49% 48%;
 
-    .advantages-container__image {
-      width: 610px;
-      display: block;
+    @include media_970 {
+      @include advantages-container-column;
     }
   }
 
   .advantages-container__row_place_second {
-    grid-template-columns: 380px 820px;
+    grid-template-columns: 30% 66%;
+
+    @include media_1280 {
+      grid-template-columns: 49% 48%;
+    }
+
+    @include media_970 {
+      @include advantages-container-column;
+    }
   }
 
   .advantages-container__row_place_third {
-    grid-template-columns: 715px 485px;
+    grid-template-columns: 58% 40%;
+
+    @include media_1280 {
+      grid-template-columns: 49% 48%;
+    }
+
+    @include media_970 {
+      @include advantages-container-column;
+    }
   }
 
   .advantages-container__row_place_fourth {
-    grid-template-columns: 590px 610px;
+    grid-template-columns: 48% 49%;
+
+    @include media_1280 {
+      grid-template-columns: 49% 48%;
+    }
+
+    @include media_970 {
+      @include advantages-container-column;
+    }
   }
 }

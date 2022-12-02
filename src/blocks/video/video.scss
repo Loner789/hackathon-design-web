@@ -10,15 +10,59 @@
 
   .video__image {
     display: block;
-    width: 820px;
+    width: 100%;
     height: 420px;
     object-fit: cover;
+
+    @include media_1280 {
+      height: 380px;
+    }
+
+    @include media_970 {
+      height: 372px;
+      width: 610px;
+    }
+
+    @include media_768 {
+      width: 500px;
+      height: 350px;
+    }
+
+    @include media_600 {
+      width: 290px;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
   }
 
   .video__iframe {
-    width: 820px;
+    width: 100%;
     height: 420px;
     border: none;
+
+    @include media_1280 {
+      height: 380px;
+    }
+
+    @include media_970 {
+      height: 372px;
+      width: 610px;
+    }
+
+    @include media_768 {
+      width: 500px;
+      height: 350px;
+    }
+
+    @include media_600 {
+      width: 290px;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
   }
 }
 
