@@ -3211,7 +3211,6 @@
 @media screen and (max-width: 1024px) {
   .vacancies {
     max-width: 1024px;
-    min-width: 100vw;
   }
   .vacancies__container {
     width: 100%;
@@ -3248,7 +3247,6 @@
 @media screen and (max-width: 768px) {
   .vacancies {
     max-width: 768px;
-    min-width: 100vw;
   }
   .vacancies__container {
     width: 100%;
@@ -3317,7 +3315,6 @@
 @media screen and (max-width: 320px) {
   .vacancies {
     max-width: 320px;
-    min-width: 100vw;
   }
   .vacancies__container {
     width: 100%;
