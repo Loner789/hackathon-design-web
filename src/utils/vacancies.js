@@ -1,4 +1,4 @@
-import VacancyItem from './VacancyItem';
+import VacancyItem from '../components/VacancyItem';
 
 const generateVacancy = (card) => new VacancyItem(card, '#template-vacancies-galary-item').generate();
 

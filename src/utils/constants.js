@@ -21,17 +21,11 @@ const vacancieProphItems = vacancies.querySelectorAll(
 );
 const vacancieProphSensey = vacancies.querySelector('#sensey');
 const vacancieProphReviewer = vacancies.querySelector('#reviewer');
-const vacancieSenseyGallaryProg = vacancies.querySelector(
-  '#sensey-gallary-prog',
+const vacancieSenseyGallary = vacancies.querySelector(
+  '#sensey-gallary',
 );
-const vacancieReviewerGallaryProg = vacancies.querySelector(
-  '#reviewer-gallary-prog',
-);
-const vacancieSenseyGallaryAnalitics = vacancies.querySelector(
-  '#sensey-gallary-analitics',
-);
-const vacancieReviewerGallaryAnalitics = vacancies.querySelector(
-  '#reviewer-gallary-analitics',
+const vacancieReviewerGallary = vacancies.querySelector(
+  '#reviewer-gallary',
 );
 const vacanciesGallaries = vacancies.querySelectorAll('.vacancies__gallery');
 const vacanciesNoVac = vacancies.querySelector('#no-vac-available');
@@ -104,10 +98,8 @@ export {
   vacancieProphItems,
   vacancieProphSensey,
   vacancieProphReviewer,
-  vacancieSenseyGallaryProg,
-  vacancieReviewerGallaryProg,
-  vacancieSenseyGallaryAnalitics,
-  vacancieReviewerGallaryAnalitics,
+  vacancieSenseyGallary,
+  vacancieReviewerGallary,
   vacanciesGallaries,
   vacanciesNoVac,
   vacanciesNotFound,

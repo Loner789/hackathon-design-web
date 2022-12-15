@@ -9,12 +9,20 @@ import Section from '../components/Section';
 import PopupWithForm from '../components/PopupWithForm';
 import FormValidator from '../components/FormValidator';
 import PopupWithVideo from '../components/PopupWithVideo';
+import { renderElementsToDOM } from '../utils/utils.js';
+import generateVacancy from '../utils/vacancies.js';
 import {
   learningTitles,
   conditionsCards,
   successStoriesText,
   successStoriesVideo,
 } from '../utils/initial-data';
+import {
+  vacProgSenseyData,
+  vacProgReviewerData,
+  vacAnSenseyData,
+  vacAnReviewerData,
+} from '../utils/vacancies-data';
 import {
   scroller,
   faqBtn,
@@ -32,10 +40,8 @@ import {
   vacancieProphItems,
   vacancieProphSensey,
   vacancieProphReviewer,
-  vacancieSenseyGallaryProg,
-  vacancieReviewerGallaryProg,
-  vacancieSenseyGallaryAnalitics,
-  vacancieReviewerGallaryAnalitics,
+  vacancieSenseyGallary,
+  vacancieReviewerGallary,
   vacanciesGallaries,
   vacanciesNoVac,
   vacanciesNotFound,
@@ -283,32 +289,15 @@ const createSuccessStoryVideo = (data) => {
 createSuccessStoryVideo(successStoriesVideo);
 
 // ------- vacancies -------
-vacancieNameBtn.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const vacItem = btn.closest('.vacancies__gallery-item');
-    const vacDescription = vacItem.querySelector('.vacancies__description');
-    const vacName = vacItem.querySelector('.vacancies__name');
-    const vacArrow = vacItem.querySelector('.vacancies__gallery-arrow');
+if (vacancieEduItemProgramming.classList.contains('vacancies__btn-menu_active')) {
+  if (vacancieProphSensey.classList.contains('vacancies__proph-btn-menu_active')) {
+    renderElementsToDOM(vacProgSenseyData, vacancieSenseyGallary, generateVacancy);
+  } else if (vacancieProphReviewer.classList.contains('vacancies__proph-btn-menu_active')) {
+    renderElementsToDOM(vacProgReviewerData, vacancieReviewerGallary, generateVacancy);
+  }
+}
 
-    vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
-    vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
-    if (vacName.classList.contains('vacancies__name_active')) {
-      vacName.classList.remove('vacancies__name_active');
-      vacArrow.classList.remove('vacancies__gallery-arrow_active');
-    } else {
-      vacName.classList.add('vacancies__name_active');
-      vacArrow.classList.add('vacancies__gallery-arrow_active');
-    }
-    if (vacDescription.classList.contains('vacancies__description_active')) {
-      vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
-      vacName.classList.remove('vacancies__name_active');
-      vacArrow.classList.remove('vacancies__gallery-arrow_active');
-    } else {
-      vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
-      vacDescription.classList.add('vacancies__description_active');
-    }
-  });
-});
+
 
 const activateVacanciesProphItem = (menuItems, menuItemElement) => {
   menuItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
