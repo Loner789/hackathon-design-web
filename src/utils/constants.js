@@ -36,6 +36,7 @@ const vacanciesPopupShareEmptyCode = '';
 const vacanciesPopupShareFullCode = '<nav class="vacancies__popup-list"><div id="copyLink" class="vacancies__popup-link-wrapper"><div class="vacancies__popup-copy-icon"></div><a rel="nofollow" class="vacancies__popup-link">Скопировать ссылку</a></div><div class="vacancies__popup-link-wrapper"><div class="vacancies__popup-telegram-icon"></div><a href="#" target="_blank" rel="nofollow" class="vacancies__popup-link">Telegram</a></div><div class="vacancies__popup-link-wrapper"><div class="vacancies__popup-vk-icon"></div><a href="#" target="_blank" rel="nofollow" class="vacancies__popup-link">Вконтакте</a></div><div class="vacancies__popup-link-wrapper"><div class="vacancies__popup-twitter-icon"></div><a href="#" target="_blank" rel="nofollow" class="vacancies__popup-link">Twitter</a></div></nav>';
 const vacanciesBtnMenuArrows = vacancies.querySelectorAll('.vacancies__btn-menu-arrow');
 const vacanciesEduMenu = vacancies.querySelector('.vacancies__education-menu');
+const vacanciesProphMenu = vacancies.querySelector('.vacancies__prophecy-menu');
 const vacanciesSendBtns = vacancies.querySelectorAll('.vacancies__send-btn');
 const videoElement = document.querySelector('.video');
 const cardLinePlaceFirstTop = document.querySelector(
@@ -109,6 +110,7 @@ export {
   vacanciesPopupShareFullCode,
   vacanciesBtnMenuArrows,
   vacanciesEduMenu,
+  vacanciesProphMenu,
   vacanciesSendBtns,
   videoElement,
   cardLinePlaceFirstTop,

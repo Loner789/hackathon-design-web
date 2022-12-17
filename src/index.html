@@ -221,47 +221,16 @@
     <section id="vacancies" class="vacancies">
       <div class="vacancies__container">
         <h2 class="vacancies__title">Открытые предложения</h2>
-        <ul class="vacancies__education-menu">
-          <li class="vacancies__menu-item">
-            <button class="vacancies__btn-menu" type="button" id="disign">Дизайн</button>
-            <button class="vacancies__btn-menu-arrow"></button>
-          </li>
-          <li class="vacancies__menu-item vacancies__menu-item_visible">
-            <button class="vacancies__btn-menu vacancies__btn-menu_active" type="button" id="programming">Программирование</button>
-            <button class="vacancies__btn-menu-arrow"></button>
-          </li>
-          <li class="vacancies__menu-item">
-            <button class="vacancies__btn-menu" type="button" id="analitics">Аналитика</button>
-            <button class="vacancies__btn-menu-arrow"></button>
-          </li>
-          <li class="vacancies__menu-item">
-            <button class="vacancies__btn-menu" type="button" id="marketing">Маркетинг</button>
-            <button class="vacancies__btn-menu-arrow"></button>
-          </li>
-          <li class="vacancies__menu-item">
-            <button class="vacancies__btn-menu" type="button" id="management">Менеджмент</button>
-            <button class="vacancies__btn-menu-arrow"></button>
-          </li>
-        </ul>
+        <ul class="vacancies__education-menu"></ul>
         <div class="vacancies__info">
-          <ul class="vacancies__prophecy-menu">
-            <li class="vacancies__prophecy-item">
-              <button class="vacancies__proph-btn-menu vacancies__proph-btn-menu_active" type="button"
-                id="sensey">Наставник</button>
-            </li>
-            <li class="vacancies__prophecy-item">
-              <button class="vacancies__proph-btn-menu" type="button" id="reviewer">Ревьюер</button>
-            </li>
-          </ul>
+          <ul class="vacancies__prophecy-menu"></ul>
           <div id="no-vac-available" class="vacancies__novac-wrapper">
             <p class="vacancies__no-vac-text">К&nbsp;сожалению, пока вакансий по&nbsp;этому направлению нет.
               Не&nbsp;расстраивайтесь! Нам всё-равно интересно познакомиться. На&nbsp;будущее.</p>
             <button class="vacancies__send-btn vacancies__send-btn_noVac">Отправить резюме</button>
           </div>
-          <ul id="sensey-gallary" class="vacancies__gallery vacancies__gallery_active">  
-          </ul>
-          <ul id="reviewer-gallary" class="vacancies__gallery">  
-          </ul>
+          <ul id="sensey-gallary" class="vacancies__gallery vacancies__gallery_active"></ul>
+          <ul id="reviewer-gallary" class="vacancies__gallery"></ul>
           <div id="vac-notfound" class="vacancies__gallery-wrapper vacancies__gallery-wrapper_share vacancies__gallery-wrapper_small">
             <p class="vacancies__notfound-vac-text">Нет подходящего предложения?</p>
             <button class="vacancies__notfound-vac-btn">Оставить заявку</button>
@@ -408,6 +377,19 @@
   </template>
 
   <!-- VACANCIES TAMPLATE -->
+  <template id="template-vacancies-proph-item">
+    <li class="vacancies__menu-item">
+      <button class="vacancies__btn-menu" type="button"></button>
+      <button class="vacancies__btn-menu-arrow"></button>
+    </li>
+  </template>
+
+  <template id="template-vacancies-proph-menu-item">
+    <li class="vacancies__prophecy-item">
+      <button class="vacancies__proph-btn-menu" type="button"></button>
+    </li>
+  </template>
+
   <template id="template-vacancies-galary-item">
     <li class="vacancies__gallery-item">
       <div class="vacancies__gallery-wrapper">

@@ -10,7 +10,11 @@ import PopupWithForm from '../components/PopupWithForm';
 import FormValidator from '../components/FormValidator';
 import PopupWithVideo from '../components/PopupWithVideo';
 import { renderElementsToDOM } from '../utils/utils.js';
-import generateVacancy from '../utils/vacancies.js';
+import { 
+    generateVacancy,
+    generateMenu,
+    generateProph,
+} from '../utils/vacancies.js';
 import {
   learningTitles,
   conditionsCards,
@@ -18,6 +22,8 @@ import {
   successStoriesVideo,
 } from '../utils/initial-data';
 import {
+  vacanciesProphData,
+  vacanciesProphMenuData,
   vacProgSenseyData,
   vacProgReviewerData,
   vacAnSenseyData,
@@ -51,6 +57,7 @@ import {
   vacanciesPopupShareFullCode,
   vacanciesBtnMenuArrows,
   vacanciesEduMenu,
+  vacanciesProphMenu,
   vacanciesSendBtns,
   videoElement,
   cardLinePlaceFirstTop,
@@ -289,13 +296,9 @@ const createSuccessStoryVideo = (data) => {
 createSuccessStoryVideo(successStoriesVideo);
 
 // ------- vacancies -------
-if (vacancieEduItemProgramming.classList.contains('vacancies__btn-menu_active')) {
-  if (vacancieProphSensey.classList.contains('vacancies__proph-btn-menu_active')) {
-    renderElementsToDOM(vacProgSenseyData, vacancieSenseyGallary, generateVacancy);
-  } else if (vacancieProphReviewer.classList.contains('vacancies__proph-btn-menu_active')) {
-    renderElementsToDOM(vacProgReviewerData, vacancieReviewerGallary, generateVacancy);
-  }
-}
+renderElementsToDOM(vacanciesProphData, vacanciesEduMenu, generateMenu);
+renderElementsToDOM(vacanciesProphMenuData, vacanciesProphMenu, generateProph);
+renderElementsToDOM(vacProgSenseyData, vacancieSenseyGallary, generateVacancy);
 
 
 
@@ -330,79 +333,79 @@ const handleVacReviewerProphItemClick = (evt) => {
 };
 
 const activateVacanciesEducationItem = (menuItems, menuItemElement) => {
-  menuItems.forEach((item) => item.classList.remove('vacancies__btn-menu_active'));
-  vacanciesMenuItems.forEach((item) => item.classList.remove('vacancies__menu-item_visible'));
-  menuItemElement.classList.add('vacancies__btn-menu_active');
-  const vacEdMenuItem = menuItemElement.closest('.vacancies__menu-item');
-  vacEdMenuItem.classList.add('vacancies__menu-item_visible');
-  vacanciesEduMenu.classList.remove('vacancies__education-menu_active');
+  // menuItems.forEach((item) => item.classList.remove('vacancies__btn-menu_active'));
+  // vacanciesMenuItems.forEach((item) => item.classList.remove('vacancies__menu-item_visible'));
+  // menuItemElement.classList.add('vacancies__btn-menu_active');
+  // const vacEdMenuItem = menuItemElement.closest('.vacancies__menu-item');
+  // vacEdMenuItem.classList.add('vacancies__menu-item_visible');
+  // vacanciesEduMenu.classList.remove('vacancies__education-menu_active');
 };
 
 const handleDesignBtnClick = (evt) => {
   activateVacanciesEducationItem(vacancieEduItems, evt.target);
-  vacancieProphItems.forEach((item) => (item.disabled = true));
-  vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
-  vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
+  // vacancieProphItems.forEach((item) => (item.disabled = true));
+  // vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
+  // vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
   vacancieProphSensey.classList.add('vacancies__proph-btn-menu_active');
   vacanciesNoVac.classList.add('vacancies__novac-wrapper_active');
   vacanciesNotFound.classList.add('vacancies__gallery-wrapper_hide');
-  vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
-  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
-  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
+  // vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+  // vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
+  // vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
 };
 
 const handleProgrammingBtnClick = (evt) => {
   activateVacanciesEducationItem(vacancieEduItems, evt.target);
-  vacancieProphItems.forEach((item) => (item.disabled = false));
-  vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
-  vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
+  // vacancieProphItems.forEach((item) => (item.disabled = false));
+  // vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
+  // vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
   vacancieProphSensey.classList.add('vacancies__proph-btn-menu_active');
   vacancieSenseyGallaryProg.classList.add('vacancies__gallery_active');
   vacanciesNoVac.classList.remove('vacancies__novac-wrapper_active');
   vacanciesNotFound.classList.remove('vacancies__gallery-wrapper_hide');
-  vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
-  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
-  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
+  // vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+  // vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
+  // vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
 };
 
 const handleAnaliticsBtnClick = (evt) => {
   activateVacanciesEducationItem(vacancieEduItems, evt.target);
-  vacancieProphItems.forEach((item) => (item.disabled = false));
-  vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
-  vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
+  // vacancieProphItems.forEach((item) => (item.disabled = false));
+  // vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
+  // vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
   vacancieProphSensey.classList.add('vacancies__proph-btn-menu_active');
   vacancieSenseyGallaryAnalitics.classList.add('vacancies__gallery_active');
   vacanciesNoVac.classList.remove('vacancies__novac-wrapper_active');
   vacanciesNotFound.classList.remove('vacancies__gallery-wrapper_hide');
-  vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
-  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
-  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
+  // vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+  // vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
+  // vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
 };
 
 const handleMarketingBtnClick = (evt) => {
   activateVacanciesEducationItem(vacancieEduItems, evt.target);
-  vacancieProphItems.forEach((item) => (item.disabled = true));
-  vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
-  vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
+  // vacancieProphItems.forEach((item) => (item.disabled = true));
+  // vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
+  // vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
   vacancieProphSensey.classList.add('vacancies__proph-btn-menu_active');
   vacanciesNoVac.classList.add('vacancies__novac-wrapper_active');
   vacanciesNotFound.classList.add('vacancies__gallery-wrapper_hide');
-  vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
-  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
-  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
+  // vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+  // vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
+  // vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
 };
 
 const handleManagementBtnClick = (evt) => {
   activateVacanciesEducationItem(vacancieEduItems, evt.target);
-  vacancieProphItems.forEach((item) => (item.disabled = true));
-  vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
-  vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
+  // vacancieProphItems.forEach((item) => (item.disabled = true));
+  // vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
+  // vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
   vacancieProphSensey.classList.add('vacancies__proph-btn-menu_active');
   vacanciesNoVac.classList.add('vacancies__novac-wrapper_active');
   vacanciesNotFound.classList.add('vacancies__gallery-wrapper_hide');
-  vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
-  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
-  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
+  // vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+  // vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
+  // vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
 };
 
 function copy() {
@@ -489,13 +492,13 @@ cardLinePlaceSecondBottomParent.addEventListener('mouseout', () => {
 });
 
 // Vacancies listeners
-vacancieEduItemDesign.addEventListener('click', handleDesignBtnClick);
-vacancieEduItemProgramming.addEventListener('click', handleProgrammingBtnClick);
-vacancieEduItemAnalitics.addEventListener('click', handleAnaliticsBtnClick);
-vacancieEduItemMarketing.addEventListener('click', handleMarketingBtnClick);
-vacancieEduItemManagement.addEventListener('click', handleManagementBtnClick);
-vacancieProphSensey.addEventListener('click', handleVacSenseyProphItemClick);
-vacancieProphReviewer.addEventListener('click', handleVacReviewerProphItemClick);
+// vacancieEduItemDesign.addEventListener('click', handleDesignBtnClick);
+// vacancieEduItemProgramming.addEventListener('click', handleProgrammingBtnClick);
+// vacancieEduItemAnalitics.addEventListener('click', handleAnaliticsBtnClick);
+// vacancieEduItemMarketing.addEventListener('click', handleMarketingBtnClick);
+// vacancieEduItemManagement.addEventListener('click', handleManagementBtnClick);
+// vacancieProphSensey.addEventListener('click', handleVacSenseyProphItemClick);
+// vacancieProphReviewer.addEventListener('click', handleVacReviewerProphItemClick);
 
 /* button for the oppening popup */
 const button = document.querySelector('.vacancies__notfound-vac-btn');

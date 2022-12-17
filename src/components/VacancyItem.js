@@ -17,11 +17,10 @@ export default class VacancyItem {
     return elementCard;
   }
 
-  _pushBtn() {
+  _handleBtnClick() {
       const vacanciesDescriptionItems = document.querySelectorAll('.vacancies__description');
       const vacancieNameBtn = document.querySelectorAll('.vacancies__name');
       const vacGalleryArrows = document.querySelectorAll('.vacancies__gallery-arrow');
-      
       
     if (this._vacName.classList.contains('vacancies__name_active')) {
       vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
@@ -38,16 +37,14 @@ export default class VacancyItem {
   }
 
   _setEventListeners() {
-    this._vacName.addEventListener('click', () => {this._pushBtn()});
+    this._vacName.addEventListener('click', () => {this._handleBtnClick()});
   }
 
   generate() {
     this._vacName.textContent = this._data.name;
     this._vacName.id = this._data.id;
 
-    
     this._salary.textContent = this._data.salary;
-
     
     this._workTime.textContent = this._data.time;
 

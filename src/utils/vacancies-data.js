@@ -1,3 +1,37 @@
+const vacanciesProphData = [
+  {
+    name: 'Дизайн',
+    id: 'disign'
+  },
+  {
+    name: 'Программирование',
+    id: 'programming'
+  },
+  {
+    name: 'Аналитика',
+    id: 'analitics'
+  },
+  {
+    name: 'Маркетинг',
+    id: 'marketing'
+  },
+  {
+    name: 'Менеджмент',
+    id: 'management'
+  },
+];
+
+const vacanciesProphMenuData = [
+  {
+    name: 'Наставник',
+    id: 'sensey'
+  },
+  {
+    name: 'Ревьюер',
+    id: 'reviewer'
+  },
+];
+
 const vacProgSenseyData = [
   {
     name: 'Наставник Java-разработчик',
@@ -371,6 +405,8 @@ const vacAnReviewerData = [
 ];
 
 export {
+  vacanciesProphData,
+  vacanciesProphMenuData,
   vacProgSenseyData,
   vacProgReviewerData,
   vacAnSenseyData,
