@@ -24,10 +24,7 @@ import {
 import {
   vacanciesProphData,
   vacanciesProphMenuData,
-  vacProgSenseyData,
-  vacProgReviewerData,
-  vacAnSenseyData,
-  vacAnReviewerData,
+  vacanciesData,
 } from '../utils/vacancies-data';
 import {
   scroller,
@@ -297,8 +294,8 @@ createSuccessStoryVideo(successStoriesVideo);
 
 // ------- vacancies -------
 renderElementsToDOM(vacanciesProphData, vacanciesEduMenu, generateMenu);
-renderElementsToDOM(vacanciesProphMenuData, vacanciesProphMenu, generateProph);
-renderElementsToDOM(vacProgSenseyData, vacancieSenseyGallary, generateVacancy);
+// renderElementsToDOM(vacanciesProphMenuData, vacanciesProphMenu, generateProph);
+// renderElementsToDOM(vacanciesData.programming.sensey.data, vacancieSenseyGallary, generateVacancy);
 
 
 

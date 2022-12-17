@@ -1,8 +1,13 @@
 export default class VacancyMenuItem {
-    constructor(data, selector) {
+    constructor(data, selector, renderElementsToDOM, generateProph, generateVacancy, vacanciesProphMenuData, vacanciesData) {
       this._data = data;
       this._id = this._data.id;
       this._selector = selector;
+      this._renderElementsToDOM = renderElementsToDOM;
+      this._generateProph = generateProph;
+      this._generateVacancy = generateVacancy;
+      this._vacanciesProphMenuData = vacanciesProphMenuData;
+      this._vacanciesData = vacanciesData;
       this._element = this._getElement();
       this._itemName = this._element.querySelector('.vacancies__btn-menu');
 
@@ -16,10 +21,15 @@ export default class VacancyMenuItem {
     }
   
     _setActiveClass() {
-      if (this._id === 'programming') {
-        this._itemName.classList.add('vacancies__btn-menu_active');
-        this._element.classList.add('vacancies__menu-item_visible');
-      }
+        const vacanciesProphMenu = document.querySelector('.vacancies__prophecy-menu');
+        const vacancieSenseyGallary = document.querySelector('#sensey-gallary');
+
+        if (this._id === 'programming') {
+          this._itemName.classList.add('vacancies__btn-menu_active');
+          this._element.classList.add('vacancies__menu-item_visible');
+          this._renderElementsToDOM(this._vacanciesProphMenuData, vacanciesProphMenu, this._generateProph)
+          this._renderElementsToDOM(this._vacanciesData.programming.sensey.data, vacancieSenseyGallary, this._generateVacancy)
+        }
     }
   
     _handleBtnClick() {
@@ -45,23 +55,6 @@ export default class VacancyMenuItem {
         this._itemName.classList.add('vacancies__btn-menu_active');
         this._element.classList.add('vacancies__menu-item_visible');
 
-
-    //     const vacanciesDescriptionItems = document.querySelectorAll('.vacancies__description');
-    //     const vacancieNameBtn = document.querySelectorAll('.vacancies__name');
-    //     const vacGalleryArrows = document.querySelectorAll('.vacancies__gallery-arrow');
-        
-    //   if (this._vacName.classList.contains('vacancies__name_active')) {
-    //     vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
-    //     vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
-    //     vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
-    //   } else {
-    //     vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
-    //     vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
-    //     vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
-    //     this._vacName.classList.add('vacancies__name_active');
-    //     this._vacArrow.classList.add('vacancies__gallery-arrow_active');
-    //     this._vacDescription.classList.add('vacancies__description_active');
-    //   }
     }
   
     _setEventListeners() {
