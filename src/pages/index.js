@@ -295,13 +295,6 @@ createSuccessStoryVideo(successStoriesVideo);
 // ------- vacancies -------
 renderElementsToDOM(vacanciesProphData, vacanciesEduMenu, generateMenu);
 
-vacanciesBtnMenuArrows.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    vacanciesMenuItems.forEach((item) => item.classList.add('vacancies__menu-item_visible'));
-    vacanciesEduMenu.classList.add('vacancies__education-menu_active');
-  });
-});
-
 // EVENT LISTENERS:
 // Animation of the advantage
 cardLinePlaceFirstTopParent.addEventListener('mousemove', () => {

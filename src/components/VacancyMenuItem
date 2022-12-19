@@ -10,6 +10,7 @@ export default class VacancyMenuItem {
       this._vacanciesProphData = vacanciesProphData;
       this._element = this._getElement();
       this._itemName = this._element.querySelector('.vacancies__btn-menu');
+      this._menuArrow = this._element.querySelector('.vacancies__btn-menu-arrow');
     }
   
     _getElement() {
@@ -32,7 +33,16 @@ export default class VacancyMenuItem {
         this._renderElementsToDOM(this._vacanciesProphData[index].data.sensey.data, vacancieSenseyGallary, this._generateVacancy)
       }
     }
-  
+
+    // Событие при нажатии на стрелку специальности на экране 320px
+    _handleMenuArrowClick() {
+      const vacanciesMenuItems = vacancies.querySelectorAll('.vacancies__menu-item');
+      const vacanciesEduMenu = vacancies.querySelector('.vacancies__education-menu');
+
+      vacanciesMenuItems.forEach((item) => item.classList.add('vacancies__menu-item_visible'));
+      vacanciesEduMenu.classList.add('vacancies__education-menu_active');
+    }
+
     // Событие при нажатии на конкретную специальность
     _handleBtnClick(evt) {
       const target = evt.target;
@@ -97,7 +107,8 @@ export default class VacancyMenuItem {
     }
   
     _setEventListeners() {
-      this._itemName.addEventListener('click', (evt) => {this._handleBtnClick(evt)});
+      this._itemName.addEventListener('click', (evt) => this._handleBtnClick(evt));
+      this._menuArrow.addEventListener('click', () => this._handleMenuArrowClick())
     }
   
     generate() {
