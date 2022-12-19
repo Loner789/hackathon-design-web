@@ -3027,6 +3027,11 @@
   padding: 0;
   padding-left: 25px;
 }
+.vacancies__todo-list {
+  list-style: square;
+  padding: 0;
+  padding-left: 25px;
+}
 .vacancies__req-list :last-child {
   margin: 0 0 30px 10px;
 }
