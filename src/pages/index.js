@@ -295,59 +295,6 @@ createSuccessStoryVideo(successStoriesVideo);
 // ------- vacancies -------
 renderElementsToDOM(vacanciesProphData, vacanciesEduMenu, generateMenu);
 
-function copy() {
-  const url = document.location.href;
-  navigator.clipboard.writeText(url);
-}
-
-vacanciesShareBtns.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const vacGalWrap = btn.closest('.vacancies__gallery-wrapper');
-    const vacPopupShare = vacGalWrap.querySelector('.vacancies__popup-share');
-
-    if (!btn.classList.contains('vacancies__share-btn_active')) {
-      vacanciesShareBtns.forEach((item) => item.classList.remove('vacancies__share-btn_active'));
-      btn.classList.add('vacancies__share-btn_active');
-      if (!vacPopupShare.classList.contains('vacancies__popup-share_active')) {
-        vacPopupShare.innerHTML = vacanciesPopupShareFullCode;
-        const vacanciesCopyBtn = vacGalWrap.querySelector('.vacancies__popup-copy-icon');
-        const vacanciesPopupLink = vacGalWrap.querySelector('.vacancies__popup-link');
-        const handleCopyShareBtnClick = () => {
-          vacanciesCopyBtn.classList.add('vacancies__popup-copy-icon_done');
-          vacanciesPopupLink.classList.add('vacancies__popup-link_active');
-          copy();
-        };
-
-        const vacanciesCopyLink = vacGalWrap.querySelector('#copyLink');
-        vacanciesCopyLink.addEventListener('click', handleCopyShareBtnClick);
-        vacPopupShare.classList.add('vacancies__popup-share_active');
-        document.addEventListener('mousedown', (evt) => {
-          if (!evt.target.classList.contains('vacancies__popup-share')
-          && !evt.target.classList.contains('vacancies__popup-list')
-          && !evt.target.classList.contains('vacancies__popup-link-wrapper')
-          && !evt.target.classList.contains('vacancies__popup-copy-icon')
-          && !evt.target.classList.contains('vacancies__popup-link')
-          && !evt.target.classList.contains('vacancies__share-btn')) {
-            vacanciesCopyLink.removeEventListener('click', handleCopyShareBtnClick);
-            vacPopupShare.classList.remove('vacancies__popup-share_active');
-            vacanciesCopyBtn.classList.remove('vacancies__popup-copy-icon_done');
-            vacanciesPopupLink.classList.remove('vacancies__popup-link_active');
-            btn.classList.remove('vacancies__share-btn_active');
-            vacPopupShare.innerHTML = vacanciesPopupShareEmptyCode;
-          }
-        });
-      } else {
-        btn.classList.remove('vacancies__share-btn_active');
-        vacPopupShare.innerHTML = vacanciesPopupShareEmptyCode;
-      }
-    } else {
-      vacanciesShareBtns.forEach((item) => item.classList.remove('vacancies__share-btn_active'));
-      vacPopupShare.classList.remove('vacancies__popup-share_active');
-      vacPopupShare.innerHTML = vacanciesPopupShareEmptyCode;
-    }
-  });
-});
-
 vacanciesBtnMenuArrows.forEach((btn) => {
   btn.addEventListener('click', () => {
     vacanciesMenuItems.forEach((item) => item.classList.add('vacancies__menu-item_visible'));
