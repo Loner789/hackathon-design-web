@@ -1,3 +1,9 @@
+// TODO
+// - share-button
+// - copy to clipboard from share menu
+// - send cv button
+// - arrows for education menu
+
 export default class VacancyItem {
   constructor(data, selector) {
     this._data = data;

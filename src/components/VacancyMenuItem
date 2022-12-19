@@ -1,5 +1,5 @@
 export default class VacancyMenuItem {
-    constructor(data, selector, renderElementsToDOM, generateProph, generateVacancy, vacanciesProphMenuData, vacanciesData) {
+    constructor(data, selector, renderElementsToDOM, generateProph, generateVacancy, vacanciesProphMenuData, vacanciesProphData) {
       this._data = data;
       this._id = this._data.id;
       this._selector = selector;
@@ -7,10 +7,9 @@ export default class VacancyMenuItem {
       this._generateProph = generateProph;
       this._generateVacancy = generateVacancy;
       this._vacanciesProphMenuData = vacanciesProphMenuData;
-      this._vacanciesData = vacanciesData;
+      this._vacanciesProphData = vacanciesProphData;
       this._element = this._getElement();
       this._itemName = this._element.querySelector('.vacancies__btn-menu');
-
     }
   
     _getElement() {
@@ -20,45 +19,85 @@ export default class VacancyMenuItem {
       return elementCard;
     }
   
+    // Рендер исходных данных вакансии конкретной специальности
     _setActiveClass() {
-        const vacanciesProphMenu = document.querySelector('.vacancies__prophecy-menu');
-        const vacancieSenseyGallary = document.querySelector('#sensey-gallary');
+      const vacanciesProphMenu = document.querySelector('.vacancies__prophecy-menu');
+      const vacancieSenseyGallary = document.querySelector('#sensey-gallary');
 
-        if (this._id === 'programming') {
-          this._itemName.classList.add('vacancies__btn-menu_active');
-          this._element.classList.add('vacancies__menu-item_visible');
-          this._renderElementsToDOM(this._vacanciesProphMenuData, vacanciesProphMenu, this._generateProph)
-          this._renderElementsToDOM(this._vacanciesData.programming.sensey.data, vacancieSenseyGallary, this._generateVacancy)
-        }
-    }
-  
-    _handleBtnClick() {
-        const vacancieEduItems = document.querySelectorAll('.vacancies__btn-menu');
-        const vacanciesMenuItems = document.querySelectorAll('.vacancies__menu-item');
-        const vacanciesGallaries = document.querySelectorAll('.vacancies__gallery');
-        const vacanciesEduMenu = document.querySelector('.vacancies__education-menu');
-        const vacancieProphItems = document.querySelectorAll('.vacancies__proph-btn-menu');
-        const vacanciesDescriptionItems = vacancies.querySelectorAll('.vacancies__description');
-        const vacancieNameBtn = vacancies.querySelectorAll('.vacancies__name');
-        const vacGalleryArrows = vacancies.querySelectorAll('.vacancies__gallery-arrow');
-
-        vacancieEduItems.forEach((item) => item.classList.remove('vacancies__btn-menu_active'));
-        vacanciesMenuItems.forEach((item) => item.classList.remove('vacancies__menu-item_visible'));
-        vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
-        vacanciesEduMenu.classList.remove('vacancies__education-menu_active');
-        vacancieProphItems.forEach((item) => (item.disabled = true));
-        vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
-        vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
-        vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
-        vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
-
+      if (this._id === 'programming') {
         this._itemName.classList.add('vacancies__btn-menu_active');
         this._element.classList.add('vacancies__menu-item_visible');
+        this._renderElementsToDOM(this._vacanciesProphMenuData, vacanciesProphMenu, this._generateProph)
+        const index = this._vacanciesProphData.findIndex(item => item.id === this._id);
+        this._renderElementsToDOM(this._vacanciesProphData[index].data.sensey.data, vacancieSenseyGallary, this._generateVacancy)
+      }
+    }
+  
+    // Событие при нажатии на конкретную специальность
+    _handleBtnClick(evt) {
+      const target = evt.target;
+      const id = target.id;
+      const index = this._vacanciesProphData.findIndex(item => item.id === id);
+      const vacancies = document.querySelector('.vacancies');
+      const vacancieSenseyGallary = vacancies.querySelector('#sensey-gallary');
+      const vacSenseyItems = vacancieSenseyGallary.querySelectorAll('.vacancies__gallery-item');
+      const vacancieReviewerGallary = vacancies.querySelector('#reviewer-gallary');
+      const vacReviewerItems =vacancieReviewerGallary.querySelectorAll('.vacancies__gallery-item');
+      const vacanciesNoVac = vacancies.querySelector('#no-vac-available');
+      const vacanciesNotFound = vacancies.querySelector('#vac-notfound');
+      const vacancieEduItems = vacancies.querySelectorAll('.vacancies__btn-menu');
+      const vacanciesMenuItems = vacancies.querySelectorAll('.vacancies__menu-item');
+      const vacanciesGallaries = vacancies.querySelectorAll('.vacancies__gallery');
+      const vacanciesEduMenu = vacancies.querySelector('.vacancies__education-menu');
+      const vacancieProphItems = vacancies.querySelectorAll('.vacancies__proph-btn-menu');
+      const vacanciesDescriptionItems = vacancies.querySelectorAll('.vacancies__description');
+      const vacancieNameBtn = vacancies.querySelectorAll('.vacancies__name');
+      const vacGalleryArrows = vacancies.querySelectorAll('.vacancies__gallery-arrow');
 
+      // Удаление активных классов специальностей, ролей и данных специальности
+      vacancieEduItems.forEach((item) => item.classList.remove('vacancies__btn-menu_active'));
+      vacanciesMenuItems.forEach((item) => item.classList.remove('vacancies__menu-item_visible'));
+      vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
+      vacanciesEduMenu.classList.remove('vacancies__education-menu_active');
+      vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
+      vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+      vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
+      vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
+      vacanciesNoVac.classList.remove('vacancies__novac-wrapper_active');
+      vacanciesNotFound.classList.add('vacancies__gallery-wrapper_hide');
+
+      // Добавление активных классов выбранной специальности
+      this._itemName.classList.add('vacancies__btn-menu_active');
+      this._element.classList.add('vacancies__menu-item_visible');
+      vacancieSenseyGallary.classList.add('vacancies__gallery_active');       
+      
+      // Добавление активного класса роли наставника
+      const vacanciesProphMenu = vacancies.querySelector('.vacancies__prophecy-menu');
+      const vacancieProphSensey = vacanciesProphMenu.querySelector('#sensey');
+      vacancieProphSensey.classList.add('vacancies__proph-btn-menu_active');
+
+      // Удаление прежних данных рендера
+      vacSenseyItems.forEach((item) => item.remove());
+      vacReviewerItems.forEach((item) => item.remove());
+
+      // Проверка наличия вакансий по специальности по каждой роли
+      // Рендер данных вакансии конкретной специальности
+      if (this._vacanciesProphData[index].data.sensey.data.length > 1) {
+        this._renderElementsToDOM(this._vacanciesProphData[index].data.sensey.data, vacancieSenseyGallary, this._generateVacancy);
+        vacanciesNotFound.classList.remove('vacancies__gallery-wrapper_hide');
+        } else {
+        if (this._vacanciesProphData[index].data.reviewer.data.length > 1) {
+          this._renderElementsToDOM(this._vacanciesProphData[index].data.reviewer.data, vacancieReviewerGallary, this._generateVacancy);
+          vacanciesNotFound.classList.remove('vacancies__gallery-wrapper_hide');
+        } else {
+          vacanciesNoVac.classList.add('vacancies__novac-wrapper_active');
+          vacanciesNotFound.classList.add('vacancies__gallery-wrapper_hide');
+        }
+      }
     }
   
     _setEventListeners() {
-      this._itemName.addEventListener('click', () => {this._handleBtnClick()});
+      this._itemName.addEventListener('click', (evt) => {this._handleBtnClick(evt)});
     }
   
     generate() {
