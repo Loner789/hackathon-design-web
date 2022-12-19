@@ -1,6 +1,5 @@
 // TODO
 // - send cv button
-// - FAQ refactor
 
 export default class VacancyItem {
   constructor(data, selector, vacanciesPopupShareFullCode, vacanciesPopupShareEmptyCode) {

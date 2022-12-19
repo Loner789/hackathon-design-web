@@ -81,7 +81,7 @@ export default class VacancyProphItem {
     }
   
     _setEventListeners() {
-      this._itemName.addEventListener('click', (evt) => {this._handleBtnClick(evt)});
+      this._itemName.addEventListener('click', (evt) => this._handleBtnClick(evt));
     }
   
     generate() {

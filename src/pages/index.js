@@ -10,11 +10,12 @@ import PopupWithForm from '../components/PopupWithForm';
 import FormValidator from '../components/FormValidator';
 import PopupWithVideo from '../components/PopupWithVideo';
 import { renderElementsToDOM } from '../utils/utils.js';
-import { 
-    generateVacancy,
+import {
     generateMenu,
-    generateProph,
 } from '../utils/vacancies.js';
+import {
+  generateFaq,
+} from '../utils/faq.js'
 import {
   learningTitles,
   conditionsCards,
@@ -23,38 +24,17 @@ import {
 } from '../utils/initial-data';
 import {
   vacanciesProphData,
-  vacanciesProphMenuData,
-  vacanciesData,
 } from '../utils/vacancies-data';
+import {
+  faqData,
+} from '../utils/faq-data';
 import {
   scroller,
   faqBtn,
+  faqContainer,
   faqAnswers,
   faqQuestions,
-  vacancieNameBtn,
-  vacancieEduItems,
-  vacanciesMenuItems,
-  vacanciesDescriptionItems,
-  vacancieEduItemDesign,
-  vacancieEduItemProgramming,
-  vacancieEduItemAnalitics,
-  vacancieEduItemMarketing,
-  vacancieEduItemManagement,
-  vacancieProphItems,
-  vacancieProphSensey,
-  vacancieProphReviewer,
-  vacancieSenseyGallary,
-  vacancieReviewerGallary,
-  vacanciesGallaries,
-  vacanciesNoVac,
-  vacanciesNotFound,
-  vacanciesShareBtns,
-  vacGalleryArrows,
-  vacanciesPopupShareEmptyCode,
-  vacanciesPopupShareFullCode,
-  vacanciesBtnMenuArrows,
   vacanciesEduMenu,
-  vacanciesProphMenu,
   vacanciesSendBtns,
   videoElement,
   cardLinePlaceFirstTop,
@@ -202,41 +182,7 @@ const setupVideo = (video) => {
 setupVideo(videoElement);
 
 // -------- faq --------
-faqBtn.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const qblock = btn.closest('.faq__question-block');
-    const faqAnswer = qblock.querySelector('.faq__question-text');
-    const faqCloseBtn = qblock.querySelector('.faq__question-button');
-
-    if (faqCloseBtn.classList.contains('faq__question-button_active')) {
-      faqAnswers.forEach((item) => item.classList.remove('faq__question-text_active'));
-      faqBtn.forEach((item) => item.classList.remove('faq__question-button_active'));
-    } else {
-      faqAnswers.forEach((item) => item.classList.remove('faq__question-text_active'));
-      faqBtn.forEach((item) => item.classList.remove('faq__question-button_active'));
-      faqAnswer.classList.add('faq__question-text_active');
-      faqCloseBtn.classList.add('faq__question-button_active');
-    }
-  });
-});
-
-faqQuestions.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const qblock = btn.closest('.faq__question-block');
-    const faqAnswer = qblock.querySelector('.faq__question-text');
-    const faqCloseBtn = qblock.querySelector('.faq__question-button');
-
-    if (faqCloseBtn.classList.contains('faq__question-button_active')) {
-      faqAnswers.forEach((item) => item.classList.remove('faq__question-text_active'));
-      faqBtn.forEach((item) => item.classList.remove('faq__question-button_active'));
-    } else {
-      faqAnswers.forEach((item) => item.classList.remove('faq__question-text_active'));
-      faqBtn.forEach((item) => item.classList.remove('faq__question-button_active'));
-      faqAnswer.classList.add('faq__question-text_active');
-      faqCloseBtn.classList.add('faq__question-button_active');
-    }
-  });
-});
+renderElementsToDOM(faqData, faqContainer, generateFaq);
 
 // ------- other -------
 
