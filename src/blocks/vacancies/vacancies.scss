@@ -481,8 +481,6 @@
 
   .vacancies {
     max-width: 1024px;
-    // min-width: 100vw;
-
 
     &__container {
       width: 100%;
@@ -529,8 +527,6 @@
 
   .vacancies {
     max-width: 768px;
-    // min-width: 100vw;
-
 
     &__container {
       width: 100%;
@@ -618,8 +614,6 @@
 
   .vacancies {
     max-width: 320px;
-    // min-width: 100vw;
-
 
     &__container {
       width: 100%;
@@ -692,6 +686,7 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
+      background-color: transparent;
       transform: rotate(90deg);
       border-style: none;
       padding: 0;
