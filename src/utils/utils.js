@@ -11,7 +11,7 @@ import {
     vacanciesPopupShareEmptyCode,
 } from '../utils/constants';
 
-
+// --------RENDERER--------
 const renderElementsToDOM = (data, containerElement, generateElementFunc) => (
     data.forEach((item) => containerElement.append(generateElementFunc(item)))
 );
