@@ -9,25 +9,19 @@ import Section from '../components/Section';
 import PopupWithForm from '../components/PopupWithForm';
 import FormValidator from '../components/FormValidator';
 import PopupWithVideo from '../components/PopupWithVideo';
-import { renderElementsToDOM } from '../utils/utils.js';
-import {
-    generateMenu,
-} from '../utils/vacancies.js';
-import {
+import { 
+  renderElementsToDOM,
+  generateMenu,
   generateFaq,
-} from '../utils/faq.js'
+} from '../utils/utils.js';
 import {
   learningTitles,
   conditionsCards,
   successStoriesText,
   successStoriesVideo,
-} from '../utils/initial-data';
-import {
-  vacanciesProphData,
-} from '../utils/vacancies-data';
-import {
   faqData,
-} from '../utils/faq-data';
+  vacanciesProphData,
+} from '../utils/initial-data';
 import {
   scroller,
   faqBtn,
@@ -263,16 +257,7 @@ cardLinePlaceSecondBottomParent.addEventListener('mousemove', () => {
 cardLinePlaceSecondBottomParent.addEventListener('mouseout', () => {
   cardLinePlaceSecondBottom.classList.remove('card__line_hovered');
 });
-
-// Vacancies listeners
-// vacancieEduItemDesign.addEventListener('click', handleDesignBtnClick);
-// vacancieEduItemProgramming.addEventListener('click', handleProgrammingBtnClick);
-// vacancieEduItemAnalitics.addEventListener('click', handleAnaliticsBtnClick);
-// vacancieEduItemMarketing.addEventListener('click', handleMarketingBtnClick);
-// vacancieEduItemManagement.addEventListener('click', handleManagementBtnClick);
-// vacancieProphSensey.addEventListener('click', handleVacSenseyProphItemClick);
-// vacancieProphReviewer.addEventListener('click', handleVacReviewerProphItemClick);
-
+////////////////
 /* button for the oppening popup */
 const button = document.querySelector('.vacancies__notfound-vac-btn');
 
@@ -290,7 +275,7 @@ vacanciesSendBtns.forEach((btn) => {
     popupWithForm.open();
   });
 });
-
+////////////////
 const FormInPopupValidator = new FormValidator(configFormValidator, '#form');
 FormInPopupValidator.enableValidation();
 
