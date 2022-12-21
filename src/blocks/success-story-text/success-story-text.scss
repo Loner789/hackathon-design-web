@@ -40,6 +40,8 @@
     padding: 50px 4.5% 0 7%;
     box-sizing: border-box;
     position: relative;
+    cursor: default;
+    @include fadeInAndEnlargement(1s);
 
     @include media_1110 {
       padding: 30px 3% 0 5%;
@@ -105,6 +107,7 @@
     border-bottom: $cardBorder;
     content: '';
     width: 22.5%;
+    @include fadeIn(1s);
 
     @include media_1400 {
       left: 20%;
@@ -114,7 +117,6 @@
   .success-story-text__bottom-line_hidden {
     display: none;
   }
-
 }
 
 .success-story-text_hidden {
@@ -135,4 +137,5 @@
   height: 22%;
   position: absolute;
   box-sizing: border-box;
+  @include fadeIn(1s);
 }

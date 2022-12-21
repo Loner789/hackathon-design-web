@@ -17,7 +17,6 @@ export default class SuccessStoryCard {
   }
 
   _getElementCard() {
-    // eslint-disable-next-line
     const elementTemplate = document.querySelector(this._elementTemplateSelector).content;
     const elementCard = elementTemplate.querySelector(this._cardSelector).cloneNode(true);
 
@@ -47,10 +46,9 @@ export default class SuccessStoryCard {
       const target = evt.target;
       const container = target.parentNode;
       const id = container.getAttribute('id');
-      // eslint-disable-next-line
-      const textContentlist = document.querySelectorAll('.success-story-text__content');
+      const textContentList = document.querySelectorAll('.success-story-text__content');
 
-      textContentlist.forEach((el) => {
+      textContentList.forEach((el) => {
         // eslint-disable-next-line no-shadow
         const container = el.parentNode;
         const elId = container.getAttribute('id');
@@ -59,6 +57,7 @@ export default class SuccessStoryCard {
         if (elId === id) {
           el.classList.remove('success-story-text__content_hidden');
           bottomLine.classList.remove('success-story-text__bottom-line_hidden');
+        //  container.classList.add('success-story-text_border');
         } else {
           el.classList.add('success-story-text__content_hidden');
           bottomLine.classList.add('success-story-text__bottom-line_hidden');

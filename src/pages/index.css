@@ -1,5 +1,8 @@
 @import '../vendor/normalize.css';
 @import '../vendor/fonts.css';
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 :root {
   margin: 0 auto;
   padding: 0 100px;
@@ -30,6 +33,9 @@
   margin: 100px 0 0;
 }
 
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 .header {
   margin: 0;
   padding: 0;
@@ -100,6 +106,9 @@
   }
 }
 
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 .learning {
   margin: 0;
   padding: 0;
@@ -554,6 +563,9 @@
   }
 }
 
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 .section-title {
   font-style: normal;
   font-weight: 500;
@@ -596,6 +608,9 @@
   width: 100%;
 }
 
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 .advantages {
   max-width: 1240px;
   width: 100%;
@@ -618,6 +633,9 @@
   }
 }
 
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 .advantages-container {
   display: grid;
   column-gap: 2%;
@@ -772,6 +790,9 @@
   }
 }
 
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 .card {
   max-width: 590px;
   width: 100%;
@@ -1331,6 +1352,9 @@
   }
 }
 
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 .advantages-list {
   padding: 0;
   box-sizing: border-box;
@@ -1557,6 +1581,9 @@
   cursor: pointer;
 }
 
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 .video-button {
   background-image: url(../images/button-play-video.png);
   background-color: transparent;
@@ -1615,6 +1642,9 @@
   cursor: pointer;
 }
 
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 .duties {
   display: flex;
   flex-direction: column;
@@ -1676,6 +1706,9 @@
   background-color: #00308C;
 }
 
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 .position {
   display: flex;
   justify-content: center;
@@ -1938,6 +1971,9 @@
   display: none;
 }
 
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 .section-title {
   font-style: normal;
   font-weight: 500;
@@ -2232,6 +2268,9 @@
     width: 100%;
   }
 }
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 .section-title {
   font-style: normal;
   font-weight: 500;
@@ -2309,6 +2348,9 @@
   transition: 0.7s;
 }
 
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 .success-stories {
   font-family: "YS Display", Arial, sans-serif;
   color: #1E2027;
@@ -2391,6 +2433,20 @@
   padding: 50px 4.5% 0 7%;
   box-sizing: border-box;
   position: relative;
+  cursor: default;
+  animation-name: fadeInAndEnlargement;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+@keyframes fadeInAndEnlargement {
+  from {
+    opacity: 0;
+    width: 50%;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 1110px) {
   .success-story-text .success-story-text__content {
@@ -2454,6 +2510,17 @@
   border-bottom: 3px solid rgba(133, 133, 133, 0.3);
   content: "";
   width: 22.5%;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @media screen and (max-width: 1400px) {
   .success-story-text .success-story-text__bottom-line {
@@ -2482,8 +2549,22 @@
   height: 22%;
   position: absolute;
   box-sizing: border-box;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 .success-story-video {
   display: grid;
   position: relative;
@@ -2528,6 +2609,9 @@
   width: 47%;
 }
 
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 .success-story-title {
   font-style: normal;
   font-weight: 500;
@@ -2569,6 +2653,9 @@
   position: absolute;
 }
 
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 .success-story-subtitle {
   font-style: normal;
   font-weight: 300;
@@ -2621,6 +2708,9 @@
   position: absolute;
 }
 
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 .video-button {
   background-image: url(../images/button-play-video.png);
   background-color: transparent;
@@ -2679,6 +2769,9 @@
   cursor: pointer;
 }
 
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 .popup {
   display: grid;
   visibility: hidden;
@@ -3494,6 +3587,9 @@
     font-size: 13px;
   }
 }
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 .form {
   display: flex;
   flex-direction: column;
@@ -3689,6 +3785,9 @@
   display: none;
 }
 
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 .popup {
   display: grid;
   visibility: hidden;
@@ -3893,6 +3992,9 @@
   transition: 0.7s;
 }
 
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 @media screen and (max-width: 1010px) {
   .success-story-mobile {
     display: grid;
