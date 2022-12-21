@@ -40,6 +40,30 @@ export default class SuccessStoryCard {
     }
   }
 
+  _addMobileContent() {
+    if (!this._imgMobile) this._element.classList.add('success-story-text_hidden');
+    if (this._id === 0) {
+      this._elementImg.classList.add('success-story-text__photo_mobile');
+      this._elementImg.src = this._imgMobile;
+      this._elementImg.alt = this._name;
+      this._titleMobile.textContent = this._name;
+      this._subTitleMobile.textContent = this._position;
+      this._textMobile.textContent = '';
+      this._getListOfParagraphs(this._textMobile);
+    }
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  _addCardDesktop() {
+    const cardList = document.querySelectorAll('.success-story-text_hidden');
+    const mobilePhoto = this._element.querySelector('.success-story-text__photo_mobile');
+
+    cardList.forEach((el) => {
+      el.classList.remove('success-story-text_hidden');
+    });
+    if (mobilePhoto) mobilePhoto.classList.remove('success-story-text__photo_mobile');
+  }
+
   _setEventListeners() {
     this._elementImg.addEventListener('click', (evt) => {
       // eslint-disable-next-line
@@ -57,7 +81,6 @@ export default class SuccessStoryCard {
         if (elId === id) {
           el.classList.remove('success-story-text__content_hidden');
           bottomLine.classList.remove('success-story-text__bottom-line_hidden');
-        //  container.classList.add('success-story-text_border');
         } else {
           el.classList.add('success-story-text__content_hidden');
           bottomLine.classList.add('success-story-text__bottom-line_hidden');
@@ -65,12 +88,20 @@ export default class SuccessStoryCard {
       });
     });
 
-    if (document.documentElement.clientWidth <= 1010) {
+    window.addEventListener('resize', () => {
+      if (window.innerWidth <= 1010) {
+        this._addMobileContent();
+      } else {
+        this._elementImg.src = this._img;
+        this._addCardDesktop();
+      }
+
       this._elementImg.addEventListener('click', (evt) => {
         // eslint-disable-next-line
         const target = evt.target;
         if (target.closest('.success-story-text__photo_mobile')) return;
         const currentImg = document.querySelector('.success-story-text__photo_mobile');
+        if (!currentImg) return;
         const currentPerson = currentImg.alt;
 
         target.classList.add('success-story-text__photo_mobile');
@@ -91,7 +122,7 @@ export default class SuccessStoryCard {
           }
         });
       });
-    }
+    });
   }
 
   generateElementCard() {
@@ -113,15 +144,10 @@ export default class SuccessStoryCard {
     this._setEventListeners();
 
     if (document.documentElement.clientWidth <= 1010) {
-      if (!this._imgMobile) this._element.classList.add('success-story-text_hidden');
-      if (this._id === 0) {
-        this._elementImg.classList.add('success-story-text__photo_mobile');
-        this._elementImg.src = this._imgMobile;
-        this._elementImg.alt = this._name;
-        this._titleMobile.textContent = this._name;
-        this._subTitleMobile.textContent = this._position;
-        this._getListOfParagraphs(this._textMobile);
-      }
+      this._addMobileContent();
+    } else {
+      this._elementImg.src = this._img;
+      this._addCardDesktop();
     }
 
     return this._element;

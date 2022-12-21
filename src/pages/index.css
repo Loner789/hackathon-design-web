@@ -2429,7 +2429,6 @@
   max-height: 630px;
   height: min-content;
   overflow: hidden;
-  width: 70%;
   padding: 50px 4.5% 0 7%;
   box-sizing: border-box;
   position: relative;
@@ -3989,13 +3988,16 @@
 /* PROPERTIES */
 /* MEDIA QUERIES */
 /* ANIMATIONS */
+.success-story-mobile {
+  display: none;
+}
 @media screen and (max-width: 1010px) {
   .success-story-mobile {
     display: grid;
     max-height: 630px;
     height: min-content;
     width: 100%;
-    padding: 20px 0 50px 0;
+    padding: 20px 0;
     box-sizing: border-box;
     position: relative;
     margin-left: 10px;
