@@ -5,7 +5,7 @@
  display: flex;
  position: relative;
 
-  .success-story-text__photo {
+  &__photo {
     display: block;
 
     @include media_1400 {
@@ -18,11 +18,11 @@
     }
   }
 
-  .success-story-text__photo:hover {
+  &:hover {
     cursor: pointer;
   }
 
-  .success-story-text__photo_mobile {
+  &__photo_mobile {
     width: 300px;
 
     @include media_768 {
@@ -31,7 +31,7 @@
     }
   }
 
-  .success-story-text__content {
+  &__content {
     display: grid;
     max-height: 630px;
     height: min-content;
@@ -50,41 +50,41 @@
     @include media_1010 {
       display: none;
     }
+  }
 
-    .success-story-text__text {
-      font-style: normal;
-      font-weight: 300;
-      font-size: 20px;
-      line-height: 1.4;
+  &__text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 25px 0 0;
+    display: grid;
+    row-gap: 10px;
+    list-style-type: none;
+    position: relative;
+    box-sizing: border-box;
+
+    @include media_1430 {
+      font-size: 16px;
+    }
+
+    @include media_1110 {
+      padding-top: 15px;
+    }
+
+    &__paragraph {
+      padding: 0;
       margin: 0;
-      padding: 25px 0 0;
-      display: grid;
-      row-gap: 10px;
-      list-style-type: none;
-      position: relative;
       box-sizing: border-box;
+    }
 
-      @include media_1430 {
-        font-size: 16px;
-      }
-
-      @include media_1110 {
-        padding-top: 15px;
-      }
-
-      .success-story-text__paragraph {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-
-      .success-story-text__paragraph:first-child {
-        position: relative;
-      }
+    &__paragraph:first-child {
+      position: relative;
     }
   }
 
-  .success-story-text__content::before {
+  &__content::before {
     content: '';
     border-top: $cardBorder;
     border-right: $cardBorder;
@@ -96,11 +96,11 @@
     box-sizing: border-box;
   }
 
-  .success-story-text__content_hidden {
+  &__content_hidden {
     display: none;
   }
 
-  .success-story-text__bottom-line {
+  &__bottom-line {
     position: absolute;
     bottom: 0;
     left: 190px;
@@ -114,28 +114,28 @@
     }
   }
 
-  .success-story-text__bottom-line_hidden {
+  &__bottom-line_hidden {
     display: none;
   }
-}
 
-.success-story-text_hidden {
-  display: none;
+  &_hidden {
+    display: none;
+  }
+
+  &::after {
+    content: '';
+    border-bottom: $cardBorder;
+    border-right: $cardBorder;
+    bottom: 0;
+    right: 0;
+    width: 9%;
+    height: 22%;
+    position: absolute;
+    box-sizing: border-box;
+    @include fadeIn(1s);
+  }
 }
 
 .success-story-mobile_hidden {
   display: none;
-}
-
-.success-story-text::after {
-  content: '';
-  border-bottom: $cardBorder;
-  border-right: $cardBorder;
-  bottom: 0;
-  right: 0;
-  width: 9%;
-  height: 22%;
-  position: absolute;
-  box-sizing: border-box;
-  @include fadeIn(1s);
 }
