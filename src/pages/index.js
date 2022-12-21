@@ -13,6 +13,7 @@ import {
   renderElementsToDOM,
   generateMenu,
   generateFaq,
+  popupWithForm,
 } from '../utils/utils.js';
 import {
   learningTitles,
@@ -24,12 +25,9 @@ import {
 } from '../utils/initial-data';
 import {
   scroller,
-  faqBtn,
   faqContainer,
-  faqAnswers,
-  faqQuestions,
   vacanciesEduMenu,
-  vacanciesSendBtns,
+  notFoundVacBtn,
   videoElement,
   cardLinePlaceFirstTop,
   cardLinePlaceFirstTopParent,
@@ -259,33 +257,33 @@ cardLinePlaceSecondBottomParent.addEventListener('mouseout', () => {
 });
 ////////////////
 /* button for the oppening popup */
-const button = document.querySelector('.vacancies__notfound-vac-btn');
+// const notFoundVacBtn = document.querySelector('.vacancies__notfound-vac-btn');
 
 // eslint-disable-next-line no-use-before-define
-const popupWithForm = new PopupWithForm(popupSelector, submitHandlerForm, formSelector);
+// const popupWithForm = new PopupWithForm(popupSelector, submitHandlerForm, formSelector);
 popupWithForm.setEventListeners();
 
 /* to open popup */
-button.addEventListener('click', () => {
+notFoundVacBtn.addEventListener('click', () => {
   popupWithForm.open();
 });
 
-vacanciesSendBtns.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    popupWithForm.open();
-  });
-});
+// vacanciesSendBtns.forEach((btn) => {
+//   btn.addEventListener('click', () => {
+//     popupWithForm.open();
+//   });
+// });
 ////////////////
 const FormInPopupValidator = new FormValidator(configFormValidator, '#form');
 FormInPopupValidator.enableValidation();
 
-function submitHandlerForm(data) {
-  // eslint-disable-next-line
-  console.log(data);
+// function submitHandlerForm(data) {
+//   // eslint-disable-next-line
+//   console.log(data);
 
-  /* on successful submission */
-  popupWithForm.showBlockSuccess();
-}
+//   /* on successful submission */
+//   popupWithForm.showBlockSuccess();
+// }
 
 const clientScreenWidth = () => document.documentElement.clientWidth;
 

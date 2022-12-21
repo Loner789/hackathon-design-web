@@ -108,7 +108,7 @@ export default class VacancyMenuItem {
   
     _setEventListeners() {
       this._itemName.addEventListener('click', (evt) => this._handleBtnClick(evt));
-      this._menuArrow.addEventListener('click', () => this._handleMenuArrowClick())
+      this._menuArrow.addEventListener('click', () => this._handleMenuArrowClick());
     }
   
     generate() {

@@ -39,6 +39,7 @@ const vacanciesBtnMenuArrows = vacancies.querySelectorAll('.vacancies__btn-menu-
 const vacanciesEduMenu = vacancies.querySelector('.vacancies__education-menu');
 const vacanciesProphMenu = vacancies.querySelector('.vacancies__prophecy-menu');
 const vacanciesSendBtns = vacancies.querySelectorAll('.vacancies__send-btn');
+const notFoundVacBtn = document.querySelector('.vacancies__notfound-vac-btn');
 const videoElement = document.querySelector('.video');
 const cardLinePlaceFirstTop = document.querySelector(
   '.card__line_place__first-top',
@@ -114,6 +115,7 @@ export {
   vacanciesEduMenu,
   vacanciesProphMenu,
   vacanciesSendBtns,
+  notFoundVacBtn,
   videoElement,
   cardLinePlaceFirstTop,
   cardLinePlaceFirstTopParent,

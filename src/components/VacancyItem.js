@@ -2,9 +2,10 @@
 // - send cv button
 
 export default class VacancyItem {
-  constructor(data, selector, vacanciesPopupShareFullCode, vacanciesPopupShareEmptyCode) {
+  constructor(data, selector, popupWithForm, vacanciesPopupShareFullCode, vacanciesPopupShareEmptyCode) {
     this._data = data;
     this._selector = selector;
+    this._popupWithForm = popupWithForm;
     this._vacanciesPopupShareFullCode = vacanciesPopupShareFullCode;
     this._vacanciesPopupShareEmptyCode = vacanciesPopupShareEmptyCode;
     this._element = this._getElement();
@@ -16,6 +17,7 @@ export default class VacancyItem {
     this._shareBtn = this._element.querySelector('.vacancies__share-btn');
     this._vacGalWrap = this._element.querySelector('.vacancies__gallery-wrapper_share');
     this._vacPopupShare = this._vacGalWrap.querySelector('.vacancies__popup-share');
+    this._sendCVBtn = this._element.querySelector('.vacancies__send-btn');
   }
 
   _getElement() {
@@ -99,7 +101,8 @@ export default class VacancyItem {
 
   _setEventListeners() {
     this._vacName.addEventListener('click', () => this._handleBtnClick());
-    this._shareBtn.addEventListener('click', () => this._handleShareBtnClick())
+    this._shareBtn.addEventListener('click', () => this._handleShareBtnClick());
+    this._sendCVBtn.addEventListener('click', () => this._popupWithForm.open());
   }
 
   generate() {
