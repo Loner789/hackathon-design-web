@@ -14,8 +14,16 @@
     }
 
     @include media_768 {
-      height: 220px;
+      height: 400px;
       width: auto;
+    }
+
+    @include media_600 {
+      height: 330px;
+    }
+
+    @include media_480 {
+      height: 220px;
     }
   }
 
@@ -28,8 +36,16 @@
     object-fit: cover;
 
     @include media_768 {
-      height: 220px;
+      height: 400px;
       width: auto;
+    }
+
+    @include media_600 {
+      height: 330px;
+    }
+
+    @include media_480 {
+      height: 220px;
     }
   }
 
