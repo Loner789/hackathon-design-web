@@ -2400,6 +2400,7 @@
 }
 .success-story-text__photo {
   display: block;
+  object-fit: cover;
 }
 @media screen and (max-width: 1400px) {
   .success-story-text__photo {
@@ -2417,6 +2418,7 @@
 }
 .success-story-text__photo_mobile {
   width: 300px;
+  object-fit: cover;
 }
 @media screen and (max-width: 768px) {
   .success-story-text__photo_mobile {
@@ -2433,18 +2435,16 @@
   box-sizing: border-box;
   position: relative;
   cursor: default;
-  animation-name: fadeInAndEnlargement;
+  animation-name: fadeIn;
   animation-duration: 1s;
   animation-timing-function: ease-in;
 }
-@keyframes fadeInAndEnlargement {
+@keyframes fadeIn {
   from {
     opacity: 0;
-    width: 50%;
   }
   to {
     opacity: 1;
-    width: 100%;
   }
 }
 @media screen and (max-width: 1110px) {

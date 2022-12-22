@@ -7,6 +7,7 @@
 
   &__photo {
     display: block;
+    object-fit: cover;
 
     @include media_1400 {
       width: 150px;
@@ -24,6 +25,7 @@
 
   &__photo_mobile {
     width: 300px;
+    object-fit: cover;
 
     @include media_768 {
       height: 220px;
@@ -40,7 +42,7 @@
     box-sizing: border-box;
     position: relative;
     cursor: default;
-    @include fadeInAndEnlargement(1s);
+    @include fadeIn(1s);
 
     @include media_1110 {
       padding: 30px 3% 0 5%;

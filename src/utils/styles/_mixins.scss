@@ -81,23 +81,6 @@
 }
 
 /* ANIMATIONS */
-@mixin fadeInAndEnlargement($duration) {
-  @keyframes fadeInAndEnlargement {
-    from {
-      opacity: 0;
-      width: 50%;
-    }
-    to {
-      opacity: 1;
-      width: 100%;
-    }
-  }
-
-  animation-name: fadeInAndEnlargement;
-  animation-duration: $duration;
-  animation-timing-function: ease-in;
-}
-
 @mixin fadeIn($duration) {
   @keyframes fadeIn {
     from {

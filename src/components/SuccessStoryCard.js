@@ -41,8 +41,10 @@ export default class SuccessStoryCard {
   }
 
   _addMobileContent() {
+    const listImg = document.querySelectorAll('.success-story-text__photo_mobile');
+
     if (!this._imgMobile) this._element.classList.add('success-story-text_hidden');
-    if (this._id === 0) {
+    if (this._id === 0 && listImg.length === 0) {
       this._elementImg.classList.add('success-story-text__photo_mobile');
       this._elementImg.src = this._imgMobile;
       this._elementImg.alt = this._name;
@@ -66,37 +68,7 @@ export default class SuccessStoryCard {
 
   _setEventListeners() {
     this._elementImg.addEventListener('click', (evt) => {
-      // eslint-disable-next-line
-      const target = evt.target;
-      const container = target.parentNode;
-      const id = container.getAttribute('id');
-      const textContentList = document.querySelectorAll('.success-story-text__content');
-
-      textContentList.forEach((el) => {
-        // eslint-disable-next-line no-shadow
-        const container = el.parentNode;
-        const elId = container.getAttribute('id');
-        const bottomLine = container.querySelector('.success-story-text__bottom-line');
-
-        if (elId === id) {
-          el.classList.remove('success-story-text__content_hidden');
-          bottomLine.classList.remove('success-story-text__bottom-line_hidden');
-        } else {
-          el.classList.add('success-story-text__content_hidden');
-          bottomLine.classList.add('success-story-text__bottom-line_hidden');
-        }
-      });
-    });
-
-    window.addEventListener('resize', () => {
       if (window.innerWidth <= 1010) {
-        this._addMobileContent();
-      } else {
-        this._elementImg.src = this._img;
-        this._addCardDesktop();
-      }
-
-      this._elementImg.addEventListener('click', (evt) => {
         // eslint-disable-next-line
         const target = evt.target;
         if (target.closest('.success-story-text__photo_mobile')) return;
@@ -121,7 +93,37 @@ export default class SuccessStoryCard {
             currentImg.src = el.img;
           }
         });
-      });
+      } else {
+        // eslint-disable-next-line
+        const target = evt.target;
+        const container = target.parentNode;
+        const id = container.getAttribute('id');
+        const textContentList = document.querySelectorAll('.success-story-text__content');
+
+        textContentList.forEach((el) => {
+          // eslint-disable-next-line no-shadow
+          const container = el.parentNode;
+          const elId = container.getAttribute('id');
+          const bottomLine = container.querySelector('.success-story-text__bottom-line');
+
+          if (elId === id) {
+            el.classList.remove('success-story-text__content_hidden');
+            bottomLine.classList.remove('success-story-text__bottom-line_hidden');
+          } else {
+            el.classList.add('success-story-text__content_hidden');
+            bottomLine.classList.add('success-story-text__bottom-line_hidden');
+          }
+        });
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth <= 1010) {
+        this._addMobileContent();
+      } else {
+        this._elementImg.src = this._img;
+        this._addCardDesktop();
+      }
     });
   }
 
