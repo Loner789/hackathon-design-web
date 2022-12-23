@@ -862,7 +862,7 @@
     font-size: 18px;
   }
 }
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 768px) {
   .card .card__rotate .card__description {
     display: none;
   }
@@ -924,7 +924,7 @@
 }
 .card .card__mobile {
   display: none;
-  padding: 0 8.5%;
+  padding: 55px 8.5% 0;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -935,7 +935,6 @@
   margin: 0;
   color: #fff;
   background-color: #5686e3;
-  padding-top: 55px;
 }
 @media screen and (max-width: 768px) {
   .card .card__mobile {
@@ -946,6 +945,7 @@
   .card .card__mobile {
     font-size: 15px;
     width: 296px;
+    padding-top: 25%;
   }
 }
 .card .card__mobile_visible {
@@ -955,6 +955,11 @@
 .card_tap {
   background-color: #5686e3;
   background-image: none;
+}
+@media screen and (max-width: 600px) {
+  .card_tap {
+    min-height: 244px;
+  }
 }
 
 .card_hidden {

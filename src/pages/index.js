@@ -228,8 +228,7 @@ faqQuestions.forEach((btn) => {
   });
 });
 
-// ------- other -------
-
+// ------- success stories -------
 const createSuccessStoryCard = (data) => {
   const сardsList = new Section(
     {
@@ -570,11 +569,10 @@ positionList.forEach((el) => {
   }
 });
 
+// -------- advantages --------
 advantageList.forEach((card) => {
-  const screenWidth = clientScreenWidth();
-
-  if (screenWidth < 970 && screenWidth >= 600) {
-    card.addEventListener('click', (evt) => {
+  card.addEventListener('click', (evt) => {
+    if (window.innerWidth < 970 && window.innerWidth >= 600) {
       // eslint-disable-next-line prefer-destructuring
       const target = evt.target;
       const rotate = target.querySelector(advantagesRotateSelector);
@@ -601,22 +599,30 @@ advantageList.forEach((card) => {
         rotate.classList.add(advantageRotateTapClass);
         cardMobile.classList.add(advantageCardMobileVisebleClass);
       }
-    });
-  }
+    }
 
-  if (screenWidth < 600) {
-    card.addEventListener('click', (evt) => {
+    if (window.innerWidth < 600) {
       // eslint-disable-next-line prefer-destructuring
       const target = evt.target;
       const rotate = target.querySelector(advantagesRotateSelector);
       const cardMobile = target.querySelector(advantagesCardMobileSelector);
       const id = target.getAttribute('id');
 
-      advantageList.forEach((el) => {
-        if (id !== el.getAttribute('id')) {
-          el.classList.add(advantageCardHidden);
-        }
-      });
+      if (id < 4) {
+        advantageList.forEach((el) => {
+          if (el.getAttribute('id') < 4 && id !== el.getAttribute('id')) {
+            el.classList.add(advantageCardHidden);
+          }
+        });
+      }
+
+      if (id > 3) {
+        advantageList.forEach((el) => {
+          if (el.getAttribute('id') > 3 && id !== el.getAttribute('id')) {
+            el.classList.add(advantageCardHidden);
+          }
+        });
+      }
 
       if (target.closest(`.${advantagesCardTapClass}`)) {
         target.classList.remove(advantagesCardTapClass);
@@ -628,6 +634,6 @@ advantageList.forEach((card) => {
         rotate.classList.add(advantageRotateTapClass);
         cardMobile.classList.add(advantageCardMobileVisebleClass);
       }
-    });
-  }
+    }
+  });
 });

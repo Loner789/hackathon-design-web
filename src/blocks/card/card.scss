@@ -68,7 +68,7 @@
         font-size: 18px;
       }
 
-      @include media_970 {
+      @include media_768 {
         display: none;
       }
     }
@@ -135,7 +135,7 @@
 
   .card__mobile {
     display: none;
-    padding: 0 8.5%;
+    padding: 55px 8.5% 0;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -146,7 +146,6 @@
     margin: 0;
     color: #fff;
     background-color: $blueBackground;
-    padding-top: 55px;
 
     @include media_768 {
       width: 500px;
@@ -155,6 +154,7 @@
     @include media_600 {
       font-size: 15px;
       width: 296px;
+      padding-top: 25%;
     }
   }
 
@@ -166,6 +166,10 @@
 .card_tap {
   background-color: $blueBackground;
   background-image: none;
+
+  @include media_600 {
+    min-height: 244px;
+  }
 }
 
 .card_hidden {
