@@ -87,6 +87,20 @@ const configFormValidator = {
   errorClass: 'form__error_active',
 };
 
+const successStoryMobileSelector = '.success-story-mobile';
+const successStoryTitleSelector = '.success-story-title';
+const successStorySubtitleSelector = '.success-story-subtitle';
+const successStoryMobileTextSelector = '.success-story-mobile__text';
+const successStoryTextParagraphClass = 'success-story-text__paragraph';
+const successStoryTextContentHiddenClass = 'success-story-text__content_hidden';
+const successStoryTextBottomLineHiddenClass = 'success-story-text__bottom-line_hidden';
+const successStoryTextPhotoMobileClass = 'success-story-text__photo_mobile';
+const successStoryTextHiddenClass = 'success-story-text_hidden';
+const successStoryTextContentSelector = '.success-story-text__content';
+const successStoryTextBottomLineSelector = '.success-story-text__bottom-line';
+const successStoryTextPhotoSelector = '.success-story-text__photo';
+const successStoryTextTextSelector = '.success-story-text__text';
+
 export {
   scroller,
   faqBtn,
@@ -145,4 +159,17 @@ export {
   advantagesCardMobileSelector,
   advantageRotateTapClass,
   advantageCardHidden,
+  successStoryMobileSelector,
+  successStoryTitleSelector,
+  successStorySubtitleSelector,
+  successStoryMobileTextSelector,
+  successStoryTextParagraphClass,
+  successStoryTextContentHiddenClass,
+  successStoryTextBottomLineHiddenClass,
+  successStoryTextPhotoMobileClass,
+  successStoryTextHiddenClass,
+  successStoryTextContentSelector,
+  successStoryTextBottomLineSelector,
+  successStoryTextPhotoSelector,
+  successStoryTextTextSelector,
 };
