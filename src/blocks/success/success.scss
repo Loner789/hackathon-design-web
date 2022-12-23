@@ -6,7 +6,7 @@
   padding-bottom: 100px;
   box-sizing: border-box;
 
-  .success__title {
+  &__title {
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
@@ -17,7 +17,7 @@
     text-align: center;
   }
 
-  .success__text {
+  &__text {
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -28,21 +28,21 @@
     text-align: center;
   }
 
-  .success__vector {
+  &__vector {
     position: absolute;
     bottom: 35px;
   }
 
-  .success__vector_left {
+  &__vector_left {
     left: -190px;
   }
 
-  .success__vector_right {
+  &__vector_right {
     right: -190px;
     transform: rotateY(180deg);
   }
-}
 
-.success_visible {
-  display: grid;
+  &_visible {
+    display: grid;
+  }
 }

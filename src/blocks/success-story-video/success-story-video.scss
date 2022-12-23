@@ -34,13 +34,13 @@
       height: 500px;
     }
   }
-}
 
-.success-story-video::after {
-  content: '';
-  box-sizing: border-box;
-  border-bottom: $cardBorder;
-  bottom: 0;
-  right: 0;
-  width: 47%;
+  &::after {
+    content: '';
+    box-sizing: border-box;
+    border-bottom: $cardBorder;
+    bottom: 0;
+    right: 0;
+    width: 47%;
+  }
 }
