@@ -2800,7 +2800,7 @@
   cursor: pointer;
   overflow: scroll;
 }
-.popup .popup__container {
+.popup__container {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
@@ -2814,29 +2814,39 @@
   padding: 90px 190px 60px;
 }
 @media screen and (max-width: 1110px) {
-  .popup .popup__container {
+  .popup__container {
     padding: 50px 100px 30px;
     width: 730px;
   }
 }
 @media screen and (max-width: 768px) {
-  .popup .popup__container {
+  .popup__container {
     padding: 20px 50px 10px;
     width: 450px;
   }
 }
 @media screen and (max-width: 480px) {
-  .popup .popup__container {
+  .popup__container {
     width: 320px;
     padding: 75px 0 40px;
   }
 }
-.popup .popup__container .popup__video {
+.popup__video {
   width: 100%;
   border: none;
   height: 500px;
 }
-.popup .popup__container .popup__title {
+@media screen and (max-width: 768px) {
+  .popup__video {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .popup__video {
+    height: auto;
+  }
+}
+.popup__title {
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
@@ -2847,15 +2857,15 @@
   width: 100%;
 }
 @media screen and (max-width: 768px) {
-  .popup .popup__container .popup__title {
+  .popup__title {
     font-size: 25px;
     width: 300px;
   }
 }
-.popup .popup__container .popup__title_hidden {
+.popup__title_hidden {
   display: none;
 }
-.popup .popup__container .popup__button {
+.popup__button {
   margin-top: 16px;
   background: #4F7FDD;
   border-radius: 8px;
@@ -2872,59 +2882,56 @@
   text-decoration: none;
 }
 @media screen and (max-width: 480px) {
-  .popup .popup__container .popup__button {
+  .popup__button {
     width: 240px;
   }
 }
-.popup .popup__container .popup__button:hover {
+.popup__button:hover {
   cursor: pointer;
   background-color: #2B68DE;
 }
-.popup .popup__container .popup__button:focus {
+.popup__button:focus {
   background-color: #00308C;
 }
-.popup .popup__container .popup__button_disabled {
+.popup__button_disabled {
   background-color: rgba(133, 133, 133, 0.3);
 }
-.popup .popup__container .popup__button:disabled {
+.popup__button:disabled {
   background-color: rgba(133, 133, 133, 0.3);
 }
-.popup .popup__container .popup__button_place_success {
+.popup__button_place_success {
   margin-top: 86px;
 }
-.popup .popup__container .popup__success_visible {
+.popup__success_visible {
   display: block;
 }
-.popup .popup__container_place_video-popup {
+.popup__container_place_video-popup {
   padding: 0;
   width: 900px;
 }
 @media screen and (max-width: 1110px) {
-  .popup .popup__container_place_video-popup {
+  .popup__container_place_video-popup {
     width: 600px;
   }
 }
 @media screen and (max-width: 768px) {
-  .popup .popup__container_place_video-popup {
+  .popup__container_place_video-popup {
     width: 340px;
   }
 }
 @media screen and (max-width: 480px) {
-  .popup .popup__container_place_video-popup {
+  .popup__container_place_video-popup {
     width: 80%;
   }
 }
-
 .popup_opened {
   visibility: visible;
   opacity: 1;
   transition: visibility 0.9s, opacity 0.7s linear;
 }
-
 .popup_background_opacity {
   background-color: rgba(0, 0, 0, 0.9);
 }
-
 .popup_content_video {
   overflow: hidden;
 }
@@ -3835,7 +3842,7 @@
   cursor: pointer;
   overflow: scroll;
 }
-.popup .popup__container {
+.popup__container {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
@@ -3849,29 +3856,39 @@
   padding: 90px 190px 60px;
 }
 @media screen and (max-width: 1110px) {
-  .popup .popup__container {
+  .popup__container {
     padding: 50px 100px 30px;
     width: 730px;
   }
 }
 @media screen and (max-width: 768px) {
-  .popup .popup__container {
+  .popup__container {
     padding: 20px 50px 10px;
     width: 450px;
   }
 }
 @media screen and (max-width: 480px) {
-  .popup .popup__container {
+  .popup__container {
     width: 320px;
     padding: 75px 0 40px;
   }
 }
-.popup .popup__container .popup__video {
+.popup__video {
   width: 100%;
   border: none;
   height: 500px;
 }
-.popup .popup__container .popup__title {
+@media screen and (max-width: 768px) {
+  .popup__video {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .popup__video {
+    height: auto;
+  }
+}
+.popup__title {
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
@@ -3882,15 +3899,15 @@
   width: 100%;
 }
 @media screen and (max-width: 768px) {
-  .popup .popup__container .popup__title {
+  .popup__title {
     font-size: 25px;
     width: 300px;
   }
 }
-.popup .popup__container .popup__title_hidden {
+.popup__title_hidden {
   display: none;
 }
-.popup .popup__container .popup__button {
+.popup__button {
   margin-top: 16px;
   background: #4F7FDD;
   border-radius: 8px;
@@ -3907,59 +3924,56 @@
   text-decoration: none;
 }
 @media screen and (max-width: 480px) {
-  .popup .popup__container .popup__button {
+  .popup__button {
     width: 240px;
   }
 }
-.popup .popup__container .popup__button:hover {
+.popup__button:hover {
   cursor: pointer;
   background-color: #2B68DE;
 }
-.popup .popup__container .popup__button:focus {
+.popup__button:focus {
   background-color: #00308C;
 }
-.popup .popup__container .popup__button_disabled {
+.popup__button_disabled {
   background-color: rgba(133, 133, 133, 0.3);
 }
-.popup .popup__container .popup__button:disabled {
+.popup__button:disabled {
   background-color: rgba(133, 133, 133, 0.3);
 }
-.popup .popup__container .popup__button_place_success {
+.popup__button_place_success {
   margin-top: 86px;
 }
-.popup .popup__container .popup__success_visible {
+.popup__success_visible {
   display: block;
 }
-.popup .popup__container_place_video-popup {
+.popup__container_place_video-popup {
   padding: 0;
   width: 900px;
 }
 @media screen and (max-width: 1110px) {
-  .popup .popup__container_place_video-popup {
+  .popup__container_place_video-popup {
     width: 600px;
   }
 }
 @media screen and (max-width: 768px) {
-  .popup .popup__container_place_video-popup {
+  .popup__container_place_video-popup {
     width: 340px;
   }
 }
 @media screen and (max-width: 480px) {
-  .popup .popup__container_place_video-popup {
+  .popup__container_place_video-popup {
     width: 80%;
   }
 }
-
 .popup_opened {
   visibility: visible;
   opacity: 1;
   transition: visibility 0.9s, opacity 0.7s linear;
 }
-
 .popup_background_opacity {
   background-color: rgba(0, 0, 0, 0.9);
 }
-
 .popup_content_video {
   overflow: hidden;
 }
