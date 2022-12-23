@@ -119,6 +119,18 @@
   .popup__container_place_video-popup {
     padding: 0;
     width: 900px;
+
+    @include media_1110 {
+      width: 600px;
+    }
+
+    @include media_768 {
+      width: 340px;
+    }
+
+    @include media_480 {
+      width: 80%;
+    }
   }
 }
 
@@ -130,4 +142,8 @@
 
 .popup_background_opacity {
   background-color: rgba(0, 0, 0, .9);
+}
+
+.popup_content_video {
+  overflow: hidden;
 }
