@@ -1633,7 +1633,7 @@
   margin: 160px auto 0;
   box-sizing: border-box;
 }
-.duties .duties__list-of-positions {
+.duties__list-of-positions {
   display: grid;
   width: 100%;
   grid-template-columns: repeat(2, 1fr);
@@ -1643,17 +1643,17 @@
   column-gap: 20px;
 }
 @media screen and (max-width: 1280px) {
-  .duties .duties__list-of-positions {
+  .duties__list-of-positions {
     grid-template-columns: 1fr;
     row-gap: 20px;
   }
 }
 @media screen and (max-width: 600px) {
-  .duties .duties__list-of-positions {
+  .duties__list-of-positions {
     margin-top: 50px;
   }
 }
-.duties .duties__button {
+.duties__button {
   text-decoration: none;
   color: #fff;
   font-style: normal;
@@ -1670,17 +1670,17 @@
   padding: 10px 0;
 }
 @media screen and (max-width: 480px) {
-  .duties .duties__button {
+  .duties__button {
     margin-top: 30px;
     width: 300px;
     font-size: 15px;
   }
 }
-.duties .duties__button:hover {
+.duties__button:hover {
   cursor: pointer;
   background-color: #2B68DE;
 }
-.duties .duties__button:focus {
+.duties__button:focus {
   background-color: #00308C;
 }
 

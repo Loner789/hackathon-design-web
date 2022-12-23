@@ -11,7 +11,7 @@
   margin: 160px auto 0;
   box-sizing: border-box;
 
-  .duties__list-of-positions {
+  &__list-of-positions {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(2, 1fr);
@@ -30,7 +30,7 @@
     }
   }
 
-  .duties__button {
+  &__button {
     text-decoration: none;
     color: $lightText;
     font-style: normal;
@@ -53,12 +53,12 @@
     }
   }
 
-  .duties__button:hover {
+  &__button:hover {
     cursor: pointer;
     background-color: #2B68DE;
   }
 
-  .duties__button:focus {
+  &__button:focus {
     background-color: #00308C;
   }
 }
