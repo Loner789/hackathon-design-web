@@ -1056,13 +1056,13 @@
       <h2 class="popup__title">Хочу стать частью команды Яндекс Практикума</h2>
 
       <form class="popup__form form" id="form" novalidate>
-        <label for="name" class="form__label form__label_place_input">
+        <label for="name" class="form__label form__label_input form__label_place_input">
           <input type="text" class="form__item form__item_input" id="name" name="name" minlength="2" maxlength="100"
             required placeholder="ФИО">
         </label>
         <span class="form__name-error form__error-text"></span>
 
-        <label for="email" class="form__label form__label_place_input">
+        <label for="email" class="form__label form__label_input form__label_place_input">
           <input type="email" class="form__item form__item_input" id="email" name="email" minlength="2" maxlength="30"
             required placeholder="Почта">
         </label>
@@ -1081,18 +1081,18 @@
         <label for="aboutYou" class="form__label form__label_place_textarea">
           <p class="form__label-text">
             Почему вы хотите стать частью команды Яндекс.Практикума?
+            <span class="form__required-input">*</span>
           </p>
           <textarea class="form__item form__item_textarea" id="aboutYou" name="aboutYou" minlength="2" maxlength="1000"
             required></textarea>
         </label>
         <span class="form__aboutYou-error form__error-text"></span>
 
-        <label for="cv" class="form__label form__label_place_input form__label_place_url">
+        <label for="cv" class="form__label form__label_input form__label_place_input form__label_place_url">
           <input type="url" class="form__item form__item_input" id="cv" name="cv" minlength="2" maxlength="100" required
             placeholder="Ссылка на резюме">
           <p class="form__label-prompt">
             Пожалуйста, проверьте, что вы открыли достут к документу
-            <span class="form__required-input">*</span>
           </p>
         </label>
         <span class="form__cv-error form__error-text"></span>

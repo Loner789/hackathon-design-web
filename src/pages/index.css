@@ -3646,7 +3646,7 @@
 .form__label:first-child {
   margin-top: 0;
 }
-.form__label_place_input {
+.form__label_input {
   max-width: 418px;
 }
 .form__label_place_textarea {

@@ -12,6 +12,8 @@ export default class PopupWithForm extends Popup {
     this._popupTitle = this._elementPopup.querySelector('.popup__title');
     this._formErrorList = this._formElement.querySelectorAll('.error-text');
     this._formInputList = this._formElement.querySelectorAll('.form__item');
+    this._formItemInputList = this._formElement.querySelectorAll('.form__item_input');
+    this._formTextareaList = this._formElement.querySelectorAll('.form__item_textarea');
   }
 
   _getInputValues() {
@@ -57,6 +59,28 @@ export default class PopupWithForm extends Popup {
 
     this._successButton.addEventListener('click', () => {
       this.close();
+    });
+
+    this._formItemInputList.forEach((el) => {
+      el.addEventListener('focus', () => {
+        el.parentElement.classList.remove('form__label_place_input');
+      });
+
+      el.addEventListener('blur', () => {
+        el.parentElement.classList.add('form__label_place_input');
+      });
+    });
+
+    this._formTextareaList.forEach((el) => {
+      const spanElement = el.parentElement.querySelector('.form__required-input');
+
+      el.addEventListener('focus', () => {
+        spanElement.textContent = '';
+      });
+
+      el.addEventListener('blur', () => {
+        spanElement.textContent = '*';
+      });
     });
   }
 }
