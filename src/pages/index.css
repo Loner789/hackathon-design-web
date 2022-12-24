@@ -2782,7 +2782,7 @@
 @media screen and (max-width: 1110px) {
   .popup__container {
     padding: 50px 100px 30px;
-    width: 730px;
+    width: 720px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2791,10 +2791,14 @@
     width: 450px;
   }
 }
+@media screen and (max-width: 600px) {
+  .popup__container {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 480px) {
   .popup__container {
-    width: 320px;
-    padding: 75px 0 40px;
+    padding: 75px 5px 40px;
   }
 }
 .popup__video {
@@ -2825,7 +2829,7 @@
 @media screen and (max-width: 768px) {
   .popup__title {
     font-size: 25px;
-    width: 300px;
+    max-width: 300px;
   }
 }
 .popup__title_hidden {
@@ -3605,7 +3609,12 @@
 @media screen and (max-width: 480px) {
   .form {
     margin-top: 50px;
-    max-width: 300px;
+    max-width: 280px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .form {
+    max-width: 250px;
   }
 }
 .form__label {
@@ -3621,7 +3630,7 @@
 }
 @media screen and (max-width: 480px) {
   .form__label {
-    max-width: 300px;
+    max-width: 280px;
     font-size: 15px;
   }
 }
@@ -3648,6 +3657,11 @@
 }
 .form__label_input {
   max-width: 418px;
+}
+@media screen and (max-width: 480px) {
+  .form__label_input {
+    max-width: 280px;
+  }
 }
 .form__label_place_textarea {
   margin-top: 0;
@@ -3823,7 +3837,7 @@
 @media screen and (max-width: 1110px) {
   .popup__container {
     padding: 50px 100px 30px;
-    width: 730px;
+    width: 720px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -3832,10 +3846,14 @@
     width: 450px;
   }
 }
+@media screen and (max-width: 600px) {
+  .popup__container {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 480px) {
   .popup__container {
-    width: 320px;
-    padding: 75px 0 40px;
+    padding: 75px 5px 40px;
   }
 }
 .popup__video {
@@ -3866,7 +3884,7 @@
 @media screen and (max-width: 768px) {
   .popup__title {
     font-size: 25px;
-    width: 300px;
+    max-width: 300px;
   }
 }
 .popup__title_hidden {

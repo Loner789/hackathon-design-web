@@ -30,7 +30,7 @@
 
     @include media_1110 {
       padding: 50px 100px 30px;
-      width: 730px;
+      width: 720px;
     }
 
     @include media_768 {
@@ -38,9 +38,12 @@
       width: 450px;
     }
 
+    @include media_600 {
+      width: 100%;
+    }
+
     @include media_480 {
-      width: 320px;
-      padding: 75px 0 40px;
+      padding: 75px 5px 40px;
     }
   }
 
@@ -70,7 +73,7 @@
 
     @include media_768 {
       font-size: 25px;
-      width: 300px;
+      max-width: 300px;
     }
   }
 

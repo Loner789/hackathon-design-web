@@ -80,6 +80,12 @@
   }
 }
 
+@mixin media_360 {
+  @media screen and (max-width: 360px) {
+    @content;
+  }
+}
+
 /* ANIMATIONS */
 @mixin fadeIn($duration) {
   @keyframes fadeIn {
