@@ -27,6 +27,7 @@
     cursor: default;
     justify-items: center;
     padding: 90px 190px 60px;
+    overflow-x: hidden;
 
     @include media_1110 {
       padding: 50px 100px 30px;
@@ -121,6 +122,22 @@
 
   &__button_place_success {
     margin-top: 86px;
+    color: #4F7FDD;
+    background-color: transparent;
+    border: 1px solid #4F7FDD;
+
+    @include media_768 {
+      margin-top: 50px;
+      width: 300px;
+    }
+
+    @include media_360 {
+      width: 260px;
+    }
+  }
+
+  &__button_place_success:hover {
+    background-color: #F3F7FF;
   }
 
   &__success_visible {
