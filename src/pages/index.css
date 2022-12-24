@@ -605,6 +605,11 @@
   max-width: 600px;
   width: 100%;
 }
+@media screen and (max-width: 480px) {
+  .section-title_place_duties {
+    max-width: 270px;
+  }
+}
 
 /* PROPERTIES */
 /* MEDIA QUERIES */
@@ -1653,6 +1658,12 @@
     margin-top: 50px;
   }
 }
+@media screen and (max-width: 480px) {
+  .duties__list-of-positions {
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
+}
 .duties__button {
   text-decoration: none;
   color: #fff;
@@ -1674,6 +1685,11 @@
     margin-top: 30px;
     width: 300px;
     font-size: 15px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .duties__button {
+    width: 280px;
   }
 }
 .duties__button:hover {
@@ -1723,6 +1739,11 @@
     max-width: 260px;
     margin-left: 30px;
     row-gap: 5px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .position .position__list-of-tasks {
+    margin-left: 10px;
   }
 }
 .position .position__list-of-tasks .position__task {
@@ -1990,6 +2011,11 @@
   align-self: flex-start;
   max-width: 600px;
   width: 100%;
+}
+@media screen and (max-width: 480px) {
+  .section-title_place_duties {
+    max-width: 270px;
+  }
 }
 
 .faq {
@@ -2285,6 +2311,11 @@
   align-self: flex-start;
   max-width: 600px;
   width: 100%;
+}
+@media screen and (max-width: 480px) {
+  .section-title_place_duties {
+    max-width: 270px;
+  }
 }
 
 .button-close {
@@ -4121,7 +4152,7 @@
 @media screen and (max-width: 1010px) {
   .success-story-mobile {
     display: grid;
-    max-height: 630px;
+    max-height: 660px;
     height: min-content;
     padding: 20px 0;
     box-sizing: border-box;

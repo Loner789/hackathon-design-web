@@ -28,6 +28,11 @@
     @include media_600 {
       margin-top: 50px;
     }
+
+    @include media_480 {
+      box-sizing: border-box;
+      padding: 0 10px;
+    }
   }
 
   &__button {
@@ -50,6 +55,10 @@
       margin-top: 30px;
       width: 300px;
       font-size: 15px;
+    }
+
+    @include media_360 {
+      width: 280px;
     }
   }
 

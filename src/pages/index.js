@@ -536,12 +536,9 @@ function submitHandlerForm(data) {
   popupWithForm.showBlockSuccess();
 }
 
-const clientScreenWidth = () => document.documentElement.clientWidth;
-
+// -------- duties --------
 positionList.forEach((el) => {
-  const screenWidth = clientScreenWidth();
-
-  if (screenWidth < 768) {
+  if (window.innerWidth < 768) {
     el.addEventListener('click', (evt) => {
       // eslint-disable-next-line prefer-destructuring
       const target = evt.target;

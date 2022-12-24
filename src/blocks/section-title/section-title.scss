@@ -35,5 +35,9 @@
     align-self: flex-start;
     max-width: 600px;
     width: 100%;
+
+    @include media_480 {
+      max-width: 270px;
+    }
   }
 }
