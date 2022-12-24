@@ -3608,7 +3608,7 @@
     max-width: 300px;
   }
 }
-.form .form__label {
+.form__label {
   width: 100%;
   margin-top: 23px;
   font-style: normal;
@@ -3620,12 +3620,12 @@
   position: relative;
 }
 @media screen and (max-width: 480px) {
-  .form .form__label {
+  .form__label {
     max-width: 300px;
     font-size: 15px;
   }
 }
-.form .form__label_place_input::after {
+.form__label_place_input::after {
   content: "*";
   position: absolute;
   top: 0;
@@ -3638,21 +3638,21 @@
   color: #FF3B30;
 }
 @media screen and (max-width: 480px) {
-  .form .form__label_place_input::after {
+  .form__label_place_input::after {
     max-width: 300px;
     font-size: 15px;
   }
 }
-.form .form__label:first-child {
+.form__label:first-child {
   margin-top: 0;
 }
-.form .form__label_place_input {
+.form__label_place_input {
   max-width: 418px;
 }
-.form .form__label_place_textarea {
+.form__label_place_textarea {
   margin-top: 0;
 }
-.form .form__item_textarea {
+.form__item_textarea {
   height: 200px;
   border: 1px solid rgba(133, 133, 133, 0.3);
   border-radius: 6px;
@@ -3660,29 +3660,29 @@
   display: inline-block;
 }
 @media screen and (max-width: 480px) {
-  .form .form__item_textarea {
+  .form__item_textarea {
     max-width: 300px;
     font-size: 15px;
   }
 }
-.form .form__label_place_url {
+.form__label_place_url {
   margin-top: 0;
 }
-.form .form__label_place_checkbox {
+.form__label_place_checkbox {
   margin-top: 0;
 }
-.form .form__label-text_checkbox {
+.form__label-text_checkbox {
   display: grid;
   grid-template-columns: 20px calc(100% - 20px);
   width: 100%;
   column-gap: 10px;
 }
-.form .form__item_checkbox {
+.form__item_checkbox {
   z-index: -1;
   opacity: 0;
   position: absolute;
 }
-.form .form__label-text_checkbox::before {
+.form__label-text_checkbox::before {
   content: "";
   display: inline-block;
   border: 1px solid rgba(133, 133, 133, 0.3);
@@ -3694,22 +3694,22 @@
   background-size: 50% 50%;
   opacity: 1;
 }
-.form .form__item_checkbox:checked + .form__label-text_checkbox::before {
+.form__item_checkbox:checked + .form__label-text_checkbox::before {
   border: 1px solid #37935B;
   background-image: url(../images/custom-checkbox.png);
 }
-.form .form__item {
+.form__item {
   width: 100%;
   padding: 0;
   display: block;
 }
 @media screen and (max-width: 480px) {
-  .form .form__item {
+  .form__item {
     max-width: 300px;
     font-size: 15px;
   }
 }
-.form .form__item_input {
+.form__item_input {
   padding: 0;
   font-weight: 400;
   font-size: 18px;
@@ -3720,10 +3720,10 @@
   height: 37px;
   display: block;
 }
-.form .form__item_input:focus-visible {
+.form__item_input:focus-visible {
   outline: none;
 }
-.form .form__item_input::placeholder {
+.form__item_input::placeholder {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.4;
@@ -3731,7 +3731,7 @@
   mix-blend-mode: normal;
   opacity: 0.3;
 }
-.form .form__label-text {
+.form__label-text {
   padding: 0;
   margin: 0;
   font-weight: 400;
@@ -3740,7 +3740,7 @@
   color: #1E2027;
   mix-blend-mode: normal;
 }
-.form .form__label-text .form__required-input {
+.form__required-input {
   font-family: "YS Text";
   font-style: normal;
   font-weight: 400;
@@ -3748,7 +3748,7 @@
   line-height: 1.56;
   color: #FF3B30;
 }
-.form .form__label-prompt {
+.form__label-prompt {
   margin: 0;
   padding: 0;
   font-style: normal;
@@ -3758,11 +3758,11 @@
   color: #585A5B;
   font-family: "YS Text";
 }
-.form .form__link {
+.form__link {
   color: #1E2027;
   text-decoration: none;
 }
-.form .error-text {
+.form__error-text {
   visibility: hidden;
   font-family: "YS Text";
   font-style: normal;
@@ -3773,19 +3773,18 @@
   position: relative;
   min-block-size: 24px;
 }
-.form .form__error_active {
+.form__error_active {
   visibility: visible;
 }
-.form .form__item_type_error {
+.form__item_type_error {
   border-bottom: 2px solid #FF3B30;
 }
-.form .form__item:focus {
+.form__item:focus {
   border-bottom: 2px solid #1E2027;
 }
-.form .form__item:valid {
+.form__item:valid {
   border-bottom: 2px solid #37935B;
 }
-
 .form_hidden {
   display: none;
 }
