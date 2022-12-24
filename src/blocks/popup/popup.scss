@@ -27,7 +27,7 @@
     cursor: default;
     justify-items: center;
     padding: 90px 190px 60px;
-    overflow-x: hidden;
+    border-radius: 8px;
 
     @include media_1110 {
       padding: 50px 100px 30px;
@@ -46,6 +46,10 @@
     @include media_480 {
       padding: 75px 5px 40px;
     }
+  }
+
+  &__container_overflow_hidden {
+    overflow: hidden;
   }
 
   &__video {

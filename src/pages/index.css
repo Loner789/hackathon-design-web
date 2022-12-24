@@ -2809,7 +2809,7 @@
   cursor: default;
   justify-items: center;
   padding: 90px 190px 60px;
-  overflow-x: hidden;
+  border-radius: 8px;
 }
 @media screen and (max-width: 1110px) {
   .popup__container {
@@ -2832,6 +2832,9 @@
   .popup__container {
     padding: 75px 5px 40px;
   }
+}
+.popup__container_overflow_hidden {
+  overflow: hidden;
 }
 .popup__video {
   width: 100%;
@@ -3882,7 +3885,7 @@
   cursor: default;
   justify-items: center;
   padding: 90px 190px 60px;
-  overflow-x: hidden;
+  border-radius: 8px;
 }
 @media screen and (max-width: 1110px) {
   .popup__container {
@@ -3905,6 +3908,9 @@
   .popup__container {
     padding: 75px 5px 40px;
   }
+}
+.popup__container_overflow_hidden {
+  overflow: hidden;
 }
 .popup__video {
   width: 100%;

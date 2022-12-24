@@ -6,14 +6,15 @@ export default class PopupWithForm extends Popup {
     this._submitHandlerForm = submitHandlerForm;
     this._formElement = this._elementPopup.querySelector(formSelector);
     this._inputsList = Array.from(this._formElement.querySelectorAll('.form__item'));
-    this._buttonForm = this._formElement.querySelector('.popup__button');
+    this._buttonForm = this._formElement.querySelector('.popup__button_submit');
     this._success = this._elementPopup.querySelector('.success');
-    this._successButton = this._success.querySelector('.popup__button');
+    this._successButton = this._success.querySelector('.popup__button_success');
     this._popupTitle = this._elementPopup.querySelector('.popup__title');
     this._formErrorList = this._formElement.querySelectorAll('.error-text');
     this._formInputList = this._formElement.querySelectorAll('.form__item');
     this._formItemInputList = this._formElement.querySelectorAll('.form__item_input');
     this._formTextareaList = this._formElement.querySelectorAll('.form__item_textarea');
+    this._popupContainer = this._elementPopup.querySelector('.popup__container');
   }
 
   _getInputValues() {
@@ -27,6 +28,7 @@ export default class PopupWithForm extends Popup {
   close() {
     super.close();
     this._formElement.reset();
+    this._popupContainer.classList.remove('popup__container_overflow_hidden');
     this._formErrorList.forEach((el) => {
       el.textContent = '';
     });
@@ -55,6 +57,7 @@ export default class PopupWithForm extends Popup {
     this._formElement.addEventListener('submit', (evt) => {
       evt.preventDefault();
       this._submitHandlerForm(this._getInputValues());
+      this._popupContainer.classList.add('popup__container_overflow_hidden');
     });
 
     this._successButton.addEventListener('click', () => {
