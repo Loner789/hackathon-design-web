@@ -1,9 +1,10 @@
 import Popup from './Popup.js';
+import { popupContainerSelector, popupVideoClass } from '../utils/constants';
 
 export default class PopupWithVideo extends Popup {
   constructor(popupSelector) {
     super(popupSelector);
-    this._videoContainer = this._elementPopup.querySelector('.popup__container');
+    this._videoContainer = this._elementPopup.querySelector(popupContainerSelector);
   }
 
   _getVideoId() {
@@ -27,7 +28,7 @@ export default class PopupWithVideo extends Popup {
     iframe.setAttribute('allowfullscreen', '');
     iframe.setAttribute('allow', 'autoplay');
     iframe.setAttribute('src', this._generateURL(id));
-    iframe.classList.add('popup__video');
+    iframe.classList.add(popupVideoClass);
 
     return iframe;
   }
@@ -46,7 +47,7 @@ export default class PopupWithVideo extends Popup {
 
   close() {
     super.close();
-    const iframe = this._elementPopup.querySelector('.popup__video');
+    const iframe = this._elementPopup.querySelector(`.${popupVideoClass}`);
     this._videoContainer.removeChild(iframe);
   }
 }

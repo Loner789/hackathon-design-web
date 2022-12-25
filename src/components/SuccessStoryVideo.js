@@ -1,3 +1,12 @@
+import {
+  videoStoryImageSelector,
+  successStoryTitleSelector,
+  successStorySubtitleSelector,
+  videoStorySelector,
+  videoStoryLinkSelector,
+  videoButtonSelector,
+} from '../utils/constants';
+
 export default class SuccessStoryVideo {
   constructor(data, cardSelector, elementTemplateSelector, handleClickVideo) {
     this._name = data.name;
@@ -28,12 +37,12 @@ export default class SuccessStoryVideo {
 
   generateElementCard() {
     this._element = this._getElementCard();
-    this._elementImg = this._element.querySelector('.video-story__image');
-    this._elementTitle = this._element.querySelector('.success-story-title');
-    this._elementSubtitle = this._element.querySelector('.success-story-subtitle');
-    this._elementVideo = this._element.querySelector('.video-story');
-    this._elementLinkVideo = this._element.querySelector('.video-story__link');
-    this._elementVideoButton = this._element.querySelector('.video-button');
+    this._elementImg = this._element.querySelector(videoStoryImageSelector);
+    this._elementTitle = this._element.querySelector(successStoryTitleSelector);
+    this._elementSubtitle = this._element.querySelector(successStorySubtitleSelector);
+    this._elementVideo = this._element.querySelector(videoStorySelector);
+    this._elementLinkVideo = this._element.querySelector(videoStoryLinkSelector);
+    this._elementVideoButton = this._element.querySelector(videoButtonSelector);
 
     this._elementImg.src = this._img;
     this._elementImg.alt = `Обложка видео ${this._name}`;

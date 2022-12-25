@@ -73,6 +73,16 @@ import {
   advantagesCardMobileSelector,
   advantageRotateTapClass,
   advantageCardHidden,
+  positionSelector,
+  formId,
+  cardLineHoveredClass,
+  successStoryTextSelector,
+  successStoryTextTemplateId,
+  successStoriesTextListSelector,
+  videoPopupId,
+  successStoryVideoSelector,
+  successStoryVideoTemplateId,
+  successStoriesVideoListSelector,
 } from '../utils/constants';
 
 // FUNCTIONS:
@@ -236,15 +246,15 @@ const createSuccessStoryCard = (data) => {
       renderer: (item) => {
         const elementCard = new SuccessStoryCard(
           item,
-          '.success-story-text',
-          '#template-success-story-text',
+          successStoryTextSelector,
+          successStoryTextTemplateId,
           data,
         );
 
         return elementCard.generateElementCard();
       },
     },
-    '.success-stories__text-list',
+    successStoriesTextListSelector,
   );
   сardsList.renderItems();
 
@@ -253,7 +263,7 @@ const createSuccessStoryCard = (data) => {
 
 createSuccessStoryCard(successStoriesText);
 
-const popupWithVideo = new PopupWithVideo('#video-popup');
+const popupWithVideo = new PopupWithVideo(videoPopupId);
 popupWithVideo.setEventListeners();
 
 const createSuccessStoryVideo = (data) => {
@@ -266,14 +276,14 @@ const createSuccessStoryVideo = (data) => {
         };
         const elementVideo = new SuccessStoryVideo(
           item,
-          '.success-story-video',
-          '#template-success-story-video',
+          successStoryVideoSelector,
+          successStoryVideoTemplateId,
           handleClickVideo,
         );
         return elementVideo.generateElementCard();
       },
     },
-    '.success-stories__video-list',
+    successStoriesVideoListSelector,
   );
   videoList.renderItems();
   return videoList;
@@ -478,24 +488,24 @@ vacanciesBtnMenuArrows.forEach((btn) => {
 // EVENT LISTENERS:
 // Animation of the advantage
 cardLinePlaceFirstTopParent.addEventListener('mousemove', () => {
-  cardLinePlaceFirstTop.classList.add('card__line_hovered');
+  cardLinePlaceFirstTop.classList.add(cardLineHoveredClass);
 });
 cardLinePlaceFirstTopParent.addEventListener('mouseout', () => {
-  cardLinePlaceFirstTop.classList.remove('card__line_hovered');
+  cardLinePlaceFirstTop.classList.remove(cardLineHoveredClass);
 });
 
 cardLinePlaceSecondTopParent.addEventListener('mousemove', () => {
-  cardLinePlaceSecondTop.classList.add('card__line_hovered');
+  cardLinePlaceSecondTop.classList.add(cardLineHoveredClass);
 });
 cardLinePlaceSecondTopParent.addEventListener('mouseout', () => {
-  cardLinePlaceSecondTop.classList.remove('card__line_hovered');
+  cardLinePlaceSecondTop.classList.remove(cardLineHoveredClass);
 });
 
 cardLinePlaceSecondBottomParent.addEventListener('mousemove', () => {
-  cardLinePlaceSecondBottom.classList.add('card__line_hovered');
+  cardLinePlaceSecondBottom.classList.add(cardLineHoveredClass);
 });
 cardLinePlaceSecondBottomParent.addEventListener('mouseout', () => {
-  cardLinePlaceSecondBottom.classList.remove('card__line_hovered');
+  cardLinePlaceSecondBottom.classList.remove(cardLineHoveredClass);
 });
 
 // Vacancies listeners
@@ -525,7 +535,7 @@ vacanciesSendBtns.forEach((btn) => {
   });
 });
 
-const FormInPopupValidator = new FormValidator(configFormValidator, '#form');
+const FormInPopupValidator = new FormValidator(configFormValidator, formId);
 FormInPopupValidator.enableValidation();
 
 function submitHandlerForm(data) {
@@ -542,8 +552,8 @@ positionList.forEach((el) => {
     el.addEventListener('click', (evt) => {
       // eslint-disable-next-line prefer-destructuring
       const target = evt.target;
-      const cardPosition = target.parentElement.closest('.position')
-        ? target.parentElement.closest('.position') : el;
+      const cardPosition = target.parentElement.closest(positionSelector)
+        ? target.parentElement.closest(positionSelector) : el;
       const borderElement = cardPosition.querySelector(dutiesBorderSelector);
       const title = cardPosition.querySelector(dutiesTitleSelector);
       const taskListElement = cardPosition.querySelector(dutiesTaskListSelector);
