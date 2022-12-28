@@ -68,7 +68,7 @@ export default class VacancyMenuItem {
       vacancieEduItems.forEach((item) => item.classList.remove('vacancies__btn-menu_active'));
       vacanciesMenuItems.forEach((item) => item.classList.remove('vacancies__menu-item_visible'));
       vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
-      vacanciesEduMenu.classList.remove('vacancies__education-menu_active');
+      // vacanciesEduMenu.classList.remove('vacancies__education-menu_active');
       vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
       vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
       vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
@@ -102,6 +102,17 @@ export default class VacancyMenuItem {
         } else {
           vacanciesNoVac.classList.add('vacancies__novac-wrapper_active');
           vacanciesNotFound.classList.add('vacancies__gallery-wrapper_hide');
+        }
+      }
+
+      if (document.documentElement.clientWidth <= 530) {
+        if (!vacanciesEduMenu.classList.contains('vacancies__education-menu_active')) {
+          vacanciesEduMenu.classList.add('vacancies__education-menu_active');
+          vacanciesMenuItems.forEach((item) => item.classList.add('vacancies__menu-item_visible'));
+        } else {
+          vacanciesEduMenu.classList.remove('vacancies__education-menu_active');
+          vacanciesMenuItems.forEach((item) => item.classList.remove('vacancies__menu-item_visible'));
+          this._element.classList.add('vacancies__menu-item_visible');
         }
       }
     }

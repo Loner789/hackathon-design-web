@@ -103,6 +103,7 @@ export default class VacancyItem {
     this._vacName.addEventListener('click', () => this._handleBtnClick());
     this._shareBtn.addEventListener('click', () => this._handleShareBtnClick());
     this._sendCVBtn.addEventListener('click', () => this._popupWithForm.open());
+    this._vacArrow.addEventListener('click', () => this._handleBtnClick());
   }
 
   generate() {

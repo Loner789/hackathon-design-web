@@ -2047,7 +2047,7 @@
   font-size: 30px;
   line-height: 140%;
   color: #1E2027;
-  width: 906px;
+  width: 88%;
   min-height: 42px;
   margin: 0;
   cursor: pointer;
@@ -2079,7 +2079,7 @@
   color: #585A5B;
   margin: 0;
   margin-bottom: 30px;
-  width: 820px;
+  width: 80%;
   display: none;
 }
 .faq__question-text_active {
@@ -2124,9 +2124,6 @@
     width: calc(100% - 40px);
     max-width: 1024px;
   }
-  .faq__question-text-main {
-    width: 860px;
-  }
   .faq__question-text {
     font-size: 18px;
   }
@@ -2170,13 +2167,11 @@
   .faq__question-text-main {
     font-size: 16px;
     line-height: 26.4px;
-    width: 604px;
     min-height: 26.4px;
   }
   .faq__question-text {
     font-size: 15px;
     margin-bottom: 18px;
-    width: 728px;
   }
 }
 @media screen and (max-width: 320px) {
@@ -2215,7 +2210,6 @@
     font-weight: 500;
     font-size: 15px;
     line-height: 21px;
-    width: 239px;
     min-height: 21px;
   }
   .faq__question-button {
@@ -2956,6 +2950,7 @@
   background-size: contain;
   background-position: center;
   transition: all 0.3s linear;
+  cursor: pointer;
 }
 .vacancies__gallery-arrow_active {
   transform: rotate(90deg);
@@ -2971,6 +2966,7 @@
   color: #1E2027;
   margin: 0 0 0 10px;
   padding: 0;
+  text-align: left;
   cursor: pointer;
 }
 .vacancies__name_active {
@@ -3228,10 +3224,12 @@
     max-width: 1024px;
     min-height: 71px;
     margin: 80px 0 0 0;
+    justify-content: space-evenly;
   }
   .vacancies__btn-menu {
     font-size: 18px;
     line-height: 21px;
+    margin: 0;
   }
   .vacancies__info {
     width: calc(100% - 40px);
@@ -3268,7 +3266,6 @@
   .vacancies__btn-menu {
     font-size: 16px;
     line-height: 22px;
-    margin: 0 30px 0 15px;
   }
   .vacancies__info {
     width: calc(100% - 40px);
@@ -3313,13 +3310,13 @@
     bottom: 85%;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 530px) {
   .vacancies {
-    max-width: 320px;
+    max-width: 530px;
   }
   .vacancies__container {
     width: 100%;
-    max-width: 320px;
+    max-width: 530px;
     margin: 90px 0 90px 0;
   }
   .vacancies__title {
@@ -3331,7 +3328,7 @@
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
-    max-width: 320px;
+    max-width: 530px;
     min-height: 20px;
     height: 40px;
     padding: 15px 0 15px 0;

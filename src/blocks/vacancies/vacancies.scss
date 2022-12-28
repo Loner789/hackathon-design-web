@@ -181,6 +181,7 @@
     background-size: contain;
     background-position: center;
     transition: all .3s linear;
+    cursor: pointer;
 
 
     &_active {
@@ -199,6 +200,7 @@
     color: #1E2027;
     margin: 0 0 0 10px;
     padding: 0;
+    text-align: left;
     cursor: pointer;
 
 
@@ -499,11 +501,13 @@
       max-width: 1024px;
       min-height: 71px;
       margin: 80px 0 0 0;
+      justify-content: space-evenly;
     }
 
     &__btn-menu {
       font-size: 18px;
       line-height: 21px;
+      margin: 0;
     }
 
     &__info {
@@ -550,7 +554,6 @@
     &__btn-menu {
       font-size: 16px;
       line-height: 22px;
-      margin: 0 30px 0 15px;
     }
 
     &__info {
@@ -610,14 +613,14 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 530px) {
 
   .vacancies {
-    max-width: 320px;
+    max-width: 530px;
 
     &__container {
       width: 100%;
-      max-width: 320px;
+      max-width: 530px;
       margin: 90px 0 90px 0;
     }
 
@@ -631,7 +634,7 @@
       flex-direction: column;
       justify-content: flex-start;
       width: 100%;
-      max-width: 320px;
+      max-width: 530px;
       min-height: 20px;
       height: 40px;
       padding: 15px 0 15px 0;

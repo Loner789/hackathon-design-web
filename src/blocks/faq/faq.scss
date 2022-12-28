@@ -73,7 +73,7 @@
     font-size: 30px;
     line-height: 140%;
     color: #1E2027;
-    width: 906px;
+    width: 88%;
     min-height: 42px;
     margin: 0;
     cursor: pointer;
@@ -108,7 +108,7 @@
     color: #585A5B;
     margin: 0;
     margin-bottom: 30px;
-    width: 820px;
+    width: 80%;
     display: none;
 
 
@@ -163,10 +163,6 @@
     &__question-wrapper {
       width: calc(100% - 40px);
       max-width: 1024px;
-    }
-
-    &__question-text-main {
-      width: 860px;
     }
 
     &__question-text {
@@ -224,14 +220,12 @@
     &__question-text-main {
       font-size: 16px;
       line-height: 26.4px;
-      width: 604px;
       min-height: 26.4px;
     }
 
     &__question-text {
       font-size: 15px;
       margin-bottom: 18px;
-      width: 728px;
     }
   }
 }
@@ -281,7 +275,6 @@
       font-weight: 500;
       font-size: 15px;
       line-height: 21px;
-      width: 239px;
       min-height: 21px;
     }
 
