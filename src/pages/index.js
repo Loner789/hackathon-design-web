@@ -16,7 +16,6 @@ import {
   successStoriesVideo,
 } from '../utils/initial-data';
 import {
-  scroller,
   faqBtn,
   faqAnswers,
   faqQuestions,
@@ -76,7 +75,25 @@ import {
 } from '../utils/constants';
 
 // FUNCTIONS:
-// Learning section typing
+
+// --------------------- Common Functions ---------------------
+
+function createSection(dataArray, creationFunction, containerSelector) {
+  const сardsList = new Section(
+    {
+      items: dataArray,
+      renderer: creationFunction,
+    },
+    containerSelector,
+  );
+  сardsList.renderItems();
+
+  return сardsList;
+}
+
+// --------------------- Learning Section Functions ---------------------
+
+// Learning section typing text message
 // eslint-disable-next-line no-unused-vars
 const typed = new Typed('.learning__title-span', {
   strings: learningTitles,
@@ -85,6 +102,8 @@ const typed = new Typed('.learning__title-span', {
   loop: true,
   backDelay: 1000,
 });
+
+// --------------------- Conditions Section Functions ---------------------
 
 // Creation of conditions-card element
 function createConditionsCard(cardData) {
@@ -95,34 +114,19 @@ function createConditionsCard(cardData) {
     .cloneNode(true);
   const [firstPart, ...rest] = title.split(' ');
 
+  cardElement.querySelector('.conditions__card-title_side_left').textContent =
+    firstPart;
+  cardElement.querySelector('.conditions__card-title_side_right').textContent =
+    rest.join(' ');
   cardElement.querySelector(
-    '.conditions__card-title_side_left',
-  ).textContent = firstPart;
-  cardElement.querySelector(
-    '.conditions__card-title_side_right',
-  ).textContent = rest.join(' ');
-  cardElement.querySelector(
-    '.conditions__card-image',
+    '.conditions__card-image'
   ).style.backgroundImage = `url(${image})`;
   cardElement.querySelector('.conditions__card-text').textContent = text;
 
   return cardElement;
 }
 
-// Render function
-function renderItems(item, block) {
-  block.append(item);
-}
-
-// Inserting data from the initial arrays
-function loadInitialData(data, createFunction, node) {
-  data.forEach((item) => {
-    const element = createFunction(item);
-    renderItems(element, node);
-  });
-}
-
-loadInitialData(conditionsCards, createConditionsCard, scroller);
+createSection(conditionsCards, createConditionsCard, '.conditions__slider');
 
 // Conditions section scroller
 gsap.registerPlugin(ScrollTrigger);
@@ -137,9 +141,9 @@ gsap.to(cards, {
     start: 'top top',
     pin: true,
     scrub: true,
-    snap: 1 / (cards.length - 1),
+    snap: false,
     // eslint-disable-next-line prefer-template
-    end: () => '+=' + (document.querySelector('.conditions__slider').offsetWidth),
+    end: () => '+=' + document.querySelector('.conditions__slider').offsetWidth,
   },
 });
 
@@ -199,11 +203,19 @@ faqBtn.forEach((btn) => {
     const faqCloseBtn = qblock.querySelector('.faq__question-button');
 
     if (faqCloseBtn.classList.contains('faq__question-button_active')) {
-      faqAnswers.forEach((item) => item.classList.remove('faq__question-text_active'));
-      faqBtn.forEach((item) => item.classList.remove('faq__question-button_active'));
+      faqAnswers.forEach((item) =>
+        item.classList.remove('faq__question-text_active')
+      );
+      faqBtn.forEach((item) =>
+        item.classList.remove('faq__question-button_active')
+      );
     } else {
-      faqAnswers.forEach((item) => item.classList.remove('faq__question-text_active'));
-      faqBtn.forEach((item) => item.classList.remove('faq__question-button_active'));
+      faqAnswers.forEach((item) =>
+        item.classList.remove('faq__question-text_active')
+      );
+      faqBtn.forEach((item) =>
+        item.classList.remove('faq__question-button_active')
+      );
       faqAnswer.classList.add('faq__question-text_active');
       faqCloseBtn.classList.add('faq__question-button_active');
     }
@@ -217,11 +229,19 @@ faqQuestions.forEach((btn) => {
     const faqCloseBtn = qblock.querySelector('.faq__question-button');
 
     if (faqCloseBtn.classList.contains('faq__question-button_active')) {
-      faqAnswers.forEach((item) => item.classList.remove('faq__question-text_active'));
-      faqBtn.forEach((item) => item.classList.remove('faq__question-button_active'));
+      faqAnswers.forEach((item) =>
+        item.classList.remove('faq__question-text_active')
+      );
+      faqBtn.forEach((item) =>
+        item.classList.remove('faq__question-button_active')
+      );
     } else {
-      faqAnswers.forEach((item) => item.classList.remove('faq__question-text_active'));
-      faqBtn.forEach((item) => item.classList.remove('faq__question-button_active'));
+      faqAnswers.forEach((item) =>
+        item.classList.remove('faq__question-text_active')
+      );
+      faqBtn.forEach((item) =>
+        item.classList.remove('faq__question-button_active')
+      );
       faqAnswer.classList.add('faq__question-text_active');
       faqCloseBtn.classList.add('faq__question-button_active');
     }
@@ -239,13 +259,13 @@ const createSuccessStoryCard = (data) => {
           item,
           '.success-story-text',
           '#template-success-story-text',
-          data,
+          data
         );
 
         return elementCard.generateElementCard();
       },
     },
-    '.success-stories__text-list',
+    '.success-stories__text-list'
   );
   сardsList.renderItems();
 
@@ -269,12 +289,12 @@ const createSuccessStoryVideo = (data) => {
           item,
           '.success-story-video',
           '#template-success-story-video',
-          handleClickVideo,
+          handleClickVideo
         );
         return elementVideo.generateElementCard();
       },
     },
-    '.success-stories__video-list',
+    '.success-stories__video-list'
   );
   videoList.renderItems();
   return videoList;
@@ -290,8 +310,12 @@ vacancieNameBtn.forEach((btn) => {
     const vacName = vacItem.querySelector('.vacancies__name');
     const vacArrow = vacItem.querySelector('.vacancies__gallery-arrow');
 
-    vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
-    vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
+    vacancieNameBtn.forEach((item) =>
+      item.classList.remove('vacancies__name_active')
+    );
+    vacGalleryArrows.forEach((item) =>
+      item.classList.remove('vacancies__gallery-arrow_active')
+    );
     if (vacName.classList.contains('vacancies__name_active')) {
       vacName.classList.remove('vacancies__name_active');
       vacArrow.classList.remove('vacancies__gallery-arrow_active');
@@ -300,28 +324,44 @@ vacancieNameBtn.forEach((btn) => {
       vacArrow.classList.add('vacancies__gallery-arrow_active');
     }
     if (vacDescription.classList.contains('vacancies__description_active')) {
-      vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+      vacanciesDescriptionItems.forEach((item) =>
+        item.classList.remove('vacancies__description_active')
+      );
       vacName.classList.remove('vacancies__name_active');
       vacArrow.classList.remove('vacancies__gallery-arrow_active');
     } else {
-      vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
+      vacanciesDescriptionItems.forEach((item) =>
+        item.classList.remove('vacancies__description_active')
+      );
       vacDescription.classList.add('vacancies__description_active');
     }
   });
 });
 
 const activateVacanciesProphItem = (menuItems, menuItemElement) => {
-  menuItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
-  vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
+  menuItems.forEach((item) =>
+    item.classList.remove('vacancies__proph-btn-menu_active')
+  );
+  vacanciesGallaries.forEach((item) =>
+    item.classList.remove('vacancies__gallery_active')
+  );
   menuItemElement.classList.add('vacancies__proph-btn-menu_active');
 };
 
 const handleVacSenseyProphItemClick = (evt) => {
   activateVacanciesProphItem(vacancieProphItems, evt.target);
-  vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
-  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
-  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
-  if (vacancieEduItemProgramming.classList.contains('vacancies__btn-menu_active')) {
+  vacanciesDescriptionItems.forEach((item) =>
+    item.classList.remove('vacancies__description_active')
+  );
+  vacancieNameBtn.forEach((item) =>
+    item.classList.remove('vacancies__name_active')
+  );
+  vacGalleryArrows.forEach((item) =>
+    item.classList.remove('vacancies__gallery-arrow_active')
+  );
+  if (
+    vacancieEduItemProgramming.classList.contains('vacancies__btn-menu_active')
+  ) {
     vacancieSenseyGallaryProg.classList.add('vacancies__gallery_active');
   } else {
     vacancieSenseyGallaryAnalitics.classList.add('vacancies__gallery_active');
@@ -330,10 +370,18 @@ const handleVacSenseyProphItemClick = (evt) => {
 
 const handleVacReviewerProphItemClick = (evt) => {
   activateVacanciesProphItem(vacancieProphItems, evt.target);
-  vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
-  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
-  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
-  if (vacancieEduItemProgramming.classList.contains('vacancies__btn-menu_active')) {
+  vacanciesDescriptionItems.forEach((item) =>
+    item.classList.remove('vacancies__description_active')
+  );
+  vacancieNameBtn.forEach((item) =>
+    item.classList.remove('vacancies__name_active')
+  );
+  vacGalleryArrows.forEach((item) =>
+    item.classList.remove('vacancies__gallery-arrow_active')
+  );
+  if (
+    vacancieEduItemProgramming.classList.contains('vacancies__btn-menu_active')
+  ) {
     vacancieReviewerGallaryProg.classList.add('vacancies__gallery_active');
   } else {
     vacancieReviewerGallaryAnalitics.classList.add('vacancies__gallery_active');
@@ -341,8 +389,12 @@ const handleVacReviewerProphItemClick = (evt) => {
 };
 
 const activateVacanciesEducationItem = (menuItems, menuItemElement) => {
-  menuItems.forEach((item) => item.classList.remove('vacancies__btn-menu_active'));
-  vacanciesMenuItems.forEach((item) => item.classList.remove('vacancies__menu-item_visible'));
+  menuItems.forEach((item) =>
+    item.classList.remove('vacancies__btn-menu_active')
+  );
+  vacanciesMenuItems.forEach((item) =>
+    item.classList.remove('vacancies__menu-item_visible')
+  );
   menuItemElement.classList.add('vacancies__btn-menu_active');
   const vacEdMenuItem = menuItemElement.closest('.vacancies__menu-item');
   vacEdMenuItem.classList.add('vacancies__menu-item_visible');
@@ -352,68 +404,118 @@ const activateVacanciesEducationItem = (menuItems, menuItemElement) => {
 const handleDesignBtnClick = (evt) => {
   activateVacanciesEducationItem(vacancieEduItems, evt.target);
   vacancieProphItems.forEach((item) => (item.disabled = true));
-  vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
-  vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
+  vacanciesGallaries.forEach((item) =>
+    item.classList.remove('vacancies__gallery_active')
+  );
+  vacancieProphItems.forEach((item) =>
+    item.classList.remove('vacancies__proph-btn-menu_active')
+  );
   vacancieProphSensey.classList.add('vacancies__proph-btn-menu_active');
   vacanciesNoVac.classList.add('vacancies__novac-wrapper_active');
   vacanciesNotFound.classList.add('vacancies__gallery-wrapper_hide');
-  vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
-  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
-  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
+  vacanciesDescriptionItems.forEach((item) =>
+    item.classList.remove('vacancies__description_active')
+  );
+  vacancieNameBtn.forEach((item) =>
+    item.classList.remove('vacancies__name_active')
+  );
+  vacGalleryArrows.forEach((item) =>
+    item.classList.remove('vacancies__gallery-arrow_active')
+  );
 };
 
 const handleProgrammingBtnClick = (evt) => {
   activateVacanciesEducationItem(vacancieEduItems, evt.target);
   vacancieProphItems.forEach((item) => (item.disabled = false));
-  vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
-  vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
+  vacancieProphItems.forEach((item) =>
+    item.classList.remove('vacancies__proph-btn-menu_active')
+  );
+  vacanciesGallaries.forEach((item) =>
+    item.classList.remove('vacancies__gallery_active')
+  );
   vacancieProphSensey.classList.add('vacancies__proph-btn-menu_active');
   vacancieSenseyGallaryProg.classList.add('vacancies__gallery_active');
   vacanciesNoVac.classList.remove('vacancies__novac-wrapper_active');
   vacanciesNotFound.classList.remove('vacancies__gallery-wrapper_hide');
-  vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
-  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
-  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
+  vacanciesDescriptionItems.forEach((item) =>
+    item.classList.remove('vacancies__description_active')
+  );
+  vacancieNameBtn.forEach((item) =>
+    item.classList.remove('vacancies__name_active')
+  );
+  vacGalleryArrows.forEach((item) =>
+    item.classList.remove('vacancies__gallery-arrow_active')
+  );
 };
 
 const handleAnaliticsBtnClick = (evt) => {
   activateVacanciesEducationItem(vacancieEduItems, evt.target);
   vacancieProphItems.forEach((item) => (item.disabled = false));
-  vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
-  vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
+  vacancieProphItems.forEach((item) =>
+    item.classList.remove('vacancies__proph-btn-menu_active')
+  );
+  vacanciesGallaries.forEach((item) =>
+    item.classList.remove('vacancies__gallery_active')
+  );
   vacancieProphSensey.classList.add('vacancies__proph-btn-menu_active');
   vacancieSenseyGallaryAnalitics.classList.add('vacancies__gallery_active');
   vacanciesNoVac.classList.remove('vacancies__novac-wrapper_active');
   vacanciesNotFound.classList.remove('vacancies__gallery-wrapper_hide');
-  vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
-  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
-  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
+  vacanciesDescriptionItems.forEach((item) =>
+    item.classList.remove('vacancies__description_active')
+  );
+  vacancieNameBtn.forEach((item) =>
+    item.classList.remove('vacancies__name_active')
+  );
+  vacGalleryArrows.forEach((item) =>
+    item.classList.remove('vacancies__gallery-arrow_active')
+  );
 };
 
 const handleMarketingBtnClick = (evt) => {
   activateVacanciesEducationItem(vacancieEduItems, evt.target);
   vacancieProphItems.forEach((item) => (item.disabled = true));
-  vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
-  vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
+  vacanciesGallaries.forEach((item) =>
+    item.classList.remove('vacancies__gallery_active')
+  );
+  vacancieProphItems.forEach((item) =>
+    item.classList.remove('vacancies__proph-btn-menu_active')
+  );
   vacancieProphSensey.classList.add('vacancies__proph-btn-menu_active');
   vacanciesNoVac.classList.add('vacancies__novac-wrapper_active');
   vacanciesNotFound.classList.add('vacancies__gallery-wrapper_hide');
-  vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
-  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
-  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
+  vacanciesDescriptionItems.forEach((item) =>
+    item.classList.remove('vacancies__description_active')
+  );
+  vacancieNameBtn.forEach((item) =>
+    item.classList.remove('vacancies__name_active')
+  );
+  vacGalleryArrows.forEach((item) =>
+    item.classList.remove('vacancies__gallery-arrow_active')
+  );
 };
 
 const handleManagementBtnClick = (evt) => {
   activateVacanciesEducationItem(vacancieEduItems, evt.target);
   vacancieProphItems.forEach((item) => (item.disabled = true));
-  vacanciesGallaries.forEach((item) => item.classList.remove('vacancies__gallery_active'));
-  vacancieProphItems.forEach((item) => item.classList.remove('vacancies__proph-btn-menu_active'));
+  vacanciesGallaries.forEach((item) =>
+    item.classList.remove('vacancies__gallery_active')
+  );
+  vacancieProphItems.forEach((item) =>
+    item.classList.remove('vacancies__proph-btn-menu_active')
+  );
   vacancieProphSensey.classList.add('vacancies__proph-btn-menu_active');
   vacanciesNoVac.classList.add('vacancies__novac-wrapper_active');
   vacanciesNotFound.classList.add('vacancies__gallery-wrapper_hide');
-  vacanciesDescriptionItems.forEach((item) => item.classList.remove('vacancies__description_active'));
-  vacancieNameBtn.forEach((item) => item.classList.remove('vacancies__name_active'));
-  vacGalleryArrows.forEach((item) => item.classList.remove('vacancies__gallery-arrow_active'));
+  vacanciesDescriptionItems.forEach((item) =>
+    item.classList.remove('vacancies__description_active')
+  );
+  vacancieNameBtn.forEach((item) =>
+    item.classList.remove('vacancies__name_active')
+  );
+  vacGalleryArrows.forEach((item) =>
+    item.classList.remove('vacancies__gallery-arrow_active')
+  );
 };
 
 function copy() {
@@ -427,12 +529,18 @@ vacanciesShareBtns.forEach((btn) => {
     const vacPopupShare = vacGalWrap.querySelector('.vacancies__popup-share');
 
     if (!btn.classList.contains('vacancies__share-btn_active')) {
-      vacanciesShareBtns.forEach((item) => item.classList.remove('vacancies__share-btn_active'));
+      vacanciesShareBtns.forEach((item) =>
+        item.classList.remove('vacancies__share-btn_active')
+      );
       btn.classList.add('vacancies__share-btn_active');
       if (!vacPopupShare.classList.contains('vacancies__popup-share_active')) {
         vacPopupShare.innerHTML = vacanciesPopupShareFullCode;
-        const vacanciesCopyBtn = vacGalWrap.querySelector('.vacancies__popup-copy-icon');
-        const vacanciesPopupLink = vacGalWrap.querySelector('.vacancies__popup-link');
+        const vacanciesCopyBtn = vacGalWrap.querySelector(
+          '.vacancies__popup-copy-icon'
+        );
+        const vacanciesPopupLink = vacGalWrap.querySelector(
+          '.vacancies__popup-link'
+        );
         const handleCopyShareBtnClick = () => {
           vacanciesCopyBtn.classList.add('vacancies__popup-copy-icon_done');
           vacanciesPopupLink.classList.add('vacancies__popup-link_active');
@@ -443,15 +551,22 @@ vacanciesShareBtns.forEach((btn) => {
         vacanciesCopyLink.addEventListener('click', handleCopyShareBtnClick);
         vacPopupShare.classList.add('vacancies__popup-share_active');
         document.addEventListener('mousedown', (evt) => {
-          if (!evt.target.classList.contains('vacancies__popup-share')
-          && !evt.target.classList.contains('vacancies__popup-list')
-          && !evt.target.classList.contains('vacancies__popup-link-wrapper')
-          && !evt.target.classList.contains('vacancies__popup-copy-icon')
-          && !evt.target.classList.contains('vacancies__popup-link')
-          && !evt.target.classList.contains('vacancies__share-btn')) {
-            vacanciesCopyLink.removeEventListener('click', handleCopyShareBtnClick);
+          if (
+            !evt.target.classList.contains('vacancies__popup-share') &&
+            !evt.target.classList.contains('vacancies__popup-list') &&
+            !evt.target.classList.contains('vacancies__popup-link-wrapper') &&
+            !evt.target.classList.contains('vacancies__popup-copy-icon') &&
+            !evt.target.classList.contains('vacancies__popup-link') &&
+            !evt.target.classList.contains('vacancies__share-btn')
+          ) {
+            vacanciesCopyLink.removeEventListener(
+              'click',
+              handleCopyShareBtnClick
+            );
             vacPopupShare.classList.remove('vacancies__popup-share_active');
-            vacanciesCopyBtn.classList.remove('vacancies__popup-copy-icon_done');
+            vacanciesCopyBtn.classList.remove(
+              'vacancies__popup-copy-icon_done'
+            );
             vacanciesPopupLink.classList.remove('vacancies__popup-link_active');
             btn.classList.remove('vacancies__share-btn_active');
             vacPopupShare.innerHTML = vacanciesPopupShareEmptyCode;
@@ -462,7 +577,9 @@ vacanciesShareBtns.forEach((btn) => {
         vacPopupShare.innerHTML = vacanciesPopupShareEmptyCode;
       }
     } else {
-      vacanciesShareBtns.forEach((item) => item.classList.remove('vacancies__share-btn_active'));
+      vacanciesShareBtns.forEach((item) =>
+        item.classList.remove('vacancies__share-btn_active')
+      );
       vacPopupShare.classList.remove('vacancies__popup-share_active');
       vacPopupShare.innerHTML = vacanciesPopupShareEmptyCode;
     }
@@ -471,7 +588,9 @@ vacanciesShareBtns.forEach((btn) => {
 
 vacanciesBtnMenuArrows.forEach((btn) => {
   btn.addEventListener('click', () => {
-    vacanciesMenuItems.forEach((item) => item.classList.add('vacancies__menu-item_visible'));
+    vacanciesMenuItems.forEach((item) =>
+      item.classList.add('vacancies__menu-item_visible')
+    );
     vacanciesEduMenu.classList.add('vacancies__education-menu_active');
   });
 });
@@ -506,13 +625,20 @@ vacancieEduItemAnalitics.addEventListener('click', handleAnaliticsBtnClick);
 vacancieEduItemMarketing.addEventListener('click', handleMarketingBtnClick);
 vacancieEduItemManagement.addEventListener('click', handleManagementBtnClick);
 vacancieProphSensey.addEventListener('click', handleVacSenseyProphItemClick);
-vacancieProphReviewer.addEventListener('click', handleVacReviewerProphItemClick);
+vacancieProphReviewer.addEventListener(
+  'click',
+  handleVacReviewerProphItemClick
+);
 
 /* button for the oppening popup */
 const button = document.querySelector('.vacancies__notfound-vac-btn');
 
 // eslint-disable-next-line no-use-before-define
-const popupWithForm = new PopupWithForm(popupSelector, submitHandlerForm, formSelector);
+const popupWithForm = new PopupWithForm(
+  popupSelector,
+  submitHandlerForm,
+  formSelector
+);
 popupWithForm.setEventListeners();
 
 /* to open popup */
@@ -547,10 +673,13 @@ positionList.forEach((el) => {
       // eslint-disable-next-line prefer-destructuring
       const target = evt.target;
       const cardPosition = target.parentElement.closest('.position')
-        ? target.parentElement.closest('.position') : el;
+        ? target.parentElement.closest('.position')
+        : el;
       const borderElement = cardPosition.querySelector(dutiesBorderSelector);
       const title = cardPosition.querySelector(dutiesTitleSelector);
-      const taskListElement = cardPosition.querySelector(dutiesTaskListSelector);
+      const taskListElement = cardPosition.querySelector(
+        dutiesTaskListSelector
+      );
       const taskList = cardPosition.querySelectorAll(dutiesTaskSelector);
 
       if (cardPosition.closest(`.${dutiesTapClass}`)) {
@@ -558,13 +687,17 @@ positionList.forEach((el) => {
         title.classList.remove(dutiesTitleTapClass);
         cardPosition.classList.remove(dutiesTapClass);
         taskListElement.classList.remove(dutiesTaskListTapClass);
-        taskList.forEach((element) => element.classList.remove(dutiesTaskTapClass));
+        taskList.forEach((element) =>
+          element.classList.remove(dutiesTaskTapClass)
+        );
       } else {
         borderElement.classList.add(dutiesBorderTapClass);
         title.classList.add(dutiesTitleTapClass);
         cardPosition.classList.add(dutiesTapClass);
         taskListElement.classList.add(dutiesTaskListTapClass);
-        taskList.forEach((element) => element.classList.add(dutiesTaskTapClass));
+        taskList.forEach((element) =>
+          element.classList.add(dutiesTaskTapClass)
+        );
       }
     });
   }
@@ -580,8 +713,6 @@ advantageList.forEach((card) => {
       const rotate = target.querySelector(advantagesRotateSelector);
       const cardMobile = target.querySelector(advantagesCardMobileSelector);
       const id = target.getAttribute('id');
-
-
 
       advantageList.forEach((el) => {
         if (id !== el.getAttribute('id')) {

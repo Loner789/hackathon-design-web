@@ -1,5 +1,4 @@
 // CONSTANTS:
-const scroller = document.querySelector('.conditions__slider');
 const faq = document.querySelector('.faq');
 const faqBtn = faq.querySelectorAll('.faq__question-button');
 const faqAnswers = faq.querySelectorAll('.faq__question-text');
@@ -88,7 +87,6 @@ const configFormValidator = {
 };
 
 export {
-  scroller,
   faqBtn,
   faqAnswers,
   faqQuestions,

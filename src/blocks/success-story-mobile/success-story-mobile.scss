@@ -31,7 +31,7 @@
 .success-story-mobile::after {
   content: '';
   box-sizing: border-box;
-  border-bottom: $cardBorder;
+  // border-bottom: $cardBorder;
   height: 100%;
   width: 47%;
   bottom: 0;
@@ -42,7 +42,7 @@
 .success-story-mobile::before {
   content: '';
   box-sizing: border-box;
-  border-bottom: $cardBorder;
+  // border-bottom: $cardBorder;
   width: 20%;
   bottom: 0;
   right: 8%;
