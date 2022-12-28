@@ -58,6 +58,34 @@ const cardLinePlaceSecondBottomParent = cardLinePlaceSecondBottom.parentNode;
 
 const popupSelector = '#popup-with-form';
 const formSelector = '.popup__form';
+const formId = '#form';
+const configFormValidator = {
+  inputSelector: '.form__item',
+  submitButtonSelector: '.popup__button',
+  inactiveButtonClass: 'popup__button_disabled',
+  inputErrorClass: 'form__item_type_error',
+  errorClass: 'form__error_active',
+};
+const buttonCloseClass = 'button-close';
+const popupOpenedClass = 'popup_opened';
+const formInputSelector = '.form__item';
+const popupButtonSubmitSelector = '.popup__button_submit';
+const successSelector = '.success';
+const popupButtonSuccessSelector = '.popup__button_success';
+const popupTitleSelector = '.popup__title';
+const errorTextSelector = '.error-text';
+const formItemInputSelector = '.form__item_input';
+const formItemTextareaSelector = '.form__item_textarea';
+const popupContainerSelector = '.popup__container';
+const popupContainerOverflowHiddenClass = 'popup__container_overflow_hidden';
+const formItemTypeErrorClass = 'form__item_type_error';
+const popupTitleHiddenClass = 'popup__title_hidden';
+const formHiddenClass = 'form_hidden';
+const successVisibleClass = 'success_visible';
+const formLabelPlaceInputClass = 'form__label_place_input';
+const formRequiredInputSelector = '.form__required-input';
+const popupVideoClass = 'popup__video';
+
 const dutiesBorderTapClass = 'position__border_tap';
 const dutiesTitleTapClass = 'position__title_tap';
 const dutiesTapClass = 'position_tap';
@@ -67,24 +95,42 @@ const dutiesTitleSelector = '.position__title';
 const dutiesTaskListSelector = '.position__list-of-tasks';
 const dutiesTaskTapClass = 'position__task_tap';
 const dutiesTaskSelector = '.position__task';
-
+const positionSelector = '.position';
 const positionList = document.querySelectorAll('.position');
+
 const advantagesCardTapClass = 'card_tap';
 const advantageCardMobileVisebleClass = 'card__mobile_visible';
 const advantagesRotateSelector = '.card__rotate';
 const advantagesCardMobileSelector = '.card__mobile';
 const advantageRotateTapClass = 'card__rotate_tap';
 const advantageCardHidden = 'card_hidden';
-
 const advantageList = document.querySelectorAll('.card');
+const cardLineHoveredClass = 'card__line_hovered';
 
-const configFormValidator = {
-  inputSelector: '.form__item',
-  submitButtonSelector: '.popup__button',
-  inactiveButtonClass: 'popup__button_disabled',
-  inputErrorClass: 'form__item_type_error',
-  errorClass: 'form__error_active',
-};
+const successStoryMobileSelector = '.success-story-mobile';
+const successStoryTitleSelector = '.success-story-title';
+const successStorySubtitleSelector = '.success-story-subtitle';
+const successStoryMobileTextSelector = '.success-story-mobile__text';
+const successStoryTextParagraphClass = 'success-story-text__paragraph';
+const successStoryTextContentHiddenClass = 'success-story-text__content_hidden';
+const successStoryTextBottomLineHiddenClass = 'success-story-text__bottom-line_hidden';
+const successStoryTextPhotoMobileClass = 'success-story-text__photo_mobile';
+const successStoryTextHiddenClass = 'success-story-text_hidden';
+const successStoryTextContentSelector = '.success-story-text__content';
+const successStoryTextBottomLineSelector = '.success-story-text__bottom-line';
+const successStoryTextPhotoSelector = '.success-story-text__photo';
+const successStoryTextTextSelector = '.success-story-text__text';
+const successStoryTextSelector = '.success-story-text';
+const successStoryTextTemplateId = '#template-success-story-text';
+const successStoriesTextListSelector = '.success-stories__text-list';
+const videoPopupId = '#video-popup';
+const successStoryVideoSelector = '.success-story-video';
+const successStoryVideoTemplateId = '#template-success-story-video';
+const successStoriesVideoListSelector = '.success-stories__video-list';
+const videoStoryImageSelector = '.video-story__image';
+const videoStorySelector = '.video-story';
+const videoStoryLinkSelector = '.video-story__link';
+const videoButtonSelector = '.video-button';
 
 export {
   faqBtn,
@@ -143,4 +189,50 @@ export {
   advantagesCardMobileSelector,
   advantageRotateTapClass,
   advantageCardHidden,
+  successStoryMobileSelector,
+  successStoryTitleSelector,
+  successStorySubtitleSelector,
+  successStoryMobileTextSelector,
+  successStoryTextParagraphClass,
+  successStoryTextContentHiddenClass,
+  successStoryTextBottomLineHiddenClass,
+  successStoryTextPhotoMobileClass,
+  successStoryTextHiddenClass,
+  successStoryTextContentSelector,
+  successStoryTextBottomLineSelector,
+  successStoryTextPhotoSelector,
+  successStoryTextTextSelector,
+  positionSelector,
+  formId,
+  cardLineHoveredClass,
+  successStoryTextSelector,
+  successStoryTextTemplateId,
+  successStoriesTextListSelector,
+  videoPopupId,
+  successStoryVideoSelector,
+  successStoryVideoTemplateId,
+  successStoriesVideoListSelector,
+  buttonCloseClass,
+  popupOpenedClass,
+  formInputSelector,
+  popupButtonSubmitSelector,
+  successSelector,
+  popupButtonSuccessSelector,
+  popupTitleSelector,
+  errorTextSelector,
+  formItemInputSelector,
+  formItemTextareaSelector,
+  popupContainerSelector,
+  popupContainerOverflowHiddenClass,
+  formItemTypeErrorClass,
+  popupTitleHiddenClass,
+  formHiddenClass,
+  successVisibleClass,
+  formLabelPlaceInputClass,
+  formRequiredInputSelector,
+  popupVideoClass,
+  videoStoryImageSelector,
+  videoStorySelector,
+  videoStoryLinkSelector,
+  videoButtonSelector,
 };

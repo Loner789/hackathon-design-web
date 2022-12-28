@@ -11,7 +11,7 @@
   margin: 0;
   box-sizing: border-box;
 
-  .duties__list-of-positions {
+  &__list-of-positions {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(2, 1fr);
@@ -28,9 +28,14 @@
     @include media_600 {
       margin-top: 50px;
     }
+
+    @include media_480 {
+      box-sizing: border-box;
+      padding: 0 10px;
+    }
   }
 
-  .duties__button {
+  &__button {
     text-decoration: none;
     color: $lightText;
     font-style: normal;
@@ -51,14 +56,18 @@
       width: 300px;
       font-size: 15px;
     }
+
+    @include media_360 {
+      width: 280px;
+    }
   }
 
-  .duties__button:hover {
+  &__button:hover {
     cursor: pointer;
     background-color: #2B68DE;
   }
 
-  .duties__button:focus {
+  &__button:focus {
     background-color: #00308C;
   }
 }

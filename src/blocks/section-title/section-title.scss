@@ -13,7 +13,7 @@
   @include media_600 {
     font-size: 35px;
   }
-  
+
   @include media_1280 {
     font-size: 45px;
   }
@@ -26,14 +26,18 @@
     font-size: 25px;
     margin-left: 12px;
   }
-}
 
-.section-title_place_advantages {
-  justify-self: start;
-}
+  &_place_advantages {
+    justify-self: start;
+  }
 
-.section-title_place_duties {
-  align-self: flex-start;
-  max-width: 600px;
-  width: 100%;
+  &_place_duties {
+    align-self: flex-start;
+    max-width: 600px;
+    width: 100%;
+
+    @include media_480 {
+      max-width: 270px;
+    }
+  }
 }

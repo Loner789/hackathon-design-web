@@ -4,11 +4,11 @@
   display: block;
   position: relative;
 
-  .video__link {
+  &__link {
     display: block;
   }
 
-  .video__image {
+  &__image {
     display: block;
     width: 100%;
     height: 420px;
@@ -37,7 +37,7 @@
     }
   }
 
-  .video__iframe {
+  &__iframe {
     width: 100%;
     height: 420px;
     border: none;
@@ -64,8 +64,8 @@
       box-sizing: border-box;
     }
   }
-}
 
-.video:hover {
-  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+  }
 }

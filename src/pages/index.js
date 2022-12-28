@@ -72,6 +72,16 @@ import {
   advantagesCardMobileSelector,
   advantageRotateTapClass,
   advantageCardHidden,
+  positionSelector,
+  formId,
+  cardLineHoveredClass,
+  successStoryTextSelector,
+  successStoryTextTemplateId,
+  successStoriesTextListSelector,
+  videoPopupId,
+  successStoryVideoSelector,
+  successStoryVideoTemplateId,
+  successStoriesVideoListSelector,
 } from '../utils/constants';
 
 // FUNCTIONS:
@@ -248,8 +258,7 @@ faqQuestions.forEach((btn) => {
   });
 });
 
-// ------- other -------
-
+// ------- success stories -------
 const createSuccessStoryCard = (data) => {
   const сardsList = new Section(
     {
@@ -257,15 +266,15 @@ const createSuccessStoryCard = (data) => {
       renderer: (item) => {
         const elementCard = new SuccessStoryCard(
           item,
-          '.success-story-text',
-          '#template-success-story-text',
-          data
+          successStoryTextSelector,
+          successStoryTextTemplateId,
+          data,
         );
 
         return elementCard.generateElementCard();
       },
     },
-    '.success-stories__text-list'
+    successStoriesTextListSelector,
   );
   сardsList.renderItems();
 
@@ -274,7 +283,7 @@ const createSuccessStoryCard = (data) => {
 
 createSuccessStoryCard(successStoriesText);
 
-const popupWithVideo = new PopupWithVideo('#video-popup');
+const popupWithVideo = new PopupWithVideo(videoPopupId);
 popupWithVideo.setEventListeners();
 
 const createSuccessStoryVideo = (data) => {
@@ -287,14 +296,14 @@ const createSuccessStoryVideo = (data) => {
         };
         const elementVideo = new SuccessStoryVideo(
           item,
-          '.success-story-video',
-          '#template-success-story-video',
-          handleClickVideo
+          successStoryVideoSelector,
+          successStoryVideoTemplateId,
+          handleClickVideo,
         );
         return elementVideo.generateElementCard();
       },
     },
-    '.success-stories__video-list'
+    successStoriesVideoListSelector,
   );
   videoList.renderItems();
   return videoList;
@@ -598,24 +607,24 @@ vacanciesBtnMenuArrows.forEach((btn) => {
 // EVENT LISTENERS:
 // Animation of the advantage
 cardLinePlaceFirstTopParent.addEventListener('mousemove', () => {
-  cardLinePlaceFirstTop.classList.add('card__line_hovered');
+  cardLinePlaceFirstTop.classList.add(cardLineHoveredClass);
 });
 cardLinePlaceFirstTopParent.addEventListener('mouseout', () => {
-  cardLinePlaceFirstTop.classList.remove('card__line_hovered');
+  cardLinePlaceFirstTop.classList.remove(cardLineHoveredClass);
 });
 
 cardLinePlaceSecondTopParent.addEventListener('mousemove', () => {
-  cardLinePlaceSecondTop.classList.add('card__line_hovered');
+  cardLinePlaceSecondTop.classList.add(cardLineHoveredClass);
 });
 cardLinePlaceSecondTopParent.addEventListener('mouseout', () => {
-  cardLinePlaceSecondTop.classList.remove('card__line_hovered');
+  cardLinePlaceSecondTop.classList.remove(cardLineHoveredClass);
 });
 
 cardLinePlaceSecondBottomParent.addEventListener('mousemove', () => {
-  cardLinePlaceSecondBottom.classList.add('card__line_hovered');
+  cardLinePlaceSecondBottom.classList.add(cardLineHoveredClass);
 });
 cardLinePlaceSecondBottomParent.addEventListener('mouseout', () => {
-  cardLinePlaceSecondBottom.classList.remove('card__line_hovered');
+  cardLinePlaceSecondBottom.classList.remove(cardLineHoveredClass);
 });
 
 // Vacancies listeners
@@ -652,7 +661,7 @@ vacanciesSendBtns.forEach((btn) => {
   });
 });
 
-const FormInPopupValidator = new FormValidator(configFormValidator, '#form');
+const FormInPopupValidator = new FormValidator(configFormValidator, formId);
 FormInPopupValidator.enableValidation();
 
 function submitHandlerForm(data) {
@@ -663,18 +672,14 @@ function submitHandlerForm(data) {
   popupWithForm.showBlockSuccess();
 }
 
-const clientScreenWidth = () => document.documentElement.clientWidth;
-
+// -------- duties --------
 positionList.forEach((el) => {
-  const screenWidth = clientScreenWidth();
-
-  if (screenWidth < 768) {
+  if (window.innerWidth < 768) {
     el.addEventListener('click', (evt) => {
       // eslint-disable-next-line prefer-destructuring
       const target = evt.target;
-      const cardPosition = target.parentElement.closest('.position')
-        ? target.parentElement.closest('.position')
-        : el;
+      const cardPosition = target.parentElement.closest(positionSelector)
+        ? target.parentElement.closest(positionSelector) : el;
       const borderElement = cardPosition.querySelector(dutiesBorderSelector);
       const title = cardPosition.querySelector(dutiesTitleSelector);
       const taskListElement = cardPosition.querySelector(
@@ -703,11 +708,10 @@ positionList.forEach((el) => {
   }
 });
 
+// -------- advantages --------
 advantageList.forEach((card) => {
-  const screenWidth = clientScreenWidth();
-
-  if (screenWidth < 970 && screenWidth >= 600) {
-    card.addEventListener('click', (evt) => {
+  card.addEventListener('click', (evt) => {
+    if (window.innerWidth < 970 && window.innerWidth >= 600) {
       // eslint-disable-next-line prefer-destructuring
       const target = evt.target;
       const rotate = target.querySelector(advantagesRotateSelector);
@@ -734,22 +738,30 @@ advantageList.forEach((card) => {
         rotate.classList.add(advantageRotateTapClass);
         cardMobile.classList.add(advantageCardMobileVisebleClass);
       }
-    });
-  }
+    }
 
-  if (screenWidth < 600) {
-    card.addEventListener('click', (evt) => {
+    if (window.innerWidth < 600) {
       // eslint-disable-next-line prefer-destructuring
       const target = evt.target;
       const rotate = target.querySelector(advantagesRotateSelector);
       const cardMobile = target.querySelector(advantagesCardMobileSelector);
       const id = target.getAttribute('id');
 
-      advantageList.forEach((el) => {
-        if (id !== el.getAttribute('id')) {
-          el.classList.add(advantageCardHidden);
-        }
-      });
+      if (id < 4) {
+        advantageList.forEach((el) => {
+          if (el.getAttribute('id') < 4 && id !== el.getAttribute('id')) {
+            el.classList.add(advantageCardHidden);
+          }
+        });
+      }
+
+      if (id > 3) {
+        advantageList.forEach((el) => {
+          if (el.getAttribute('id') > 3 && id !== el.getAttribute('id')) {
+            el.classList.add(advantageCardHidden);
+          }
+        });
+      }
 
       if (target.closest(`.${advantagesCardTapClass}`)) {
         target.classList.remove(advantagesCardTapClass);
@@ -761,6 +773,6 @@ advantageList.forEach((card) => {
         rotate.classList.add(advantageRotateTapClass);
         cardMobile.classList.add(advantageCardMobileVisebleClass);
       }
-    });
-  }
+    }
+  });
 });
