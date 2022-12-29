@@ -1,3 +1,5 @@
+@import '../../utils/styles/mixins';
+
 .vacancies {
   font-family: 'YS Display', Arial, sans-serif;
   display: flex;
@@ -17,14 +19,11 @@
   }
 
   &__title {
-    font-family: 'YS Display';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 55px;
-    line-height: 64px;
+    @include remove-margins;
+    @include subtitle-h2;
     color: #1E2027;
+    text-align: left;
     align-self: start;
-    margin: 0;
   }
 
   &__education-menu {
@@ -59,6 +58,18 @@
 
   &__btn-menu-arrow {
     display: none;
+    width: 15px;
+    height: 15px;
+    background-image: url(../images/icon-arrow-320.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: transparent;
+    transform: rotate(90deg);
+    border-style: none;
+    padding: 0;
+    margin: 0 15px 0 0;
+    cursor: pointer;
   }
 
   &__btn-menu_active {
@@ -221,7 +232,6 @@
 
   &__line {
     width: 100%;
-    max-width: 1030px;
     height: 0.5px;
     background-color: rgba(133, 133, 133, 0.3);
     margin-top: 15px;
@@ -320,7 +330,7 @@
     border-radius: 8px;
     padding: 0;
     margin: 15px 0 35px 20px;
-    border: 1px solid #585A5B;
+    border: none;
     cursor: pointer;
   }
 
@@ -479,6 +489,12 @@
   }
 }
 
+@media screen and (max-width: 1240px) {
+  .vacancies__title {
+    margin: 0 0 0 21px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
 
   .vacancies {
@@ -487,12 +503,6 @@
     &__container {
       width: 100%;
       max-width: 1024px;
-    }
-
-    &__title {
-      font-size: 45px;
-      line-height: 53px;
-      margin: 0 0 0 21px;
     }
 
     &__education-menu {
@@ -536,8 +546,6 @@
     }
 
     &__title {
-      font-size: 30px;
-      line-height: 35px;
       margin: 0 0 0 20px;
     }
 
@@ -620,8 +628,6 @@
     }
 
     &__title {
-      font-size: 25px;
-      line-height: 29px;
       margin: 0 0 0 10px;
     }
 
@@ -678,18 +684,10 @@
 
     &__btn-menu-arrow {
       display: block;
-      width: 15px;
-      height: 15px;
-      background-image: url(../images/icon-arrow-320.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      background-color: transparent;
-      transform: rotate(90deg);
-      border-style: none;
-      padding: 0;
-      margin: 0 15px 0 0;
-      cursor: pointer;
+    }
+
+    &__btn-menu-arrow_hidden {
+      display: none;
     }
 
     &__info {
@@ -738,7 +736,6 @@
 
       &_share {
         flex-direction: row;
-        justify-content: space-between;
       }
 
       &_small {

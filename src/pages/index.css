@@ -2975,6 +2975,9 @@
   overflow: hidden;
 }
 
+/* PROPERTIES */
+/* MEDIA QUERIES */
+/* ANIMATIONS */
 .vacancies {
   font-family: "YS Display", Arial, sans-serif;
   display: flex;
@@ -2992,14 +2995,33 @@
   max-width: 1240px;
 }
 .vacancies__title {
-  font-family: "YS Display";
+  margin: 0;
+  padding: 0;
   font-style: normal;
   font-weight: 500;
   font-size: 55px;
   line-height: 64px;
   color: #1E2027;
+  text-align: left;
   align-self: start;
-  margin: 0;
+}
+@media screen and (max-width: 1280px) {
+  .vacancies__title {
+    font-size: 45px;
+    line-height: 53px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .vacancies__title {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .vacancies__title {
+    font-size: 25px;
+    line-height: 29px;
+  }
 }
 .vacancies__education-menu {
   display: flex;
@@ -3030,6 +3052,18 @@
 }
 .vacancies__btn-menu-arrow {
   display: none;
+  width: 15px;
+  height: 15px;
+  background-image: url(../images/icon-arrow-320.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: transparent;
+  transform: rotate(90deg);
+  border-style: none;
+  padding: 0;
+  margin: 0 15px 0 0;
+  cursor: pointer;
 }
 .vacancies__btn-menu_active {
   background-color: #FFFFFF;
@@ -3164,7 +3198,6 @@
 }
 .vacancies__line {
   width: 100%;
-  max-width: 1030px;
   height: 0.5px;
   background-color: rgba(133, 133, 133, 0.3);
   margin-top: 15px;
@@ -3250,7 +3283,7 @@
   border-radius: 8px;
   padding: 0;
   margin: 15px 0 35px 20px;
-  border: 1px solid #585A5B;
+  border: none;
   cursor: pointer;
 }
 .vacancies__notfound-vac-text {
@@ -3386,6 +3419,11 @@
   background-position: center;
 }
 
+@media screen and (max-width: 1240px) {
+  .vacancies__title {
+    margin: 0 0 0 21px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .vacancies {
     max-width: 1024px;
@@ -3393,11 +3431,6 @@
   .vacancies__container {
     width: 100%;
     max-width: 1024px;
-  }
-  .vacancies__title {
-    font-size: 45px;
-    line-height: 53px;
-    margin: 0 0 0 21px;
   }
   .vacancies__education-menu {
     width: 100%;
@@ -3431,8 +3464,6 @@
     max-width: 768px;
   }
   .vacancies__title {
-    font-size: 30px;
-    line-height: 35px;
     margin: 0 0 0 20px;
   }
   .vacancies__education-menu {
@@ -3496,8 +3527,6 @@
     max-width: 530px;
   }
   .vacancies__title {
-    font-size: 25px;
-    line-height: 29px;
     margin: 0 0 0 10px;
   }
   .vacancies__education-menu {
@@ -3547,18 +3576,9 @@
   }
   .vacancies__btn-menu-arrow {
     display: block;
-    width: 15px;
-    height: 15px;
-    background-image: url(../images/icon-arrow-320.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    background-color: transparent;
-    transform: rotate(90deg);
-    border-style: none;
-    padding: 0;
-    margin: 0 15px 0 0;
-    cursor: pointer;
+  }
+  .vacancies__btn-menu-arrow_hidden {
+    display: none;
   }
   .vacancies__info {
     width: calc(100% - 20px);
@@ -3597,7 +3617,6 @@
   }
   .vacancies__gallery-wrapper_share {
     flex-direction: row;
-    justify-content: space-between;
   }
   .vacancies__gallery-wrapper_small {
     flex-direction: column;

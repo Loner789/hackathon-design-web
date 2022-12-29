@@ -38,9 +38,11 @@ export default class VacancyMenuItem {
     _handleMenuArrowClick() {
       const vacanciesMenuItems = vacancies.querySelectorAll('.vacancies__menu-item');
       const vacanciesEduMenu = vacancies.querySelector('.vacancies__education-menu');
+      const vacanciesBtnMenuArrows = vacancies.querySelectorAll('.vacancies__btn-menu-arrow');
 
       vacanciesMenuItems.forEach((item) => item.classList.add('vacancies__menu-item_visible'));
       vacanciesEduMenu.classList.add('vacancies__education-menu_active');
+      vacanciesBtnMenuArrows.forEach((item) => item.classList.add('vacancies__btn-menu-arrow_hidden'));
     }
 
     // Событие при нажатии на конкретную специальность
@@ -63,6 +65,7 @@ export default class VacancyMenuItem {
       const vacanciesDescriptionItems = vacancies.querySelectorAll('.vacancies__description');
       const vacancieNameBtn = vacancies.querySelectorAll('.vacancies__name');
       const vacGalleryArrows = vacancies.querySelectorAll('.vacancies__gallery-arrow');
+      const vacanciesBtnMenuArrows = vacancies.querySelectorAll('.vacancies__btn-menu-arrow');
 
       // Удаление активных классов специальностей, ролей и данных специальности
       vacancieEduItems.forEach((item) => item.classList.remove('vacancies__btn-menu_active'));
@@ -109,10 +112,12 @@ export default class VacancyMenuItem {
         if (!vacanciesEduMenu.classList.contains('vacancies__education-menu_active')) {
           vacanciesEduMenu.classList.add('vacancies__education-menu_active');
           vacanciesMenuItems.forEach((item) => item.classList.add('vacancies__menu-item_visible'));
+          vacanciesBtnMenuArrows.forEach((item) => item.classList.add('vacancies__btn-menu-arrow_hidden'));
         } else {
           vacanciesEduMenu.classList.remove('vacancies__education-menu_active');
           vacanciesMenuItems.forEach((item) => item.classList.remove('vacancies__menu-item_visible'));
           this._element.classList.add('vacancies__menu-item_visible');
+          vacanciesBtnMenuArrows.forEach((item) => item.classList.remove('vacancies__btn-menu-arrow_hidden'));
         }
       }
     }
