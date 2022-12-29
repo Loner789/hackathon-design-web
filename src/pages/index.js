@@ -13,6 +13,7 @@ import {
   generateMenu,
   generateFaq,
   popupWithForm,
+  createConditionsCard,
 } from '../utils/utils';
 import {
   learningTitles,
@@ -94,24 +95,6 @@ const typed = new Typed('.learning__title-span', {
 // --------------------- Conditions Section Functions ---------------------
 
 // Creation of conditions-card element
-function createConditionsCard(cardData) {
-  const { title, image, text } = cardData;
-  const cardElement = document
-    .querySelector('#conditions-card')
-    .content.querySelector('.conditions__slide')
-    .cloneNode(true);
-  const [firstPart, ...rest] = title.split(' ');
-
-  cardElement.querySelector('.conditions__card-title_side_left').textContent = firstPart;
-  cardElement.querySelector('.conditions__card-title_side_right').textContent = rest.join(' ');
-  cardElement.querySelector(
-    '.conditions__card-image',
-  ).style.backgroundImage = `url(${image})`;
-  cardElement.querySelector('.conditions__card-text').textContent = text;
-
-  return cardElement;
-}
-
 createSection(conditionsCards, createConditionsCard, '.conditions__slider');
 
 // Conditions section scroller
