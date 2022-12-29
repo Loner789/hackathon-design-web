@@ -8,7 +8,6 @@
   width: 100%;
   max-width: 1440px;
   font-family: 'YS Display', Arial, sans-serif;
-  margin: 0;
   box-sizing: border-box;
 
   &__list-of-positions {
@@ -31,7 +30,6 @@
 
     @include media_480 {
       box-sizing: border-box;
-      padding: 0 10px;
     }
   }
 

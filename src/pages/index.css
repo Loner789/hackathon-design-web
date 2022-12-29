@@ -4,7 +4,44 @@
 /* MEDIA QUERIES */
 /* ANIMATIONS */
 :root {
+  margin: 0 auto;
   max-width: 1440px;
+}
+
+.section-top-indent {
+  margin-top: 160px;
+}
+@media screen and (max-width: 1280px) {
+  .section-top-indent {
+    margin-top: 150px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .section-top-indent {
+    margin-top: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-top-indent {
+    margin-top: 90px;
+  }
+}
+
+.section-side-indent {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+@media screen and (max-width: 1280px) {
+  .section-side-indent {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-side-indent {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 /* PROPERTIES */
@@ -20,7 +57,7 @@
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 11;
 }
 .header__logo-link {
   margin: 0;
@@ -305,9 +342,9 @@
 }
 
 .conditions {
-  padding-top: 130px;
+  padding-top: 120px;
   font-family: "YS Display", Arial, sans-serif;
-  width: 100%;
+  width: calc(100% - 1px);
   min-height: 100vh;
   box-sizing: border-box;
 }
@@ -358,7 +395,7 @@
 .conditions__container {
   margin: 0;
   width: 100%;
-  padding: 50px 0 15px;
+  padding: 30px 0 15px;
   height: calc(100% - 132px);
   display: flex;
   flex-direction: column;
@@ -367,13 +404,11 @@
 }
 @media screen and (max-width: 1280px) {
   .conditions__container {
-    padding-top: 80px;
     height: calc(100% - 108px);
   }
 }
 @media screen and (max-width: 1024px) {
   .conditions__container {
-    padding-top: 55px;
     height: calc(100% - 72px);
   }
 }
@@ -404,9 +439,9 @@
 }
 .conditions__card {
   margin: 0 90px 0 0;
-  padding: 95px 50px 80px;
+  padding: 65px 50px 60px;
   width: 400px;
-  height: 480px;
+  height: 420px;
   background: transparent;
   box-sizing: border-box;
   position: relative;
@@ -415,7 +450,7 @@
 @media screen and (max-width: 1280px) {
   .conditions__card {
     width: 352px;
-    height: 440px;
+    height: 420px;
     padding: 65px 25px 40px;
     margin-right: 20px;
   }
@@ -543,12 +578,12 @@
 }
 @media screen and (max-width: 1024px) {
   .conditions {
-    padding-top: 120px;
+    padding-top: 110px;
   }
 }
 @media screen and (max-width: 768px) {
   .conditions {
-    padding-top: 100px;
+    padding-top: 80px;
   }
 }
 
@@ -583,7 +618,7 @@
 @media screen and (max-width: 480px) {
   .section-title {
     font-size: 25px;
-    margin-left: 12px;
+    margin-left: 2px;
   }
 }
 .section-title_place_advantages {
@@ -604,7 +639,6 @@
 /* MEDIA QUERIES */
 /* ANIMATIONS */
 .advantages {
-  max-width: 1240px;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -612,17 +646,7 @@
   color: #1E2027;
   justify-items: center;
   text-align: center;
-  margin: 205px auto 0;
-}
-@media screen and (max-width: 1280px) {
-  .advantages {
-    margin-top: 150px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .advantages {
-    margin-top: 90px;
-  }
+  box-sizing: border-box;
 }
 
 /* PROPERTIES */
@@ -1624,7 +1648,6 @@
   width: 100%;
   max-width: 1440px;
   font-family: "YS Display", Arial, sans-serif;
-  margin: 0;
   box-sizing: border-box;
 }
 .duties__list-of-positions {
@@ -1650,7 +1673,6 @@
 @media screen and (max-width: 480px) {
   .duties__list-of-positions {
     box-sizing: border-box;
-    padding: 0 10px;
   }
 }
 .duties__button {
@@ -1976,7 +1998,7 @@
 @media screen and (max-width: 480px) {
   .section-title {
     font-size: 25px;
-    margin-left: 12px;
+    margin-left: 2px;
   }
 }
 .section-title_place_advantages {
@@ -2000,6 +2022,7 @@
   align-items: center;
   width: 100%;
   max-width: 1440px;
+  box-sizing: border-box;
 }
 .faq__background {
   display: flex;
@@ -2018,7 +2041,7 @@
   align-items: center;
   width: 100%;
   max-width: 1030px;
-  margin: 160px 0 160px 0;
+  margin-bottom: 160px;
 }
 .faq__title {
   font-family: "YS Display";
@@ -2060,7 +2083,7 @@
   font-size: 30px;
   line-height: 140%;
   color: #1E2027;
-  width: 906px;
+  width: 88%;
   min-height: 42px;
   margin: 0;
   cursor: pointer;
@@ -2092,7 +2115,7 @@
   color: #585A5B;
   margin: 0;
   margin-bottom: 30px;
-  width: 820px;
+  width: 80%;
   display: none;
 }
 .faq__question-text_active {
@@ -2121,26 +2144,21 @@
   .faq__container {
     width: calc(100% - 40px);
     max-width: 1024px;
-    margin: 150px 0 150px 0;
+    margin-bottom: 150px;
   }
   .faq__title {
     font-size: 45px;
     line-height: 53px;
   }
   .faq__line {
-    width: calc(100% - 40px);
     max-width: 1024px;
   }
   .faq__question-block {
-    width: calc(100% - 40px);
     max-width: 1024px;
   }
   .faq__question-wrapper {
     width: calc(100% - 40px);
     max-width: 1024px;
-  }
-  .faq__question-text-main {
-    width: 860px;
   }
   .faq__question-text {
     font-size: 18px;
@@ -2148,7 +2166,6 @@
 }
 @media screen and (max-width: 768px) {
   .faq {
-    width: 100vw;
     max-width: 768px;
   }
   .faq__background {
@@ -2158,7 +2175,7 @@
   .faq__container {
     width: calc(100% - 40px);
     max-width: 768px;
-    margin: 100px 0 181px 0;
+    margin-bottom: 181px;
   }
   .faq__title {
     font-size: 30px;
@@ -2166,12 +2183,13 @@
     margin: 0 0 23px 0;
   }
   .faq__line {
-    width: 100%;
     max-width: 768px;
     margin: 0 0 23px 0;
   }
-  .faq__question-block {
+  .faq__line_first {
     width: 100%;
+  }
+  .faq__question-block {
     max-width: 768px;
   }
   .faq__question-wrapper {
@@ -2185,13 +2203,11 @@
   .faq__question-text-main {
     font-size: 16px;
     line-height: 26.4px;
-    width: 604px;
     min-height: 26.4px;
   }
   .faq__question-text {
     font-size: 15px;
     margin-bottom: 18px;
-    width: 728px;
   }
 }
 @media screen and (max-width: 320px) {
@@ -2204,7 +2220,7 @@
   .faq__container {
     width: calc(100% - 20px);
     max-width: 320px;
-    margin: 92px 0 90px 0;
+    margin-bottom: 90px;
   }
   .faq__title {
     font-size: 25px;
@@ -2212,12 +2228,10 @@
     margin: 0 0 30px 0;
   }
   .faq__line {
-    width: calc(100% - 20px);
     max-width: 320px;
     margin: 0 0 20px 0;
   }
   .faq__question-block {
-    width: calc(100% - 20px);
     max-width: 320px;
   }
   .faq__question-wrapper {
@@ -2232,7 +2246,6 @@
     font-weight: 500;
     font-size: 15px;
     line-height: 21px;
-    width: 239px;
     min-height: 21px;
   }
   .faq__question-button {
@@ -2276,7 +2289,7 @@
 @media screen and (max-width: 480px) {
   .section-title {
     font-size: 25px;
-    margin-left: 12px;
+    margin-left: 2px;
   }
 }
 .section-title_place_advantages {
@@ -2334,9 +2347,10 @@
   color: #1E2027;
   display: grid;
   row-gap: 20px;
-  max-width: 1240px;
   width: 100%;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
 }
 .success-stories__text-list {
   padding: 0;
@@ -2940,6 +2954,7 @@
   align-items: center;
   width: 100%;
   max-width: 1440px;
+  box-sizing: border-box;
 }
 .vacancies__container {
   display: flex;
@@ -2947,7 +2962,6 @@
   align-items: center;
   width: 100%;
   max-width: 1240px;
-  margin: 160px 0 147px 0;
 }
 .vacancies__title {
   font-family: "YS Display";
@@ -3000,7 +3014,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 100%;
+  width: calc(100% - 40px);
   margin: 60px 0 0 0;
 }
 .vacancies__prophecy-menu {
@@ -3089,6 +3103,7 @@
   background-size: contain;
   background-position: center;
   transition: all 0.3s linear;
+  cursor: pointer;
 }
 .vacancies__gallery-arrow_active {
   transform: rotate(90deg);
@@ -3104,6 +3119,7 @@
   color: #1E2027;
   margin: 0 0 0 10px;
   padding: 0;
+  text-align: left;
   cursor: pointer;
 }
 .vacancies__name_active {
@@ -3152,6 +3168,11 @@
   color: #1E2027;
 }
 .vacancies__req-list {
+  list-style: square;
+  padding: 0;
+  padding-left: 25px;
+}
+.vacancies__todo-list {
   list-style: square;
   padding: 0;
   padding-left: 25px;
@@ -3340,12 +3361,10 @@
 @media screen and (max-width: 1024px) {
   .vacancies {
     max-width: 1024px;
-    min-width: 100vw;
   }
   .vacancies__container {
     width: 100%;
     max-width: 1024px;
-    margin: 150px 0 150px 0;
   }
   .vacancies__title {
     font-size: 45px;
@@ -3357,13 +3376,14 @@
     max-width: 1024px;
     min-height: 71px;
     margin: 80px 0 0 0;
+    justify-content: space-evenly;
   }
   .vacancies__btn-menu {
     font-size: 18px;
     line-height: 21px;
+    margin: 0;
   }
   .vacancies__info {
-    width: calc(100% - 40px);
     margin: 60px 0 0 0;
   }
   .vacancies__prophecy-menu {
@@ -3377,12 +3397,10 @@
 @media screen and (max-width: 768px) {
   .vacancies {
     max-width: 768px;
-    min-width: 100vw;
   }
   .vacancies__container {
     width: 100%;
     max-width: 768px;
-    margin: 100px 0 110px 0;
   }
   .vacancies__title {
     font-size: 30px;
@@ -3398,10 +3416,8 @@
   .vacancies__btn-menu {
     font-size: 16px;
     line-height: 22px;
-    margin: 0 30px 0 15px;
   }
   .vacancies__info {
-    width: calc(100% - 40px);
     margin: 22px 0 0 0;
   }
   .vacancies__prophecy-menu {
@@ -3443,15 +3459,13 @@
     bottom: 85%;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 530px) {
   .vacancies {
-    max-width: 320px;
-    min-width: 100vw;
+    max-width: 530px;
   }
   .vacancies__container {
     width: 100%;
-    max-width: 320px;
-    margin: 90px 0 90px 0;
+    max-width: 530px;
   }
   .vacancies__title {
     font-size: 25px;
@@ -3462,7 +3476,7 @@
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
-    max-width: 320px;
+    max-width: 530px;
     min-height: 20px;
     height: 40px;
     padding: 15px 0 15px 0;
@@ -3511,6 +3525,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-color: transparent;
     transform: rotate(90deg);
     border-style: none;
     padding: 0;
@@ -4178,7 +4193,7 @@
 }
 
 .footer {
-  padding: 0 0 100px;
+  padding-bottom: 100px;
   font-family: "YS Display", Arial, sans-serif;
 }
 .footer__container {

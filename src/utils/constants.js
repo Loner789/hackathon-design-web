@@ -1,5 +1,6 @@
 // CONSTANTS:
 const faq = document.querySelector('.faq');
+const faqContainer = faq.querySelector('.faq__container');
 const faqBtn = faq.querySelectorAll('.faq__question-button');
 const faqAnswers = faq.querySelectorAll('.faq__question-text');
 const faqQuestions = faq.querySelectorAll('.faq__question-text-main');
@@ -20,17 +21,11 @@ const vacancieProphItems = vacancies.querySelectorAll(
 );
 const vacancieProphSensey = vacancies.querySelector('#sensey');
 const vacancieProphReviewer = vacancies.querySelector('#reviewer');
-const vacancieSenseyGallaryProg = vacancies.querySelector(
-  '#sensey-gallary-prog',
+const vacancieSenseyGallary = vacancies.querySelector(
+  '#sensey-gallary',
 );
-const vacancieReviewerGallaryProg = vacancies.querySelector(
-  '#reviewer-gallary-prog',
-);
-const vacancieSenseyGallaryAnalitics = vacancies.querySelector(
-  '#sensey-gallary-analitics',
-);
-const vacancieReviewerGallaryAnalitics = vacancies.querySelector(
-  '#reviewer-gallary-analitics',
+const vacancieReviewerGallary = vacancies.querySelector(
+  '#reviewer-gallary',
 );
 const vacanciesGallaries = vacancies.querySelectorAll('.vacancies__gallery');
 const vacanciesNoVac = vacancies.querySelector('#no-vac-available');
@@ -41,7 +36,9 @@ const vacanciesPopupShareEmptyCode = '';
 const vacanciesPopupShareFullCode = '<nav class="vacancies__popup-list"><div id="copyLink" class="vacancies__popup-link-wrapper"><div class="vacancies__popup-copy-icon"></div><a rel="nofollow" class="vacancies__popup-link">Скопировать ссылку</a></div><div class="vacancies__popup-link-wrapper"><div class="vacancies__popup-telegram-icon"></div><a href="#" target="_blank" rel="nofollow" class="vacancies__popup-link">Telegram</a></div><div class="vacancies__popup-link-wrapper"><div class="vacancies__popup-vk-icon"></div><a href="#" target="_blank" rel="nofollow" class="vacancies__popup-link">Вконтакте</a></div><div class="vacancies__popup-link-wrapper"><div class="vacancies__popup-twitter-icon"></div><a href="#" target="_blank" rel="nofollow" class="vacancies__popup-link">Twitter</a></div></nav>';
 const vacanciesBtnMenuArrows = vacancies.querySelectorAll('.vacancies__btn-menu-arrow');
 const vacanciesEduMenu = vacancies.querySelector('.vacancies__education-menu');
+const vacanciesProphMenu = vacancies.querySelector('.vacancies__prophecy-menu');
 const vacanciesSendBtns = vacancies.querySelectorAll('.vacancies__send-btn');
+const notFoundVacBtn = document.querySelector('.vacancies__notfound-vac-btn');
 const videoElement = document.querySelector('.video');
 const cardLinePlaceFirstTop = document.querySelector(
   '.card__line_place__first-top',
@@ -134,6 +131,7 @@ const videoButtonSelector = '.video-button';
 
 export {
   faqBtn,
+  faqContainer,
   faqAnswers,
   faqQuestions,
   vacancieNameBtn,
@@ -148,10 +146,8 @@ export {
   vacancieProphItems,
   vacancieProphSensey,
   vacancieProphReviewer,
-  vacancieSenseyGallaryProg,
-  vacancieReviewerGallaryProg,
-  vacancieSenseyGallaryAnalitics,
-  vacancieReviewerGallaryAnalitics,
+  vacancieSenseyGallary,
+  vacancieReviewerGallary,
   vacanciesGallaries,
   vacanciesNoVac,
   vacanciesNotFound,
@@ -161,7 +157,9 @@ export {
   vacanciesPopupShareFullCode,
   vacanciesBtnMenuArrows,
   vacanciesEduMenu,
+  vacanciesProphMenu,
   vacanciesSendBtns,
+  notFoundVacBtn,
   videoElement,
   cardLinePlaceFirstTop,
   cardLinePlaceFirstTopParent,

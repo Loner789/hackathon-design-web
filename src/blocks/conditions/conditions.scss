@@ -1,7 +1,7 @@
 .conditions {
-  padding-top: 130px;
+  padding-top: 120px;
   font-family: 'YS Display', Arial, sans-serif;
-  width: 100%;
+  width: calc(100% - 1px);
   min-height: 100vh;
   box-sizing: border-box;
 
@@ -48,7 +48,7 @@
   &__container {
     margin: 0;
     width: 100%;
-    padding: 50px 0 15px;
+    padding: 30px 0 15px;
     height: calc(100% - 132px);
     display: flex;
     flex-direction: column;
@@ -56,12 +56,10 @@
     box-sizing: border-box;
 
     @include media_1280 {
-      padding-top: 80px;
       height: calc(100% - 108px);
     }
 
     @include media_1024 {
-      padding-top: 55px;
       height: calc(100% - 72px);
     }
 
@@ -95,9 +93,9 @@
 
   &__card {
     margin: 0 90px 0 0;
-    padding: 95px 50px 80px;
+    padding: 65px 50px 60px;
     width: 400px;
-    height: 480px;
+    height: 420px;
     background: transparent;
     box-sizing: border-box;
     position: relative;
@@ -105,7 +103,7 @@
 
     @include media_1280 {
       width: 352px;
-      height: 440px;
+      height: 420px;
       padding: 65px 25px 40px;
       margin-right: 20px;
     }
@@ -227,10 +225,10 @@
   }
 
   @include media_1024 {
-    padding-top: 120px;
+    padding-top: 110px;
   }
 
   @include media_768 {
-    padding-top: 100px;
+    padding-top: 80px;
   }
 }
