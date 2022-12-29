@@ -205,40 +205,46 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  font-size: 70px;
-  font-weight: 500;
-  line-height: 1.2;
   color: #6251C9;
   display: inline;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 70px;
+  line-height: 82px;
 }
 @media screen and (max-width: 1280px) {
   .learning__title-span {
     font-size: 60px;
+    line-height: 70px;
   }
 }
 @media screen and (max-width: 1024px) {
   .learning__title-span {
     font-size: 40px;
+    line-height: 47px;
   }
 }
 @media screen and (max-width: 768px) {
   .learning__title-span {
     font-size: 30px;
+    line-height: 35px;
   }
 }
 .learning__subtitle {
   margin: 0;
   padding: 0;
   width: 100%;
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 1.2;
   display: inline;
   color: #1E2027;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.2;
 }
 @media screen and (max-width: 1024px) {
   .learning__subtitle {
     font-size: 24px;
+    line-height: 28px;
   }
 }
 .learning__learning-picture {
@@ -368,30 +374,6 @@
     width: 300px;
   }
 }
-.conditions__title {
-  margin: 0;
-  width: 100%;
-  font-size: 55px;
-  font-weight: 700;
-  line-height: 1.2;
-}
-@media screen and (max-width: 1280px) {
-  .conditions__title {
-    font-size: 45px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .conditions__title {
-    max-width: 370px;
-    font-size: 30px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .conditions__title {
-    max-width: 300px;
-    font-size: 24px;
-  }
-}
 .conditions__container {
   margin: 0;
   width: 100%;
@@ -503,9 +485,25 @@
 .conditions__card-title {
   margin: 0;
   padding: 0;
+  font-style: normal;
   font-weight: 400;
   font-size: 40px;
-  line-height: 1.2;
+  line-height: 1.4;
+}
+@media screen and (max-width: 1280px) {
+  .conditions__card-title {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .conditions__card-title {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .conditions__card-title {
+    font-size: 20px;
+  }
 }
 .conditions__card-title:before {
   content: "";
@@ -543,21 +541,6 @@
     border-top: 2px solid rgba(133, 133, 133, 0.3);
   }
 }
-@media screen and (max-width: 1280px) {
-  .conditions__card-title {
-    font-size: 35px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .conditions__card-title {
-    font-size: 25px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .conditions__card-title {
-    font-size: 20px;
-  }
-}
 .conditions__card-text {
   margin: 0;
   padding: 50px 0 0;
@@ -591,33 +574,35 @@
 /* MEDIA QUERIES */
 /* ANIMATIONS */
 .section-title {
+  margin: 0;
+  padding: 0;
   font-style: normal;
   font-weight: 500;
   font-size: 55px;
-  line-height: 1.16;
-  padding: 0;
+  line-height: 64px;
   color: #1E2027;
-  margin: 0;
   text-align: left;
-}
-@media screen and (max-width: 600px) {
-  .section-title {
-    font-size: 35px;
-  }
 }
 @media screen and (max-width: 1280px) {
   .section-title {
     font-size: 45px;
+    line-height: 53px;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   .section-title {
     font-size: 30px;
+    line-height: 35px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 25px;
+    line-height: 29px;
   }
 }
 @media screen and (max-width: 480px) {
   .section-title {
-    font-size: 25px;
     margin-left: 2px;
   }
 }
@@ -632,6 +617,19 @@
 @media screen and (max-width: 480px) {
   .section-title_place_duties {
     max-width: 270px;
+  }
+}
+.section-title_place_conditions {
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .section-title_place_conditions {
+    max-width: 370px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-title_place_conditions {
+    max-width: 300px;
   }
 }
 
@@ -1971,33 +1969,35 @@
 /* MEDIA QUERIES */
 /* ANIMATIONS */
 .section-title {
+  margin: 0;
+  padding: 0;
   font-style: normal;
   font-weight: 500;
   font-size: 55px;
-  line-height: 1.16;
-  padding: 0;
+  line-height: 64px;
   color: #1E2027;
-  margin: 0;
   text-align: left;
-}
-@media screen and (max-width: 600px) {
-  .section-title {
-    font-size: 35px;
-  }
 }
 @media screen and (max-width: 1280px) {
   .section-title {
     font-size: 45px;
+    line-height: 53px;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   .section-title {
     font-size: 30px;
+    line-height: 35px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 25px;
+    line-height: 29px;
   }
 }
 @media screen and (max-width: 480px) {
   .section-title {
-    font-size: 25px;
     margin-left: 2px;
   }
 }
@@ -2012,6 +2012,19 @@
 @media screen and (max-width: 480px) {
   .section-title_place_duties {
     max-width: 270px;
+  }
+}
+.section-title_place_conditions {
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .section-title_place_conditions {
+    max-width: 370px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-title_place_conditions {
+    max-width: 300px;
   }
 }
 
@@ -2262,33 +2275,35 @@
 /* MEDIA QUERIES */
 /* ANIMATIONS */
 .section-title {
+  margin: 0;
+  padding: 0;
   font-style: normal;
   font-weight: 500;
   font-size: 55px;
-  line-height: 1.16;
-  padding: 0;
+  line-height: 64px;
   color: #1E2027;
-  margin: 0;
   text-align: left;
-}
-@media screen and (max-width: 600px) {
-  .section-title {
-    font-size: 35px;
-  }
 }
 @media screen and (max-width: 1280px) {
   .section-title {
     font-size: 45px;
+    line-height: 53px;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   .section-title {
     font-size: 30px;
+    line-height: 35px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 25px;
+    line-height: 29px;
   }
 }
 @media screen and (max-width: 480px) {
   .section-title {
-    font-size: 25px;
     margin-left: 2px;
   }
 }
@@ -2303,6 +2318,19 @@
 @media screen and (max-width: 480px) {
   .section-title_place_duties {
     max-width: 270px;
+  }
+}
+.section-title_place_conditions {
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .section-title_place_conditions {
+    max-width: 370px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-title_place_conditions {
+    max-width: 300px;
   }
 }
 

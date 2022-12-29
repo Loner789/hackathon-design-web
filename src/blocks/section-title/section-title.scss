@@ -1,29 +1,12 @@
 @import '../../utils/styles/mixins';
 
 .section-title {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 55px;
-  line-height: 1.16;
-  padding: 0;
+  @include remove-margins;
+  @include subtitle-h2;
   color: #1E2027;
-  margin: 0;
   text-align: left;
 
-  @include media_600 {
-    font-size: 35px;
-  }
-
-  @include media_1280 {
-    font-size: 45px;
-  }
-
-  @include media_600 {
-    font-size: 30px;
-  }
-
   @include media_480 {
-    font-size: 25px;
     margin-left: 2px;
   }
 
@@ -38,6 +21,18 @@
 
     @include media_480 {
       max-width: 270px;
+    }
+  }
+
+  &_place_conditions {
+    width: 100%;
+
+    @include media_1024 {
+      max-width: 370px;
+    }
+
+    @include media_768 {
+      max-width: 300px;
     }
   }
 }
