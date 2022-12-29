@@ -18,11 +18,12 @@
   "bugs": {
     "url": "https://github.com/Loner789/hackathon-design-web/issues"
   },
-  "homepage": "https://github.com/Loner789/hackathon-design-web#readme",
+  "homepage": "./",
   "dependencies": {
     "autoprefixer": "^10.4.13",
     "core-js": "^3.26.1",
     "cssnano": "^5.1.14",
+    "gh-pages": "^4.0.0",
     "gsap": "^3.11.3",
     "node-sass": "^8.0.0",
     "sass-loader": "^13.2.0",
@@ -36,7 +37,6 @@
     "eslint": "^8.28.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.0",
     "postcss-loader": "^7.0.1",

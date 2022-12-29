@@ -2,18 +2,19 @@
 @import '../../utils/styles/constants';
 
 .success-story-mobile {
+  display: none;
+
   @include media_1010 {
     display: grid;
-    max-height: 630px;
+    max-height: 660px;
     height: min-content;
-    width: 100%;
-    padding: 20px 0 50px 0;
+    padding: 20px 0;
     box-sizing: border-box;
     position: relative;
     margin-left: 10px;
   }
 
-  .success-story-mobile__text {
+  &__text {
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
@@ -26,25 +27,29 @@
     position: relative;
     box-sizing: border-box;
   }
-}
 
-.success-story-mobile::after {
-  content: '';
-  box-sizing: border-box;
-  border-bottom: $cardBorder;
-  height: 100%;
-  width: 47%;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-}
+  &::after {
+    content: '';
+    box-sizing: border-box;
+    border-bottom: $cardBorder;
+    height: 100%;
+    width: 47%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
 
-.success-story-mobile::before {
-  content: '';
-  box-sizing: border-box;
-  border-bottom: $cardBorder;
-  width: 20%;
-  bottom: 0;
-  right: 8%;
-  position: absolute;
+  &::before {
+    content: '';
+    box-sizing: border-box;
+    border-bottom: $cardBorder;
+    width: 20%;
+    bottom: 0;
+    right: 8%;
+    position: absolute;
+  }
+
+  &_hidden {
+    display: none;
+  }
 }

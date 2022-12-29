@@ -1,3 +1,171 @@
+/* PROPERTIES */
+@mixin remove-margins {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin title-h1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 70px;
+  line-height: 82px;
+
+  @include media_1280 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  @include media_1024 {
+    font-size: 40px;
+    line-height: 47px;
+  }
+
+  @include media_768 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+@mixin subtitle-h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 64px;
+
+  @include media_1280 {
+    font-size: 45px;
+    line-height: 53px;
+  }
+
+  @include media_1024 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  @include media_768 {
+    font-size: 25px;
+    line-height: 29px;
+  }
+}
+
+@mixin subtitle-h3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.4;
+
+  @include media_1280 {
+    font-size: 35px;
+  }
+
+  @include media_1024 {
+    font-size: 25px;
+  }
+
+  @include media_768 {
+    font-size: 20px;
+  }
+}
+
+@mixin subtitle-h4 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.4;
+
+  @include media_768 {
+    font-size: 19px;
+  }
+}
+
+@mixin subtitle-h4-medium {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.2;
+
+  @include media_1024 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+@mixin text-light {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.4;
+
+  @include media_1280 {
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+@mixin text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+
+  @include media_1024 {
+    font-size: 16px;
+  }
+
+  @include media_768 {
+    font-size: 15px;
+  }
+}
+
+@mixin text-bold {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+
+
+  @include media_1024 {
+    font-size: 16px;
+  }
+}
+
+@mixin text-medium {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+
+  @include media_1024 {
+    font-size: 16px;
+  }
+
+  @include media_768 {
+    font-size: 15px;
+  }
+}
+
+@mixin reset-border {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@mixin size-vector-duties {
+  background-size: 150px 170px;
+}
+
+@mixin advantages-container-column {
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+  justify-items: center;
+}
+
+/* MEDIA QUERIES */
 @mixin media_1430 {
   @media screen and (max-width: 1430px) {
     @content;
@@ -21,7 +189,6 @@
     @content;
   }
 }
-
 
 @mixin media_1110 {
   @media screen and (max-width: 1110px) {
@@ -59,22 +226,25 @@
   }
 }
 
-@mixin reset-border {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
+@mixin media_360 {
+  @media screen and (max-width: 360px) {
+    @content;
+  }
 }
 
-@mixin size-vector-duties {
-  background-size: 150px 170px;
-}
+/* ANIMATIONS */
+@mixin fadeIn($duration) {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
 
-@mixin advantages-container-column {
-  grid-template-columns: 1fr;
-  row-gap: 20px;
-  justify-items: center;
+    to {
+      opacity: 1;
+    }
+  }
+
+  animation-name: fadeIn;
+  animation-duration: $duration;
+  animation-timing-function: ease-in;
 }

@@ -1,0 +1,15 @@
+.section-top-indent {
+  margin-top: 160px;
+
+  @include media_1280 {
+    margin-top: 150px;
+  }
+
+  @include media_1024 {
+    margin-top: 100px;
+  }
+
+  @include media_768 {
+    margin-top: 90px;
+  }
+}

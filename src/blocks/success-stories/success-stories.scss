@@ -6,11 +6,12 @@
   color: $darkText;
   display: grid;
   row-gap: 20px;
-  max-width: 1240px;
   width: 100%;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
 
-  .success-stories__text-list {
+  &__text-list {
     padding: 0;
     list-style-type: none;
     display: flex;
@@ -27,7 +28,7 @@
     }
   }
 
-  .success-stories__video-list {
+  &__video-list {
     padding: 0;
     list-style-type: none;
     display: grid;

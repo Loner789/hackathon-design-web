@@ -1,10 +1,9 @@
 .footer {
-  padding: 0 0 100px;
+  padding-bottom: 100px;
   font-family: 'YS Display', Arial, sans-serif;
 
   &__container {
-    margin: 0;
-    padding: 0;
+    @include remove-margins;
     height: 250px;
     display: flex;
     justify-content: space-between;
@@ -42,8 +41,7 @@
   }
 
   &__block {
-    margin: 0;
-    padding: 0;
+    @include remove-margins;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
@@ -106,15 +104,13 @@
   }
 
   &__tel {
-    margin: 0;
-    padding: 0;
+    @include remove-margins;
     display: flex;
     flex-direction: column;
   }
 
   &__tel-number {
-    margin: 0;
-    padding: 0;
+    @include remove-margins;
     font-size: 30px;
     font-weight: 400;
     line-height: 1.4;
@@ -125,8 +121,7 @@
   }
 
   &__tel-caption {
-    margin: 0;
-    padding: 0;
+    @include remove-margins;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.4;
@@ -137,8 +132,7 @@
   }
 
   &__social-links {
-    margin: 0;
-    padding: 0;
+    @include remove-margins;
     display: flex;
     align-items: center;
   }
@@ -236,8 +230,7 @@
   }
 
   &__brand {
-    margin: 0;
-    padding: 0;
+    @include remove-margins;
     font-size: 14px;
     font-weight: normal;
     line-height: 1.2;
@@ -247,15 +240,13 @@
   }
 
   &__navbar {
-    margin: 0;
-    padding: 0;
+    @include remove-margins;
     display: flex;
     justify-content: space-between;
   }
 
   &__navbar-links {
-    margin: 0;
-    padding: 0;
+    @include remove-margins;
     list-style: none;
   }
 
@@ -273,8 +264,7 @@
   }
 
   &__navbar-link {
-    margin: 0;
-    padding: 0;
+    @include remove-margins;
     font-size: 18px;
     font-weight: 400;
     line-height: 1.4;
@@ -287,8 +277,7 @@
   }
 
   &__info-item {
-    margin: 0;
-    padding: 0;
+    @include remove-margins;
     font-size: 14px;
     font-weight: normal;
     line-height: 1.2;

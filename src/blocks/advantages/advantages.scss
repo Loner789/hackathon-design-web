@@ -2,7 +2,6 @@
 @import '../../utils/styles/mixins';
 
 .advantages {
-  max-width: 1240px;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -10,13 +9,5 @@
   color: $darkText;
   justify-items: center;
   text-align: center;
-  margin: 205px auto 0;
-
-  @include media_1280 {
-    margin-top: 150px;
-  }
-
-  @include media_600 {
-    margin-top: 90px;
-  }
+  box-sizing: border-box;
 }

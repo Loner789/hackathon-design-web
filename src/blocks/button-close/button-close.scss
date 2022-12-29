@@ -18,16 +18,16 @@
     width: 19px;
     height: 19px;
   }
-}
 
-.button-close_place_video-popup {
-  background-image: url(../images/button-close-popup-white.png);
-  top: -40px;
-  right: -40px;
-}
+  &_place_video-popup {
+    background-image: url(../images/button-close-popup-white.png);
+    top: -40px;
+    right: -40px;
+  }
 
-.button-close:hover {
-  cursor: pointer;
-  opacity: .6;
-  transition: .7s;
+  &:hover {
+    cursor: pointer;
+    opacity: .6;
+    transition: .7s;
+  }
 }

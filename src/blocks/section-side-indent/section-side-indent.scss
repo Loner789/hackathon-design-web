@@ -1,0 +1,14 @@
+.section-side-indent {
+  padding-left: 100px;
+  padding-right: 100px;
+
+  @include media_1280 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @include media_768 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
