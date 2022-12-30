@@ -1,13 +1,9 @@
-@import '../../utils/styles/constants';
-@import '../../utils/styles/mixins';
-
 .success-story-title {
   font-style: normal;
   font-weight: 500;
   font-size: 40px;
   line-height: 1.4;
-  margin: 0;
-  padding: 0;
+  @include remove-margins;
   position: relative;
   box-sizing: border-box;
 
@@ -18,23 +14,23 @@
   @include media_600 {
     font-size: 20px;
   }
-}
 
-.success-story-title_place_video {
-  position: relative;
-  margin: 25px 0 0 60px;
+  &_place_video {
+    position: relative;
+    margin: 25px 0 0 60px;
 
-  @include media_600 {
-    margin: 25px 0 0 10px;
+    @include media_600 {
+      margin: 25px 0 0 10px;
+    }
   }
-}
 
-.success-story-title_place_video::before {
-  content: '';
-  box-sizing: border-box;
-  border-right: $cardBorder;
-  height: 100%;
-  top: 0;
-  right: 0;
-  position: absolute;
+  &_place_video::before {
+    content: '';
+    box-sizing: border-box;
+    border-right: $cardBorder;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
 }

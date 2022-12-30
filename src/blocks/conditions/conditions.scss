@@ -1,43 +1,54 @@
 .conditions {
-  padding: 100px 0 0;
+  padding-top: 120px;
   font-family: 'YS Display', Arial, sans-serif;
-  width: 100%;
+  width: calc(100% - 1px);
+  min-height: 100vh;
+  box-sizing: border-box;
 
   &__text-container {
-    margin: 0;
-    padding: 0;
+    @include remove-margins;
     width: 770px;
-  }
-
-  &__title {
-    margin: 0;
-    padding: 0 0 100px;
-    width: 100%;
-    font-size: 55px;
-    font-weight: 700;
-    line-height: 1.2;
 
     @include media_1280 {
-      font-size: 45px;
-      padding-bottom: 80px;
+      width: 715px;
     }
 
     @include media_1024 {
-      max-width: 370px;
-      font-size: 30px;
-      padding-bottom: 55px;
+      width: 370px;
     }
 
     @include media_768 {
-      max-width: 300px;
-      font-size: 24px;
-      padding-bottom: 50px;
+      width: 300px;
+    }
+  }
+
+  &__container {
+    margin: 0;
+    width: 100%;
+    padding: 30px 0 15px;
+    height: calc(100% - 132px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+
+    @include media_1280 {
+      height: calc(100% - 108px);
+    }
+
+    @include media_1024 {
+      height: calc(100% - 72px);
+    }
+
+    @include media_768 {
+      padding-top: 50px;
+      height: calc(100% - 58px);
     }
   }
 
   &__slider {
-    margin: 0;
-    padding: 0;
+    @include remove-margins;
+    height: 100%;
     overflow-x: hidden;
     display: flex;
     list-style: none;
@@ -46,7 +57,7 @@
   &__slide {
     margin: 0;
     min-width: max-content;
-    min-height: 360px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,59 +65,45 @@
     &:last-child {
       margin-right: 0;
     }
-
-    @include media_1280 {
-      min-height: 344px;
-    }
-
-    @include media_1024 {
-      min-height: 253px;
-    }
-
-    @include media_768 {
-      min-height: 182px;
-    }
   }
 
   &__card {
     margin: 0 90px 0 0;
-    padding: 70px 45px;
-    width: 510px;
-    height: 360px;
+    padding: 65px 50px 60px;
+    width: 400px;
+    height: 420px;
     background: transparent;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
 
     @include media_1280 {
-      width: 482px;
-      height: 344px;
-      padding: 60px 40px;
-      margin-right: 25px;
-    }
-
-    @include media_1024 {
-      width: 354px;
-      height: 253px;
-      padding: 50px 27px;
+      width: 352px;
+      height: 420px;
+      padding: 65px 25px 40px;
       margin-right: 20px;
     }
 
+    @include media_1024 {
+      width: 280px;
+      height: 350px;
+      padding: 75px 30px 50px;
+    }
+
     @include media_768 {
-      width: 260px;
-      height: 182px;
-      padding: 20px 20px;
-      margin-right: 15px;
+      width: 240px;
+      height: 300px;
+      padding: 50px 20px 40px;
+      margin-right: 10px;
     }
   }
 
   &__card-image {
-    margin: 0;
-    padding: 0;
-    width: 360px;
-    height: 360px;
+    @include remove-margins;
+    width: 320px;
+    height: 320px;
     position: absolute;
-    top: 0;
+    bottom: 0;
     right: 0;
     background-position: center;
     background-size: contain;
@@ -114,35 +111,24 @@
 
 
     @include media_1280 {
-      width: 344px;
-      height: 344px;
+      width: 300px;
+      height: 300px;
     }
 
     @include media_1024 {
-      width: 253px;
-      height: 253px;
+      width: 220px;
+      height: 220px;
     }
 
     @include media_768 {
-      width: 182px;
-      height: 182px;
+      width: 180px;
+      height: 180px;
     }
   }
 
   &__card-title {
-    margin: 0;
-    padding: 0;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 1.2;
-
-    &_side_left {
-      text-align: left;
-    }
-
-    &_side_right {
-      text-align: right;
-    }
+    @include remove-margins;
+    @include subtitle-h3;
 
     &:before {
       content: '';
@@ -158,7 +144,7 @@
         width: 75px;
         height: 100px;
         border-right: 2px solid rgba(133, 133, 133, 0.3);
-      border-bottom: 2px solid rgba(133, 133, 133, 0.3);
+        border-bottom: 2px solid rgba(133, 133, 133, 0.3);
       }
     }
 
@@ -179,43 +165,30 @@
         border-top: 2px solid rgba(133, 133, 133, 0.3);
       }
     }
-
-    @include media_1280 {
-      font-size: 35px;
-    }
-
-    @include media_1024 {
-      font-size: 25px;
-    }
-
-    @include media_768 {
-      font-size: 20px;
-    }
   }
 
   &__card-text {
     margin: 0;
-    padding: 40px 0 0;
+    padding: 50px 0 0;
     font-weight: 400;
     font-size: 18px;
-    line-height: 1.4;
+    line-height: 1.6;
 
     @include media_1024 {
-      padding-top: 30px;
+      padding-top: 45px;
       font-size: 13px;
     }
 
     @include media_768 {
-      padding-top: 10px;
       font-size: 12px;
     }
   }
 
   @include media_1024 {
-    padding-top: 90px;
+    padding-top: 110px;
   }
 
-  @include media_1024 {
-    padding-top: 70px;
+  @include media_768 {
+    padding-top: 80px;
   }
 }

@@ -1,11 +1,5 @@
-@import '../../utils/styles/constants';
-@import '../../utils/styles/mixins';
-
 .success-story-subtitle {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 1.4;
+  @include text-light;
   padding: 5px 0 0;
   margin: 0;
   box-sizing: border-box;
@@ -14,38 +8,30 @@
     font-size: 16px;
   }
 
-  @include media_600 {
-    font-size: 15px;
+  &_place_video {
+    position: relative;
+    padding: 5px 0 47px 50px;
+
+    @include media_600 {
+      padding: 5px 0 13px 10px;
+    }
   }
-}
 
-.success-story-subtitle_place_video {
-  position: relative;
-  padding: 5px 0 47px 50px;
-
-  @include media_600 {
-    padding: 5px 0 13px 10px;
+  &_place_video::before {
+    content: '';
+    box-sizing: border-box;
+    border-right: $cardBorder;
+    border-left: $cardBorder;
+    height: 100%;
+    @include position-top-right;
+    width: 100%;
   }
-}
 
-.success-story-subtitle_place_video::before {
-  content: '';
-  box-sizing: border-box;
-  border-right: $cardBorder;
-  border-left: $cardBorder;
-  height: 100%;
-  top: 0;
-  right: 0;
-  width: 100%;
-  position: absolute;
-}
-
-.success-story-subtitle_place_video::after {
-  content: '';
-  box-sizing: border-box;
-  border-bottom: $cardBorder;
-  bottom: 0;
-  right: 0;
-  width: 35%;
-  position: absolute;
+  &_place_video::after {
+    content: '';
+    box-sizing: border-box;
+    border-bottom: $cardBorder;
+    @include position-bottom-right;
+    width: 35%;
+  }
 }

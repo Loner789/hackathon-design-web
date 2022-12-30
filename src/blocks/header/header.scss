@@ -1,8 +1,4 @@
-@import '../../utils/styles/mixins';
-
 .header {
-  margin: 0;
-  padding: 0;
   min-height: 100px;
   font-family: 'YS Display', Arial, sans-serif;
   background: #FFF;
@@ -12,11 +8,10 @@
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 11;
 
   &__logo-link {
-    margin: 0;
-    padding: 0;
+    @include remove-margins;
     width: max-content;
     text-decoration: none;
   }

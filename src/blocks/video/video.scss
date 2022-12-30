@@ -1,14 +1,12 @@
-@import '../../utils/styles/constants';
-
 .video {
   display: block;
   position: relative;
 
-  .video__link {
+  &__link {
     display: block;
   }
 
-  .video__image {
+  &__image {
     display: block;
     width: 100%;
     height: 420px;
@@ -31,13 +29,12 @@
     @include media_600 {
       width: 290px;
       height: auto;
-      margin: 0;
-      padding: 0;
+      @include remove-margins;
       box-sizing: border-box;
     }
   }
 
-  .video__iframe {
+  &__iframe {
     width: 100%;
     height: 420px;
     border: none;
@@ -59,13 +56,12 @@
     @include media_600 {
       width: 290px;
       height: auto;
-      margin: 0;
-      padding: 0;
+      @include remove-margins;
       box-sizing: border-box;
     }
   }
-}
 
-.video:hover {
-  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+  }
 }

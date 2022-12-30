@@ -1,8 +1,4 @@
-@import '../../utils/styles/mixins';
-
 .learning {
-  margin: 0;
-  padding: 0;
   font-family: 'YS Display', Arial, sans-serif;
 
   &__content {
@@ -28,8 +24,7 @@
   }
 
   &__text-container {
-    margin: 0;
-    padding: 0;
+    @include remove-margins;
     width: 630px;
     min-height: 200px;
     flex-shrink: 0;
@@ -79,46 +74,23 @@
   }
 
   &__title-span {
-    margin: 0;
-    padding: 0;
+    @include remove-margins;
     width: 100%;
-    font-size: 70px;
-    font-weight: 500;
-    line-height: 1.2;
     color: #6251C9;
     display: inline;
-
-    @include media_1280 {
-      font-size: 60px;
-    }
-
-    @include media_1024 {
-      font-size: 40px;
-    }
-
-    @include media_768 {
-      font-size: 30px;
-    }
+    @include title-h1;
   }
 
   &__subtitle {
-    margin: 0;
-    padding: 0;
+    @include remove-margins;
     width: 100%;
-    font-size: 30px;
-    font-weight: 500;
-    line-height: 1.2;
     display: inline;
     color: #1E2027;
-
-    @include media_1024 {
-      font-size: 24px;
-    }
+    @include subtitle-h4-medium;
   }
 
   &__learning-picture {
-    margin: 0;
-    padding: 0;
+    @include remove-margins;
     width: 100%;
     height: 642px;
     background-image: url(../images/learning-pic.png);

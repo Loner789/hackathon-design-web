@@ -1,40 +1,38 @@
-@import '../../utils/styles/constants';
-@import '../../utils/styles/mixins';
-
 .success-stories {
   font-family: 'YS Display', Arial, sans-serif;
   color: $darkText;
   display: grid;
   row-gap: 20px;
-  max-width: 1240px;
   width: 100%;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
 
-  .success-stories__text-list {
+  &__text-list {
     padding: 0;
     list-style-type: none;
     display: flex;
     margin: 100px 0 0 0;
     column-gap: 20px;
+    justify-content: center;
 
     @include media_1110 {
       margin-top: 80px;
     }
 
     @include media_600 {
-      margin-top: 50px;
+      margin-top: 20px;
       column-gap: 0;
     }
   }
 
-  .success-stories__video-list {
-    padding: 0;
+  &__video-list {
+    @include remove-margins;
     list-style-type: none;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
     align-content: start;
-    margin: 0;
 
     @include media_768 {
       grid-template-columns: 1fr;
