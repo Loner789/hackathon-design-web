@@ -168,57 +168,40 @@ setupVideo(videoElement);
 renderElementsToDOM(faqData, faqContainer, generateFaq);
 
 // ------- success stories -------
-const createSuccessStoryCard = (data) => {
-  const сardsList = new Section(
-    {
-      items: data,
-      renderer: (item) => {
-        const elementCard = new SuccessStoryCard(
-          item,
-          successStoryTextSelector,
-          successStoryTextTemplateId,
-          data,
-        );
+createSection(
+  successStoriesText,
+  (item) => {
+    const elementCard = new SuccessStoryCard(
+      item,
+      successStoryTextSelector,
+      successStoryTextTemplateId,
+      successStoriesText,
+    );
 
-        return elementCard.generateElementCard();
-      },
-    },
-    successStoriesTextListSelector,
-  );
-  сardsList.renderItems();
-
-  return сardsList;
-};
-
-createSuccessStoryCard(successStoriesText);
+    return elementCard.generateElementCard();
+  },
+  successStoriesTextListSelector,
+);
 
 const popupWithVideo = new PopupWithVideo(videoPopupId);
 popupWithVideo.setEventListeners();
 
-const createSuccessStoryVideo = (data) => {
-  const videoList = new Section(
-    {
-      items: data,
-      renderer: (item) => {
-        const handleClickVideo = () => {
-          popupWithVideo.open(item);
-        };
-        const elementVideo = new SuccessStoryVideo(
-          item,
-          successStoryVideoSelector,
-          successStoryVideoTemplateId,
-          handleClickVideo,
-        );
-        return elementVideo.generateElementCard();
-      },
-    },
-    successStoriesVideoListSelector,
-  );
-  videoList.renderItems();
-  return videoList;
-};
-
-createSuccessStoryVideo(successStoriesVideo);
+createSection(
+  successStoriesVideo,
+  (item) => {
+    const handleClickVideo = () => {
+      popupWithVideo.open(item);
+    };
+    const elementVideo = new SuccessStoryVideo(
+      item,
+      successStoryVideoSelector,
+      successStoryVideoTemplateId,
+      handleClickVideo,
+    );
+    return elementVideo.generateElementCard();
+  },
+  successStoriesVideoListSelector,
+);
 
 // ------- vacancies -------
 renderElementsToDOM(vacanciesProphData, vacanciesEduMenu, generateMenu);
