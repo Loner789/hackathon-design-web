@@ -1,5 +1,3 @@
-@import '../../utils/styles/mixins';
-
 .success {
   display: none;
   justify-items: center;
@@ -18,17 +16,12 @@
 
   &__title {
     @include subtitle-h3;
-    /* font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 1.4; */
     color: #1E2027;
     padding: 0;
     margin: 0;
     text-align: center;
 
     @include media_768 {
-      /* font-size: 25px; */
       margin-top: 50px;
     }
   }

@@ -44,9 +44,6 @@
   }
 }
 
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .header {
   min-height: 100px;
   font-family: "YS Display", Arial, sans-serif;
@@ -115,9 +112,6 @@
   }
 }
 
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .learning {
   font-family: "YS Display", Arial, sans-serif;
 }
@@ -570,9 +564,6 @@
   }
 }
 
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .section-title {
   margin: 0;
   padding: 0;
@@ -633,9 +624,6 @@
   }
 }
 
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .advantages {
   width: 100%;
   display: grid;
@@ -647,9 +635,6 @@
   box-sizing: border-box;
 }
 
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .advantages-container {
   display: grid;
   column-gap: 2%;
@@ -804,9 +789,6 @@
   }
 }
 
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .card {
   max-width: 590px;
   width: 100%;
@@ -1356,9 +1338,6 @@
   }
 }
 
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .advantages-list {
   padding: 0;
   box-sizing: border-box;
@@ -1584,9 +1563,6 @@
   cursor: pointer;
 }
 
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .video-button {
   background-image: url(../images/button-play-video.png);
   background-color: transparent;
@@ -1641,9 +1617,6 @@
   cursor: pointer;
 }
 
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .duties {
   display: flex;
   flex-direction: column;
@@ -1714,9 +1687,6 @@
   background-color: #00308C;
 }
 
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .position {
   display: flex;
   justify-content: center;
@@ -1982,9 +1952,6 @@
   display: none;
 }
 
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .section-title {
   margin: 0;
   padding: 0;
@@ -2288,9 +2255,6 @@
     width: 100%;
   }
 }
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .section-title {
   margin: 0;
   padding: 0;
@@ -2383,9 +2347,6 @@
   opacity: 0.6;
 }
 
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .success-stories {
   font-family: "YS Display", Arial, sans-serif;
   color: #1E2027;
@@ -2618,9 +2579,6 @@
   }
 }
 
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .success-story-video {
   display: grid;
   position: relative;
@@ -2645,9 +2603,6 @@
   width: 47%;
 }
 
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .success-story-title {
   font-style: normal;
   font-weight: 500;
@@ -2687,9 +2642,6 @@
   position: absolute;
 }
 
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .success-story-subtitle {
   font-style: normal;
   font-weight: 300;
@@ -2763,9 +2715,6 @@
   height: 500px;
 }
 
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .video-button {
   background-image: url(../images/button-play-video.png);
   background-color: transparent;
@@ -2820,9 +2769,6 @@
   cursor: pointer;
 }
 
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .popup {
   display: grid;
   visibility: hidden;
@@ -3014,9 +2960,6 @@
   overflow: hidden;
 }
 
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .vacancies {
   font-family: "YS Display", Arial, sans-serif;
   display: flex;
@@ -3724,9 +3667,6 @@
     font-size: 13px;
   }
 }
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .form {
   display: flex;
   flex-direction: column;
@@ -3931,9 +3871,6 @@
   display: none;
 }
 
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .popup {
   display: grid;
   visibility: hidden;
@@ -4125,9 +4062,6 @@
   overflow: hidden;
 }
 
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .success {
   display: none;
   justify-items: center;
@@ -4151,10 +4085,6 @@
   font-weight: 400;
   font-size: 40px;
   line-height: 1.4;
-  /* font-style: normal;
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 1.4; */
   color: #1E2027;
   padding: 0;
   margin: 0;
@@ -4177,7 +4107,6 @@
 }
 @media screen and (max-width: 768px) {
   .success__title {
-    /* font-size: 25px; */
     margin-top: 50px;
   }
 }
@@ -4267,9 +4196,6 @@
   opacity: 0.6;
 }
 
-/* PROPERTIES */
-/* MEDIA QUERIES */
-/* ANIMATIONS */
 .success-story-mobile {
   display: none;
 }

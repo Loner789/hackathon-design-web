@@ -1,5 +1,3 @@
-@import '../../utils/styles/mixins';
-
 .section-title {
   @include remove-margins;
   @include subtitle-h2;
