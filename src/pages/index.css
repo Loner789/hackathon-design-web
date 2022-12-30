@@ -2386,6 +2386,7 @@
   display: flex;
   margin: 100px 0 0 0;
   column-gap: 20px;
+  justify-content: center;
 }
 @media screen and (max-width: 1110px) {
   .success-stories__text-list {
