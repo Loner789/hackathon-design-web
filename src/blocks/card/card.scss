@@ -187,6 +187,10 @@
 
     .card__rotate {
       transform: rotateY(180deg);
+
+      @include media_768 {
+        transform: none;
+      }
     }
   }
 
