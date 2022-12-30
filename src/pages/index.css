@@ -2369,7 +2369,6 @@
 .button-close:hover {
   cursor: pointer;
   opacity: 0.6;
-  transition: 0.7s;
 }
 
 /* PROPERTIES */
@@ -4191,7 +4190,6 @@
 .button-close:hover {
   cursor: pointer;
   opacity: 0.6;
-  transition: 0.7s;
 }
 
 /* PROPERTIES */
