@@ -2394,7 +2394,7 @@
 }
 @media screen and (max-width: 600px) {
   .success-stories__text-list {
-    margin-top: 50px;
+    margin-top: 20px;
     column-gap: 0;
   }
 }
