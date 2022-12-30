@@ -1,5 +1,3 @@
-@import '../../utils/styles/mixins';
-
 .form {
   display: flex;
   flex-direction: column;
@@ -35,9 +33,7 @@
 
   &__label_place_input::after {
     content: '*';
-    position: absolute;
-    top: 0;
-    right: 0;
+    @include position-top-right;
     font-family: 'YS Text';
     font-style: normal;
     font-weight: 400;
@@ -175,8 +171,7 @@
   }
 
   &__label-prompt {
-    margin: 0;
-    padding: 0;
+    @include remove-margins;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;

@@ -1,6 +1,3 @@
-@import '../../utils/styles/constants';
-@import '../../utils/styles/mixins';
-
 .card {
   max-width: 590px;
   width: 100%;
@@ -89,9 +86,7 @@
   &__line_place__first-top::after {
     content: '';
     width: 80%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    @include position-bottom-left;
     border-bottom: $cardBorder;
     box-sizing: border-box;
 
@@ -104,9 +99,7 @@
     content: '';
     width: 22%;
     height: 100px;
-    position: absolute;
-    top: 0;
-    right: 0;
+    @include position-top-right;
     border-top: $cardBorder;
     border-right: $cardBorder;
     box-sizing: border-box;
@@ -119,9 +112,7 @@
   &__line_place__second-bottom::before {
     content: '';
     width: 80%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    @include position-bottom-left;
     border-bottom: $cardBorder;
 
     @include media_970 {
@@ -187,6 +178,10 @@
 
     .card__rotate {
       transform: rotateY(180deg);
+
+      @include media_768 {
+        transform: none;
+      }
     }
   }
 
@@ -200,9 +195,7 @@
     content: '';
     border-right: $cardBorder;
     border-top: $cardBorder;
-    position: absolute;
-    top: 0;
-    right: 0;
+    @include position-top-right;
     height: 100%;
     width: 53%;
     box-sizing: border-box;
@@ -216,9 +209,7 @@
     content: '';
     border-left: $cardBorder;
     border-bottom: $cardBorder;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    @include position-bottom-left;
     height: 52%;
     width: 41%;
     box-sizing: border-box;
@@ -232,9 +223,7 @@
     content: '';
     border-right: $cardBorder;
     border-top: $cardBorder;
-    position: absolute;
-    top: 0;
-    right: 0;
+    @include position-top-right;
     height: 100%;
     width: 12%;
     box-sizing: border-box;
@@ -248,9 +237,7 @@
     content: '';
     border-left: $cardBorder;
     border-top: $cardBorder;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @include position-top-left;
     height: 40%;
     width: 12%;
     box-sizing: border-box;
@@ -264,9 +251,7 @@
     content: '';
     border-right: $cardBorder;
     border-bottom: $cardBorder;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    @include position-bottom-right;
     height: 100%;
     width: 64%;
     box-sizing: border-box;
@@ -280,9 +265,7 @@
     content: '';
     border-left: $cardBorder;
     border-top: $cardBorder;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @include position-top-left;
     height: 84%;
     width: 34%;
     box-sizing: border-box;
@@ -296,9 +279,7 @@
     content: '';
     border-right: $cardBorder;
     border-bottom: $cardBorder;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    @include position-bottom-right;
     height: 70%;
     width: 11%;
     box-sizing: border-box;
@@ -312,9 +293,7 @@
     content: '';
     border-left: $cardBorder;
     border-top: $cardBorder;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @include position-top-left;
     height: 100%;
     width: 71%;
     box-sizing: border-box;
@@ -328,9 +307,7 @@
     content: '';
     border-right: $cardBorder;
     border-bottom: $cardBorder;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    @include position-bottom-right;
     height: 30%;
     width: 61%;
     box-sizing: border-box;
@@ -344,9 +321,7 @@
     content: '';
     border-left: $cardBorder;
     border-top: $cardBorder;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @include position-top-left;
     height: 41%;
     width: 53%;
     box-sizing: border-box;
@@ -360,9 +335,7 @@
     content: '';
     border-right: $cardBorder;
     border-bottom: $cardBorder;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    @include position-bottom-right;
     height: 57%;
     width: 52%;
     box-sizing: border-box;
@@ -376,9 +349,7 @@
     content: '';
     border-left: $cardBorder;
     border-top: $cardBorder;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @include position-top-left;
     height: 23%;
     width: 71%;
     box-sizing: border-box;
@@ -392,9 +363,7 @@
     content: '';
     border-right: $cardBorder;
     border-top: $cardBorder;
-    position: absolute;
-    top: 0;
-    right: 0;
+    @include position-top-right;
     height: 100%;
     width: 54%;
     box-sizing: border-box;
@@ -408,9 +377,7 @@
     content: '';
     border-left: $cardBorder;
     border-bottom: $cardBorder;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    @include position-bottom-left;
     height: 52%;
     width: 41%;
     box-sizing: border-box;
@@ -424,9 +391,7 @@
     content: '';
     border-right: $cardBorder;
     border-top: $cardBorder;
-    position: absolute;
-    top: 0;
-    right: 0;
+    @include position-top-right;
     height: 100%;
     width: 15%;
     box-sizing: border-box;
@@ -440,9 +405,7 @@
     content: '';
     border-left: $cardBorder;
     border-top: $cardBorder;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @include position-top-left;
     height: 40%;
     width: 15%;
     box-sizing: border-box;

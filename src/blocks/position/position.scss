@@ -1,6 +1,3 @@
-@import '../../utils/styles/mixins';
-@import '../../utils/styles/constants';
-
 .position {
   display: flex;
   justify-content: center;
@@ -77,14 +74,10 @@
   }
 
   &__title {
+    @include subtitle-h3;
     margin: 70px 0 0 20%;
-    font-style: normal;
-    font-size: 40px;
-    line-height: 1.4;
     max-width: 380px;
     width: 100%;
-    font-style: normal;
-    font-weight: 400;
     box-sizing: border-box;
     padding: 0;
 
@@ -93,12 +86,10 @@
     }
 
     @include media_600 {
-      font-size: 30px;
       max-width: 250px;
     }
 
     @include media_480 {
-      font-size: 20px;
       margin-top: 33px;
       margin-left: 30px;
     }
@@ -109,20 +100,16 @@
   }
 
   &__reviewer {
-    position: absolute;
+    @include position-bottom-right;
     width: 295px;
     height: 295px;
-    right: 0;
-    bottom: 0;
     display: block;
     box-sizing: border-box;
   }
 
   &__border_line_left-top {
     box-sizing: border-box;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @include position-top-left;
     width: 39%;
     height: 39%;
     border-top: $cardBorder;
@@ -131,9 +118,7 @@
 
   &__border_line_right-top {
     box-sizing: border-box;
-    position: absolute;
-    top: 0;
-    right: 0;
+    @include position-top-right;
     width: 56%;
     height: 56%;
     border-top: $cardBorder;
@@ -146,9 +131,7 @@
 
   &_line_top-right::after {
     content: '';
-    top: 0;
-    right: 0;
-    position: absolute;
+    @include position-top-right;
     width: 22%;
     height: 30%;
     border-top: $cardBorder;
@@ -158,9 +141,7 @@
 
   &_line_top-right::before {
     content: '';
-    bottom: 0;
-    left: 0;
-    position: absolute;
+    @include position-bottom-left;
     width: 39%;
     height: 5%;
     border-left: $cardBorder;
