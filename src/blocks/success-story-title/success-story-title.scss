@@ -6,8 +6,7 @@
   font-weight: 500;
   font-size: 40px;
   line-height: 1.4;
-  margin: 0;
-  padding: 0;
+  @include remove-margins;
   position: relative;
   box-sizing: border-box;
 

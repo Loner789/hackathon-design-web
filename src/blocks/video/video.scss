@@ -31,8 +31,7 @@
     @include media_600 {
       width: 290px;
       height: auto;
-      margin: 0;
-      padding: 0;
+      @include remove-margins;
       box-sizing: border-box;
     }
   }
@@ -59,8 +58,7 @@
     @include media_600 {
       width: 290px;
       height: auto;
-      margin: 0;
-      padding: 0;
+      @include remove-margins;
       box-sizing: border-box;
     }
   }

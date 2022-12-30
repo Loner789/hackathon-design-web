@@ -70,10 +70,7 @@
   }
 
   &__text {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 1.4;
+    @include text-light;
     margin: 0;
     padding: 25px 0 0;
     display: grid;
@@ -105,11 +102,9 @@
     content: '';
     border-top: $cardBorder;
     border-right: $cardBorder;
-    top: 0;
-    right: 0;
+    @include position-top-right;
     width: 53%;
     height: 53%;
-    position: absolute;
     box-sizing: border-box;
   }
 
@@ -143,11 +138,9 @@
     content: '';
     border-bottom: $cardBorder;
     border-right: $cardBorder;
-    bottom: 0;
-    right: 0;
+    @include position-bottom-right;
     width: 9%;
     height: 22%;
-    position: absolute;
     box-sizing: border-box;
     @include fadeIn(1s);
   }

@@ -17,26 +17,24 @@
   }
 
   &__title {
-    font-style: normal;
+    @include subtitle-h3;
+    /* font-style: normal;
     font-weight: 400;
     font-size: 40px;
-    line-height: 1.4;
+    line-height: 1.4; */
     color: #1E2027;
     padding: 0;
     margin: 0;
     text-align: center;
 
     @include media_768 {
-      font-size: 25px;
+      /* font-size: 25px; */
       margin-top: 50px;
     }
   }
 
   &__text {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.4;
+    @include text;
     color: #1E2027;
     padding: 0;
     margin: 46px 0 0;
@@ -44,7 +42,6 @@
 
     @include media_768 {
       margin-top: 20px;
-      font-size: 15px;
     }
   }
 

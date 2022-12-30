@@ -30,13 +30,12 @@
   }
 
   &__video-list {
-    padding: 0;
+    @include remove-margins;
     list-style-type: none;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
     align-content: start;
-    margin: 0;
 
     @include media_768 {
       grid-template-columns: 1fr;
