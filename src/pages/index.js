@@ -61,6 +61,7 @@ import {
   successStoryVideoSelector,
   successStoryVideoTemplateId,
   successStoriesVideoListSelector,
+  vacanciesSendBtns,
 } from '../utils/constants';
 
 // FUNCTIONS:
@@ -234,6 +235,11 @@ popupWithForm.setEventListeners();
 /* to open popup */
 notFoundVacBtn.addEventListener('click', () => {
   popupWithForm.open();
+});
+vacanciesSendBtns.forEach((el) => {
+  el.addEventListener('click', () => {
+    popupWithForm.open();
+  });
 });
 
 const FormInPopupValidator = new FormValidator(configFormValidator, '#form');
